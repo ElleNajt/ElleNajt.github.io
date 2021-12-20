@@ -1,27 +1,21 @@
 ## About Me:
-<!---  ![Photo](https://github.com/LorenzoNajt/LorenzoNajt.github.io/blob/master/CoffeeGood.jpg)--->
 
-I am a PhD student at the University of Wisconsin-Madison. My advisor is [Jordan Ellenberg](http://www.math.wisc.edu/~ellenber/).
+I obtained my math PhD Dec 2021 at the University of Wisconsin-Madison, advised by [Jordan Ellenberg](http://www.math.wisc.edu/~ellenber/).
 
-Jan 2018 - August 2019 I was a visitor in [Justin Solomon](https://people.csail.mit.edu/jsolomon/)'s lab at MIT/CSAIL. I am working with his group to analyze statistical techniques currently being used to create evidence of gerrymandering. I also collaborate with members of [MGGG](https://mggg.org/).
+I currently work as a data scientist at Two Sigma.
 
+## Collaborations:
+
+Jan 2018 - August 2019 I was a visitor in [Justin Solomon](https://people.csail.mit.edu/jsolomon/)'s lab at MIT/CSAIL. I am working with his group to analyze statistical techniques currently being used to create evidence of gerrymandering. I also collaborate with members of [MGGG](https://mggg.org/). 
 
 ## Research:
 
-[See here for a list of research papers and cv.](https://lorenzonajt.github.io/Research)
-
-## Teaching: 
-
-[Resources for Students](https://lorenzonajt.github.io/Teaching)
+[See here for a list of research papers and cv.](https://ellenajt.github.io/Research)
 
 ## Contact / Social Media:
 
-Email: lnajt@math.wisc.edu
+Email: lnajt4@gmail.com
 
-[This is my stack exchange profile](https://stackexchange.com/users/2174622/lorenzo) 
+[This is my stack exchange profile](https://math.stackexchange.com/users/54092/elle-najt) 
 
-[This is my github account](https://github.com/LorenzoNajt)
-
-## Other:
-
-[Miscellaneous Thoughts](https://lorenzonajt.github.io/Thoughts)
+[This is my github account](https://github.com/ElleNajt)
