@@ -16,6 +16,8 @@ Jan 2018 - August 2019 I was a visitor in [Justin Solomon](https://people.csail.
 
 Email: lnajt4@gmail.com
 
-[This is my stack exchange profile](https://math.stackexchange.com/users/54092/elle-najt) 
+[Stack Exchange](https://math.stackexchange.com/users/54092/elle-najt) 
 
-[This is my github account](https://github.com/ElleNajt)
+[Github](https://github.com/ElleNajt)
+
+[LinkedIn](https://www.linkedin.com/in/elle-najt-35851034/)
