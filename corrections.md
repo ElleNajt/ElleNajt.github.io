@@ -1,5 +1,5 @@
 
-## Upcoming talks :
+## Corrections: 
 
 Oct 22 - Presenting at the [AMS Special Session on Partitioning and Redistricting, I](https://meetings.ams.org/math/fall2022w/meetingapp.cgi/Paper/17358). I would like to note that the abstract I submitted contains, in my opinion, several serious errors; in particular, I overestimated the meaningfulness of an experiment that lead me to be overconfident in our results. Since I cannot correct those errors on the AMS webpage, despite trying, here is a corrected abstract: 
 
