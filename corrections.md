@@ -3,7 +3,7 @@
 
 Oct 22 - Presenting at the [AMS Special Session on Partitioning and Redistricting, I](https://meetings.ams.org/math/fall2022w/meetingapp.cgi/Paper/17358). 
 
-I would like to note that the abstract I submitted contains, in my opinion, a serious error: I mistaken about the meaningfulness of an experiment, and this lead me to be overconfident that we had succesfully replicated 'metamandering' on real-world data.
+I would like to note that the abstract I submitted contains, in my opinion, a serious error: I did not appropriately measure the signal-to-noise ratio of  experiment, and this lead me to be overconfident that we had succesfully replicated 'metamandering' on real-world data.
 
 Since I cannot correct those errors on the AMS webpage,  here is a corrected abstract: 
 
