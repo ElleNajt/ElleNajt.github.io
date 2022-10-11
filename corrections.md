@@ -9,7 +9,7 @@ I would like to note that the abstract I submitted contains, in my opinion, an i
 
 To highlight the difference from the old abstract:
 
-While I still believe that it is unclear whether these distributions over connected partitions refer to an observable reality, and that this is supported by their apparent non-robustness to infinitsemal pertubations to VTDs of the grid graph that we showed in (N., DeFord, Solomon), it is not true that I was able to find meaningful examples of comparable complexity to real world data that used infinitesimal pertubations in the same way as the toy examples. 
+While I still believe that it is unclear whether these distributions over connected partitions refer to an observable reality, and that this is supported by their apparent non-robustness to infinitsemal pertubations to VTDs of the grid graph that we showed in (N., DeFord, Solomon), it is not true that I was able to find meaningful examples of comparable complexity to real world data that used infinitesimal pertubations in the same way as the grid graph examples.
 
 My mistakes were:
 1. I did not appropriately measure the 'signal-to-noise ratio' of the real-data experiment we ran (shift differences vs. inherent randomness), and this lead me to be overconfident that we had succesfully replicated 'metamandering' on real-world data.
