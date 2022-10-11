@@ -4,11 +4,11 @@ I obtained my math PhD Dec 2021 at the University of Wisconsin-Madison, advised 
 
 I currently work as a data scientist at Two Sigma.
 
-[Corrections to public statements I cannot amend](https://ellenajt.github.io/corrections)
+[Corrections](https://ellenajt.github.io/corrections)
 
 ## Collaborations:
 
-Jan 2018 - August 2019 I was a visitor in [Justin Solomon](https://people.csail.mit.edu/jsolomon/)'s lab at MIT/CSAIL. I am working with his group to analyze statistical techniques currently being used to create evidence of gerrymandering. I also collaborate with members of [MGGG](https://mggg.org/). 
+Jan 2018 - August 2019 I was a visitor in [Justin Solomon](https://people.csail.mit.edu/jsolomon/)'s lab at MIT/CSAIL. I worked with his group, especially Daryl DeFord, to analyze statistical techniques currently being used to create evidence of gerrymandering. 
 
 ## Upcoming talks :
 
