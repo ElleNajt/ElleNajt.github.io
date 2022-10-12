@@ -9,7 +9,7 @@ I would like to note that the abstract I submitted contains, in my opinion, an i
 
 The primary difference from the previous abstract is that I no longer believe that I was able to find meaningful metamandering examples of on real-world data using  infinitesimal pertubations in the same way as the grid graph examples. Of course, 'meaningful' is a weasel word, see rationality post-mortem below.
 
-However, my opinion remains that metamandering is possible for models of the world that are closer to reality than the grid graph. We are exploring an alternative strategy for real-world metamandering, based on infering votes on the census block level and picking agglomerations, which I will report progress on. 
+However, my opinion remains that metamandering is possible for models of the world that are closer to reality than the grid graph. We are exploring an alternative strategy for real-world metamandering, based on infering votes on the census block level and picking agglomerations, which I will report progress on, in addition to explaining thje current status of generalizing the infinitesimal shifts metamandering to real-data.
 
 Moreover, from a more philosophical point of view, my opinion is that the experiments from (N., DeFord, Solomon) independently make a strong case that we don't have a clear understanding of what ensemble methods are measuring, or whether they define a legitimate baseline. In other words, 
 it is unclear whether these distributions over connected partitions refer to an observable reality, and this uncertainty is supported by their apparent non-robustness to infinitsemal pertubations to VTDs of the grid graph. This is an independent question from whether metamandering attacks is a feasible manipulation on real-world data.
