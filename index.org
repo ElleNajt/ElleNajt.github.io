@@ -17,11 +17,12 @@ I've been on an arc of getting better at software engineering skills and other a
 Meditation, Clowning, Burning Man, other adventures...
 
 * [[file:Topics/Music.org][Music:]]
-
 I like music, and also make music on the piano and in ableton.
 
-* Professional:
+* [[file:Topics/Consumerism.org][Consumerism:]]
+Things that benefit me through their consumption; tools, thoughts, medicine.
 
+* Professional:
 I obtained my math PhD Dec 2021 at the University of Wisconsin-Madison, advised by [[http://www.math.wisc.edu/~ellenber/][Jordan Ellenberg]].
 
 Jan 2018 - August 2019 I was a visitor in [[https://people.csail.mit.edu/jsolomon/'s][Justin Solomon's]] lab at MIT/CSAIL. I worked with him and Daryl DeFord to [[file:Topics/GradSchoolResearch.org::*Gerrymandering][analyze statistical techniques being used to evaluate gerrymandering.]]
@@ -29,7 +30,6 @@ Jan 2018 - August 2019 I was a visitor in [[https://people.csail.mit.edu/jsolomo
 I currently work as a data scientist on a systematic trading team at Two Sigma. I like it!
 
 * Contact info:
-
 [[mailto:lnajt4@gmail.com][Email: LNajt4@gmail.com]]
 [[https://math.stackexchange.com/users/54092/elle-najt/][Stack-exchange]]
 [[https://github.com/ElleNajt/][Github]]

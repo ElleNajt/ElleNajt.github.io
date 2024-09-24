@@ -8,18 +8,30 @@ I have a whole page for emacs, but it deserves a bullet here.
 
 I love being able to shape my editor into a glove that fits me and my idiosyncrasies. It's so much better than shaping myself to fit an awkward tool. Getting good at emacs has made development a million times more fun, and this leads to more flow, and to more creativity.
 
+** Org babel
+
+I don't use jupyter notebooks anymore, I use org babel!
+
 ** Nix
 
 I do most of my personal development through a nixos vm running with UTM on my mac. I love being able to version my system configuration, and steal bits of config from friends.
 
-(I do like having this live inside of a computer that's stable, and that just *works*.)
+I do like having these linux shenanigans live inside of a computer that's stable, and that just *works* and interfaces as a first class citizen with the rest of the world.
 
-I also use nix as my package manager for python environments at home. Sometimes requires terrible overlays but at least it's hermetic and aesthetic. ^^
+I also use nix as my package manager for python environments at home. Sometimes requires terrible overlays but at least it's hermetic, reproduable and aesthetic. ^^
 
 ** Git
 
 I love git so much.
 
-I didn't always love git, I used to be afraid of messing it up.
+I didn't always love git, I used to be afraid of messing things up.
 
-Then I asked for help and read pro-git.
+Then I asked for help from more senior developers and got a lot of it, and did deliberate practice by using it at every opportunity, and [[https://git-scm.com/book/en/v2][studied pro-git closely]].
+
+Emac's built in porcelein git wrapper Magit was also really helpful. Did I mention emacs is great?
+
+You can just get good at things!
+
+** Tests!
+
+This is less of a tool, but I love test driven development -- it makes for a fun feedback loop.
