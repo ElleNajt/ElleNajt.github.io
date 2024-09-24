@@ -1,5 +1,5 @@
+#+SETUPFILE: ~/.doom.d/org-templates/standard.org
 #+title: Music
 
 * Original
 * Favorites
-*

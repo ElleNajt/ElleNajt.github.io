@@ -1,3 +1,4 @@
+#+SETUPFILE: ~/.doom.d/org-templates/standard.org
 #+title: Grad School Research
 
 * Gerrymandering

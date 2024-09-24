@@ -1,8 +1,6 @@
+#+SETUPFILE: ~/.doom.d/org-templates/standard.org
 #+title: Emacs
 #+PROPERTY: :exports both
-#+OPTIONS: html-link-use-abs-url:nil
-#+OPTIONS: html-link-home:""
-#+OPTIONS: html-link-org-files-as-html:t
 
 * I'm an org babel for data science evangelist!
 Seriously this is great -- it's changed my life. Will write more on that later.

@@ -1,6 +1,6 @@
 (require 'ox-publish)
 (setq org-publish-project-alist
-      '(("my_blog"
+      '(("blog-pages"
          :base-directory "~/org/blog"
          :publishing-directory "~/org/blog/docs"
          :recursive t
@@ -14,7 +14,18 @@
          :section-numbers nil
          :html-extension "html"
          ;; :auto-preamble t
-         )))
+         )
+        ("blog-static"
+         :base-directory "~/org/blog"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+         :publishing-directory "~/org/blog/docs"
+         :recursive t
+         :publishing-function org-publish-attachment
+         )
+        ("blog" :components ("blog-pages" "blog-static"))
+        )
 
+
+      )
 
 (org-publish-all t)
