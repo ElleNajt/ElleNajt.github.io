@@ -16,4 +16,14 @@
          ;; :auto-preamble t
          )))
 
+(org-link-set-parameters
+ "orgfile"
+ :follow (lambda (path) (find-file path))
+ :export (lambda (path desc backend)
+           (cond
+            ((eq backend 'html)
+             (format "<a href=\"%s.org\">%s</a>" path (or desc path)))
+            (t
+             (format "[[file:%s.org][%s]]" path (or desc path))))))
+
 (org-publish-all t)

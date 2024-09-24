@@ -7,7 +7,7 @@
 * I'm an org babel for data science evangelist!
 Seriously this is great -- it's changed my life.
 
-[[file:../Code/OrgBabelExample/example.org::*Notebook][Notebook example]]
+[[orgfile:../Code/OrgBabelExample/example.org::*Notebook][Notebook example]]
 
 ** TODO actually that gets published to an html, how do I fix this
 ** TODO Write a blog post explaining how this has changed my life
