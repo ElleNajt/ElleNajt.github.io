@@ -34,3 +34,5 @@ Seriously this is great -- it's changed my life.
 
 ** wdired is magic
 ** ! then command (e.g. firefox) on the highlighted file = yay
+** tab on a file
+**

@@ -1,5 +1,5 @@
 #+SETUPFILE: ~/.doom.d/org-templates/standard.org
-#+title: Elle's webpage
+#+title: Elle Najt's webpage
 
 Welcome to my webpage! It's written in org mode!!
 
@@ -13,11 +13,27 @@ I like learning math, and writing about what I'm learning clarifies things for m
 * [[file:Topics/ComputerScience.org][Computer Science:]]
 I've been on an arc of getting better at software engineering skills and other aspects of computer touchery.
 
-* Blog:
-Meditation, Clowning, Burning Man, other adventures
+* [[file:Topics/Blog.org][Blog:]]
+Meditation, Clowning, Burning Man, other adventures...
 
 * [[file:Topics/Music.org][Music:]]
 
-I like music, and also make music.
+I like music, and also make music on the piano and in ableton.
 
 * Professional:
+
+I obtained my math PhD Dec 2021 at the University of Wisconsin-Madison, advised by [Jordan Ellenberg](http://www.math.wisc.edu/~ellenber/).
+
+Jan 2018 - August 2019 I was a visitor in [Justin Solomon](https://people.csail.mit.edu/jsolomon/)'s lab at MIT/CSAIL. I worked with him and Daryl DeFord to [[file:Topics/GradSchoolResearch.org::*Gerrymandering][analyze statistical techniques being used to evaluate gerrymandering.]]
+
+I currently work as a data scientist on a systematic trading team at Two Sigma. I like it!
+
+* Contact info:
+
+Email: lnajt4@gmail.com
+
+[Stack Exchange](https://math.stackexchange.com/users/54092/elle-najt)
+
+[Github](https://github.com/ElleNajt)
+
+[LinkedIn](https://www.linkedin.com/in/elle-najt-35851034/)

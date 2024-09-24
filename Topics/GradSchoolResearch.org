@@ -1,18 +1,10 @@
 #+title: Grad School Research
 
-* On asking for help:
-
-In graduate school I wrote:
-
-> I believe that doing science is a network activity. If the knowledge I need to advance my research goals is likely to be basic knowledge to some experts who I can be connected to through stack exchange, then it is my responsibility as a researcher to put aside my ego and ask for help. It is unreasonable to expect to be able to replicate the same happy accidents that brought scientific communities to new insights.
-
-I think, in retrospect, I could have asked for a lot more help. :)
-
 * Gerrymandering
 
-Some of this work was cited in an amicus brief at the supreme court!
+[Some of the work I did was cited in an amicus brief at the supreme court!](https://www.supremecourt.gov/DocketPDF/21/21-1086/230272/20220718153650363_21-1086%2021-1087%20bsac%20Computational%20Redistricting%20Experts.pdf)
 
-Some of this work was featured [here](https://grad.wisc.edu/2020/04/23/mathematics-research-builds-better-ways-to-identify-gerrymandering/).
+This work was featured [here](https://grad.wisc.edu/2020/04/23/mathematics-research-builds-better-ways-to-identify-gerrymandering/).
 
 ** [Complexity and Geometry of Sampling Connected Graph Partitions](https://arxiv.org/abs/1908.08881)
 In this paper, we prove intractability results about sampling from the set of partitions of a planar graph into connected components. Our proofs are motivated by a technique introduced by Jerrum, Valiant, and Vazirani. Moreover, we use gadgets inspired by their technique to provide families of graphs where the "flip walk" Markov chain used in practice for this sampling task exhibits exponentially slow mixing. Supporting our theoretical results we present some empirical evidence demonstrating the slow mixing of the flip walk on grid graphs and on real data. Inspired by connections to the statistical physics of self-avoiding walks, we investigate the sensitivity of certain popular sampling algorithms to the graph topology. Finally, we discuss a few cases where the sampling problem is tractable. Applications to political redistricting have recently brought increased attention to this problem, and we articulate open questions about this application that are highlighted by our results.
@@ -50,3 +42,11 @@ y
 
 ** [Uniformly sampling vertices of a polytope of bounded branchwidth is still hard (Draft)](Code/Latex/PolytopePaper/The_intractability_of_uniformly_sampling_and_counting_the_vertices_of_a_polytope_under_branchwidth_constraints__Arxiv_Version_.pdf)
 Abstract: We consider the complexity of sampling vertices of a polytope. A theorem of Khachiyan uses the circulation polytope of a directed graph to show that this sampling problem is NP-hard, in the sense that a polynomial time sampler would imply NP = RP. It is known, also by work of Khachiyan et al., that the vertex enumeration problem is NP-hard for polyhedra, while it remains open for polytopes. However, bounding the branchwidth has been shown to provide a total polynomial time algorithm for the polytope vertex enumeration problem, and it is therefore natural to ask whether bounding branchwidth makes vertex sampling tractable. We investigate this question and demonstrate the NP-hardness of uniformly sampling vertices of a polytope given by $\{ Ax = b x \geq 0 \}$, where $A$ has branchwidth <= 4. To do so, we develop gadgets that build bounded branchwidth polytopes that have many vertices over certificates of an NP-hard problem. In an appendix, we apply this gadget to provide an alternative proof a recent theorem of Guo and Jerrum about sampling vertices from another class of polytopes. We also study some related questions, such as the branchwidth of the circulation polytope, and show that the vertices of a circulation polytope of bounded branchwidth can be sampled efficiently.
+
+* On asking for help:
+
+In graduate school I wrote:
+
+> I believe that doing science is a network activity. If the knowledge I need to advance my research goals is likely to be basic knowledge to some experts who I can be connected to through stack exchange, then it is my responsibility as a researcher to put aside my ego and ask for help. It is unreasonable to expect to be able to replicate the same happy accidents that brought scientific communities to new insights.
+
+I think, in retrospect, I could have asked for a lot more help. :)
