@@ -16,15 +16,5 @@
          ;; :auto-preamble t
          )))
 
-(org-link-set-parameters
- "orgfile"
- :follow (lambda (path) (find-file (car (split-string path "::"))))
- :export (lambda (path desc backend)
-           (let ((clean-path (car (split-string path "::"))))
-             (cond
-              ((eq backend 'html)
-               (format "<a href=\"%s\">%s</a>" clean-path (or desc clean-path)))
-              (t
-               (format "[[file:%s][%s]]" clean-path (or desc clean-path)))))))
 
 (org-publish-all t)
