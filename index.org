@@ -22,18 +22,15 @@ I like music, and also make music on the piano and in ableton.
 
 * Professional:
 
-I obtained my math PhD Dec 2021 at the University of Wisconsin-Madison, advised by [Jordan Ellenberg](http://www.math.wisc.edu/~ellenber/).
+I obtained my math PhD Dec 2021 at the University of Wisconsin-Madison, advised by [[http://www.math.wisc.edu/~ellenber/][Jordan Ellenberg]].
 
-Jan 2018 - August 2019 I was a visitor in [Justin Solomon](https://people.csail.mit.edu/jsolomon/)'s lab at MIT/CSAIL. I worked with him and Daryl DeFord to [[file:Topics/GradSchoolResearch.org::*Gerrymandering][analyze statistical techniques being used to evaluate gerrymandering.]]
+Jan 2018 - August 2019 I was a visitor in [[https://people.csail.mit.edu/jsolomon/'s][Justin Solomon's]] lab at MIT/CSAIL. I worked with him and Daryl DeFord to [[file:Topics/GradSchoolResearch.org::*Gerrymandering][analyze statistical techniques being used to evaluate gerrymandering.]]
 
 I currently work as a data scientist on a systematic trading team at Two Sigma. I like it!
 
 * Contact info:
 
-Email: lnajt4@gmail.com
-
-[Stack Exchange](https://math.stackexchange.com/users/54092/elle-najt)
-
-[Github](https://github.com/ElleNajt)
-
-[LinkedIn](https://www.linkedin.com/in/elle-najt-35851034/)
+[[mailto:lnajt4@gmail.com][Email: LNajt4@gmail.com]]
+[[https://math.stackexchange.com/users/54092/elle-najt/][Stack-exchange]]
+[[https://github.com/ElleNajt/][Github]]
+[[https://www.linkedin.com/in/elle-najt-35851034/][LinkedIn]]
