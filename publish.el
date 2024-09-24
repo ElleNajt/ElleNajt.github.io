@@ -2,7 +2,7 @@
 (setq org-publish-project-alist
       '(("my_blog"
          :base-directory "~/org/blog"
-         :publishing-directory "~/org/blog/html"
+         :publishing-directory "~/org/blog/docs"
          :recursive t
          :publishing-function org-html-publish-to-html
          ;; :html-link-home "index.html"
