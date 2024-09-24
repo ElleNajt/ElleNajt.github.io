@@ -5,12 +5,9 @@
 #+OPTIONS: html-link-org-files-as-html:t
 
 * I'm an org babel for data science evangelist!
-Seriously this is great -- it's changed my life.
+Seriously this is great -- it's changed my life. Will write more on that later.
 
 [[orgfile:../Code/OrgBabelExample/example.org::*Notebook][Notebook example]]
-
-** TODO actually that gets published to an html, how do I fix this
-** TODO Write a blog post explaining how this has changed my life
 
 * Org Mode
 ** <2024-09-23 Mon> Some struggles getting org publish to work, but I finally have a webpage
@@ -30,9 +27,10 @@ Seriously this is great -- it's changed my life.
 - so much slower in doom than batching it out , so I just emacs --batch -l ./publish.el
 *** TODO Fix latex exports
 
-* Dired
+* Dired features I'm enjoying
 
 ** wdired is magic
 ** ! then command (e.g. firefox) on the highlighted file = yay
 ** tab on a file
-**
+** M for changing permissions
+** Mapping W to dired-do-eww

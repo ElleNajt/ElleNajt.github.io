@@ -18,12 +18,13 @@
 
 (org-link-set-parameters
  "orgfile"
- :follow (lambda (path) (find-file path))
+ :follow (lambda (path) (find-file (car (split-string path "::"))))
  :export (lambda (path desc backend)
-           (cond
-            ((eq backend 'html)
-             (format "<a href=\"%s.org\">%s</a>" path (or desc path)))
-            (t
-             (format "[[file:%s.org][%s]]" path (or desc path))))))
+           (let ((clean-path (car (split-string path "::"))))
+             (cond
+              ((eq backend 'html)
+               (format "<a href=\"%s\">%s</a>" clean-path (or desc clean-path)))
+              (t
+               (format "[[file:%s][%s]]" clean-path (or desc clean-path)))))))
 
 (org-publish-all t)
