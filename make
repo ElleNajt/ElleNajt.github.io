@@ -7,6 +7,9 @@ rm -r ./docs/
 
 emacs --batch -l ./publish.el
 
+# TODO these symlinked things are not actually recognized by github hosting,
+# though they do work locally
+
 git_root=$(git rev-parse --show-toplevel)
 docs_folder="${git_root}/docs"
 find "$git_root" -mindepth 1 \

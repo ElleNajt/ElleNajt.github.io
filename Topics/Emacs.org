@@ -7,7 +7,7 @@
 * I'm an org babel for data science evangelist!
 Seriously this is great -- it's changed my life. Will write more on that later.
 
-[[orgfile:../Code/OrgBabelExample/example.org::*Notebook][Notebook example]]
+[[file:../Code/OrgBabelExample/example.org::*Notebook][Notebook example]]
 
 * Org Mode
 ** <2024-09-23 Mon> Some struggles getting org publish to work, but I finally have a webpage
@@ -20,12 +20,10 @@ Seriously this is great -- it's changed my life. Will write more on that later.
 (setq org-link-file-path-type 'relative)
    #+end_src
 
-   or possibly with the correct configuration in publish.el
-
- or possibly by making it a project,
+   or possibly with the correct configuration in publish.el (seems unlikely)
+ or possibly by making it a project in some kind of way that emacs recognized (e.g. making it a git repo) -- also seems unlikely
 
 - so much slower in doom than batching it out , so I just emacs --batch -l ./publish.el
-*** TODO Fix latex exports
 
 * Dired features I'm enjoying
 
