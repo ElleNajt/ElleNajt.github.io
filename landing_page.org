@@ -1,0 +1,23 @@
+#+SETUPFILE: ~/.doom.d/org-templates/standard.org
+#+title: Elle's webpage
+
+Welcome to my webpage! It's written in org mode!!
+
+* [[file:Topics/Emacs.org][Emacs:]]
+I love emacs and working on my workflow experience brings me a lot of happiness. :)
+This is a journal of features I learn about, or emacs lisp I write.
+
+* [[file:Topics/Math.org][Math Blog:]]
+I like learning math, and writing about what I'm learning clarifies things for me.
+
+* [[file:Topics/ComputerScience.org][Computer Science:]]
+I've been on an arc of getting better at software engineering skills and other aspects of computer touchery.
+
+* Blog:
+Meditation, Clowning, Burning Man, other adventures
+
+* [[file:Topics/Music.org][Music:]]
+
+I like music, and also make music.
+
+* Professional:

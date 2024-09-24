@@ -1,0 +1,14 @@
+#+SETUPFILE: ~/.doom.d/org-templates/standard.org
+#+title: Math
+
+Here are the math topics I'm interested in:
+
+* Statistics $\mathbb{P}(A)$
+
+* Assorted Pure Math  $\mathcal{F}$
+
+* Theoratical Computer Science $T(x)$
+
+* Competition Math $x + y \geq 2\sqrt{xy}$
+
+I wasn't very good at competition math in high school, so I'm enjoying learning how to become good at it as a means of doing some emotional processing and improving my general problem solving skills.
