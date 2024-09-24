@@ -5,9 +5,9 @@ Here are the math topics I'm interested in:
 
 * Statistics $\mathbb{P}(A)$
 
-* Assorted Pure Math  $\mathcal{F}$
+* Assorted Pure Math  $\mathcal{F}(X)$
 
-* Theoratical Computer Science $T(x)$
+* Theoretical Computer Science $T(x)$
 
 * Competition Math $x + y \geq 2\sqrt{xy}$
 
