@@ -6,17 +6,22 @@
 Seriously this is great -- it's changed my life. Will write more on that later.
 
 [[https://github.com/ElleNajt/ElleNajt.github.io/blob/master/Code/OrgBabelExample/example.org][Here's an example of an org babel file as a generic data science notebook!]]
+[[file:../Code/OrgBabelExample/example.org][Here's what it looks like when published to html.]]
 
 * Emacs is really fun, that's the main reason I like it.
+
+But Fun is a signal, not frivolity.
+Fun is leads to flow, and flow leads to deep work and curiosity creativity.
+
 * [[https://github.com/ElleNajt/emacs][Here's my emacs config!]]
+
 * Dired features I'm enjoying
 
-** wdired is magic
-** ! then command (e.g. firefox) on the highlighted file = yay
-** tab on a file
-** M for changing permissions
-** Mapping W to dired-do-eww
-
+- wdired is magic
+- ! then command (e.g. firefox) on the highlighted file = yay
+- tab on a file
+- M for changing permissions
+- Mapping W to dired-do-eww
 
 * Other org stuff
 ** <2024-09-23 Mon> Some struggles getting org publish to work, but I have a webpage

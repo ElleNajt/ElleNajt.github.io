@@ -1,8 +1,9 @@
 (require 'ox-publish)
 (setq org-publish-project-alist
-      '(("blog-pages"
-         :base-directory "~/org/blog"
-         :publishing-directory "~/org/blog/docs"
+      '(("personal_webpage-pages"
+         :base-directory "~/org/personal_webpage"
+         :publishing-directory "~/org/personal_webpage/docs"
+         :exclude "^docs/"
          :recursive t
          :publishing-function org-html-publish-to-html
          ;; :html-link-home "index.html"
@@ -13,16 +14,22 @@
          :with-toc nil
          :section-numbers nil
          :html-extension "html"
-         ;; :auto-preamble t
+         :auto-sitemap t
+         :auto-preamble t
+
+         ;; :auto-index t
+         ;; :make-index t
          )
-        ("blog-static"
-         :base-directory "~/org/blog"
+        ("personal_webpage-static"
+         :base-directory "~/org/personal_webpage"
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-         :publishing-directory "~/org/blog/docs"
+
+         :exclude "^docs/"
+         :publishing-directory "~/org/personal_webpage/docs"
          :recursive t
          :publishing-function org-publish-attachment
          )
-        ("blog" :components ("blog-pages" "blog-static"))
+        ("personal_webpage" :components ("personal_webpage-pages" "personal_webpage-static"))
         )
 
 
