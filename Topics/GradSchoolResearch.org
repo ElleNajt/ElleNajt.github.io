@@ -13,36 +13,25 @@ In this paper, we prove intractability results about sampling from the set of pa
 ** [[https://arxiv.org/abs/1905.03173][The Gerrymandering Jumble: Map Projections Permute Districts' Compactness Scores]]
 In political redistricting, the compactness of a district is used as a quantitative proxy for its fairness. Several well-established, yet competing, notions of geographic compactness are commonly used to evaluate the shapes of regions, including the Polsby-Popper score, the convex hull score, and the Reock score, and these scores are used to compare two or more districts or plans. In this paper, we prove mathematically that any map projection from the sphere to the plane reverses the ordering of the scores of some pair of regions for all three of these scores. Empirically, we demonstrate that the effect of using the Cartesian latitude-longitude projection on the order of Reock scores is quite dramatic.
 
-** Unfinished redistricting related research:
+** (Ongoing?) Further research into metamandering on real data.
 
+[[file:abstraction_correction.org::Correction to an abstract for a presentation:][I spoke about some of the in-progress work at the AMS Special Session on Partitioning and Redistricting, and have a correction to my abstract.]]
 
-*** Correction to an abstract for a presentation:
-
-Oct 22 - Presenting at the [AMS Special Session on Partitioning and Redistricting, I](https://meetings.ams.org/math/fall2022w/meetingapp.cgi/Paper/17358).
-
-I would like to note that the abstract I submitted contains, in my opinion, an important error. Since I cannot correct this error on the AMS webpage,  here is a corrected abstract:
-
-> Ensemble methods for identifying ’gerrymanders’ have become increasingly influential over the past decade, but the robustness of these methods to extraneous factors has been understudied. Ensemble methods work by building a collection of redistricting plans, and examining the properties of a proposed plan in relation to this collection. In (N., DeFord, Solomon), we investigated the sensitivity of several of these methods to the essentially arbitrary way that voting tabulation districts (VTDs) partition simplified political geography, and found that infinitesimal perturbations of VTD geometry lead to meaningfully different ensemble averages of the number of seats won by a particular party, a phenomenon that we called metamandering. These findings posed a challenge for the meaningfulness of the ’average seats won’ ensemble statistic and, therefore, its practical utility; however, it remained unclear to what extent similar examples existed on real data. I will report on my progress with Karrmann, Mark and Zhang on finding metamanders in real world data.
-
-The primary difference from the previous abstract is that I no longer believe that I was able to find meaningful metamandering examples of on real-world data using  infinitesimal pertubations in the same way as the grid graph examples. Of course, 'meaningful' is a weasel word, see rationality post-mortem below.
-
-However, my opinion remains that metamandering is possible for models of the world that are closer to reality than the grid graph. We are exploring an alternative strategy for real-world metamandering, based on infering votes on the census block level and picking agglomerations, which I will report progress on, in addition to explaining the current status of generalizing the infinitesimal shifts metamandering to real-data.
-
-Moreover, from a more philosophical point of view, my opinion is that the experiments from (N., DeFord, Solomon) independently make a strong case that we don't have a clear understanding of what ensemble methods are measuring, or whether they define a legitimate baseline. In other words,
-it is unclear whether these distributions over connected partitions refer to an observable reality, and this uncertainty is supported by their apparent non-robustness to small pertubations to VTDs of the grid graph. This is an independent question from whether metamandering attacks is a feasible manipulation on real-world data.
-
-Rationality post-mortem:
-1. I did not appropriately measure the 'signal-to-noise ratio' of the real-data experiment we ran (shift differences vs. inherent randomness), and this lead me to be overconfident that we had succesfully replicated 'metamandering' on real-world data.  In the submitted abstract, meaningfulness initially meant a little under half a seat out of 13 (depending on parameters), but I am not sure right now if this is meaningful compared to noise from  gerrychain (depending on parameters). (Experiment running to see, will update and clarify this.)
-2. I was overconfident about the richness of the search space for the strategy we developed to generalize grid-graph metamandering, and this lead to me to require less evidence for a meaningful shift than I should have required.
-3. Together these made me overconfident that finding a larger shift using our strategy was just a matter of turning up the compute. I currently believe that this assumption is is wrong, or at any rate a premature announcement: the large proportion of triangles in real world VTD dual graphs creates an obstruction to replicating the 'infinitesimal' shifts metamandering strategy, since it number of adjacencies that can be modified is small part of the map (~7% in NC). This, however, does not necessarily mean that this approach cannot work, and it is not an obstruction to other approaches to metamandering.
-y
-
-
-
-* Polytopes
+* Sampling problems
 ** [[file:../Code/Latex/PolytopePaper/The_intractability_of_uniformly_sampling_and_counting_the_vertices_of_a_polytope_under_branchwidth_constraints__Arxiv_Version_.pdf::%PDF-1.5][Uniform sampling of vertices of polytopes with bounded branchwidth is still hard]]
 
 Abstract: We consider the complexity of sampling vertices of a polytope. A theorem of Khachiyan uses the circulation polytope of a directed graph to show that this sampling problem is NP-hard, in the sense that a polynomial time sampler would imply NP = RP. It is known, also by work of Khachiyan et al., that the vertex enumeration problem is NP-hard for polyhedra, while it remains open for polytopes. However, bounding the branchwidth has been shown to provide a total polynomial time algorithm for the polytope vertex enumeration problem, and it is therefore natural to ask whether bounding branchwidth makes vertex sampling tractable. We investigate this question and demonstrate the NP-hardness of uniformly sampling vertices of a polytope given by $\{ Ax = b x \geq 0 \}$, where $A$ has branchwidth <= 4. To do so, we develop gadgets that build bounded branchwidth polytopes that have many vertices over certificates of an NP-hard problem. In an appendix, we apply this gadget to provide an alternative proof a recent theorem of Guo and Jerrum about sampling vertices from another class of polytopes. We also study some related questions, such as the branchwidth of the circulation polytope, and show that the vertices of a circulation polytope of bounded branchwidth can be sampled efficiently.
+
+** Sampling connected partitions for Bayesian statistics
+
+* The Legend of Zelda
+I had the great pleasure letting my inner child contribute a theorem to this paper:
+
+** [[https://thaijmath2.in.cmu.ac.th/index.php/thaijmath/article/view/1539][The Legend of Zelda: The Complexity of Mechanics]]
+Abstract: We analyze some of the many game mechanics available to Link in the classic Legend of Zelda series of video games. In each case, we prove that the generalized game with that mechanic is polynomial, NP-complete, NP-hard and in PSPACE, or PSPACE-complete. In the process we give an overview of many of the hardness proof techniques developed for video games over the past decade: the motion-planning-through-gadgets framework, the planar doors framework, the doors-and-buttons framework, the “Nintendo” platform game / SAT framework, and the collectible tokens and toll roads / Hamiltonicity framework.
+
+Erik Demaine's course on complexity lower bounds via video games was pedagogically brilliant: [[https://courses.csail.mit.edu/6.892/spring19/][Fun with Hardness Proofs]]
+Research and math education should be fun and playful! Scientific creativity is a form of play.
 
 * On asking for help:
 
