@@ -28,7 +28,8 @@ I obtained my math PhD Dec 2021 at the University of Wisconsin-Madison, advised 
 
 [[file:Topics/GradSchoolResearch.org][Here is a catalogue of the research I was involved in during graduate school.]]
 
-Jan 2018 - August 2019 I was a visitor in [[https://people.csail.mit.edu/jsolomon/][Justin Solomon's]] lab at MIT/CSAIL. I worked with him and Daryl DeFord to [[file:Topics/GradSchoolResearch.org::*Gerrymandering][analyze statistical techniques being used to evaluate gerrymandering.]]
+Jan 2018 - August 2019 I was a visitor in [[https://people.csail.mit.edu/jsolomon/][Justin Solomon's]] lab at MIT/CSAIL. I worked with him and
+[[https://www.math.wsu.edu/faculty/ddeford/][Daryl DeFord]] to [[file:Topics/GradSchoolResearch.org::*Gerrymandering][analyze statistical techniques being used to evaluate gerrymandering.]]
 
 I currently work as a data scientist on a systematic trading team at Two Sigma. I like it!
 
