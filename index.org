@@ -5,9 +5,10 @@ Welcome to my webpage! It's written in org mode!!
 
 * [[file:Topics/Emacs.org][Emacs:]]
 I love emacs and working on my workflow experience brings me a lot of happiness. :)
-This is a journal of features I learn about, or emacs lisp I write.
 
-* [[file:Topics/Math.org][Math Blog:]]
+I like sharing the cool features I find, or the things I hack on and add.
+
+* [[file:Topics/Math.org][Math:]]
 I like learning math, and writing about what I'm learning clarifies things for me.
 
 * [[file:Topics/ComputerScience.org][Computer Science:]]
@@ -24,6 +25,8 @@ Things that benefit me through their consumption; tools, thoughts, medicine.
 
 * Professional:
 I obtained my math PhD Dec 2021 at the University of Wisconsin-Madison, advised by [[http://www.math.wisc.edu/~ellenber/][Jordan Ellenberg]].
+
+[[file:Topics/GradSchoolResearch.org][Here is a catalogue of the research I was involved in during graduate school.]]
 
 Jan 2018 - August 2019 I was a visitor in [[https://people.csail.mit.edu/jsolomon/][Justin Solomon's]] lab at MIT/CSAIL. I worked with him and Daryl DeFord to [[file:Topics/GradSchoolResearch.org::*Gerrymandering][analyze statistical techniques being used to evaluate gerrymandering.]]
 
