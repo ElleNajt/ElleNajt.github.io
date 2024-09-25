@@ -1,44 +1,51 @@
-#+SETUPFILE: ~/.doom.d/org-templates/standard.org
 #+title: Emacs
 #+PROPERTY: :exports both
 
+[[https://github.com/ElleNajt/emacs][Here's my emacs config!]]
+
 * I'm an org babel for data science evangelist!
-Seriously this is great -- it's changed my life. Will write more on that later.
 
 [[https://github.com/ElleNajt/ElleNajt.github.io/blob/master/Code/OrgBabelExample/example.org][Here's an example of an org babel file as a generic data science notebook!]]
 [[file:../Code/OrgBabelExample/example.org][Here's what it looks like when published to html.]]
 
-* Emacs is really fun, that's the main reason I like it.
+Seriously this is great -- it's changed my life.
 
-But Fun is a signal, not frivolity.
-Fun is leads to flow, and flow leads to deep work and curiosity creativity.
+** TODO Write a post about this.
+SCHEDULED: <2024-09-25 Wed>
 
-* [[https://github.com/ElleNajt/emacs][Here's my emacs config!]]
+* Emacs is really fun, that's the main reason I like it!
 
-* Dired features I'm enjoying
+Fun is a signal, not frivolity.
+Fun is leads to flow, and flow leads to deep work and curiosity and creativity.
+All of this leads to more productivity, but that's not the main point.
+Much like meditation.
 
+* Favorite features:
+** Dired:
 - wdired is magic
 - ! then command (e.g. firefox) on the highlighted file = yay
 - tab on a file
 - M for changing permissions
 - Mapping W to dired-do-eww
 
-* Other org stuff
-** <2024-09-23 Mon> Some struggles getting org publish to work, but I have a webpage
-- Publish seems confused by folders that have spaces?
-- auto inserted links ( via SPC n l -> C-c C-l workflow) were not always relative, which lead to links breaking. I think this was fixed with:
+** Org todos / agenda
+
+I love that I can collect todos from my org babel notebooks! No more running todo lists, org just collects them in their natural contexts.
+
+** Org publish:
+*** Cool features:
+- I can drop todos in my webpage and have them hidden by default by visible in my agenda.
+*** Challenges I ran into :
+
+- Needed to set (org-store-link) to be relative by default; otherwise depending on folder structure emacs can insert them as absolute paths, which results in links in the published page that point to files that don't exist.
 
    #+begin_src elisp
-
-(setq org-link-file-path-type 'relative)
+   (setq org-link-file-path-type 'relative)
    #+end_src
 
-- Calling publish from doom is slow on my machine (probably downstream of it being somewhat slow to load an org file for the first time in my config on my virtual machine) so I run:
 
-  #+begin_src bash
-
-  emacs --batch -l ./publish.el
-  #+end_src
+- I don't know how to get publish to handle links to files in folders that have spaces
+***** TODO Fix the spaces in folders stuff.
+***** TODO Also make auto-index work, it's not respecting folder structure.
 
 
-- Now that it's working it's awesome though. :)

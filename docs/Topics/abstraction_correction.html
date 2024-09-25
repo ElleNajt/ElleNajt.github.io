@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-09-24 Tue 23:12 -->
+<!-- 2024-09-25 Wed 11:10 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Abstraction Correction</title>
@@ -197,50 +197,51 @@
 <div id="content" class="content">
 <h1 class="title">Abstraction Correction</h1>
 
-<div id="outline-container-org4a585a7" class="outline-2">
-<h2 id="org4a585a7">Correction to an abstract for a presentation:</h2>
-<div class="outline-text-2" id="text-org4a585a7">
+<div id="outline-container-org68415f2" class="outline-2">
+<h2 id="org68415f2"><span class="section-number-2">1.</span> Correction to an abstract for a presentation:</h2>
+<div class="outline-text-2" id="text-1">
 <p>
-2022 Oct 22 - I presented at the [AMS Special Session on Partitioning and Redistricting, I](<a href="https://meetings.ams.org/math/fall2022w/meetingapp.cgi/Paper/17358">https://meetings.ams.org/math/fall2022w/meetingapp.cgi/Paper/17358</a>).
+2022 Oct 22 - I presented at the [AMS Special Session on Partitioning and Redistricting, I](<a href="https://meetings.ams.org/math/fall2022w/meetingapp.cgi/Paper/17358">https://meetings.ams.org/math/fall2022w/meetingapp.cgi/Paper/17358</a>).<br />
 </p>
 
 <p>
-The abstract I submitted contains, in my opinion, an important error. Since I cannot correct this error on the AMS webpage,  here is a corrected abstract:
+The abstract I submitted contains, in my opinion, an important error. Since I cannot correct this error on the AMS webpage,  here is a corrected abstract:<br />
 </p>
 
 <p>
-&gt; Ensemble methods for identifying ’gerrymanders’ have become increasingly influential over the past decade, but the robustness of these methods to extraneous factors has been understudied. Ensemble methods work by building a collection of redistricting plans, and examining the properties of a proposed plan in relation to this collection. In (N., DeFord, Solomon), we investigated the sensitivity of several of these methods to the essentially arbitrary way that voting tabulation districts (VTDs) partition simplified political geography, and found that infinitesimal perturbations of VTD geometry lead to meaningfully different ensemble averages of the number of seats won by a particular party, a phenomenon that we called metamandering. These findings posed a challenge for the meaningfulness of the ’average seats won’ ensemble statistic and, therefore, its practical utility; however, it remained unclear to what extent similar examples existed on real data. I will report on my progress with Karrmann, Mark and Zhang on finding metamanders in real world data.
+&gt; Ensemble methods for identifying ’gerrymanders’ have become increasingly influential over the past decade, but the robustness of these methods to extraneous factors has been understudied. Ensemble methods work by building a collection of redistricting plans, and examining the properties of a proposed plan in relation to this collection. In (N., DeFord, Solomon), we investigated the sensitivity of several of these methods to the essentially arbitrary way that voting tabulation districts (VTDs) partition simplified political geography, and found that infinitesimal perturbations of VTD geometry lead to meaningfully different ensemble averages of the number of seats won by a particular party, a phenomenon that we called metamandering. These findings posed a challenge for the meaningfulness of the ’average seats won’ ensemble statistic and, therefore, its practical utility; however, it remained unclear to what extent similar examples existed on real data. I will report on my progress with Karrmann, Mark and Zhang on finding metamanders in real world data.<br />
 </p>
 
 <p>
-The primary difference from the previous abstract is that I no longer believe that I was able to find meaningful metamandering examples of on real-world data using  infinitesimal pertubations in the same way as the grid graph examples. Of course, 'meaningful' is a weasel word, see rationality post-mortem below.
+The primary difference from the previous abstract is that I no longer believe that I was able to find meaningful metamandering examples of on real-world data using  infinitesimal pertubations in the same way as the grid graph examples. Of course, &rsquo;meaningful&rsquo; is a weasel word, see rationality post-mortem below.<br />
 </p>
 
 <p>
-However, my opinion remains that metamandering is possible for models of the world that are closer to reality than the grid graph. We are exploring an alternative strategy for real-world metamandering, based on infering votes on the census block level and picking agglomerations, which I will report progress on, in addition to explaining the current status of generalizing the infinitesimal shifts metamandering to real-data.
+However, my opinion remains that metamandering is possible for models of the world that are closer to reality than the grid graph. We are exploring an alternative strategy for real-world metamandering, based on infering votes on the census block level and picking agglomerations, which I will report progress on, in addition to explaining the current status of generalizing the infinitesimal shifts metamandering to real-data.<br />
 </p>
 
 <p>
-Moreover, from a more philosophical point of view, my opinion is that the experiments from (N., DeFord, Solomon) independently make a strong case that we don't have a clear understanding of what ensemble methods are measuring, or whether they define a legitimate baseline. In other words,
-it is unclear whether these distributions over connected partitions refer to an observable reality, and this uncertainty is supported by their apparent non-robustness to small pertubations to VTDs of the grid graph. This is an independent question from whether metamandering attacks is a feasible manipulation on real-world data.
+Moreover, from a more philosophical point of view, my opinion is that the experiments from (N., DeFord, Solomon) independently make a strong case that we don&rsquo;t have a clear understanding of what ensemble methods are measuring, or whether they define a legitimate baseline. In other words,<br />
+it is unclear whether these distributions over connected partitions refer to an observable reality, and this uncertainty is supported by their apparent non-robustness to small pertubations to VTDs of the grid graph. This is an independent question from whether metamandering attacks is a feasible manipulation on real-world data.<br />
 </p>
 
 <p>
-Rationality post-mortem:
+Rationality post-mortem:<br />
 </p>
 <ol class="org-ol">
-<li>I did not appropriately measure the 'signal-to-noise ratio' of the real-data experiment we ran (shift differences vs. inherent randomness), and this lead me to be overconfident that we had succesfully replicated 'metamandering' on real-world data.  In the submitted abstract, meaningfulness initially meant a little under half a seat out of 13 (depending on parameters), but I am not sure right now if this is meaningful compared to noise from  gerrychain (depending on parameters). (Experiment running to see, will update and clarify this.)</li>
-<li>I was overconfident about the richness of the search space for the strategy we developed to generalize grid-graph metamandering, and this lead to me to require less evidence for a meaningful shift than I should have required.</li>
-<li>Together these made me overconfident that finding a larger shift using our strategy was just a matter of turning up the compute. I currently believe that this assumption is is wrong, or at any rate a premature announcement: the large proportion of triangles in real world VTD dual graphs creates an obstruction to replicating the 'infinitesimal' shifts metamandering strategy, since it number of adjacencies that can be modified is small part of the map (~7% in NC). This, however, does not necessarily mean that this approach cannot work, and it is not an obstruction to other approaches to metamandering.</li>
+<li>I did not appropriately measure the &rsquo;signal-to-noise ratio&rsquo; of the real-data experiment we ran (shift differences vs. inherent randomness), and this lead me to be overconfident that we had succesfully replicated &rsquo;metamandering&rsquo; on real-world data.  In the submitted abstract, meaningfulness initially meant a little under half a seat out of 13 (depending on parameters), but I am not sure right now if this is meaningful compared to noise from  gerrychain (depending on parameters). (Experiment running to see, will update and clarify this.)<br /></li>
+<li>I was overconfident about the richness of the search space for the strategy we developed to generalize grid-graph metamandering, and this lead to me to require less evidence for a meaningful shift than I should have required.<br /></li>
+<li>Together these made me overconfident that finding a larger shift using our strategy was just a matter of turning up the compute. I currently believe that this assumption is is wrong, or at any rate a premature announcement: the large proportion of triangles in real world VTD dual graphs creates an obstruction to replicating the &rsquo;infinitesimal&rsquo; shifts metamandering strategy, since it number of adjacencies that can be modified is small part of the map (~7% in NC). This, however, does not necessarily mean that this approach cannot work, and it is not an obstruction to other approaches to metamandering.<br /></li>
 </ol>
 <p>
-y
+y<br />
 </p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2024-09-24 Tue 23:12</p>
+<p class="date">Created: 2024-09-25 Wed 11:10</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.4 (<a href="https://orgmode.org">Org</a> mode 9.6.15)</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

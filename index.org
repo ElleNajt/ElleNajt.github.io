@@ -1,4 +1,3 @@
-#+SETUPFILE: ~/.doom.d/org-templates/standard.org
 #+title: Elle Najt's webpage
 
 Welcome to my webpage! It's written in org mode!!

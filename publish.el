@@ -1,4 +1,25 @@
 (require 'ox-publish)
+
+;; https://emacs.stackexchange.com/questions/7438/how-to-include-other-org-files-programmatically-ie-not-from-main-org-file
+;; (setq org-html-head-include-default-style nil)
+;; (setq org-html-head " ")
+
+(setq elle/org-setup-file "~/.doom.d/org-templates/webpage_headers.org")
+(defun elle/org-export-setup (backend)
+  (interactive)
+  (save-excursion
+    (progn
+      (goto-char (point-min))
+      (insert "#+SETUPFILE: ")
+      (insert elle/org-setup-file)
+      (insert "\n")
+      )
+    )
+  )
+
+(add-hook 'org-export-before-processing-hook
+          'elle/org-export-setup)
+
 (setq org-publish-project-alist
       '(("personal_webpage-pages"
          :base-directory "~/org/personal_webpage"

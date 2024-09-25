@@ -1,4 +1,3 @@
-#+SETUPFILE: ~/.doom.d/org-templates/standard.org
 #+title: Math
 
 Here are the math topics I'm interested in:
@@ -19,7 +18,6 @@ Some favorite theorems:
 A lot of my favorite theorems are arguably theoretical computer science, here are some cool ones:
 
 - Rapid mixing of the basis-exchange-walk on spanning trees of a graph: Take a graph $G$, and let $\mathcal{T}$ be the set of spanning trees of the graph. There is a random walk on $\mathcal{T}$ wherein standing at a tree $T$ you take an edge in $G \setminus E(T)$ -- in $G$ but not an edge of $T$ - and add it to T, forming a cycle in $T$,  and then you delete a random edge in that cycle. This mixes rapidly, so after a polynomial in $|G|$ number of steps you're at approximately a uniformly random spanning tree.
--
 
 * Competition Math $x + y \geq 2\sqrt{xy}$
 
