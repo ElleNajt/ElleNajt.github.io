@@ -1,6 +1,6 @@
 #+title: Abstraction Correction
 
-Correction to an abstract for a presentation:
+* Correction to an abstract for a presentation:
 
 2022 Oct 22 - I presented at the [AMS Special Session on Partitioning and Redistricting, I](https://meetings.ams.org/math/fall2022w/meetingapp.cgi/Paper/17358).
 
