@@ -25,4 +25,16 @@ I wasn't very good at competition math in high school, so I'm enjoying learning 
 
 ** Some problem solving lessons I'm learning:
 *** <2024-09-26 Thu> I can get stuck in an overly formal way of thinking about problems; e.g. pattern matching what I see against facts I know. It can be useful to notice mindfully when I'm in that mindset and step back into a more heuristic and embodied mindframe.
-*** Mistakes can lead to solutions; it's important to not avoid thinking about how to correct an error out of avoidant shame around doing something "dumb." This effect can be very subtle! Forgive yourself for not understanding. ^^
+*** <2024-09-19 Thu> Mistakes can lead to solutions; it's important to not avoid thinking about how to correct an error out of avoidant shame around doing something "dumb." This effect can be very subtle! Forgive yourself for not understanding. ^^
+
+#+begin_src qoute
+To fear the error and to fear the truth are one and the same. One who fears to
+be wrong is powerless to discover. It is when we are afraid of making mistakes
+that the mistake inside us becomes immovable like a rock.  Because in our fear,
+we cling to what we have decreed to be “true”, or what has always been presented
+to us as “true”. If we are moved, not by the fear of seeing an illusory security
+vanish, but by a thirst for knowing, then error, like suffering or sorrow, will
+cross us without ever becoming frozen, and the trace of its passage will be a
+renewed understanding.
+- Alexander Grothendieck
+#+end_src

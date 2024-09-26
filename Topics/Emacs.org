@@ -21,10 +21,15 @@ Fun is a signal, not frivolity.
 Fun is leads to flow, and flow leads to deep work and curiosity and creativity.
 All of this leads to more productivity.
 
+
+* I also find that the transient menu style interface works fits much better in my brain than CLI or standard UXs. I
+
+
 * Favorite features:
 ** Dired:
 - wdired is magic
-- ! then command (e.g. firefox) on the highlighted file = yay
+- ! or & then command (e.g. firefox) on the highlighted file(s) = yay
+  it's also smart about guessing what you want to do!
 - tab on a file
 - M for changing permissions
 - Mapping W to dired-do-eww

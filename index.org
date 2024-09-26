@@ -2,7 +2,7 @@
 
 Welcome to my webpage!
 
-It was written in Emac's org mode!!
+I'm currently building it using Emac's org mode!
 
 * [[file:Topics/Emacs.org][Emacs]]
 I love emacs and working on my workflow experience brings me a lot of happiness. :)
@@ -13,7 +13,7 @@ I like sharing the cool features I find, or the things I hack on and add.
 I like learning math, and writing about what I'm learning clarifies things for me.
 
 * [[file:Topics/ComputerScience.org][Computer Science]]
-I've been on an arc of getting better at software engineering skills and other aspects of computer touchery.
+I've been on an arc of getting better at software engineering skills and other aspects of computer useage.
 
 * [[file:Topics/Personal.org][Personal]]
 Meditation, Clowning, Burning Man, other adventures...
