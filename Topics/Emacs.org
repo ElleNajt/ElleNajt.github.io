@@ -44,7 +44,7 @@ See this inspiring [[https://karthinks.com/software/latex-input-for-impatient-sc
 
 ** Magit
 
-I don't think I would have learned git so throughoughly without magit.
+I don't think I would have learned git so thoroughly without magit.
 
 ** Dired
 

@@ -1,5 +1,7 @@
 #+title: (Non-theoretical) Computer Science
 
+I've been having fun this past year or so going deeper into computer science tooling, here are the ones I've been spending the most time with, and the opinions I've developed.
+
 * Tools I love:
 
 ** Emacs
@@ -45,7 +47,9 @@ Did I mention emacs is great?
 This is less of a tool, but I love test driven development -- it makes for a fun feedback loop, and it's comforting to be able to refactor with confidence.
 
 Recently I've been experimenting with using org babel files as literate expect tests -- I like that you get documentation and tests at the same time!
+
 * Opinions:
+
 ** Safe to fail
 
 A thing that tools I like have in common is that they're safe to fail in, or they make it safe to fail.
