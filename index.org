@@ -1,6 +1,8 @@
 #+title: Elle Najt's webpage
 
-Welcome to my webpage! It's written in org mode!!
+Welcome to my webpage!
+
+It was written in Emac's org mode!!
 
 * [[file:Topics/Emacs.org][Emacs]]
 I love emacs and working on my workflow experience brings me a lot of happiness. :)
