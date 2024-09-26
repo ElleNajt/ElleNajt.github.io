@@ -1,6 +1,8 @@
 #+title: Emacs
 #+PROPERTY: :exports both
 
+* Config:
+
 [[https://github.com/ElleNajt/emacs][Here's my emacs config!]]
 
 * I'm an org babel for data science evangelist!

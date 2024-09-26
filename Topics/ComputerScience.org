@@ -4,13 +4,19 @@
 
 ** Emacs
 
-I have a whole page for emacs, but it deserves a bullet here.
+I have a [[file:Emacs.org][a whole page about emacs]], but it deserves a bullet here.
 
 I love being able to shape my editor into a glove that fits me and my idiosyncrasies. It's so much better than shaping myself to fit an awkward tool. Getting good at emacs has made development a million times more fun, and this leads to more flow, and to more creativity.
 
 ** Org babel
 
-Although I'm a professional data scientist, I don't use jupyter notebooks, I use org babel!
+Although I'm a professional data scientist, I don't use jupyter notebooks, I use org babel in Emacs org mode!
+
+This is great because it enables
+- Reproducible science via version controlled text based notebooks
+- Notebooks that are integrated with org modes project management system.
+- Being part of the vast emacs ecosystem
+- Being really aesthetic and fun, and just as extensible as the rest of emacs.
 
 ** Nix
 
@@ -26,27 +32,35 @@ I also use nix as my package manager for python environments at home. Sometimes 
 
 I love git so much.
 
-I didn't always love git, I used to be afraid of messing things up, but now I understand that it's a tool that enables safe experimentation.
+I didn't always love git, I used to be afraid of messing things up, but now I understand that it's a tool that enables safe experimentation. It's quite the opposite!
 
-Quite the opposite!
-
-I asked for help from more senior developers and got a lot of it, and did deliberate practice by using it at every opportunity, and [[https://git-scm.com/book/en/v2][studied pro-git closely]].
-
-Emac's built in porcelein git wrapper Magit was also really helpful, since it meant I didn't have to remember lots of commands, and the menu of options made my option space concrete in a way that is hard with command lines.
+I changed by asking for help from more senior developers and getting a lot of it, and using git constantly because of Emac's built in gitwrapper Magit. Magit was great since it meant I didn't have to remember lots of commands, and the menu of options made my option space concrete in a way that is hard with command lines.
 
 Did I mention emacs is great?
+
+[[https://git-scm.com/book/en/v2][The book pro-git was also a great reference.]].
 
 ** Tests!
 
 This is less of a tool, but I love test driven development -- it makes for a fun feedback loop, and it's comforting to be able to refactor with confidence.
 
 Recently I've been experimenting with using org babel files as literate expect tests -- I like that you get documentation and tests at the same time!
-
-* Safe to fail
+* Opinions:
+** Safe to fail
 
 A thing that tools I like have in common is that they're safe to fail in, or they make it safe to fail.
 I like to learn by experimenting with things.
 - Broke your nixos config? Just boot an earlier one. Plus it's version controlled with git.
 - Unclear if something works? That's what tests are for.
 
-* You can just get good at things!
+** Fun
+
+It's good when tools are fun and create flow. When you're engaged you're at your best, so you should optimize for fun!
+
+** Design tools to fit yourself, don't bend yourself to fit tools.
+
+Being able to iterating on a tool that fits you like a glove is one of the beauties of a system like emacs.
+
+** You can just get good at things!
+
+A cousin of "you can just do things!"

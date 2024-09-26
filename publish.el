@@ -12,6 +12,8 @@
       (goto-char (point-min))
       (insert "#+SETUPFILE: ")
       (insert elle/org-setup-file)
+      ;; (insert "#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-bigblow.setup")
+      (message "SETUPFILE inserted for %s" (buffer-file-name))
       (insert "\n")
       )
     )
@@ -24,7 +26,7 @@
       '(("personal_webpage-pages"
          :base-directory "~/org/personal_webpage"
          :publishing-directory "~/org/personal_webpage/docs"
-         :exclude "^docs/"
+         :exclude "^docs/.*\\|todo\\.org\\|drafts/.*"
          :recursive t
          :publishing-function org-html-publish-to-html
          ;; :html-link-home "index.html"
@@ -40,6 +42,7 @@
 
          ;; :auto-index t
          ;; :make-index t
+         ;; :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/stylesheet.css\" />"
          )
         ("personal_webpage-static"
          :base-directory "~/org/personal_webpage"
@@ -55,5 +58,8 @@
 
 
       )
-
+;; (setq org-html-head-include-default-style nil)
+(setq user-mail-address "LNAJT4@gmail.com")
+(setq user-full-name "Elle Najt")
 (org-publish-all t)
+

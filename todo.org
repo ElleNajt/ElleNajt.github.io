@@ -1,0 +1,5 @@
+#+title: Todo
+
+* TODO switch to emacsclient batch
+* TODO get styling to wokr properly from the css
+[[file:../../.doom.d/org-templates/webpage_headers.org]]

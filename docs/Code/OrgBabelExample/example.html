@@ -3,10 +3,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-09-25 Wed 11:10 -->
+<!-- 2024-09-26 Thu 00:03 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Scratch</title>
+<meta name="author" content="Elle Najt" />
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -192,6 +193,7 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<link rel="stylesheet" type="text/css" href="https://orgmode.org/worg/style/worg.css"/>
 </head>
 <body>
 <div id="content" class="content">
@@ -200,9 +202,9 @@
 This is an example of using org babel as a jupyter replacement!<br />
 </p>
 
-<div id="outline-container-org5e5624b" class="outline-2">
-<h2 id="org5e5624b"><span class="section-number-2">1.</span> Notebook</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orgcd45325" class="outline-2">
+<h2 id="orgcd45325">Notebook</h2>
+<div class="outline-text-2" id="text-orgcd45325">
 <div class="org-src-container">
 <pre class="src src-python">import pandas as pd
 import seaborn as sns
@@ -430,11 +432,76 @@ Here&rsquo;s some data!<br />
 <img src="plots/example/plot_20240923_191658_2502127.png" alt="plot_20240923_191658_2502127.png" /><br />
 Cell Timer: 0:00:01<br />
 </p>
+
+<div class="org-src-container">
+<pre class="src src-python">import numpy as np
+
+def iterate_values(values, iterations=10):
+    # Convert the input list to a NumPy array
+    values = np.array(values)
+
+    # Initialize the sum of squares for the first iteration
+    previous_sum_of_squares = np.sum(values ** 2)
+
+    # Perform the iteration process
+    for i in range(iterations):
+        # Compute the difference between consecutive elements using np.roll
+        values = values - np.roll(values, -1)
+
+        # Calculate the current sum of squares
+        current_sum_of_squares = np.sum(values ** 2)
+
+        # Print the current values, sum of squares, and ratio to previous sum
+        if i == 0:
+            print(f"Iteration {i+1}: {values}, Sum of squares: {current_sum_of_squares}")
+        else:
+            ratio = current_sum_of_squares / previous_sum_of_squares
+            print(f"Iteration {i+1}: {values}, Sum of squares: {current_sum_of_squares}, Ratio to previous: {ratio}")
+
+        # Update previous_sum_of_squares for the next iteration
+        previous_sum_of_squares = current_sum_of_squares
+
+    return values
+
+# Example usage for k=4
+initial_values = [0, 0, 0,5]  # Replace with any integers
+final_values = iterate_values(initial_values, iterations=20)
+print("Final values after iterations:", final_values)
+</pre>
+</div>
+
+<p>
+Iteration 1: [ 0  0 -5  5], Sum of squares: 50<br />
+Iteration 2: [  0   5 -10   5], Sum of squares: 150, Ratio to previous: 3.0<br />
+Iteration 3: [ -5  15 -15   5], Sum of squares: 500, Ratio to previous: 3.3333333333333335<br />
+Iteration 4: [-20  30 -20  10], Sum of squares: 1800, Ratio to previous: 3.6<br />
+Iteration 5: [-50  50 -30  30], Sum of squares: 6800, Ratio to previous: 3.7777777777777777<br />
+Iteration 6: [-100   80  -60   80], Sum of squares: 26400, Ratio to previous: 3.8823529411764706<br />
+Iteration 7: [-180  140 -140  180], Sum of squares: 104000, Ratio to previous: 3.9393939393939394<br />
+Iteration 8: [-320  280 -320  360], Sum of squares: 412800, Ratio to previous: 3.9692307692307693<br />
+Iteration 9: [-600  600 -680  680], Sum of squares: 1644800, Ratio to previous: 3.9844961240310077<br />
+Iteration 10: [-1200  1280 -1360  1280], Sum of squares: 6566400, Ratio to previous: 3.992217898832685<br />
+Iteration 11: [-2480  2640 -2640  2480], Sum of squares: 26240000, Ratio to previous: 3.996101364522417<br />
+Iteration 12: [-5120  5280 -5120  4960], Sum of squares: 104908800, Ratio to previous: 3.998048780487805<br />
+Iteration 13: [-10400  10400 -10080  10080], Sum of squares: 419532800, Ratio to previous: 3.9990239141044412<br />
+Iteration 14: [-20800  20480 -20160  20480], Sum of squares: 1677926400, Ratio to previous: 3.999511837930193<br />
+Iteration 15: [-41280  40640 -40640  41280], Sum of squares: 6711296000, Ratio to previous: 3.999755889173685<br />
+Iteration 16: [-81920  81280 -81920  82560], Sum of squares: 26844364800, Ratio to previous: 3.999877937137626<br />
+Iteration 17: [-163200  163200 -164480  164480], Sum of squares: 107375820800, Ratio to previous: 3.9999389667063383<br />
+Iteration 18: [-326400  327680 -328960  327680], Sum of squares: 429500006400, Ratio to previous: 3.999969482887529<br />
+Iteration 19: [-654080  656640 -656640  654080], Sum of squares: 1717993472000, Ratio to previous: 3.999984741327352<br />
+Iteration 20: [-1310720  1313280 -1310720  1308160], Sum of squares: 6871960780800, Ratio to previous: 3.9999923706345726<br />
+Final values after iterations:<br />
+[-1310720  1313280 -1310720  1308160]<br />
+Cell Timer: 0:00:00<br />
+</p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2024-09-25 Wed 11:10</p>
+<p class="author">Author: Elle Najt</p>
+<p class="email">Email: <a href="mailto:LNAJT4@gmail.com">LNAJT4@gmail.com</a></p>
+<p class="date">Created: 2024-09-26 Thu 00:03</p>
 <p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.4 (<a href="https://orgmode.org">Org</a> mode 9.6.15)</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>

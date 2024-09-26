@@ -5,8 +5,8 @@ body {
   max-width: 900px;
   line-height: 1.6;
   font-size: 16px;
-  background: #f8f3ff;
-  color: #3a1616;
+  background: #0c0a20; /* Dark purple background */
+  color: #f2f3f7; /* Light text */
   padding: 0 10px;
   font-family: Inter, sans-serif;
 }
@@ -27,24 +27,23 @@ input {
   padding: 10px 16px;
   margin: 2px 0;
   box-sizing: border-box;
-  border: 2px solid #dabebe;
+  border: 2px solid #ff9b50; /* Bright orange for inputs */
   border-radius: 6px;
-  background: #f8f3ff;
-  color: #3a1616;
+  background: #090819; /* Dark background for input */
+  color: #f2f3f7; /* Light text */
   font-size: 16px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   outline: 0;
 }
 
 input:focus {
-  border: 2px solid #3a1616;
+  border: 2px solid #42c6ff; /* Neon blue border on focus */
 }
 
 .button {
-  background-color: #f8f3ff;
+  background-color: #0c0a20; /* Dark button background */
   border: none;
-  color: #000;
+  color: #ff2afc; /* Neon pink text */
   padding: 6px 14px;
   text-align: center;
   text-decoration: none;
@@ -53,13 +52,13 @@ input:focus {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  border: 2px solid #3a1616;
+  border: 2px solid #ff2afc; /* Neon pink border */
   border-radius: 6px;
 }
 
 .button:hover {
-  background-color: #3a1616;
-  color: #fff;
+  background-color: #ff2afc; /* Neon pink background on hover */
+  color: #fff; /* White text on hover */
 }
 
 .isa_error,
@@ -72,68 +71,140 @@ input:focus {
 }
 
 .isa_info {
-  color: #00529b;
-  background-color: #bde5f8;
+  color: #42c6ff; /* Neon blue info */
+  background-color: #090819; /* Dark background */
 }
 
 .isa_success {
-  color: #4f8a10;
-  background-color: #dff2bf;
+  color: #a7da1e; /* Bright green success */
+  background-color: #0c0a20;
 }
 
 .isa_warning {
-  color: #9f6000;
-  background-color: #feefb3;
+  color: #ffd400; /* Neon yellow warning */
+  background-color: #0c0a20;
 }
 
 .isa_error {
-  color: #d8000c;
-  background-color: #ffd2d2;
+  color: #ff2e97; /* Neon red error */
+  background-color: #0c0a20;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   line-height: 1.2;
   font-family: Inter, sans-serif;
 }
 
-h1.title,
-h2.title,
-h3.title {
+h1.title, h2.title, h3.title {
   text-align: left;
   margin-bottom: 1.5em;
+  color: #A875FF; /* Purple for headings */
 }
 
-h2 {
-  font-size: 18px;
-}
 
 img {
   max-width: 750px;
   border-radius: 10px;
+  border: 3px solid #42c6ff; /* Neon blue border for images */
 }
 
 a {
   cursor: pointer;
-  color: #217ab7;
+  color: #42c6ff; /* Neon blue links */
   line-height: inherit;
 }
 
 a:hover {
-  background-color: #e3d6ff;
+  background-color: #d8a7ff; /* Softer lavender-pink hover effect */
 }
 
-a:visited {
-  color: #43458b;
-  border-color: #43458b;
+a:hover {
+  background-color: rgba(216, 167, 255, 0.2); /* Very soft lavender with reduced opacity */
 }
 
 pre {
   font-family: Inconsolata, monospace;
+  background: #090819; /* Dark background for code */
+  color: #ff9b50; /* Bright orange text for code */
+  padding: 10px;
+  border-radius: 6px;
 }
 
 ::selection {
   color: #fff;
-  background: #ff4081;
+
+  background-color: #ff79c6; /* Softer pink hover effect */
+  background: #ff4081; /* Bright pink selection */
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-left: 0; /* Remove any default left margin */
+  padding-left: 0; /* Remove any padding that could interfere */
+}
+/* Indentation for headings and their content */
+h1 {
+  margin-left: 0;
+  font-size: 4em; /* Larger font for h1 */
+}
+
+h2 {
+  margin-left: 20px;
+  font-size: 2.5em; /* Slightly smaller font for h2 */
+}
+
+h3 {
+  margin-left: 40px;
+  font-size: 2.2em; /* Smaller font for h3 */
+}
+
+h4 {
+  margin-left: 60px;
+  font-size: 1.6em; /* Even smaller font for h4 */
+}
+
+h5 {
+  margin-left: 80px;
+  font-size: 1.4em; /* Smaller font for h5 */
+}
+
+h6 {
+  margin-left: 100px;
+  font-size: 1.2em; /* Smallest font for h6 */
+}
+
+/* Indentation for content directly below each heading level */
+h1 + *, h1 + * + * {
+  margin-left: 0;
+}
+
+h2 + *, h2 + * + * {
+  margin-left: 20px;
+}
+
+h3 + *, h3 + * + * {
+  margin-left: 40px;
+}
+
+h4 + *, h4 + * + * {
+  margin-left: 60px;
+}
+
+h5 + *, h5 + * + * {
+  margin-left: 80px;
+}
+
+h6 + *, h6 + * + * {
+  margin-left: 100px;
+}
+
+/* Indentation for nested list items */
+ul ul, ol ol {
+  margin-left: 20px;
+}
+
+ul ul ul, ol ol ol {
+  margin-left: 40px;
+}
+
+ul ul ul ul, ol ol ol ol {
+  margin-left: 60px;
 }
