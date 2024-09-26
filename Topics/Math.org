@@ -15,10 +15,14 @@ Some favorite theorems:
 
 * Theoretical Computer Science $T(x)$
 
-A lot of my favorite theorems are arguably theoretical computer science, here are some cool ones:
+A lot of my favorite theorems are theoretical computer science, here are some cool ones:
 
 - Rapid mixing of the basis-exchange-walk on spanning trees of a graph: Take a graph $G$, and let $\mathcal{T}$ be the set of spanning trees of the graph. There is a random walk on $\mathcal{T}$ wherein standing at a tree $T$ you take an edge in $G \setminus E(T)$ -- in $G$ but not an edge of $T$ - and add it to T, forming a cycle in $T$,  and then you delete a random edge in that cycle. This mixes rapidly, so after a polynomial in $|G|$ number of steps you're at approximately a uniformly random spanning tree.
 
 * Competition Math $x + y \geq 2\sqrt{xy}$
 
 I wasn't very good at competition math in high school, so I'm enjoying learning how to become good at it as a means of doing some emotional processing and improving my general problem solving skills.
+
+** Some problem solving lessons I'm learning:
+*** I can get stuck in an overly formal way of thinking about problems; e.g. pattern matching what I see against facts I know. It can be useful to notice mindfully when I'm in that mindset and step back into a more heuristic and embodied mindframe.
+*** Mistakes can lead to solutions; it's important to not avoid thinking about how to correct an error out of avoidant shame around doing something "dumb." This effect can be very subtle! Forgive yourself for not understanding. ^^

@@ -22,6 +22,16 @@
 (add-hook 'org-export-before-processing-hook
           'elle/org-export-setup)
 
+(defun my/org-html-link-home ()
+  "Determine the relative path to the home `index.html`."
+  (let ((current-dir (file-name-directory (or (buffer-file-name) default-directory))))
+    (if (string= current-dir (expand-file-name "~/org/personal_webpage/"))
+        ;; If we're in the top-level directory, no need to go up
+        "index.html"
+      ;; Otherwise, go up one level
+      "../index.html")))
+
+
 (setq org-publish-project-alist
       '(("personal_webpage-pages"
          :base-directory "~/org/personal_webpage"
@@ -29,7 +39,7 @@
          :exclude "^docs/.*\\|todo\\.org\\|drafts/.*"
          :recursive t
          :publishing-function org-html-publish-to-html
-         ;; :html-link-home "index.html"
+         ;; :html-link-home ,(my/org-html-link-home)  ;; Call func
          ;; by default this finds the index in the folder
          ;; which isn't the home behavior I'd expect or want
          :html-link-use-abs-url nil
