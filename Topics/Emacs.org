@@ -19,8 +19,7 @@ SCHEDULED: <2024-09-25 Wed>
 
 Fun is a signal, not frivolity.
 Fun is leads to flow, and flow leads to deep work and curiosity and creativity.
-All of this leads to more productivity, but that's not the main point.
-Much like meditation.
+All of this leads to more productivity.
 
 * Favorite features:
 ** Dired:

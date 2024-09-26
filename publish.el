@@ -13,7 +13,7 @@
       (insert "#+SETUPFILE: ")
       (insert elle/org-setup-file)
       ;; (insert "#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-bigblow.setup")
-      (message "SETUPFILE inserted for %s" (buffer-file-name))
+      ;; (message "SETUPFILE inserted for %s" (buffer-file-name))
       (insert "\n")
       )
     )

@@ -13,7 +13,7 @@ I like learning math, and writing about what I'm learning clarifies things for m
 * [[file:Topics/ComputerScience.org][Computer Science]]
 I've been on an arc of getting better at software engineering skills and other aspects of computer touchery.
 
-* [[file:Topics/Blog.org][Blog]]
+* [[file:Topics/Personal.org][Personal]]
 Meditation, Clowning, Burning Man, other adventures...
 
 * [[file:Topics/Music.org][Music]]
