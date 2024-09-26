@@ -1,4 +1,4 @@
-#+title: Blog
+#+title: Personal
 
 * Meditation
 
@@ -8,8 +8,14 @@ I practice lovingkindness meditation, specifically [[https://www.dhammasukha.org
 
 I'm interested in [[https://en.wikipedia.org/wiki/Canadian_clowning][Pochinko clowning]] as an art form and spiritual practice.
 
+#+begin_src quote
+Pochinko taught clowning as a sort of "reverse therapy", in which instead of
+ridding oneself of anxieties, the clown performer leans into their own
+insecurities and foibles in order to package them as comedy.
+#+end_src
+
 * Burning man
 
 I went to burning man for the first time this year (2024), and had a great time, and am planning to go back.
 
-Living in a culture that valued radical self-expression, participation and immediacy in the way Black Rock City did [[https://burningman.org/about/10-principles/][(see the 10 principles)]] was especially impactful for me.
+Living in a culture that valued radical self-expression, participation and immediacy in the way Black Rock City did [[https://burningman.org/about/10-principles/][(see the 10 principles)]] was especially impactful.

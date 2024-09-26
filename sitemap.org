@@ -8,9 +8,9 @@
 - Topics
   - [[file:Topics/ComputerScience.org][(Non-theoretical) Computer Science]]
   - [[file:Topics/abstraction_correction.org][Abstraction Correction]]
-  - [[file:Topics/Personal.org][Blog]]
   - [[file:Topics/Consumerism.org][Consumerism]]
   - [[file:Topics/Emacs.org][Emacs]]
   - [[file:Topics/GradSchoolResearch.org][Grad School Research]]
   - [[file:Topics/Math.org][Math]]
   - [[file:Topics/Music.org][Music]]
+  - [[file:Topics/Personal.org][Personal]]
