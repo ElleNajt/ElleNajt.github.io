@@ -15,22 +15,43 @@ Seriously this is great -- it's changed my life.
 ** TODO Write a post about this.
 SCHEDULED: <2024-09-25 Wed>
 
-* Emacs is really fun, that's the main reason I like it!
+* Why emacs:
+** Emacs is really fun!
 
+That's the main reason I like it!
 Fun is a signal, not frivolity.
 Fun is leads to flow, and flow leads to deep work and curiosity and creativity.
 All of this leads to more productivity.
 
+** Better than a UI or a CLI:
 
-* I also find that the transient menu style interface works fits much better in my brain than CLI or standard UXs. I
+I also find that the transient menu style interface works fits much better in my brain than CLI or standard UIs.
+
+This applies to:
+- Magit
+- Dired
+- M-x anything
+
 
 
 * Favorite features:
-** Dired:
-- wdired is magic
+
+** yassnippets
+
+They're a great way to optimize writing code. It's a nice feeling to design yas snippets so they work smoothly together.
+
+See this inspiring [[https://karthinks.com/software/latex-input-for-impatient-scholars/][fast latex input via snippets]].
+
+** Magit
+
+I don't think I would have learned git so throughoughly without magit.
+
+** Dired
+
+- wdired is magic -- I love being able to treat things that don't feel editable as editable, actually. (Consult-ripgep embark has the same flavor.)
 - ! or & then command (e.g. firefox) on the highlighted file(s) = yay
   it's also smart about guessing what you want to do!
-- tab on a file
+- Tab on a file
 - M for changing permissions
 - Mapping W to dired-do-eww
 
