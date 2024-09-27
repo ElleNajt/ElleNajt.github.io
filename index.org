@@ -7,7 +7,7 @@ I'm currently building it using Emac's org mode!
 * [[file:Topics/Emacs.org][Emacs]]
 I love emacs and working on my workflow experience brings me a lot of happiness. :)
 
-I like sharing the cool features I find, or the things I hack on and add.
+I like sharing the cool features I learn about, or the things I hack on and add.
 
 * [[file:Topics/Math.org][Math]]
 I like learning math, and writing about what I'm learning clarifies things for me.

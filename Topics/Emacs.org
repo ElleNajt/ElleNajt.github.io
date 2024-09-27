@@ -23,16 +23,16 @@ Fun is a signal, not frivolity.
 Fun is leads to flow, and flow leads to deep work and curiosity and creativity.
 All of this leads to more productivity.
 
-** Better than a UI or a CLI:
+** Better than a clicking based GUI or a CLI:
 
-I also find that the transient menu style interface works fits much better in my brain than CLI or standard UIs.
+I also find that the transient menu style interface works fits much better in my brain than CLI or standard click-on-dropdown-menu based GUIs.
+
+Stuff that I use frequently becomes muscle memory, and stuff that I don't use frequently I get gentle, immediate and usually useful hints from the system about what I'm trying to do. (And if the hints consistently aren't useful they can be changed without too much effort.)
 
 This applies to:
 - Magit
 - Dired
 - M-x anything
-
-
 
 * Favorite features:
 
@@ -61,7 +61,7 @@ I love that I can collect todos from my org babel notebooks! No more running tod
 
 ** Org publish:
 *** Cool features:
-- I can drop todos in my webpage and have them hidden by default by visible in my agenda.
+- I can drop todos in my webpage org files and have them hidden by default by visible in my agenda.
 *** Challenges I ran into :
 
 - Needed to set (org-store-link) to be relative by default; otherwise depending on folder structure emacs can insert them as absolute paths, which results in links in the published page that point to files that don't exist.

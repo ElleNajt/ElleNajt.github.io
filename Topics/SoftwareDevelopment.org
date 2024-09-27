@@ -78,7 +78,7 @@ I like to learn by experimenting with things.
 
 It's good when tools are fun and create flow. When you're engaged you're at your best, so you should optimize for fun!
 
-** Design tools to fit yourself, don't bend yourself to fit tools.
+** Design or modify tools to fit yourself, don't bend yourself to fit tools.
 
 Being able to iterating on a tool that fits you like a glove is one of the beauties of a system like emacs.
 
