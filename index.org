@@ -12,7 +12,7 @@ I like sharing the cool features I find, or the things I hack on and add.
 * [[file:Topics/Math.org][Math]]
 I like learning math, and writing about what I'm learning clarifies things for me.
 
-* [[file:Topics/ComputerScience.org][Computer Science]]
+* [[file:Topics/Computers.org][Computers]]
 I've been on an arc of getting better at software engineering skills and other aspects of computer useage.
 
 * [[file:Topics/Personal.org][Personal]]

@@ -1,0 +1,89 @@
+#+title: (Non-theoretical) Computer Science
+
+I've been having fun this past year or so going deeper into computer science tooling.
+
+Here are the ones I've been spending the most time with, and the opinions I've developed.
+
+* Tools I love:
+
+** Emacs
+
+I have a [[file:Emacs.org][a whole page about emacs]], but it deserves a bullet here.
+
+I love being able to shape my editor into a glove that fits me and my idiosyncrasies. It's so much better than shaping myself to fit an awkward tool. Getting good at emacs has made development a million times more fun, and this leads to more flow, and to more creativity.
+
+** Org-mode
+
+Although I'm a professional data scientist, I don't use jupyter notebooks, I use org babel in Emacs org mode!
+
+This is great because it:
+- Enables reproducible science via version controlled text based notebooks
+  - This also applies to devopsy work, not just research.
+- Enables literate programming that is integrated with org modes project management system.
+- Is part of the vast emacs ecosystem
+- Is really aesthetic and fun, and just as extensible as the rest of emacs.
+
+** Nix
+
+I do most of my personal development through a nixos vm running with UTM on my mac. I love being able to version my system configuration, and steal bits of config from friends.
+
+I also use nix as my package manager for python environments at home. Sometimes requires terrible overlays but at least it's hermetic, reproducible and aesthetic. ^^
+
+Configuring nix also meshes well with LLMs, because you can tell it about the stat of your configurations with text. :3
+
+I  like having these linux shenanigans live inside of a computer that's stable, and that just *works* and interfaces as a first class citizen with the rest of the world.
+
+** Git
+
+I love git so much.
+
+I didn't always love git, I used to be afraid of messing things up, but now I understand that it's a tool that enables safe experimentation. It's quite the opposite from my original feeling!
+
+I changed by asking for help from more senior developers and getting a lot of it, and using git constantly because of Emac's built in git-wrapper Magit. Magit was great since it meant I didn't have to remember lots of commands, and the menu of options made my option space concrete in a way that is hard with command lines, but at the same time it didn't *hide* git, like a lot of other UIs.
+
+Did I mention emacs is great?
+
+[[https://git-scm.com/book/en/v2][The book pro-git was also a great reference.]] Like a lot of people I was walking around with a the incorrect and confused model of commits as *differences*, and learning about how the key-value database stores snapshots (that are later compressed) clarified a lot.
+
+** LLMs
+
+I wouldn't have been able to make such rapid progress on stuff without LLMs to get me unstuck. They can be great tutors for learning new pieces of technology; I think they're especially useful for learning new languages. I've also benefit from using them as style pointers.
+
+I think they're especially nice in the stage of mastery where you know that concepts can fit together in a certain way, but you don't know the syntax; digging around for the syntax is purely wasted time vs just outlining the code and getting LLMs to fill it in.
+
+[[https://nicholas.carlini.com/writing/2024/how-i-use-ai.html][I like this post by Nicholas Carlini for inspiration on ways to use LLMs.]]
+
+*** TODO Get his diff stuff set up.
+
+** Tests!
+
+This is less of a tool, but I love test driven development -- it makes for a fun feedback loop, and it's comforting to be able to refactor with confidence.
+
+Recently I've been experimenting with using org babel files as literate expect tests -- I like that you get documentation and tests at the same time!
+
+** Text
+
+The universal interface.
+
+* Opinions:
+
+** Safe to fail
+
+A thing that tools I like have in common is that they're safe to fail in, or they make it safe to fail.
+I like to learn by experimenting with things.
+- Broke your nixos config? Just boot an earlier one. Plus it's version controlled with git.
+- Unclear if something works? That's what tests are for.
+
+** Fun
+
+It's good when tools are fun and create flow. When you're engaged you're at your best, so you should optimize for fun!
+
+** Design tools to fit yourself, don't bend yourself to fit tools.
+
+Being able to iterating on a tool that fits you like a glove is one of the beauties of a system like emacs.
+
+** You can just get good at things!
+
+A cousin of "you can just do things!"
+
+*** TODO I've noticed over and over again throughout my learning that there's a learned-helpness failure mode of deciding that I can't learn something. But actually I can, and it feels good to do so, and opens up .

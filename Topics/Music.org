@@ -1,6 +1,31 @@
 #+title: Music
 
 * Original
+
+** TODO Here's my soundcloud:
+
 * Favorites
 
-I like a mix of classical, jazz, video game music, breakcore, and genres in between these things.
+I like a mix of classical, jazz, video game music, breakcore / electronic music, and genres in between these things.
+
+Here are some favorites:
+
+** Classical:
+*** [[https://www.youtube.com/watch?v=wDLHI1EvDkg&t=1s][Chopin]]
+*** Wendy Carlos Switched on Bach
+
+** Jazz:
+Mostly what I like about jazz are creative twists on things I'm familiar with, so I tend to like:
+
+*** Jazzy versions of classical music
+**** [[https://www.youtube.com/watch?v=j_9BTBuMsmk][Jazzy Chopin]]
+**** [[https://www.youtube.com/watch?v=22yLbGU3obA][Jazzy Bach]]
+*** Jazzy versions of video game music
+
+** Video Game Music:
+
+*** Soundtrack of Celeste
+*** Zelda soundtracks
+
+** Electronic Music:
+*** https://www.youtube.com/watch?v=FbJ63spk48s
