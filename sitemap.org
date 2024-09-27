@@ -6,7 +6,6 @@
   - OrgBabelExample
     - [[file:Code/OrgBabelExample/example.org][Scratch]]
 - Topics
-  - [[file:Topics/Computers.org][(Non-theoretical) Computer Science]]
   - [[file:Topics/abstraction_correction.org][Abstraction Correction]]
   - [[file:Topics/Consumerism.org][Consumerism]]
   - [[file:Topics/Emacs.org][Emacs]]
@@ -14,3 +13,4 @@
   - [[file:Topics/Math.org][Math]]
   - [[file:Topics/Music.org][Music]]
   - [[file:Topics/Personal.org][Personal]]
+  - [[file:Topics/SoftwareDevelopment.org][Software Development]]

@@ -6,7 +6,7 @@
 <!-- 2024-09-26 Thu 22:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Code</title>
+<title>Software Development</title>
 <meta name="author" content="Elle Najt" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -197,10 +197,185 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Code</h1>
+<h1 class="title">Software Development</h1>
 <p>
-<a href="../Topics/Emacs.html">../Topics/Emacs.html</a><br />
+I&rsquo;ve been having fun this past year or so going deeper into software development tooling.<br />
 </p>
+
+<p>
+Here are the tools I&rsquo;ve been spending the most time with, and the opinions I&rsquo;ve developed.<br />
+</p>
+
+<div id="outline-container-orgb7b5976" class="outline-2">
+<h2 id="orgb7b5976">Tools I love:</h2>
+<div class="outline-text-2" id="text-orgb7b5976">
+</div>
+<div id="outline-container-org8c99dac" class="outline-3">
+<h3 id="org8c99dac">Emacs</h3>
+<div class="outline-text-3" id="text-org8c99dac">
+<p>
+I have a <a href="Emacs.html">a whole page about emacs</a>, but it deserves a bullet here.<br />
+</p>
+
+<p>
+I love being able to shape my editor into a glove that fits me and my idiosyncrasies. It&rsquo;s so much better than shaping myself to fit an awkward tool. Getting good at emacs has made development a million times more fun, and this leads to more flow, and to more creativity.<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0131778" class="outline-3">
+<h3 id="org0131778">Org-mode</h3>
+<div class="outline-text-3" id="text-org0131778">
+<p>
+Although I&rsquo;m a professional data scientist, I don&rsquo;t use jupyter notebooks, I use org babel in Emacs org mode!<br />
+</p>
+
+<p>
+This is great because it:<br />
+</p>
+<ul class="org-ul">
+<li>Enables reproducible science via version controlled text based notebooks<br />
+<ul class="org-ul">
+<li>This also applies to devopsy work, not just research.<br /></li>
+</ul></li>
+<li>Enables literate programming that is integrated with org modes project management system.<br /></li>
+<li>Is part of the vast emacs ecosystem<br /></li>
+<li>Is really aesthetic and fun, and just as extensible as the rest of emacs.<br /></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb60453a" class="outline-3">
+<h3 id="orgb60453a">Nix</h3>
+<div class="outline-text-3" id="text-orgb60453a">
+<p>
+I do most of my personal development through a nixos vm running with UTM on my mac. I love being able to version my system configuration, and steal bits of config from friends.<br />
+</p>
+
+<p>
+I also use nix as my package manager for python environments at home. Sometimes requires terrible overlays but at least it&rsquo;s hermetic, reproducible and aesthetic. ^^<br />
+</p>
+
+<p>
+Configuring nix also meshes well with LLMs, because you can tell it about the stat of your configurations with text. :3<br />
+</p>
+
+<p>
+I  like having these linux shenanigans live inside of a computer that&rsquo;s stable, and that just <b>works</b> and interfaces as a first class citizen with the rest of the world.<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2538e58" class="outline-3">
+<h3 id="org2538e58">Git</h3>
+<div class="outline-text-3" id="text-org2538e58">
+<p>
+I love git so much.<br />
+</p>
+
+<p>
+I didn&rsquo;t always love git, I used to be afraid of messing things up, but now I understand that it&rsquo;s a tool that enables safe experimentation. It&rsquo;s quite the opposite from my original feeling!<br />
+</p>
+
+<p>
+I changed by asking for help from more senior developers and getting a lot of it, and using git constantly because of Emac&rsquo;s built in git-wrapper Magit. Magit was great since it meant I didn&rsquo;t have to remember lots of commands, and the menu of options made my option space concrete in a way that is hard with command lines, but at the same time it didn&rsquo;t <b>hide</b> git, like a lot of other UIs.<br />
+</p>
+
+<p>
+Did I mention emacs is great?<br />
+</p>
+
+<p>
+<a href="https://git-scm.com/book/en/v2">The book pro-git was also a great reference.</a> Like a lot of people I was walking around with a the incorrect and confused model of commits as <b>differences</b>, and learning about how the key-value database stores snapshots (that are later compressed) clarified a lot.<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3947764" class="outline-3">
+<h3 id="org3947764">LLMs</h3>
+<div class="outline-text-3" id="text-org3947764">
+<p>
+I wouldn&rsquo;t have been able to make such rapid progress on stuff without LLMs to get me unstuck. They can be great tutors for learning new pieces of technology; I think they&rsquo;re especially useful for learning new languages. I&rsquo;ve also benefit from using them as style pointers.<br />
+</p>
+
+<p>
+I think they&rsquo;re especially nice in the stage of mastery where you know that concepts can fit together in a certain way, but you don&rsquo;t know the syntax; digging around for the syntax is purely wasted time vs just outlining the code and getting LLMs to fill it in.<br />
+</p>
+
+<p>
+<a href="https://nicholas.carlini.com/writing/2024/how-i-use-ai.html">I like this post by Nicholas Carlini for inspiration on ways to use LLMs.</a><br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1b3f412" class="outline-3">
+<h3 id="org1b3f412">Tests!</h3>
+<div class="outline-text-3" id="text-org1b3f412">
+<p>
+This is less of a tool, but I love test driven development &#x2013; it makes for a fun feedback loop, and it&rsquo;s comforting to be able to refactor with confidence.<br />
+</p>
+
+<p>
+Recently I&rsquo;ve been experimenting with using org babel files as literate expect tests &#x2013; I like that you get documentation and tests at the same time!<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf51845b" class="outline-3">
+<h3 id="orgf51845b">Text</h3>
+<div class="outline-text-3" id="text-orgf51845b">
+<p>
+The universal interface.<br />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5e1d0e0" class="outline-2">
+<h2 id="org5e1d0e0">Opinions:</h2>
+<div class="outline-text-2" id="text-org5e1d0e0">
+</div>
+<div id="outline-container-org8d0dfc7" class="outline-3">
+<h3 id="org8d0dfc7">Safe to fail</h3>
+<div class="outline-text-3" id="text-org8d0dfc7">
+<p>
+A thing that tools I like have in common is that they&rsquo;re safe to fail in, or they make it safe to fail.<br />
+I like to learn by experimenting with things.<br />
+</p>
+<ul class="org-ul">
+<li>Broke your nixos config? Just boot an earlier one. Plus it&rsquo;s version controlled with git.<br /></li>
+<li>Unclear if something works? That&rsquo;s what tests are for.<br /></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb92e33a" class="outline-3">
+<h3 id="orgb92e33a">Fun</h3>
+<div class="outline-text-3" id="text-orgb92e33a">
+<p>
+It&rsquo;s good when tools are fun and create flow. When you&rsquo;re engaged you&rsquo;re at your best, so you should optimize for fun!<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org501c922" class="outline-3">
+<h3 id="org501c922">Design tools to fit yourself, don&rsquo;t bend yourself to fit tools.</h3>
+<div class="outline-text-3" id="text-org501c922">
+<p>
+Being able to iterating on a tool that fits you like a glove is one of the beauties of a system like emacs.<br />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2d52b06" class="outline-3">
+<h3 id="org2d52b06">You can just get good at things!</h3>
+<div class="outline-text-3" id="text-org2d52b06">
+<p>
+A cousin of &ldquo;you can just do things!&rdquo;<br />
+</p>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Elle Najt</p>

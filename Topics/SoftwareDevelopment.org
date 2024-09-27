@@ -1,8 +1,8 @@
-#+title: (Non-theoretical) Computer Science
+#+title: Software Development
 
-I've been having fun this past year or so going deeper into computer science tooling.
+I've been having fun this past year or so going deeper into software development tooling.
 
-Here are the ones I've been spending the most time with, and the opinions I've developed.
+Here are the tools I've been spending the most time with, and the opinions I've developed.
 
 * Tools I love:
 
