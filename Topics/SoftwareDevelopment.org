@@ -27,7 +27,7 @@ This is great because it:
 
 I do most of my personal development through a nixos vm running with UTM on my mac. I love being able to version my system configuration, and steal bits of config from friends.
 
-I also use nix as my package manager for python environments at home. Sometimes requires terrible overlays but at least it's hermetic, reproducible and aesthetic. ^^ [[https://cyberchris.xyz/posts/nix-python-pyright/][It also integrates smoothly with eglot and pyright]] (or see my [[https://github.com/ElleNajt/emacs/tree/main/python/nix_project_defaults][python project defaults.]]
+I also use nix as my package manager for python environments at home. Sometimes requires terrible overlays but at least it's hermetic, reproducible and aesthetic. ^^ It also integrates smoothly with eglot and pyright, which can be a headache, see my [[https://github.com/ElleNajt/emacs/tree/main/python/nix_project_defaults][python project defaults.]]
 
 Configuring nix also meshes well with LLMs, because you can tell it about the status of your configurations with text. :3
 
