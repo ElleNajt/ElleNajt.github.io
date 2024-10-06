@@ -1,8 +1,8 @@
 #+title: Music
 
-* Original
+* Original Music
 
-** TODO Here's my soundcloud:
+[[https://soundcloud.com/ellenajt][Here is my soundcloud.]]
 
 * Favorites
 
@@ -13,7 +13,6 @@ Here are some favorites:
 ** Classical:
 *** [[https://www.youtube.com/watch?v=wDLHI1EvDkg&t=1s][Chopin]]
 *** Bach
-
 
 ** Electronic Music:
 
