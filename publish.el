@@ -4,18 +4,19 @@
 ;; (setq org-html-head-include-default-style nil)
 ;; (setq org-html-head " ")
 
-(setq  elle/org-setup-file "./templates/webpage_headers.org")
+(defvar elle/org-setup-file "templates/webpage_headers.org"
+  "Path to the setup file, relative to the Git repository root.")
+
 (defun elle/org-export-setup (backend)
+  "Insert the SETUPFILE directive with a path relative to the current file."
   (interactive)
   (save-excursion
-    (progn
+    (let* ((current-file (buffer-file-name))
+           (repo-root (locate-dominating-file current-file ".git"))
+           (setup-file-path (expand-file-name elle/org-setup-file repo-root))
+           (relative-path (file-relative-name setup-file-path (file-name-directory current-file))))
       (goto-char (point-min))
-      (insert "#+SETUPFILE: ")
-      (insert elle/org-setup-file)
-      (insert "\n")
-      )
-    )
-  )
+      (insert "#+SETUPFILE: " relative-path "\n"))))
 
 
 (add-hook 'org-export-before-processing-hook
