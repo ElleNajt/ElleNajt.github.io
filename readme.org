@@ -1,0 +1,5 @@
+This is my personal webpage!
+
+[[https://ellenajt.github.io/][You can view the webpage here.]]
+
+It's written in org files and uses [[https://orgmode.org/manual/Publishing.html][the emacs org-mode publish machinery]] to make the webpage itself.
