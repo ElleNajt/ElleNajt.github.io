@@ -20,6 +20,7 @@ and HTML_LINK_UP directive with the correct number of ../ to reach index.html."
            (link-up (concat (string-join  (make-list depth "../")) "index.html")))
       (goto-char (point-min))
       (insert "#+SETUPFILE: " relative-path "\n")
+      (insert "#+HTML_LINK_UP: " link-up "\n")
       (insert "#+HTML_LINK_HOME: " link-up "\n"))))
 
 
