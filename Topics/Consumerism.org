@@ -2,17 +2,46 @@
 
 * Tools I love:
 
+Here are some mostly material things that have my life a bunch better:
+
+** Good ergonomics:
+
+This matters a lot for flow, and for finding programming [[file:SoftwareDevelopment.org::*Fun][fun]]. Here are my favorite bits of ergonomics:
+- A gas monitor arm for getting the right monitor position
+- A kinesis 360 keyboard
+- A herman-miller embody
+
+These can be aligned so that my whole body feels at ease when I'm working, and it helps me stay in the zone for longer periods of time.
+
+And obviously [[file:Emacs.org][emacs.]]
+
+** Good sleep
 - A good bed -- use the money back return offers to iterate!
 - A weighted blanket
-- A comfy chair (I got a refurbished herman miler embody, it's perfect, good ergonomics matter so much for flow.)
-- A kinesis 360 keyboard (It's cool and comfy!)
-- Blender
-- Hot water dispenser
+- A good air filter
+- ([[https://slatestarcodex.com/2018/07/10/melatonin-much-more-than-you-wanted-to-know/#post-4987][The right dose of]]) melatonin sometimes
+
+** Good food
+- A nutribullet Blender
+- A zojirushi hot water dispenser
+
+** Good exercise:
+I haven't figured out an exercise I enjoy in a way I can do consistently. Maybe dancing?
 
 * Thought consumption:
-** Books:
+** Blogs:
+Here are some blogs that have influenced me:
+*** [[https://tasshin.com/][Tasshin Fogelman]]
+*** [[https://slatestarcodex.com/][Slate Star Codex]]
+*** [[https://x.com/visakanv/highlights][Visa Veerasamy]]
+*** Gwern
+**** [[https://gwern.net/choosing-software][Choosing Software]], which reinforced my convictio that [[file:Emacs.org][Emacs is excelent.]]
+*** Nicholas Carlini
+**** [[https://nicholas.carlini.com/writing/2024/how-i-use-ai.html#mobilelinks][How I use "AI"]]
 
 * Medical consumption:
+I have some medical quality of life issues that I'm trying to solve.
+
 ** Allergies
 *** <2024-09-23 Mon>
 I got retested for allergies today, and they found many more things using the intradermal tests. Turns out I am allergic to dust mites! Hoping that allergy shots will clear up my lingering night time asthma issues.

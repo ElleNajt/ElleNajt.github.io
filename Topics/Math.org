@@ -21,11 +21,27 @@ A lot of my favorite theorems are theoretical computer science, here are some co
 
 * Competition Math $x + y \geq 2\sqrt{xy}$
 
-I wasn't very good at competition math in high school, so I'm enjoying learning how to become good at it as a means of doing some emotional processing and improving my general problem solving skills.
+I wasn't successful at competition math in high school, so I'm enjoying learning how to become good at it as a means of doing some emotional processing and improving my general problem solving skills. I'm doing this by working with a tutor who is better than me at solving mathematical problems, and we are working through Engel's "Problem-Solving strategies."
 
 ** Some problem solving lessons I'm learning:
-*** <2024-09-26 Thu> I can get stuck in an overly formal way of thinking about problems; e.g. pattern matching what I see against facts I know. It can be useful to notice mindfully when I'm in that mindset and step back into a more heuristic and embodied mindframe.
-*** <2024-09-19 Thu> Mistakes can lead to solutions; it's important to not avoid thinking about how to correct an error out of avoidant shame around doing something "dumb." This effect can be very subtle! Forgive yourself for not understanding. ^^
+*** <2024-10-05 Sat>
+Noticed that I got fixated on solving one of the example problems. I did eventually solve it, which I felt really good about, though I found a different solution from the one in the book, meaning that from my struggles I didn't learn how the problem was an example of the problem solving technique of invariants.
+
+I think I internalized at some point the idea that it is virtuous to struggle to solve a problem, which I am starting to question; certainly there is virtue in solving hard problems, and value in developing the skill of being okay with frustration. But I think the "struggle with problems" mindset is one that makes the most sense when at the core ideas have been learned, and my goal here is to become a better mathematical problem solver, so it makes sense to focus on .
+
+We decided to try to optimize more for having fun -- my tutor cited some research showing that studying diversity of topics and simply doing a lot of problems is more effective, and we both agreed that it made sense to [[file:SoftwareDevelopment.org::*Fun][optimize for fun]].
+
+As we were working on another problem I started thinking about how it was hard to let go of an approach to a problem, even when I've become convinced that it won't work, because of the appeal of an idea working out.
+
+There is a useful [[file:Personal.org::*Forgiveness Meditation][forgiveness practice]] here also: forgiveness for not being able to come up with an idea, and forgiveness for an approach not working. I wonder if practice that in this context will make my attitudes more fluid.
+
+*** <2024-09-26 Thu>
+
+I can get stuck in an overly formal way of thinking about problems; e.g. pattern matching what I see against facts I know. It can be useful to notice mindfully when I'm in that mindset and step back into a more heuristic and embodied mindframe.
+
+*** <2024-09-19 Thu>
+
+Mistakes can lead to solutions; it's important to not avoid thinking about how to correct an error out of avoidant shame around doing something "dumb." This effect can be very subtle! Forgive yourself for not understanding. ^^
 
 #+begin_src qoute
 To fear the error and to fear the truth are one and the same. One who fears to

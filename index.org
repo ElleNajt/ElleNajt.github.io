@@ -2,18 +2,16 @@
 
 Welcome to my webpage!
 
-I'm currently building it using Emac's org mode!
+Click on the headers to see more about my interests.
 
 * [[file:Topics/Emacs.org][Emacs]]
-I love emacs and working on my workflow experience brings me a lot of happiness. :)
-
-I like sharing the cool features I learn about, or the things I hack on and add.
+I love emacs and developing my workflow brings me a lot of happiness. :)
 
 * [[file:Topics/Math.org][Math]]
 I like learning math, and writing about what I'm learning clarifies things for me.
 
 * [[file:Topics/SoftwareDevelopment.org][Software Development]]
-I've been on an arc of getting better at software engineering skills and other aspects of computer useage.
+I've been on an arc of getting better at software engineering skills and other aspects of computer usage.
 
 * [[file:Topics/Personal.org][Personal]]
 Meditation, Clowning, Burning Man, other adventures...
@@ -22,7 +20,7 @@ Meditation, Clowning, Burning Man, other adventures...
 I like music, and also make music on the piano and in ableton.
 
 * [[file:Topics/Consumerism.org][Consumerism]]
-Things that benefit me through their consumption; tools, thoughts, medicine.
+Things that benefit me through their consumption: tools, thoughts, medicine.
 
 * Professional
 I obtained my math PhD Dec 2021 at the University of Wisconsin-Madison, advised by [[http://www.math.wisc.edu/~ellenber/][Jordan Ellenberg]].
@@ -36,5 +34,5 @@ I currently work as a data scientist on a systematic trading team at Two Sigma. 
 
 * Internet presence:
 
-[[https://math.stackexchange.com/users/54092/elle-najt/][Stack-exchange]]
+[[https://math.stackexchange.com/users/54092/elle-najt/][Stack Exchange]]
 [[https://github.com/ElleNajt/][Github]]

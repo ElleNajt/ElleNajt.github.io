@@ -22,6 +22,8 @@
 (add-hook 'org-export-before-processing-hook
           'elle/org-export-setup)
 
+(setq org-html-validation-link nil)
+
 (defun my/org-html-link-home ()
   "Determine the relative path to the home `index.html`."
   (let ((current-dir (file-name-directory (or (buffer-file-name) default-directory))))

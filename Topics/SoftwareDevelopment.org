@@ -20,7 +20,7 @@ This is great because it:
 - Enables reproducible science via version controlled text based notebooks
   - This also applies to devopsy work, not just research.
 - Enables literate programming that is integrated with org modes project management system.
-- Is part of the vast emacs ecosystem
+- Is part of the vast emacs ecosystem.
 - Is really aesthetic and fun, and just as extensible as the rest of emacs.
 
 ** Nix
@@ -51,9 +51,7 @@ I wouldn't have been able to make such rapid progress on stuff without LLMs to g
 
 I think they're especially nice in the stage of mastery where you know that concepts can fit together in a certain way, but you don't know the syntax; digging around for the syntax is purely wasted time vs just outlining the code and getting LLMs to fill it in.
 
-[[https://nicholas.carlini.com/writing/2024/how-i-use-ai.html][I like this post by Nicholas Carlini for inspiration on ways to use LLMs.]]
-
-*** TODO Get his diff stuff set up.
+[[https://nicholas.carlini.com/writing/2024/how-i-use-ai.html][I like this post by Nicholas Carlini for inspiration on ways to use LLMs.]] I think "body-doubling" with LLMs can an effective way to have more fun coding, and of course emacs makes it easy to have a smooth and extensible LLM companion.
 
 ** Tests!
 
@@ -63,7 +61,7 @@ Recently I've been experimenting with using org babel files as literate expect t
 
 ** Text
 
-The universal interface.
+The universal interface. :3
 
 * Opinions:
 
@@ -78,12 +76,21 @@ I like to learn by experimenting with things.
 
 It's good when tools are fun and create flow. When you're engaged you're at your best, so you should optimize for fun!
 
+Recently I've been applying this [[file:Math.org::*<2024-10-05 Sat>][to my mathematical studies as well!]]
+
 ** Design or modify tools to fit yourself, don't bend yourself to fit tools.
 
 Being able to iterate towards a tool that fits you like a glove is one of the beauties of a system like emacs.
 
 ** You can just get good at things!
 
-A cousin of "you can just do things!"
+Useful subskills:
+
+- Being able to humble yourself and learn from people who have more knowledge or better heuristics
+- Agency - you can just do things!
+- Willingness to practice; comfort failing repeatedly.
 
 *** TODO I've noticed over and over again throughout my learning that there's a learned-helpness failure mode of deciding that I can't learn something. But actually I can, and it feels good to do so, and opens up .
+:PROPERTIES:
+:ID:       6cfaa8e6-cb43-4bae-8e3e-7c6271227c4e
+:END:

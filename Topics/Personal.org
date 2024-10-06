@@ -2,11 +2,15 @@
 
 * Meditation
 
-I practice lovingkindness meditation, specifically [[https://www.dhammasukha.org/beginner-lovingkindness][TWIM]], which has been very impactful for me.
+I practice lovingkindness meditation, specifically [[https://www.dhammasukha.org/beginner-lovingkindness][TWIM]].
+
+** Forgiveness Meditation
+
+I struggled for a long time to cultivate the felt-sense of metta that the basic instructions would describe, and forgiveness meditation [[https://www.dhammasukha.org/forgiveness-meditation#comp-kefxjy6t5label][as taught by TWIM]] was useful for softening my heart and preparing me for this practice.
 
 * Clowning
 
-I'm interested in [[https://en.wikipedia.org/wiki/Canadian_clowning][Pochinko clowning]] as an art form and spiritual practice.
+I'm interested in clowning, and specifically [[https://en.wikipedia.org/wiki/Canadian_clowning][Pochinko clowning,]] as an art form and spiritual practice. I participated in one of Sue Morrison's "Clown through Mask" classes.
 
 #+begin_src quote
 Pochinko taught clowning as a sort of "reverse therapy", in which instead of
@@ -14,8 +18,11 @@ ridding oneself of anxieties, the clown performer leans into their own
 insecurities and foibles in order to package them as comedy.
 #+end_src
 
+
 * Burning man
 
-I went to burning man for the first time this year (2024), and had a great time, and am planning to go back.
+I went to burning man for the first time this year (2024), had a great time, and am planning to go back.
 
-Living in a culture that valued radical self-expression, participation and immediacy in the way Black Rock City did [[https://burningman.org/about/10-principles/][(see the 10 principles)]] was especially impactful.
+Living in a culture that valued radical self-expression, participation and immediacy in the way Black Rock City did [[https://burningman.org/about/10-principles/][(see the 10 principles)]] re-socialized me to be less afraid of joining spontaneous social games with people. This meshes well with my experiences with clowning.
+
+I also attended an interesting math lecture about embodied ways of approaching mathematical problem solving, which inspired me to [[file:Math.org::*Competition Math $x + y \geq 2\sqrt{xy}$][work more on my mathematical problem solving skills]] with a tutor who is helping refactor both my understanding of foundational concepts, and improve my emotional relationship to problem-solving and mathematics overall.

@@ -1,21 +1,13 @@
 #+title: Emacs
 #+PROPERTY: :exports both
 
-* Config:
+* Why Emacs:
+** Truly customizable and extensible
 
-[[https://github.com/ElleNajt/emacs][Here's my emacs config!]]
+I can shape my editor into a tool that fits me, instead of contorting myself to fit someone else's UI design.
 
-* I'm an org babel for data science evangelist!
+Once you get the hang of it (and especially with a bit of help from LLMs), modifying emacs becomes easy and fun.
 
-[[https://github.com/ElleNajt/ElleNajt.github.io/blob/master/Code/OrgBabelExample/example.org][Here's an example of an org babel file as a generic data science notebook!]]
-[[file:../Code/OrgBabelExample/example.org][Here's what it looks like when published to html.]]
-
-Seriously this is great -- it's changed my life.
-
-** TODO Write a post about this.
-SCHEDULED: <2024-09-25 Wed>
-
-* Why emacs:
 ** Emacs is really fun!
 
 That's the main reason I like it!
@@ -27,14 +19,56 @@ All of this leads to more productivity.
 
 I also find that the transient menu style interface works fits much better in my brain than CLI or standard click-on-dropdown-menu based GUIs.
 
-Stuff that I use frequently becomes muscle memory, and stuff that I don't use frequently I get gentle, immediate and usually useful hints from the system about what I'm trying to do. (And if the hints consistently aren't useful they can be changed without too much effort.)
+Stuff that I use frequently becomes muscle memory, and for stuff that I don't use frequently I get gentle, immediate and usually useful hints from the system about what I'm trying to do.
+(And if the hints consistently aren't useful they can be changed without too much effort.)
 
 This applies to:
 - Magit
 - Dired
 - M-x anything
 
+
+** Emacs can absorb pretty much all parts of your workflow into the same extensible system.
+
 * Favorite features:
+
+** Org mode:
+*** Org babel as a replacement for jupyter notebooks
+
+Literate code! Literate dev-ops!
+
+Version controlled jupyter notebooks!
+
+Mix latex and python and bash and rust and etc. in the same file.
+
+[[https://github.com/ElleNajt/ElleNajt.github.io/blob/master/Code/OrgBabelExample/example.org][Here's an example of an org babel file as a generic data science notebook!]]
+[[file:../Code/OrgBabelExample/example.org][Here's what it looks like when published to html.]]
+
+Seriously this is great -- it's changed my life.
+
+**** TODO Write a post about this.
+SCHEDULED: <2024-09-25 Wed>
+
+*** Org todos / agenda
+
+I love that I can collect todos from my org babel notebooks! No more running todo lists, org just collects them in their natural contexts.
+
+*** Org publish:
+
+I can take all my notes, with code and diagrams and latex, and easily publish them to the Internet. That's how this webpage is generated, and it only takes a [[https://github.com/ElleNajt/ElleNajt.github.io/blob/master/publish.el][few lines of config]] to get going.
+
+**** Cool features:
+- I can drop todos in my webpage org files and have them hidden by default by visible in my agenda.
+**** TODO Submit a PR to the WORG guide
+
+- Needed to set (org-store-link) to be relative by default; otherwise depending on folder structure emacs can insert them as absolute paths, which results in links in the published page that point to files that don't exist.
+
+   #+begin_src elisp
+   (setq org-link-file-path-type 'relative)
+   #+end_src
+
+***** TODO Fix the spaces in folders stuff.
+***** TODO Also make auto-index work, it's not respecting folder structure.
 
 ** yassnippets
 
@@ -46,33 +80,16 @@ See this inspiring [[https://karthinks.com/software/latex-input-for-impatient-sc
 
 I don't think I would have learned git so thoroughly without magit.
 
-** Dired
+** Dired/dirvish
 
 - wdired is magic -- I love being able to treat things that don't feel editable as editable, actually. (Consult-ripgep embark has the same flavor.)
 - ! or & then command (e.g. firefox) on the highlighted file(s) = yay
   it's also smart about guessing what you want to do!
-- Tab on a file
+- Tab on a file or a folder!
 - M for changing permissions
 - Mapping W to dired-do-eww
+- Bookmarks for your file system
 
-** Org todos / agenda
+* Config:
 
-I love that I can collect todos from my org babel notebooks! No more running todo lists, org just collects them in their natural contexts.
-
-** Org publish:
-*** Cool features:
-- I can drop todos in my webpage org files and have them hidden by default by visible in my agenda.
-*** Challenges I ran into :
-
-- Needed to set (org-store-link) to be relative by default; otherwise depending on folder structure emacs can insert them as absolute paths, which results in links in the published page that point to files that don't exist.
-
-   #+begin_src elisp
-   (setq org-link-file-path-type 'relative)
-   #+end_src
-
-
-- I don't know how to get publish to handle links to files in folders that have spaces
-***** TODO Fix the spaces in folders stuff.
-***** TODO Also make auto-index work, it's not respecting folder structure.
-
-
+[[https://github.com/ElleNajt/emacs][Here's my emacs config!]]
