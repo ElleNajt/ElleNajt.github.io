@@ -2,6 +2,7 @@
 #+PROPERTY: :exports both
 
 * Why Emacs:
+
 ** Truly customizable and extensible
 
 I can shape my editor into a tool that fits me, instead of contorting myself to fit someone else's UI design.
@@ -26,9 +27,11 @@ This applies to:
 - Magit
 - Dired
 - M-x anything
+** Great Aesthetics
 
+** All-encompassing
 
-** Emacs can absorb pretty much all parts of your workflow into the same extensible system.
+Emacs can absorb pretty much all parts of your workflow into the same extensible system.
 
 * Favorite features:
 
@@ -72,13 +75,13 @@ I can take all my notes, with code and diagrams and latex, and easily publish th
 
 ** yassnippets
 
-They're a great way to optimize writing code. It's a nice feeling to design yas snippets so they work smoothly together.
+They're a great way to optimize writing code. It's feels nice to have yas snippets that work smoothly together, like typing at a higher level of abstraction.
 
 See this inspiring [[https://karthinks.com/software/latex-input-for-impatient-scholars/][fast latex input via snippets]].
 
 ** Magit
 
-I don't think I would have learned git so thoroughly without magit.
+I don't think I would have learned git so thoroughly without magit. I love having all the options clearly available to me, it makes visualizing staging hunks of code clear, and it simplifies rebasing by having all the information visible and/or automatically loaded based on cursor location.
 
 ** Dired/dirvish
 

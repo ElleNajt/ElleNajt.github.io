@@ -4,7 +4,7 @@
 ;; (setq org-html-head-include-default-style nil)
 ;; (setq org-html-head " ")
 
-(setq elle/org-setup-file "~/.doom.d/org-templates/webpage_headers.org")
+(setq  elle/org-setup-file "./templates/webpage_headers.org")
 (defun elle/org-export-setup (backend)
   (interactive)
   (save-excursion
@@ -12,12 +12,11 @@
       (goto-char (point-min))
       (insert "#+SETUPFILE: ")
       (insert elle/org-setup-file)
-      ;; (insert "#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-bigblow.setup")
-      ;; (message "SETUPFILE inserted for %s" (buffer-file-name))
       (insert "\n")
       )
     )
   )
+
 
 (add-hook 'org-export-before-processing-hook
           'elle/org-export-setup)
@@ -41,7 +40,7 @@
          :exclude "^docs/.*\\|todo\\.org\\|drafts/.*"
          :recursive t
          :publishing-function org-html-publish-to-html
-         ;; :html-link-home ,(my/org-html-link-home)  ;; Call func
+         ;; :html-link-home t
          ;; by default this finds the index in the folder
          ;; which isn't the home behavior I'd expect or want
          :html-link-use-abs-url nil
@@ -49,8 +48,8 @@
          :with-toc nil
          :section-numbers nil
          :html-extension "html"
-         :auto-sitemap t
-         :auto-preamble t
+         ;; :auto-sitemap t
+         ;; :auto-preamble t
 
          ;; :auto-index t
          ;; :make-index t

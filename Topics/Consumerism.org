@@ -35,7 +35,7 @@ Here are some blogs that have influenced me:
 *** [[https://slatestarcodex.com/][Slate Star Codex]]
 *** [[https://x.com/visakanv/highlights][Visa Veerasamy]]
 *** Gwern
-**** [[https://gwern.net/choosing-software][Choosing Software]], which reinforced my convictio that [[file:Emacs.org][Emacs is excelent.]]
+**** [[https://gwern.net/choosing-software][Choosing Software]], which reinforced my conviction that [[file:Emacs.org][Emacs is excellent.]]
 *** Nicholas Carlini
 **** [[https://nicholas.carlini.com/writing/2024/how-i-use-ai.html#mobilelinks][How I use "AI"]]
 
@@ -44,4 +44,4 @@ I have some medical quality of life issues that I'm trying to solve.
 
 ** Allergies
 *** <2024-09-23 Mon>
-I got retested for allergies today, and they found many more things using the intradermal tests. Turns out I am allergic to dust mites! Hoping that allergy shots will clear up my lingering night time asthma issues.
+I got retested for allergies today, and they found more reactions using the intradermal tests. Turns out I am allergic to dust mites! Hoping that allergy shots will clear up my lingering night time asthma issues.
