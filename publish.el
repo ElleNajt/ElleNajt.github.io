@@ -8,30 +8,25 @@
   "Path to the setup file, relative to the Git repository root.")
 
 (defun elle/org-export-setup (backend)
-  "Insert the SETUPFILE directive with a path relative to the current file."
+  "Insert the SETUPFILE directive with a path relative to the current file,
+and HTML_LINK_UP directive with the correct number of ../ to reach index.html."
   (interactive)
   (save-excursion
     (let* ((current-file (buffer-file-name))
            (repo-root (locate-dominating-file current-file ".git"))
            (setup-file-path (expand-file-name elle/org-setup-file repo-root))
-           (relative-path (file-relative-name setup-file-path (file-name-directory current-file))))
+           (relative-path (file-relative-name setup-file-path (file-name-directory current-file)))
+           (depth (- (length (split-string (file-relative-name current-file repo-root) "/")) 1))
+           (link-up (concat (string-join  (make-list depth "../")) "index.html")))
       (goto-char (point-min))
-      (insert "#+SETUPFILE: " relative-path "\n"))))
+      (insert "#+SETUPFILE: " relative-path "\n")
+      (insert "#+HTML_LINK_HOME: " link-up "\n"))))
 
 
 (add-hook 'org-export-before-processing-hook
           'elle/org-export-setup)
 
 (setq org-html-validation-link nil)
-
-(defun my/org-html-link-home ()
-  "Determine the relative path to the home `index.html`."
-  (let ((current-dir (file-name-directory (or (buffer-file-name) default-directory))))
-    (if (string= current-dir (expand-file-name "~/org/personal_webpage/"))
-        ;; If we're in the top-level directory, no need to go up
-        "index.html"
-      ;; Otherwise, go up one level
-      "../index.html")))
 
 
 (setq org-publish-project-alist
