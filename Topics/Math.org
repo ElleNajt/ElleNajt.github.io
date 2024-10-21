@@ -11,16 +11,15 @@ It's pretty cool that we can understand things about the world from limited data
 Here are some of my favorite theorems:
 - 27 Lines on a smooth cubic, in particular the argument via the 27 fold covering of the parameter space of smooth cubics with the configuration space of (Cubic, Line).
 - [[https://en.wikipedia.org/wiki/Steinitz%27s_theorem][Steinitz's theorem]] : The graphs of 3 polytopes are the 3-vertex connected planar graphs!
-
-* Theoretical Computer Science $T(x)$
-
-A lot of my favorite theorems are theoretical computer science, here are some cool ones:
-
 - Rapid mixing of the basis-exchange-walk on spanning trees of a graph: Take a graph $G$, and let $\mathcal{T}$ be the set of spanning trees of the graph. There is a random walk on $\mathcal{T}$ wherein standing at a tree $T$ you take an edge in $G \setminus E(T)$ -- in $G$ but not an edge of $T$ - and add it to T, forming a cycle in $T$,  and then you delete a random edge in that cycle. This mixes rapidly, so after a polynomial in $|G|$ number of steps you're at approximately a uniformly random spanning tree.
+
+* Research
+
+In graduate school I did research on Markov chains that were being used to analyze political redistricting, along with some related problems. [[file:GradSchoolResearch.org][You can find an overview of my research here.]]
 
 * Competition Math $x + y \geq 2\sqrt{xy}$
 
-I wasn't successful at competition math in high school, so I'm enjoying learning how to become good at it as a means of doing some emotional processing and improving my general problem solving skills. I'm doing this by working with a tutor who is better than me at solving mathematical problems, and we are working through Engel's "Problem-Solving strategies."
+I wasn't successful at competition math in high school, so I'm enjoying learning how to become good at it as a means of doing some emotional processing and improving my general problem solving skills. I'm doing this by working with a tutor who is better than me at solving mathematical problems and we are working through Engel's "Problem-Solving strategies."
 
 ** Some problem solving lessons I'm learning:
 *** <2024-10-05 Sat>
@@ -30,7 +29,7 @@ I reflect on how I had internalized the idea that it is virtuous to struggle to 
 
 As we were working on another problem I started thinking about how it was hard to let go of an approach to a problem, even when I've become convinced that it won't work, because of the appeal of an idea working out.
 
-There is a useful [[file:Personal.org::*Forgiveness Meditation][forgiveness practice]] here also: forgiveness for not being able to come up with an idea, and forgiveness for an approach not working. I wonder if practice that in this context will make my attitudes more fluid.
+There is a useful [[file:Personal.org::*Meditation][forgiveness practice]] here also: forgiveness for not being able to come up with an idea, and forgiveness for an approach not working. I wonder if practice that in this context will make my attitudes more fluid.
 
 *** <2024-09-26 Thu>
 
