@@ -31,16 +31,6 @@ These two things help me stay hydrated and eating well:
 ** Good exercise:
 I haven't figured out an exercise I enjoy in a way I can do consistently. Maybe dancing?
 
-* Thought consumption:
-** Blogs:
-Here are some blogs that have influenced me:
-*** [[https://tasshin.com/][Tasshin Fogelman]]
-*** [[https://slatestarcodex.com/][Slate Star Codex]]
-*** [[https://x.com/visakanv/highlights][Visa Veerasamy]]
-*** Gwern
-**** [[https://gwern.net/choosing-software][Choosing Software]], which reinforced my conviction that [[file:Emacs.org][Emacs is excellent.]]
-*** Nicholas Carlini
-**** [[https://nicholas.carlini.com/writing/2024/how-i-use-ai.html#mobilelinks][How I use "AI"]]
 
 * TODO Medical consumption:
 I have some medical quality of life issues that I'm trying to solve.

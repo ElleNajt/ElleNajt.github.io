@@ -33,3 +33,19 @@ Living in a culture that valued radical self-expression, participation and immed
 
 I also attended an interesting math lecture about embodied ways of approaching mathematical problem solving, which inspired me to [[file:Math.org::*Competition Math $x + y \geq 2\sqrt{xy}$][work more on my mathematical problem solving skills]] with a tutor who is helping refactor both my understanding of foundational concepts, and improve my emotional relationship to problem-solving and mathematics overall.
 
+* [[file:Music.org][Music]]
+I like music, and also make music on the piano and in ableton or cubase.
+
+* [[file:Consumerism.org][Consumerism]]
+Things that benefit me through their consumption
+
+* Thought consumption:
+** Blogs:
+Here are some blogs that have influenced me:
+*** [[https://tasshin.com/][Tasshin Fogelman]]
+*** [[https://slatestarcodex.com/][Slate Star Codex]]
+*** [[https://x.com/visakanv/highlights][Visa Veerasamy]]
+*** Gwern
+**** [[https://gwern.net/choosing-software][Choosing Software]], which reinforced my conviction that [[file:Emacs.org][Emacs is excellent.]]
+*** Nicholas Carlini
+**** [[https://nicholas.carlini.com/writing/2024/how-i-use-ai.html#mobilelinks][How I use "AI"]]

@@ -11,13 +11,10 @@ I like learning math, and writing about what I'm learning clarifies things for m
 I've been on an arc of getting better at software engineering skills and other aspects of computer usage.
 
 * [[file:Topics/Personal.org][Personal]]
-Meditation, Clowning, Burning Man, other adventures...
-
-* [[file:Topics/Music.org][Music]]
-I like music, and also make music on the piano and in ableton or cubase.
-
-* [[file:Topics/Consumerism.org][Consumerism]]
-Things that benefit me through their consumption: tools, thoughts, medicine.
+- Meditation, Clowning, Burning Man, other adventures...
+- Music I'm making or listening to
+- Tools I like
+- What I'm reading
 
 * Professional
 I obtained my math PhD Dec 2021 at the University of Wisconsin-Madison, advised by [[http://www.math.wisc.edu/~ellenber/][Jordan Ellenberg]].
