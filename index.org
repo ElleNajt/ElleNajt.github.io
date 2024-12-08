@@ -8,7 +8,7 @@ Click on the headers to see more about my interests.
 I like learning math, and writing about what I'm learning clarifies things for me.
 
 * [[file:Topics/SoftwareDevelopment.org][Software Development]]
-I've been on an arc of getting better at software engineering skills and other aspects of computer usage.
+I've been on an arc of getting better at software engineering skills.
 
 * [[file:Topics/Personal.org][Personal]]
 - Meditation, Clowning, Burning Man, other adventures...
