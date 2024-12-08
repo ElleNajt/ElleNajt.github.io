@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-31 Thu 12:01 -->
+<!-- 2024-12-08 Sun 13:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Software Development</title>
@@ -210,28 +210,24 @@ I&rsquo;ve been having fun this past year or so going deeper into software devel
 Here are the tools I&rsquo;ve been spending the most time with, and the opinions I&rsquo;ve developed.<br />
 </p>
 
-<div id="outline-container-org7beb13a" class="outline-2">
-<h2 id="org7beb13a">Tools I love:</h2>
-<div class="outline-text-2" id="text-org7beb13a">
+<div id="outline-container-org99cb71b" class="outline-2">
+<h2 id="org99cb71b">Tools I love:</h2>
+<div class="outline-text-2" id="text-org99cb71b">
 </div>
-<div id="outline-container-orge892b90" class="outline-3">
-<h3 id="orge892b90">Emacs</h3>
-<div class="outline-text-3" id="text-orge892b90">
+<div id="outline-container-org458ca76" class="outline-3">
+<h3 id="org458ca76">Emacs</h3>
+<div class="outline-text-3" id="text-org458ca76">
 <p>
-I have a <a href="Emacs.html">a whole page about emacs</a>, but it deserves a bullet here.<br />
-</p>
-
-<p>
-I love being able to shape my editor into a glove that fits me and my idiosyncrasies. It&rsquo;s so much better than shaping myself to fit an awkward tool. Getting good at emacs has made development a million times more fun, and this leads to more flow, and to more creativity.<br />
+I describe why I love emacs in some depth <a href="Emacs.html">here</a>, but briefly: I love being able to shape my editor into a glove that fits me and my idiosyncrasies. It&rsquo;s so much better than shaping myself to fit an awkward tool &#x2013; a philosophy that applies to many other things.<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga22d326" class="outline-3">
-<h3 id="orga22d326">Org-mode</h3>
-<div class="outline-text-3" id="text-orga22d326">
+<div id="outline-container-orgd64f7c6" class="outline-3">
+<h3 id="orgd64f7c6">Org-mode</h3>
+<div class="outline-text-3" id="text-orgd64f7c6">
 <p>
-Although I&rsquo;m a professional data scientist, I don&rsquo;t use jupyter notebooks, I use org babel in Emacs org mode!<br />
+Although I&rsquo;m a professional data scientist, for the most part I don&rsquo;t use jupyter notebooks, I use org babel in Emacs org mode!<br />
 </p>
 
 <p>
@@ -249,9 +245,9 @@ This is great because it:<br />
 </div>
 </div>
 
-<div id="outline-container-orgfa212ce" class="outline-3">
-<h3 id="orgfa212ce">Nix</h3>
-<div class="outline-text-3" id="text-orgfa212ce">
+<div id="outline-container-org7182957" class="outline-3">
+<h3 id="org7182957">Nix</h3>
+<div class="outline-text-3" id="text-org7182957">
 <p>
 I do most of my personal development through a nixos vm running with UTM on my mac. I love being able to version my system configuration, and steal bits of config from friends.<br />
 </p>
@@ -261,7 +257,7 @@ I also use nix as my package manager for python environments at home. Sometimes 
 </p>
 
 <p>
-Configuring nix also meshes well with LLMs, because you can tell it about the status of your configurations with text. :3<br />
+Configuring nix also meshes well with LLMs, because you can tell it about the status of your configurations with text, and it can give suggestions that can be copy pasted. :3<br />
 </p>
 
 <p>
@@ -270,34 +266,26 @@ I  like having these linux shenanigans live inside of a computer that&rsquo;s st
 </div>
 </div>
 
-<div id="outline-container-org3e1e0fc" class="outline-3">
-<h3 id="org3e1e0fc">Git</h3>
-<div class="outline-text-3" id="text-org3e1e0fc">
+<div id="outline-container-orgaf98b6f" class="outline-3">
+<h3 id="orgaf98b6f">Git</h3>
+<div class="outline-text-3" id="text-orgaf98b6f">
 <p>
-I love git so much.<br />
+I love git and versioning all sorts of things! I didn&rsquo;t always love git, I used to be afraid of messing things up, but now I understand that it&rsquo;s a tool that enables safe experimentation. It&rsquo;s quite the opposite from my original feeling!<br />
 </p>
 
 <p>
-I didn&rsquo;t always love git, I used to be afraid of messing things up, but now I understand that it&rsquo;s a tool that enables safe experimentation. It&rsquo;s quite the opposite from my original feeling!<br />
+The main change here was learning how git internals worked, from some friendly explanations plus the book <a href="https://git-scm.com/book/en/v2">pro-git</a>, and then using git constantly because of Emac&rsquo;s built in git-wrapper Magit.<br />
 </p>
 
 <p>
-I changed by asking for help from more senior developers and getting a lot of it, and using git constantly because of Emac&rsquo;s built in git-wrapper Magit. Magit was great since it meant I didn&rsquo;t have to remember lots of commands, and the menu of options made my option space concrete in a way that is hard with command lines, but at the same time it didn&rsquo;t <b>hide</b> git, like a lot of other UIs.<br />
-</p>
-
-<p>
-Did I mention emacs is great?<br />
-</p>
-
-<p>
-<a href="https://git-scm.com/book/en/v2">The book pro-git was also a great reference.</a> Like a lot of people I was walking around with a the incorrect and confused model of commits as <b>differences</b>, and learning about how the key-value database stores snapshots (that are later compressed) clarified a lot.<br />
+Magit is great because of menu based interaction, <a href="Emacs.html#orgb827946">which I&rsquo;ve written about here,</a> while not hiding most of git, unlike other wrappers.<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org90a6295" class="outline-3">
-<h3 id="org90a6295">LLMs</h3>
-<div class="outline-text-3" id="text-org90a6295">
+<div id="outline-container-orgf5028a5" class="outline-3">
+<h3 id="orgf5028a5">LLMs</h3>
+<div class="outline-text-3" id="text-orgf5028a5">
 <p>
 I wouldn&rsquo;t have been able to make such rapid progress on stuff without LLMs to get me unstuck. They can be great tutors for learning new pieces of technology; I think they&rsquo;re especially useful for learning new languages. I&rsquo;ve also benefit from using them as style pointers.<br />
 </p>
@@ -312,22 +300,22 @@ I think they&rsquo;re especially nice in the stage of mastery where you know tha
 </div>
 </div>
 
-<div id="outline-container-orgbdd532f" class="outline-3">
-<h3 id="orgbdd532f">Tests!</h3>
-<div class="outline-text-3" id="text-orgbdd532f">
+<div id="outline-container-org576fc21" class="outline-3">
+<h3 id="org576fc21">Tests!</h3>
+<div class="outline-text-3" id="text-org576fc21">
 <p>
 This is less of a tool, but I love test driven development &#x2013; it makes for a fun feedback loop, and it&rsquo;s comforting to be able to refactor with confidence.<br />
 </p>
 
 <p>
-Recently I&rsquo;ve been experimenting with using org babel files as literate expect tests &#x2013; I like that you get documentation and tests at the same time!<br />
+Recently I&rsquo;ve been experimenting with using org babel files as literate expect tests &#x2013; I like that you get documentation and tests at the same time! This is how I test my <a href="https://github.com/ElleNajt/ob-python-extras">org babel python for data science package</a>.<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org060424b" class="outline-3">
-<h3 id="org060424b">Text</h3>
-<div class="outline-text-3" id="text-org060424b">
+<div id="outline-container-org815ba18" class="outline-3">
+<h3 id="org815ba18">Text</h3>
+<div class="outline-text-3" id="text-org815ba18">
 <p>
 The universal interface. :3<br />
 </p>
@@ -335,13 +323,13 @@ The universal interface. :3<br />
 </div>
 </div>
 
-<div id="outline-container-org6aa5fa2" class="outline-2">
-<h2 id="org6aa5fa2">Opinions:</h2>
-<div class="outline-text-2" id="text-org6aa5fa2">
+<div id="outline-container-org6213d19" class="outline-2">
+<h2 id="org6213d19">Opinions:</h2>
+<div class="outline-text-2" id="text-org6213d19">
 </div>
-<div id="outline-container-org9e80b8f" class="outline-3">
-<h3 id="org9e80b8f">Safe to fail</h3>
-<div class="outline-text-3" id="text-org9e80b8f">
+<div id="outline-container-org12d223c" class="outline-3">
+<h3 id="org12d223c">Safe to fail</h3>
+<div class="outline-text-3" id="text-org12d223c">
 <p>
 A thing that tools I like have in common is that they&rsquo;re safe to fail in, or they make it safe to fail.<br />
 I like to learn by experimenting with things.<br />
@@ -353,31 +341,31 @@ I like to learn by experimenting with things.<br />
 </div>
 </div>
 
-<div id="outline-container-org6646168" class="outline-3">
-<h3 id="org6646168">Fun</h3>
-<div class="outline-text-3" id="text-org6646168">
+<div id="outline-container-org7425a93" class="outline-3">
+<h3 id="org7425a93">Fun</h3>
+<div class="outline-text-3" id="text-org7425a93">
 <p>
 It&rsquo;s good when tools are fun and create flow. When you&rsquo;re engaged you&rsquo;re at your best, so you should optimize for fun!<br />
 </p>
 
 <p>
-Recently I&rsquo;ve been applying this <a href="Math.html#orgc022069">to my mathematical studies as well!</a><br />
+Recently I&rsquo;ve been applying this <a href="Math.html#org8c466fd">to my mathematical studies as well!</a><br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orged17047" class="outline-3">
-<h3 id="orged17047">Design or modify tools to fit yourself, don&rsquo;t bend yourself to fit tools.</h3>
-<div class="outline-text-3" id="text-orged17047">
+<div id="outline-container-org02de150" class="outline-3">
+<h3 id="org02de150">Design or modify tools to fit yourself, don&rsquo;t bend yourself to fit tools.</h3>
+<div class="outline-text-3" id="text-org02de150">
 <p>
 Being able to iterate towards a tool that fits you like a glove is one of the beauties of a system like emacs.<br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org6326cdf" class="outline-3">
-<h3 id="org6326cdf">Find ways to develop iteratively and build positive feedback loops</h3>
-<div class="outline-text-3" id="text-org6326cdf">
+<div id="outline-container-orge19c5be" class="outline-3">
+<h3 id="orge19c5be">Find ways to develop iteratively and build positive feedback loops</h3>
+<div class="outline-text-3" id="text-orge19c5be">
 <p>
 This manifestly strongly when working on workflow tooling, because I immediately get a positive reward from improving a tool. This also shows up in writing tests and releasing code for review or use by other people, or that otherwise encounters reality in some way.<br />
 </p>
@@ -415,18 +403,18 @@ inbreeding, a mathematical subject is in danger of degeneration.<br />
 </div>
 </div>
 
-<div id="outline-container-org85a84b1" class="outline-3">
-<h3 id="org85a84b1">Have science buddies!</h3>
-<div class="outline-text-3" id="text-org85a84b1">
+<div id="outline-container-org807eb5c" class="outline-3">
+<h3 id="org807eb5c">Have science buddies!</h3>
+<div class="outline-text-3" id="text-org807eb5c">
 <p>
 <a href="https://x.com/ItaiYanai/status/1842787938175697232?t=RKkozqQX7jdShawHQ7rlWA&amp;s=19">&ldquo;Doing good science is 90% finding a science buddy to constantly talk to about the project.&rdquo;</a><br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org1ddf647" class="outline-3">
-<h3 id="org1ddf647">You can just get good at things!</h3>
-<div class="outline-text-3" id="text-org1ddf647">
+<div id="outline-container-org2d3b983" class="outline-3">
+<h3 id="org2d3b983">You can just get good at things!</h3>
+<div class="outline-text-3" id="text-org2d3b983">
 <p>
 Useful subskills:<br />
 </p>
@@ -443,7 +431,7 @@ Useful subskills:<br />
 <div id="postamble" class="status">
 <p class="author">Author: Elle Najt</p>
 <p class="email">Email: <a href="mailto:LNAJT4@gmail.com">LNAJT4@gmail.com</a></p>
-<p class="date">Created: 2024-10-31 Thu 12:01</p>
+<p class="date">Created: 2024-12-08 Sun 13:38</p>
 <p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.4 (<a href="https://orgmode.org">Org</a> mode 9.6.15)</p>
 </div>
 </body>

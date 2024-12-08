@@ -2,7 +2,7 @@
 
 * Tools I love:
 
-Here are some mostly material things that have my life a bunch better:
+Here are some mostly material things that have my life better:
 
 ** Good ergonomics:
 
@@ -20,8 +20,11 @@ And obviously [[file:Emacs.org][emacs.]]
 - A weighted blanket
 - A good air filter
 - ([[https://slatestarcodex.com/2018/07/10/melatonin-much-more-than-you-wanted-to-know/#post-4987][The right dose of]]) melatonin sometimes
+- The right mindset: framing it as trying to rest rather than fall asleep has helped me, as described [[https://tasshin.com/blog/the-gospel-of-naps-according-to-tasshin/][here]].
 
 ** Good food
+These two things help me stay hydrated and eating well:
+
 - A nutribullet Blender
 - A zojirushi hot water dispenser
 
@@ -39,7 +42,7 @@ Here are some blogs that have influenced me:
 *** Nicholas Carlini
 **** [[https://nicholas.carlini.com/writing/2024/how-i-use-ai.html#mobilelinks][How I use "AI"]]
 
-* Medical consumption:
+* TODO Medical consumption:
 I have some medical quality of life issues that I'm trying to solve.
 
 ** Allergies

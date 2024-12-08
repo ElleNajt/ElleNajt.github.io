@@ -4,9 +4,6 @@ Welcome to my webpage!
 
 Click on the headers to see more about my interests.
 
-* [[file:Topics/Emacs.org][Emacs]]
-I love emacs and developing my workflow brings me a lot of happiness. :)
-
 * [[file:Topics/Math.org][Math]]
 I like learning math, and writing about what I'm learning clarifies things for me.
 
@@ -17,7 +14,7 @@ I've been on an arc of getting better at software engineering skills and other a
 Meditation, Clowning, Burning Man, other adventures...
 
 * [[file:Topics/Music.org][Music]]
-I like music, and also make music on the piano and in ableton.
+I like music, and also make music on the piano and in ableton or cubase.
 
 * [[file:Topics/Consumerism.org][Consumerism]]
 Things that benefit me through their consumption: tools, thoughts, medicine.
@@ -30,7 +27,7 @@ I obtained my math PhD Dec 2021 at the University of Wisconsin-Madison, advised 
 Jan 2018 - August 2019 I was a visitor in [[https://people.csail.mit.edu/jsolomon/][Justin Solomon's]] lab at MIT/CSAIL. I worked with him and
 [[https://www.math.wsu.edu/faculty/ddeford/][Daryl DeFord]] to [[file:Topics/GradSchoolResearch.org::*Gerrymandering][analyze statistical techniques being used to evaluate gerrymandering.]]
 
-I currently work as a data scientist on a systematic trading team at Two Sigma. I like it! Obviously all opinions expressed on this webpage are my own.
+I currently work as a data scientist at Two Sigma. Obviously all opinions expressed on this webpage are my own.
 
 * Internet presence:
 

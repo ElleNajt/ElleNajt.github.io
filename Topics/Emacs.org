@@ -49,6 +49,8 @@ Mix latex and python and bash and rust and etc. in the same file.
 
 Seriously this is great -- it's changed my life.
 
+There are some missing features, and I've written a package that adds the ones I've missed the most [[https://github.com/ElleNajt/ob-python-extras?tab=readme-ov-file][a package that adds them.]]
+
 **** TODO Write a post about this.
 SCHEDULED: <2024-09-25 Wed>
 

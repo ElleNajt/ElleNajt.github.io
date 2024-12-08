@@ -8,13 +8,11 @@ Here are the tools I've been spending the most time with, and the opinions I've 
 
 ** Emacs
 
-I have a [[file:Emacs.org][a whole page about emacs]], but it deserves a bullet here.
-
-I love being able to shape my editor into a glove that fits me and my idiosyncrasies. It's so much better than shaping myself to fit an awkward tool. Getting good at emacs has made development a million times more fun, and this leads to more flow, and to more creativity.
+I describe why I love emacs in some depth [[file:Emacs.org][here]], but briefly: I love being able to shape my editor into a glove that fits me and my idiosyncrasies. It's so much better than shaping myself to fit an awkward tool -- a philosophy that applies to many other things.
 
 ** Org-mode
 
-Although I'm a professional data scientist, I don't use jupyter notebooks, I use org babel in Emacs org mode!
+Although I'm a professional data scientist, for the most part I don't use jupyter notebooks, I use org babel in Emacs org mode!
 
 This is great because it:
 - Enables reproducible science via version controlled text based notebooks
@@ -29,21 +27,17 @@ I do most of my personal development through a nixos vm running with UTM on my m
 
 I also use nix as my package manager for python environments at home. Sometimes requires terrible overlays but at least it's hermetic, reproducible and aesthetic. ^^ It also integrates smoothly with eglot and pyright, which can be a headache, see my [[https://github.com/ElleNajt/emacs/tree/main/python/nix_project_defaults][python project defaults.]]
 
-Configuring nix also meshes well with LLMs, because you can tell it about the status of your configurations with text. :3
+Configuring nix also meshes well with LLMs, because you can tell it about the status of your configurations with text, and it can give suggestions that can be copy pasted. :3
 
 I  like having these linux shenanigans live inside of a computer that's stable, and that just *works* and interfaces as a first class citizen with the rest of the world.
 
 ** Git
 
-I love git so much.
+I love git and versioning all sorts of things! I didn't always love git, I used to be afraid of messing things up, but now I understand that it's a tool that enables safe experimentation. It's quite the opposite from my original feeling!
 
-I didn't always love git, I used to be afraid of messing things up, but now I understand that it's a tool that enables safe experimentation. It's quite the opposite from my original feeling!
+The main change here was learning how git internals worked, from some friendly explanations plus the book [[https://git-scm.com/book/en/v2][pro-git]], and then using git constantly because of Emac's built in git-wrapper Magit.
 
-I changed by asking for help from more senior developers and getting a lot of it, and using git constantly because of Emac's built in git-wrapper Magit. Magit was great since it meant I didn't have to remember lots of commands, and the menu of options made my option space concrete in a way that is hard with command lines, but at the same time it didn't *hide* git, like a lot of other UIs.
-
-Did I mention emacs is great?
-
-[[https://git-scm.com/book/en/v2][The book pro-git was also a great reference.]] Like a lot of people I was walking around with a the incorrect and confused model of commits as *differences*, and learning about how the key-value database stores snapshots (that are later compressed) clarified a lot.
+Magit is great because of menu based interaction, [[file:Emacs.org::*Better than a clicking based GUI or a CLI:][which I've written about here,]] while not hiding most of git, unlike other wrappers.
 
 ** LLMs
 
@@ -57,7 +51,7 @@ I think they're especially nice in the stage of mastery where you know that conc
 
 This is less of a tool, but I love test driven development -- it makes for a fun feedback loop, and it's comforting to be able to refactor with confidence.
 
-Recently I've been experimenting with using org babel files as literate expect tests -- I like that you get documentation and tests at the same time!
+Recently I've been experimenting with using org babel files as literate expect tests -- I like that you get documentation and tests at the same time! This is how I test my [[https://github.com/ElleNajt/ob-python-extras][org babel python for data science package]].
 
 ** Text
 
