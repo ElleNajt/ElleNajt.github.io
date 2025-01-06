@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-01-05 Sun 20:44 -->
+<!-- 2025-01-05 Sun 20:42 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Math</title>
+<title>Basic Model</title>
 <meta name="author" content="Elle Najt" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -194,141 +194,156 @@
   .org-svg { }
 </style>
 <link rel="stylesheet" type="text/css" href="./css/worg.css"/>
-<script>
-  window.MathJax = {
-    tex: {
-      ams: {
-        multlineWidth: '85%'
-      },
-      tags: 'ams',
-      tagSide: 'right',
-      tagIndent: '.8em'
-    },
-    chtml: {
-      scale: 1.0,
-      displayAlign: 'center',
-      displayIndent: '0em'
-    },
-    svg: {
-      scale: 1.0,
-      displayAlign: 'center',
-      displayIndent: '0em'
-    },
-    output: {
-      font: 'mathjax-modern',
-      displayOverflow: 'overflow'
-    }
-  };
-</script>
-
-<script
-  id="MathJax-script"
-  async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </head>
 <body>
 <div id="org-div-home-and-up">
- <a accesskey="h" href="../index.html"> UP </a>
+ <a accesskey="h" href="../../../index.html"> UP </a>
  |
- <a accesskey="H" href="../index.html"> HOME </a>
+ <a accesskey="H" href="../../../index.html"> HOME </a>
 </div><div id="content" class="content">
-<h1 class="title">Math</h1>
+<h1 class="title">Basic Model</h1>
 
-<div id="outline-container-org6e0f66f" class="outline-2">
-<h2 id="org6e0f66f">Math Research</h2>
-<div class="outline-text-2" id="text-org6e0f66f">
-<p>
-In graduate school I did research on Markov chains that were being used to analyze political redistricting, along with some related problems. <a href="GradSchoolResearch.html">You can find an overview of my research here.</a><br />
-</p>
-</div>
-</div>
+<div id="outline-container-org7bf1e2c" class="outline-2">
+<h2 id="org7bf1e2c">Linear version</h2>
+<div class="outline-text-2" id="text-org7bf1e2c">
+<ol class="org-ol">
+<li>Start with a dataset of vectors x in R^n<br />
+x is sampled according to:<br />
+for each coordinate, flip a coin with probability S.<br />
+If tails, x[i] = 0. If heads, x[i] ~ unif[0,1]<br /></li>
 
-<div id="outline-container-org88cf1fc" class="outline-2">
-<h2 id="org88cf1fc">Statistics \(\mathbb{P}(A)\)</h2>
-<div class="outline-text-2" id="text-org88cf1fc">
-<p>
-It&rsquo;s pretty cool that we can understand things about the world from limited data; probability is a microscope!<br />
-This is also what I do for my job.<br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-org27d1aa0" class="outline-2">
-<h2 id="org27d1aa0">Some of my favorite theorems:</h2>
-<div class="outline-text-2" id="text-org27d1aa0">
-<p>
-Here are some of my favorite theorems:<br />
-</p>
-<ul class="org-ul">
-<li>27 Lines on a smooth cubic, in particular the argument via the 27 fold covering of the parameter space of smooth cubics with the configuration space of (Cubic, Line).<br /></li>
-<li><a href="https://en.wikipedia.org/wiki/Steinitz%27s_theorem">Steinitz&rsquo;s theorem</a> : The graphs of 3 polytopes are the 3-vertex connected planar graphs!<br /></li>
-<li>Rapid mixing of the basis-exchange-walk on spanning trees of a graph: Take a graph \(G\), and let \(\mathcal{T}\) be the set of spanning trees of the graph. There is a random walk on \(\mathcal{T}\) wherein standing at a tree \(T\) you take an edge in \(G \setminus E(T)\) &#x2013; in \(G\) but not an edge of \(T\) - and add it to T, forming a cycle in \(T\),  and then you delete a random edge in that cycle. This mixes rapidly, so after a polynomial in \(|G|\) number of steps you&rsquo;re at approximately a uniformly random spanning tree.<br /></li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org6a1dc84" class="outline-2">
-<h2 id="org6a1dc84">Competition Math \(x + y \geq 2\sqrt{xy}\)</h2>
-<div class="outline-text-2" id="text-org6a1dc84">
-<p>
-I wasn&rsquo;t successful at competition math in high school, so I&rsquo;m enjoying learning how to become good at it as a means of doing some emotional processing and improving my general problem solving skills. I&rsquo;m doing this by working with a tutor who is better than me at solving mathematical problems and we are working through Engel&rsquo;s &ldquo;Problem-Solving strategies.&rdquo;<br />
-</p>
-</div>
-
-<div id="outline-container-orgf50a8b3" class="outline-3">
-<h3 id="orgf50a8b3">Some problem solving lessons I&rsquo;m learning:</h3>
-<div class="outline-text-3" id="text-orgf50a8b3">
-</div>
-<div id="outline-container-org311a4d2" class="outline-4">
-<h4 id="org311a4d2"><span class="timestamp-wrapper"><span class="timestamp">&lt;2024-10-05 Sat&gt;</span></span></h4>
-<div class="outline-text-4" id="text-org311a4d2">
-<p>
-Noticed that I got fixated on solving one of the example problems. I did eventually solve it, which I felt really good about, though I found a different solution from the one in the book, meaning that from my struggles I didn&rsquo;t learn how the problem was an example of the problem solving technique of invariants.<br />
-</p>
-
-<p>
-I reflect on how I had internalized the idea that it is virtuous to struggle to solve a problem, which I am questioning - certainly there is virtue in solving hard problems, and value in developing the skill of being okay with frustration. But I think the &ldquo;struggle with problems&rdquo; mindset is one that makes the most sense when at the core ideas have been learned, and my goal here is to become a better mathematical problem solver. I discussed this with my tutor, and he cited some research showing that studying diversity of topics and simply doing a lot of problems is more effective, and we both agreed that it made sense to <a href="SoftwareDevelopment.html#org24eeeab">optimize for fun</a>.<br />
-</p>
-
-<p>
-As we were working on another problem I started thinking about how it was hard to let go of an approach to a problem, even when I&rsquo;ve become convinced that it won&rsquo;t work, because of the appeal of an idea working out.<br />
-</p>
-
-<p>
-There is a useful <a href="Personal.html#org2be6551">forgiveness practice</a> here also: forgiveness for not being able to come up with an idea, and forgiveness for an approach not working. I wonder if practice that in this context will make my attitudes more fluid.<br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-org5ab255c" class="outline-4">
-<h4 id="org5ab255c"><span class="timestamp-wrapper"><span class="timestamp">&lt;2024-09-26 Thu&gt;</span></span></h4>
-<div class="outline-text-4" id="text-org5ab255c">
-<p>
-I can get stuck in an overly formal way of thinking about problems; e.g. pattern matching what I see against facts I know. It can be useful to notice mindfully when I&rsquo;m in that mindset and step back into a more heuristic and embodied mindframe.<br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-org3cda15e" class="outline-4">
-<h4 id="org3cda15e"><span class="timestamp-wrapper"><span class="timestamp">&lt;2024-09-19 Thu&gt;</span></span></h4>
-<div class="outline-text-4" id="text-org3cda15e">
-<p>
-Mistakes can lead to solutions; it&rsquo;s important to not avoid thinking about how to correct an error out of avoidant shame around doing something &ldquo;dumb.&rdquo; This effect can be very subtle! Forgive yourself for not understanding. ^^<br />
-</p>
+<li>Then, have a linear map R^n -&gt; R^h with a bias term, followed by the transpose of that map back to R^n.<br /></li>
+<li>The loss is weighted by sum_x sum_i (1/i)(x[i] - reconstructed_x[i])^2<br /></li>
+</ol>
 
 <div class="org-src-container">
-<pre class="src src-qoute">To fear the error and to fear the truth are one and the same. One who fears to
-be wrong is powerless to discover. It is when we are afraid of making mistakes
-that the mistake inside us becomes immovable like a rock.  Because in our fear,
-we cling to what we have decreed to be “true”, or what has always been presented
-to us as “true”. If we are moved, not by the fear of seeing an illusory security
-vanish, but by a thirst for knowing, then error, like suffering or sorrow, will
-cross us without ever becoming frozen, and the trace of its passage will be a
-renewed understanding.
-- Alexander Grothendieck
+<pre class="src src-python">from helper_functions import run_experiment, LinearAutoEncoder, ReLUAutoEncoder, SAEAutoEncoder, seed_everything
 </pre>
 </div>
+
+<div class="org-src-container">
+<pre class="src src-python">n_dim = 5
+h_dim = 2
+n_samples = 5000
+importance_base = .5
+epochs = 2000
+learning_rate = 0.01
+seed_everything(42)
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">run_experiment(LinearAutoEncoder,
+               n_dim=n_dim,
+               h_dim=h_dim,
+               n_samples= n_samples,
+               sparsity=.1,
+               importance_base = importance_base,
+               epochs=epochs,
+               learning_rate=learning_rate)
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">for one_minus_sparsity in [1, .5, .1, .001]:
+    sparsity = 1 - one_minus_sparsity
+    print(f"Sparsity: {sparsity}")
+    run_experiment(ReLUAutoEncoder,
+        n_dim=n_dim,
+        h_dim=h_dim,
+        n_samples= n_samples,
+        sparsity=sparsity,
+        epochs=epochs,
+        learning_rate=learning_rate)
+    plt.show()
+</pre>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org73bb35c" class="outline-2">
+<h2 id="org73bb35c">Questions:</h2>
+<div class="outline-text-2" id="text-org73bb35c">
+</div>
+<div id="outline-container-org8129f4b" class="outline-3">
+<h3 id="org8129f4b">This is not the same architecture as in SAE, its Relu(W^T W x + h), not W^T Relu ( Wx + h ) + b</h3>
+</div>
+
+<div id="outline-container-org4e56cbb" class="outline-3">
+<h3 id="org4e56cbb">A lot less superposition with the usual SAE structure</h3>
+<div class="outline-text-3" id="text-org4e56cbb">
+<div class="org-src-container">
+<pre class="src src-python">for one_minus_sparsity in [1, .3, .1, .03, .01, .003, .001]:
+    sparsity = 1 - one_minus_sparsity
+    print(sparsity)
+    run_experiment(SAEAutoEncoder,
+        n_dim=n_dim,
+        h_dim=h_dim,
+        n_samples= n_samples,
+        sparsity=sparsity,
+        epochs=epochs,
+        learning_rate=learning_rate)
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">def create_rotary_matrix(d_model, max_seq_len):
+    position = np.arange(max_seq_len)
+    freq = 1.0 / (10000 ** (np.arange(0, d_model, 2) / d_model))
+    angles = position[:, None] * freq[None, :]
+
+    rotary = np.zeros((max_seq_len, d_model))
+    rotary[:, 0::2] = np.cos(angles)
+    rotary[:, 1::2] = np.sin(angles)
+
+    return rotary
+
+# Apply RoPE
+def apply_rotary(x, rotary):
+    return x * rotary
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Create rotary matrix
+d_model = 64
+max_seq_len = 100
+rotary = create_rotary_matrix(d_model, max_seq_len)
+
+# Plot first few dimensions of rotary embeddings
+plt.figure(figsize=(10, 4))
+plt.plot(rotary[:, :4])
+plt.title('First 4 dimensions of RoPE')
+plt.xlabel('Position')
+plt.ylabel('Value')
+plt.legend([f'dim_{i}' for i in range(4)])
+
+# Plot inner products
+inner_products = rotary @ rotary.T
+plt.figure(figsize=(8, 8))
+sns.heatmap(inner_products, cmap='RdBu')
+plt.title('Inner Products Between Position Embeddings')
+plt.xlabel('Position')
+plt.ylabel('Position')
+
+plt.show()
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">plt.figure(figsize=(12, 6))
+sns.heatmap(rotary, cmap='RdBu', center=0)
+plt.title('Rotary Position Embeddings Matrix')
+plt.xlabel('Dimension')
+plt.ylabel('Position')
+plt.show()
+</pre>
 </div>
 </div>
 </div>
@@ -337,7 +352,7 @@ renewed understanding.
 <div id="postamble" class="status">
 <p class="author">Author: Elle Najt</p>
 <p class="email">Email: <a href="mailto:LNAJT4@gmail.com">LNAJT4@gmail.com</a></p>
-<p class="date">Created: 2025-01-05 Sun 20:44</p>
+<p class="date">Created: 2025-01-05 Sun 20:42</p>
 <p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.4 (<a href="https://orgmode.org">Org</a> mode 9.6.15)</p>
 </div>
 </body>

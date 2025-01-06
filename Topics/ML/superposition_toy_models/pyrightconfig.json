@@ -1,0 +1,12 @@
+{
+    "reportUnknownParameterType": false,
+    "reportUnknownArgumentType": false,
+    "reportUnknownMemberType": false,
+    "reportUnknownLambdaType": false,
+    "reportUntypedFunctionDecorator": false,
+    "reportAny": false,
+    "reportUnknownVariableType": false,
+    "reportMissingParameterType": false,
+    "reportImplicitOverride" : false,
+    "reportUnusedCallResult" : false
+}
