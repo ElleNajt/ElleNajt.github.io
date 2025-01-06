@@ -1,0 +1,21 @@
+#+title: Readme
+
+
+* Reproductions of toy models
+
+Did some reproductions of the basic example from the toy models paper.
+
+#+begin_src bash
+streamlit run toy_models_reproductions.py
+#+end_src
+
+* Oversampled vector
+
+- Sample from a gaussian
+- Choose on of the points at random, and over sample it
+- Does a SAE learn to assign a neuron to that point
+Yes, usually. Explore with this app:
+
+#+begin_src bash
+streamlit run oversampling_streamlit_app.py
+#+end_src

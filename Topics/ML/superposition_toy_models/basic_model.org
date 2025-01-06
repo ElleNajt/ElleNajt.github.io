@@ -1,0 +1,213 @@
+#+title: Basic Model
+#+PROPERTY: header-args:python :results output drawer :python "nix-shell --run python" :async t :tangle :session python_toymodels
+#+PROPERTY: header-args:bash :results output :async t :tangle :session bash_toymodels
+
+* Linear version
+
+1. Start with a dataset of vectors x in R^n
+   x is sampled according to:
+   for each coordinate, flip a coin with probability S.
+   If tails, x[i] = 0. If heads, x[i] ~ unif[0,1]
+
+2. Then, have a linear map R^n -> R^h with a bias term, followed by the transpose of that map back to R^n.
+3. The loss is weighted by sum_x sum_i (1/i)(x[i] - reconstructed_x[i])^2
+
+#+begin_src python
+from helper_functions import run_experiment, LinearAutoEncoder, ReLUAutoEncoder, SAEAutoEncoder, seed_everything
+#+end_src
+
+#+RESULTS:
+:results:
+Cell Timer:
+0:00:00
+:end:
+
+#+begin_src python
+n_dim = 5
+h_dim = 2
+n_samples = 5000
+importance_base = .5
+epochs = 2000
+learning_rate = 0.01
+seed_everything(42)
+#+end_src
+
+#+RESULTS:
+:results:
+Cell Timer:
+0:00:00
+:end:
+
+#+begin_src python
+run_experiment(LinearAutoEncoder,
+               n_dim=n_dim,
+               h_dim=h_dim,
+               n_samples= n_samples,
+               sparsity=.1,
+               importance_base = importance_base,
+               epochs=epochs,
+               learning_rate=learning_rate)
+#+end_src
+#+RESULTS:
+:results:
+Cell Timer:
+0:00:01
+:end:
+
+#+begin_src python
+for one_minus_sparsity in [1, .5, .1, .001]:
+    sparsity = 1 - one_minus_sparsity
+    print(f"Sparsity: {sparsity}")
+    run_experiment(ReLUAutoEncoder,
+        n_dim=n_dim,
+        h_dim=h_dim,
+        n_samples= n_samples,
+        sparsity=sparsity,
+        epochs=epochs,
+        learning_rate=learning_rate)
+    plt.show()
+#+end_src
+
+#+RESULTS:
+:results:
+Sparsity: 0
+[[file:plots/basic_model/plot_20241218_214542_419610.png]]
+| idx |          0 |          1 |            2 |             3 |              4 |
+|-----+------------+------------+--------------+---------------+----------------|
+|   0 | 0.31538156 | 0.94745713 |  0.055363923 | -0.0074514532 |   0.0064009363 |
+|   1 |  0.9489268 | -0.3146804 | -0.023404496 | -0.0021438955 | -4.9842987e-05 |
+Sparsity: 0.5
+[[file:plots/basic_model/plot_20241218_214544_4614226.png]]
+| idx |          0 |         1 |           2 |           3 |            4 |
+|-----+------------+-----------+-------------+-------------+--------------|
+|   0 | 0.30461153 | 0.9668569 | 0.042540874 | 0.063047625 | -0.018422188 |
+|   1 | -0.9617669 | 0.3010558 |  0.09359686 |  0.01693264 | -0.007903109 |
+Sparsity: 0.9
+[[file:plots/basic_model/plot_20241218_214546_4108603.png]]
+| idx |           0 |           1 |          2 |         3 |             4 |
+|-----+-------------+-------------+------------+-----------+---------------|
+|   0 |   -0.276253 |   0.9737819 | -0.9588267 | 0.2749572 | -0.0021192452 |
+|   1 | -0.97181565 | -0.27703935 |  0.2742423 | 0.9584366 |  0.0035272476 |
+Sparsity: 0.999
+[[file:plots/basic_model/plot_20241218_214548_3744854.png]]
+| idx |          0 |           1 |          2 |            3 |            4 |
+|-----+------------+-------------+------------+--------------+--------------|
+|   0 | 0.21823166 |   0.9760238 | -0.9822045 | -0.042987462 | -0.040999625 |
+|   1 |  0.9759086 | -0.21823573 | 0.21969046 |  -0.19435288 |  -0.15623386 |
+Cell Timer:
+0:00:07
+:end:
+
+
+
+* Questions:
+** This is not the same architecture as in SAE, its Relu(W^T W x + h), not W^T Relu ( Wx + h ) + b
+
+** A lot less superposition with the usual SAE structure
+
+#+begin_src python
+for one_minus_sparsity in [1, .3, .1, .03, .01, .003, .001]:
+    sparsity = 1 - one_minus_sparsity
+    print(sparsity)
+    run_experiment(SAEAutoEncoder,
+        n_dim=n_dim,
+        h_dim=h_dim,
+        n_samples= n_samples,
+        sparsity=sparsity,
+        epochs=epochs,
+        learning_rate=learning_rate)
+#+end_src
+#+RESULTS:
+:results:
+0
+[[file:plots/basic_model/plot_20241218_121544_9067750.png]]
+0.7
+[[file:plots/basic_model/plot_20241218_121658_6143877.png]]
+0.9
+[[file:plots/basic_model/plot_20241218_121821_5909669.png]]
+0.97
+[[file:plots/basic_model/plot_20241218_122009_8897818.png]]
+0.99
+[[file:plots/basic_model/plot_20241218_122139_2618255.png]]
+0.997
+[[file:plots/basic_model/plot_20241218_122315_4913208.png]]
+0.999
+[[file:plots/basic_model/plot_20241218_122436_4269176.png]]
+Cell Timer:
+0:10:21
+:end:
+
+#+begin_src python
+def create_rotary_matrix(d_model, max_seq_len):
+    position = np.arange(max_seq_len)
+    freq = 1.0 / (10000 ** (np.arange(0, d_model, 2) / d_model))
+    angles = position[:, None] * freq[None, :]
+
+    rotary = np.zeros((max_seq_len, d_model))
+    rotary[:, 0::2] = np.cos(angles)
+    rotary[:, 1::2] = np.sin(angles)
+
+    return rotary
+
+# Apply RoPE
+def apply_rotary(x, rotary):
+    return x * rotary
+#+end_src
+
+#+RESULTS:
+:results:
+Cell Timer:
+0:00:00
+:end:
+
+#+begin_src python
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Create rotary matrix
+d_model = 64
+max_seq_len = 100
+rotary = create_rotary_matrix(d_model, max_seq_len)
+
+# Plot first few dimensions of rotary embeddings
+plt.figure(figsize=(10, 4))
+plt.plot(rotary[:, :4])
+plt.title('First 4 dimensions of RoPE')
+plt.xlabel('Position')
+plt.ylabel('Value')
+plt.legend([f'dim_{i}' for i in range(4)])
+
+# Plot inner products
+inner_products = rotary @ rotary.T
+plt.figure(figsize=(8, 8))
+sns.heatmap(inner_products, cmap='RdBu')
+plt.title('Inner Products Between Position Embeddings')
+plt.xlabel('Position')
+plt.ylabel('Position')
+
+plt.show()
+#+end_src
+
+#+RESULTS:
+:results:
+[[file:plots/basic_model/plot_20241219_163018_3744854.png]]
+Cell Timer:
+0:00:00
+:end:
+
+#+begin_src python
+plt.figure(figsize=(12, 6))
+sns.heatmap(rotary, cmap='RdBu', center=0)
+plt.title('Rotary Position Embeddings Matrix')
+plt.xlabel('Dimension')
+plt.ylabel('Position')
+plt.show()
+#+end_src
+
+#+RESULTS:
+:results:
+[[file:plots/basic_model/plot_20241219_163013_4108603.png]]
+Cell Timer:
+0:00:00
+:end:
