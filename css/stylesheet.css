@@ -114,6 +114,20 @@ details > summary.h6::before { content: "▸ "; }
 details[open] > summary.h6::before { content: "▾ "; }
 details > summary.h6 { font-size: 1em; color: #ffffff; margin-left: 4em; }
 
+/* Links inside headings/summaries should look like links */
+details > summary a,
+h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #79a8ff;
+  text-decoration: underline;
+  text-decoration-color: rgba(121, 168, 255, 0.4);
+  text-underline-offset: 3px;
+}
+
+details > summary a:hover,
+h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+  text-decoration-color: #79a8ff;
+}
+
 /* === Links === */
 
 a {

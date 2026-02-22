@@ -56,6 +56,6 @@ Here are some blogs that have influenced me:
 *** [[https://slatestarcodex.com/][Slate Star Codex]]
 *** [[https://x.com/visakanv/highlights][Visa Veerasamy]]
 *** Gwern
-**** [[https://gwern.net/choosing-software][Choosing Software]], which reinforced my conviction that [[file:Emacs.org][Emacs is excellent.]]
+**** [[https://gwern.net/choosing-software][Choosing Software]], which reinforced my conviction that Emacs is excellent.
 *** Nicholas Carlini
 **** [[https://nicholas.carlini.com/writing/2024/how-i-use-ai.html#mobilelinks][How I use "AI"]]

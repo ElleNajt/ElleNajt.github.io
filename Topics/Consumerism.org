@@ -13,7 +13,7 @@ This matters a lot for flow, and for finding programming [[file:Opinions.org::*F
 
 These can be aligned so that my whole body feels at ease when I'm working, and it helps me stay in the zone for longer periods of time.
 
-And obviously [[file:Emacs.org][emacs.]]
+And obviously emacs.
 
 ** Good sleep
 - A good bed -- use the money back return offers to iterate!

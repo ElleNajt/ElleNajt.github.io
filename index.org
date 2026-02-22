@@ -2,8 +2,6 @@
 
 Welcome to my webpage!
 
-Click on the headers to see more about my interests.
-
 * [[file:Topics/Math.org][Math]]
 
 I like learning math.

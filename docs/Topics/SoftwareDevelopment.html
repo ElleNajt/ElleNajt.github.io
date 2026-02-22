@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-02-21 Sat 21:11 -->
+<!-- 2026-02-21 Sat 21:34 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Software Tools</title>
@@ -22,9 +22,9 @@
 <p>
 I like building and learning tools. Time spent reducing frictions pays dividends.<br />
 </p>
-<div id="outline-container-org51bca93" class="outline-2">
-<h2 id="org51bca93">Side projects:</h2>
-<div class="outline-text-2" id="text-org51bca93">
+<div id="outline-container-orgc007214" class="outline-2">
+<h2 id="orgc007214">Side projects:</h2>
+<div class="outline-text-2" id="text-orgc007214">
 <p>
 I love org babel notebooks, they&rsquo;re much more ergonomic than jupyter notebooks. Out of the box they are missing features, but I&rsquo;ve been adding the missing features over time:<br />
 </p>
@@ -39,65 +39,92 @@ I love org babel notebooks, they&rsquo;re much more ergonomic than jupyter noteb
 </ul>
 </div>
 </div>
-<div id="outline-container-org06f83e3" class="outline-2">
-<h2 id="org06f83e3">Tools I love:</h2>
-<div class="outline-text-2" id="text-org06f83e3">
+<div id="outline-container-org6d268ab" class="outline-2">
+<h2 id="org6d268ab">Tools I love:</h2>
+<div class="outline-text-2" id="text-org6d268ab">
 </div>
-<div id="outline-container-org9d405a7" class="outline-3">
-<h3 id="org9d405a7">Emacs</h3>
-<div class="outline-text-3" id="text-org9d405a7">
+<div id="outline-container-org6ab3304" class="outline-3">
+<h3 id="org6ab3304">Emacs</h3>
+<div class="outline-text-3" id="text-org6ab3304">
 <p>
-I love being able to shape my editor into a glove that fits me and my idiosyncrasies. This <b>so</b> easy now that we have coding agents.<br />
+I love being able to shape my editor into a glove that fits me and my idiosyncrasies. It&rsquo;s become a tool that is fun and easy, in a way no other editor ever felt fun or easy.<br />
+</p>
+
+<p>
+This is what lets emacs fill that function that so well:<br />
+</p>
+
+<ul class="org-ul">
+<li>Extensible: You can advise (monkey patch) every function, and most packages provide hooks that you can use to trigger actions.<br /></li>
+<li>Uniformity: Everything that holds text is the same kind of thing (a buffer) &#x2013; your terminal, your text editing, your agents, your file explorers &#x2013; so code you write for one context works for another. This also makes window management uniform.<br />
+<ul class="org-ul">
+<li>Everything is text (with hacks to display images), so text search or editing tools work everywhere (e.g. the magic of wdired).<br /></li>
+</ul></li>
+<li>Runtime mutable &#x2013; you can edit how it works while you&rsquo;re running it.<br /></li>
+<li>Its self documenting and introspectable &#x2013; you can jump to the source of any component and read how it works, and you can look up what functions or keybindings do. This transparency makes it extensible.<br /></li>
+<li>It trusts the user, and grew organically out of users building it to meet their workflow needs.<br /></li>
+</ul>
+
+<p>
+I think emacs still has a place even as coding agents consume the world &#x2013; maybe more of a place, since the frictions around customizing emacs are going to zero. Some work flows that I previously managed with emacs I manage with agents (e.g. managing git), but others still belong in emacs (like managing what I&rsquo;m working on, and moving between streams quickly).<br />
+</p>
+
+<p>
+Plus, who doesn&rsquo;t want to look like the hacker in an 80s movie when they work.<br />
 </p>
 
 <blockquote>
 <p>
-What is emacs? Emacs is Freedom! Freedom to control how your software behave! Emacs is interconnectedness! All your tools can interact with each other as first class citizens! Emacs is eternal! We&rsquo;ve been using emacs since the 70s, and when we&rsquo;re all gerbil-humans living under AI rule in 2035, well still be using emacs! - Me<br />
+What is emacs? Emacs is Freedom! Freedom to control how your software behave! Emacs is interconnectedness! All your tools can interact with each other as first class citizens! Emacs is eternal! We&rsquo;ve been using emacs since the 70s, and when we&rsquo;re all gerbil-humans living under AI rule in 2035, we&rsquo;ll still be using emacs! - Me<br />
 </p>
 </blockquote>
+
+<p>
+<a href="https://github.com/ElleNajt/emacs">Here&rsquo;s my emacs config!</a><br />
+</p>
 </div>
 </div>
-<div id="outline-container-org40b5951" class="outline-3">
-<h3 id="org40b5951">Org-mode</h3>
-<div class="outline-text-3" id="text-org40b5951">
+<div id="outline-container-orgeba1248" class="outline-3">
+<h3 id="orgeba1248">Org-mode (Emacs)</h3>
+<div class="outline-text-3" id="text-orgeba1248">
 <p>
 I love working in org babel notebooks, they&rsquo;re much more ergonomic than jupyter notebooks. Out of the box they are missing features, but I&rsquo;ve been adding the missing features here over time <a href="https://github.com/ElleNajt/ob-python-extras">ob-python-extras</a> .<br />
 </p>
 
 <p>
-This webpage generated from org mode files.<br />
+This webpage generated from org mode files, and I track my tasks in org files.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org66970e3" class="outline-3">
-<h3 id="org66970e3">Nix</h3>
-<div class="outline-text-3" id="text-org66970e3">
+<div id="outline-container-orgdaf9977" class="outline-3">
+<h3 id="orgdaf9977">Nix</h3>
+<div class="outline-text-3" id="text-orgdaf9977">
 <p>
 I think Nix/NixOS is a good choice in an increasingly LLM agent driven world; they can read your config and edit, and you can see what they changed and roll back if things go wrong. It also makes it easy to spin up VMs out of your environment.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org73ff03b" class="outline-3">
-<h3 id="org73ff03b">Git</h3>
-<div class="outline-text-3" id="text-org73ff03b">
+<div id="outline-container-org324b970" class="outline-3">
+<h3 id="org324b970">Git</h3>
+<div class="outline-text-3" id="text-org324b970">
 <p>
-I love git and versioning all sorts of things! I used to not like it very much, but it turned out I was just missing a clear mental model of what it was doing &#x2013;  <a href="https://git-scm.com/book/en/v2">pro-git</a> helped a lot!<br />
+I love git and versioning all sorts of things! I used to not like it very much, but it turned out I was just missing a clear mental model of what git was doing &#x2013;  some helpful friends and reading <a href="https://git-scm.com/book/en/v2">pro-git</a> helped a lot!<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org5ce5b36" class="outline-3">
-<h3 id="org5ce5b36">LLMs</h3>
-<div class="outline-text-3" id="text-org5ce5b36">
+<div id="outline-container-org7d01a3a" class="outline-3">
+<h3 id="org7d01a3a">LLMs</h3>
+<div class="outline-text-3" id="text-org7d01a3a">
 <p>
-I live inside of Claude Code (inside of emacs).<br />
+I live inside of Claude Code (inside of emacs, through agent-shell).<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org72d91cf" class="outline-3">
-<h3 id="org72d91cf">Tests</h3>
-<div class="outline-text-3" id="text-org72d91cf">
+<div id="outline-container-org8e035f0" class="outline-3">
+<h3 id="org8e035f0">Tests</h3>
+<div class="outline-text-3" id="text-org8e035f0">
 <p>
-I like tests as ways to guarantee behavior. They cost nothing to build because of LLMs.<br />
+I like tests as ways to guarantee behavior. They cost nothing to build because of LLMs, but you do have to figure out what to test.<br />
 </p>
 </div>
 </div>
@@ -106,7 +133,7 @@ I like tests as ways to guarantee behavior. They cost nothing to build because o
 <div id="postamble" class="status">
 <p class="author">Author: Elle Najt</p>
 <p class="email">Email: <a href="mailto:LNAJT4@gmail.com">LNAJT4@gmail.com</a></p>
-<p class="date">Created: 2026-02-21 Sat 21:11</p>
+<p class="date">Created: 2026-02-21 Sat 21:34</p>
 <p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.11)</p>
 </div>
 </body>
