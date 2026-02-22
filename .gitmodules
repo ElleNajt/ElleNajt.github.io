@@ -1,0 +1,3 @@
+[submodule "ext/vibe-duet"]
+	path = ext/vibe-duet
+	url = https://github.com/ElleNajt/vibe-duet.git

@@ -70,4 +70,3 @@ I don't think I would have learned git so thoroughly without magit. I love havin
 
 * Config:
 
-[[https://github.com/ElleNajt/emacs][Here's my emacs config!]]

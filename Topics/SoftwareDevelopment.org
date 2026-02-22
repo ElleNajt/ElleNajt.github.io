@@ -17,17 +17,32 @@ I love org babel notebooks, they're much more ergonomic than jupyter notebooks. 
 
 ** Emacs
 
-I love being able to shape my editor into a glove that fits me and my idiosyncrasies. This *so* easy now that we have coding agents. 
+I love being able to shape my editor into a glove that fits me and my idiosyncrasies. It's become a tool that is fun and easy, in a way no other editor ever felt fun or easy.
+
+This is what lets emacs fill that function that so well: 
+
+- Extensible: You can advise (monkey patch) every function, and most packages provide hooks that you can use to trigger actions. 
+- Uniformity: Everything that holds text is the same kind of thing (a buffer) -- your terminal, your text editing, your agents, your file explorers -- so code you write for one context works for another. This also makes window management uniform. 
+  - Everything is text (with hacks to display images), so text search or editing tools work everywhere (e.g. the magic of wdired).
+- Runtime mutable -- you can edit how it works while you're running it.
+- Its self documenting and introspectable -- you can jump to the source of any component and read how it works, and you can look up what functions or keybindings do. This transparency makes it extensible.
+- It trusts the user, and grew organically out of users building it to meet their workflow needs.
+
+I think emacs still has a place even as coding agents consume the world -- maybe more of a place, since the frictions around customizing emacs are going to zero. Some work flows that I previously managed with emacs I manage with agents (e.g. managing git), but others still belong in emacs (like managing what I'm working on, and moving between streams quickly). 
+
+Plus, who doesn't want to look like the hacker in an 80s movie when they work.
 
 #+begin_quote
-What is emacs? Emacs is Freedom! Freedom to control how your software behave! Emacs is interconnectedness! All your tools can interact with each other as first class citizens! Emacs is eternal! We've been using emacs since the 70s, and when we're all gerbil-humans living under AI rule in 2035, well still be using emacs! - Me
+What is emacs? Emacs is Freedom! Freedom to control how your software behave! Emacs is interconnectedness! All your tools can interact with each other as first class citizens! Emacs is eternal! We've been using emacs since the 70s, and when we're all gerbil-humans living under AI rule in 2035, we'll still be using emacs! - Me
 #+end_quote
 
-** Org-mode
+[[https://github.com/ElleNajt/emacs][Here's my emacs config!]]
+
+** Org-mode (Emacs)
 
 I love working in org babel notebooks, they're much more ergonomic than jupyter notebooks. Out of the box they are missing features, but I've been adding the missing features here over time [[https://github.com/ElleNajt/ob-python-extras][ob-python-extras]] . 
 
-This webpage generated from org mode files.
+This webpage generated from org mode files, and I track my tasks in org files. 
 
 ** Nix
 
@@ -35,13 +50,13 @@ I think Nix/NixOS is a good choice in an increasingly LLM agent driven world; th
 
 ** Git
 
-I love git and versioning all sorts of things! I used to not like it very much, but it turned out I was just missing a clear mental model of what it was doing --  [[https://git-scm.com/book/en/v2][pro-git]] helped a lot!
+I love git and versioning all sorts of things! I used to not like it very much, but it turned out I was just missing a clear mental model of what git was doing --  some helpful friends and reading [[https://git-scm.com/book/en/v2][pro-git]] helped a lot!
 
 ** LLMs
 
-I live inside of Claude Code (inside of emacs). 
+I live inside of Claude Code (inside of emacs, through agent-shell). 
 
 ** Tests
 
-I like tests as ways to guarantee behavior. They cost nothing to build because of LLMs. 
+I like tests as ways to guarantee behavior. They cost nothing to build because of LLMs, but you do have to figure out what to test.
 

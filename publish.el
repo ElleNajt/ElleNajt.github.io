@@ -36,7 +36,7 @@ Calculates depth from repo root so paths work for pages in any subdirectory."
         `(("personal_webpage-pages"
            :base-directory ,base-dir
            :publishing-directory ,pub-dir
-           :exclude "^docs/.*\\|todo\\.org\\|drafts/.*"
+           :exclude "^docs/.*\\|^ext/.*\\|todo\\.org\\|drafts/.*"
            :recursive t
            :publishing-function org-html-publish-to-html
            :html-link-use-abs-url nil
@@ -47,7 +47,7 @@ Calculates depth from repo root so paths work for pages in any subdirectory."
           ("personal_webpage-static"
            :base-directory ,base-dir
            :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-           :exclude "^docs/"
+           :exclude "^docs/\\|^ext/"
            :publishing-directory ,pub-dir
            :recursive t
            :publishing-function org-publish-attachment)

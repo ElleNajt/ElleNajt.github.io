@@ -2,6 +2,10 @@
 
 Welcome to my webpage!
 
+* [[file:blog/index.org][Blog]]
+
+Writing about experiments and ideas.
+
 * [[file:Topics/Math.org][Math]]
 
 I like learning math.
@@ -30,7 +34,7 @@ Jan 2018 - August 2019 I was a visitor in [[https://people.csail.mit.edu/jsolomo
 
 After graduate school I worked as a data scientist at Two Sigma for several years.
 
-Now I am doing AI safety research, mostly focusing on AI Control and monitoring but with some interpy side projects.
+Now I am doing AI safety research as an Anthropic fellow, mostly focusing on AI Control and monitoring but with some interpy side projects.
 
 * Internet presence:
 
