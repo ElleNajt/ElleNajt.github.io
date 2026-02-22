@@ -21,6 +21,8 @@ And obviously [[file:Emacs.org][emacs.]]
 - A good air filter
 - ([[https://slatestarcodex.com/2018/07/10/melatonin-much-more-than-you-wanted-to-know/#post-4987][The right dose of]]) melatonin sometimes
 - The right mindset: framing it as trying to rest rather than fall asleep has helped me, as described [[https://tasshin.com/blog/the-gospel-of-naps-according-to-tasshin/][here]].
+- Going to bed regularly on time. 
+- Reading fiction in bed is really helpful for winding down in an enjoyable way.
 
 ** Good food
 These two things help me stay hydrated and eating well:
@@ -29,12 +31,13 @@ These two things help me stay hydrated and eating well:
 - A zojirushi hot water dispenser
 
 ** Good exercise:
-I haven't figured out an exercise I enjoy in a way I can do consistently. Maybe dancing?
 
+I'm liking finding opportunities to move and to push my body. Some ways that are always available:
 
-* TODO Medical consumption:
-I have some medical quality of life issues that I'm trying to solve.
+- Dancing
+- Running up stairs
 
-** Allergies
-*** <2024-09-23 Mon>
-I got retested for allergies today, and they found more reactions using the intradermal tests. Turns out I am allergic to dust mites! Hoping that allergy shots will clear up my lingering night time asthma issues.
+** Allergy shots
+
+Having allergies sucks. Get allergy shots if you can. Some doctors offer rush shots that can move you through the early slog faster.
+

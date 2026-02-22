@@ -2,24 +2,32 @@
 
 * Meditation
 
-I practice lovingkindness meditation, with the general goal of cultivating mindfulness and the brahmaviharas (lovingkindness, compassion, sympathetic joy, equanimity), integrating them into my life and mastering the Jhana's to the point where I can experience the clear view on the mental links giving rise to suffering that I understand cessation to bring.
+I practice lovingkindness meditation, with the general goal of cultivating mindfulness and the brahmaviharas (lovingkindness, compassion, sympathetic joy, equanimity), integrating them into my life. 
 
-I tried a number of different approaches to learning meditation, but the most effective technique for me has been the one I learned from going to a Tranquil Wisdom Insight Meditation retreat in 2023 with Bhante Kusula, where I learned a combination of forgiveness practice and lovingkindess practice, supported by translation of "right effort" into the six Rs (recognize, relax, re-smile, return). It was not my first exposure of lovingkindnesss meditation, but it was the first time I was able to experience the practice in a deep enough way to unlock deep feelings of compassion and self-love.
+I tried a number of different approaches to learning meditation, but the most effective technique for me has been the one I learned from going to a Tranquil Wisdom Insight Meditation retreat in 2023 with Bhante Kusula. There I learned a combination of forgiveness practice and lovingkindess practice, and it was the first time I was able to experience the practice in a deep enough way to unlock deep feelings of compassion and self-love.
 
+** Forgiveness Meditation
 I credit forgiveness meditation [[https://www.dhammasukha.org/forgiveness-meditation#comp-kefxjy6t5label][as taught by TWIM]] with softening my heart, helping me let go of personal baggage, and preparing me for this practice. Some extra color here is that I could only rarely cry before using this method, but now I regularly get moved to beautiful tears - "tears are the fruits of forgiveness," as one teacher put it. Here is a great [[https://www.youtube.com/watch?v=bLS8X-JjxN8][guided forgiveness meditation]] by Delson Armstrong, which teaches how to make the relief of forgiveness the object of meditation, and how to use right effort/4Rs to stay collected on it.
 
-Another thing I really like about TWIM-style practice is that it doesn't encourage meditation as escape; the point is to remain collected on the object as hindrances come up, which means that it is full of opportunities to observe how the minds attention moves from one object to another, for shifts in perspective to arise intuitively as a result.
+** Meditation as a way to embrace reality
+
+Something I like about TWIM-style practice is that it doesn't encourage meditation as escape; the point is to remain collected on the object as hindrances come up, which means that it is full of opportunities to observe how the minds attention moves around suffering and resentments. 
+
+** IPF
+
+I've also been practicing ideal parent figure meditations through mettagroup.org.
 
 * Clowning
 
-I love clowning an art form and spiritual practice. 
+I love clowning an art form and spiritual practice. For me, clown is about discovering a way to play innocently and fluidly. It has greatly widened my range of expression emotion.
 
-#+begin_src quote
+I've performed at open mikes and variety shows around Manhattan, and studied with teachers in the [[https://en.wikipedia.org/wiki/Canadian_clowning][Pochinko]], [[https://en.wikipedia.org/wiki/Philippe_Gaulier][Gaulier]] and Red-Nose traditions.
+
+#+begin_quote
 Pochinko taught clowning as a sort of "reverse therapy", in which instead of
 ridding oneself of anxieties, the clown performer leans into their own
 insecurities and foibles in order to package them as comedy.
-#+end_src
-
+#+end_quote
 
 * Burning man
 
@@ -27,16 +35,16 @@ I went to burning man once (2024) and had a great time. I might go back.
 
 Take aways: 
 
-- It's worth making things beautiful, even though they are transient. At burning man we build a beautiful world that lasts only a week.
+- It's worthwhile to make things beautiful, even though they are transient. At burning man we build a beautiful world that lasts only a week.
 
 - There are a lot of misconceptions about burning man -- often people think it's a festival about sex, drugs and +rock-and-roll+ tech-house. It *can* be those things, but it is so much more; it can provide nearly whatever experience you're looking for. For me, it's about participating in art, strange and genuine social connections, making and deepening friendships and living in a society that embodies the 10 principles of burning man.
 
 - Living in a culture that valued radical self-expression, participation and immediacy in the way Black Rock City did [[https://burningman.org/about/10-principles/][(see the 10 principles)]] re-socialized me to be less afraid of joining spontaneous social games with people. This meshes well with my experiences with clowning.
 
-- I also attended an interesting math lecture about embodied ways of approaching mathematical problem solving, which inspired me to [[file:Math.org::*Competition Math $x + y \geq 2\sqrt{xy}$][work more on my mathematical problem solving skills]] with a tutor who is helping refactor both my understanding of foundational concepts, and improve my emotional relationship to problem-solving and mathematics overall.
+- I went to lecture about embodied ways of approaching mathematical problem solving, which inspired me to [[file:Math.org::*Competition Math $x + y \geq 2\sqrt{xy}$][work more on my mathematical problem solving skills]] with a tutor who helped refactor both my understanding of foundational concepts, and improve my emotional relationship to problem-solving and mathematics overall.
 
 * [[file:Music.org][Music]]
-I like music, and also make music on the piano and in ableton or cubase.
+I like music, and also make music on the piano and in ableton and strudel. Recently I've been singing more also. 
 
 * [[file:Consumerism.org][Consumerism]]
 Things that benefit me through their consumption

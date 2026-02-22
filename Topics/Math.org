@@ -42,7 +42,7 @@ Mistakes can lead to solutions; it's important to not avoid thinking about how t
 
 In this case, I was given a problem, and my initial guess was wrong. I felt some shame about the silly mistake, and routed towards another approach. After solving it the second way, I came back to the first impulse, and realized that it was easy to fix just by applying inclusion-exclusion. Sometimes a mistaken approach is just the first approximation to the truth, you need to keep going!
 
-#+begin_src qoute
+#+begin_quote
 To fear the error and to fear the truth are one and the same. One who fears to
 be wrong is powerless to discover. It is when we are afraid of making mistakes
 that the mistake inside us becomes immovable like a rock.  Because in our fear,
@@ -52,4 +52,4 @@ vanish, but by a thirst for knowing, then error, like suffering or sorrow, will
 cross us without ever becoming frozen, and the trace of its passage will be a
 renewed understanding.
 - Alexander Grothendieck
-#+end_src
+#+end_quote

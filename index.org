@@ -6,16 +6,18 @@ Click on the headers to see more about my interests.
 
 * [[file:Topics/Math.org][Math]]
 
-I like learning math, and writing about what I'm learning clarifies things for me.
+I like learning math.
 
 * [[file:Topics/SoftwareDevelopment.org][Software Tools]]
 
-I like improving at my software skills, it's empowering to be able to build tools. 
+I like improving at my software skills and understanding how systems work. It's empowering to be able to build tools. 
 
 * [[file:Topics/Opinions.org][Opinions]]
+
 Opinions on software development, learning, and building things.
 
 * [[file:Topics/Personal.org][Personal]]
+
 - Meditation, Clowning, Burning Man, other adventures...
 - Music I'm making or listening to
 - Tools I like
@@ -36,4 +38,3 @@ Now I am doing AI safety research.
 
 [[https://math.stackexchange.com/users/54092/elle-najt/][Stack Exchange]]
 [[https://github.com/ElleNajt/][Github]]
-

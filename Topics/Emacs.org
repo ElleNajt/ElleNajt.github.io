@@ -7,14 +7,13 @@
 
 I can shape my editor into a tool that fits me, instead of contorting myself to fit someone else's UI design.
 
-Once you get the hang of it (and especially with a bit of help from LLMs), modifying emacs becomes easy and fun.
+Once you get the hang of it, modifying emacs becomes easy and fun. LLM agents make it really easy. 
 
 ** Emacs is really fun!
 
 That's the main reason I like it!
 Fun is a signal, not frivolity.
 Fun is leads to flow, and flow leads to deep work and curiosity and creativity.
-All of this leads to more productivity.
 
 ** Better than a clicking based GUI or a CLI:
 
@@ -27,6 +26,7 @@ This applies to:
 - Magit
 - Dired
 - M-x anything
+  
 ** Great Aesthetics
 
 ** All-encompassing
@@ -51,9 +51,6 @@ Seriously this is great -- it's changed my life.
 
 There are some missing features, and I've written a package that adds the ones I've missed the most [[https://github.com/ElleNajt/ob-python-extras?tab=readme-ov-file][a package that adds them.]]
 
-**** TODO Write a post about this.
-SCHEDULED: <2024-09-25 Wed>
-
 *** Org todos / agenda
 
 I love that I can collect todos from my org babel notebooks! No more running todo lists, org just collects them in their natural contexts.
@@ -64,22 +61,6 @@ I can take all my notes, with code and diagrams and latex, and easily publish th
 
 **** Cool features:
 - I can drop todos in my webpage org files and have them hidden by default by visible in my agenda.
-**** TODO Submit a PR to the WORG guide
-
-- Needed to set (org-store-link) to be relative by default; otherwise depending on folder structure emacs can insert them as absolute paths, which results in links in the published page that point to files that don't exist.
-
-   #+begin_src elisp
-   (setq org-link-file-path-type 'relative)
-   #+end_src
-
-***** TODO Fix the spaces in folders stuff.
-***** TODO Also make auto-index work, it's not respecting folder structure.
-
-** yassnippets
-
-They're a great way to optimize writing code. It's feels nice to have yas snippets that work smoothly together, like typing at a higher level of abstraction.
-
-See this inspiring [[https://karthinks.com/software/latex-input-for-impatient-scholars/][fast latex input via snippets]].
 
 ** Magit
 

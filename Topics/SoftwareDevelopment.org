@@ -11,7 +11,7 @@ I love org babel notebooks, they're much more ergonomic than jupyter notebooks. 
 - [[https://github.com/ElleNajt/agent-bedtime][agent-bedtime]] - So coding agents can send you to bed
 - [[https://github.com/ElleNajt/agent-timecard][agent-timecard]] - Get reports on how you're spending time, based on conversation turns with coding agents
 - [[https://github.com/ElleNajt/acp-mobile][acp-mobile]] - So you can take coding agents with you everywhere (wip)
-- [[https://github.com/ElleNajt/oneko-macs][oneko-macs]] - Hack to have a neko cat in emacs
+- [[https://github.com/ElleNajt/oneko-macs][oneko-macs]] - A silly hack to have a neko cat in emacs
 
 * Tools I love:
 
@@ -26,6 +26,8 @@ What is emacs? Emacs is Freedom! Freedom to control how your software behave! Em
 ** Org-mode
 
 I love working in org babel notebooks, they're much more ergonomic than jupyter notebooks. Out of the box they are missing features, but I've been adding the missing features here over time [[https://github.com/ElleNajt/ob-python-extras][ob-python-extras]] . 
+
+This webpage generated from org mode files.
 
 ** Nix
 
