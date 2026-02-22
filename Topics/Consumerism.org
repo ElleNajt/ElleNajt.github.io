@@ -6,7 +6,7 @@ Here are some mostly material things that have my life better:
 
 ** Good ergonomics:
 
-This matters a lot for flow, and for finding programming [[file:SoftwareDevelopment.org::*Fun][fun]]. Here are my favorite bits of ergonomics:
+This matters a lot for flow, and for finding programming [[file:Opinions.org::*Fun][fun]]. Here are my favorite bits of ergonomics:
 - A gas monitor arm for getting the right monitor position
 - A kinesis 360 keyboard
 - A herman-miller embody

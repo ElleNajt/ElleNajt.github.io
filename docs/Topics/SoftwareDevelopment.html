@@ -3,197 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-01-06 Mon 01:28 -->
+<!-- 2026-02-21 Sat 20:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Software Development</title>
+<title>Software Tools</title>
 <meta name="author" content="Elle Najt" />
 <meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-</style>
-<link rel="stylesheet" type="text/css" href="./css/worg.css"/>
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css"/>
+<script src="../scripts/org-fold.js" defer></script>
 </head>
 <body>
 <div id="org-div-home-and-up">
@@ -201,229 +18,83 @@
  |
  <a accesskey="H" href="../index.html"> HOME </a>
 </div><div id="content" class="content">
-<h1 class="title">Software Development</h1>
+<h1 class="title">Software Tools</h1>
 <p>
-I&rsquo;ve been having fun this past year or so going deeper into software development tooling.<br />
+I like building and learning tools. Time spent reducing frictions pays dividends.<br />
 </p>
-
+<div id="outline-container-orgd1a09c0" class="outline-2">
+<h2 id="orgd1a09c0">Side projects:</h2>
+<div class="outline-text-2" id="text-orgd1a09c0">
 <p>
-Here are the tools I&rsquo;ve been spending the most time with, and the opinions I&rsquo;ve developed.<br />
-</p>
-
-<div id="outline-container-orgdafe7a6" class="outline-2">
-<h2 id="orgdafe7a6">Tools I love:</h2>
-<div class="outline-text-2" id="text-orgdafe7a6">
-</div>
-<div id="outline-container-org50674e2" class="outline-3">
-<h3 id="org50674e2">Emacs</h3>
-<div class="outline-text-3" id="text-org50674e2">
-<p>
-I describe why I love emacs in some depth <a href="Emacs.html">here</a>, but briefly: I love being able to shape my editor into a glove that fits me and my idiosyncrasies. It&rsquo;s so much better than shaping myself to fit an awkward tool &#x2013; a philosophy that applies to many other things.<br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgcfcabab" class="outline-3">
-<h3 id="orgcfcabab">Org-mode</h3>
-<div class="outline-text-3" id="text-orgcfcabab">
-<p>
-Although I&rsquo;m a professional data scientist, for the most part I don&rsquo;t use jupyter notebooks, I use org babel in Emacs org mode!<br />
-</p>
-
-<p>
-This is great because it:<br />
+I love org babel notebooks, they&rsquo;re much more ergonomic than jupyter notebooks. Out of the box they are missing features, but I&rsquo;ve been adding the missing features over time:<br />
 </p>
 <ul class="org-ul">
-<li>Enables reproducible science via version controlled text based notebooks<br />
-<ul class="org-ul">
-<li>This also applies to devopsy work, not just research.<br /></li>
-</ul></li>
-<li>Enables literate programming that is integrated with org modes project management system.<br /></li>
-<li>Is part of the vast emacs ecosystem.<br /></li>
-<li>Is really aesthetic and fun, and just as extensible as the rest of emacs.<br /></li>
+<li><a href="https://github.com/ElleNajt/ob-python-extras">ob-python-extras</a> - Making org babel a full-featured replacement for jupyter notebooks<br /></li>
+<li><a href="https://github.com/ElleNajt/vibe-duet/">vibe-duet</a> - Tools for vibe coding music with strudel. Try it out! It&rsquo;s fun. :)<br /></li>
+<li><a href="https://github.com/ElleNajt/meta-agent-shell">meta-agent-shell</a> - Multi agent management in emacs agent-shell<br /></li>
+<li><a href="https://github.com/ElleNajt/agent-bedtime">agent-bedtime</a> - So coding agents can send you to bed<br /></li>
+<li><a href="https://github.com/ElleNajt/agent-timecard">agent-timecard</a> - Get reports on how you&rsquo;re spending time, based on conversation turns with coding agents<br /></li>
+<li><a href="https://github.com/ElleNajt/acp-mobile">acp-mobile</a> - So you can take coding agents with you everywhere (wip)<br /></li>
+<li><a href="https://github.com/ElleNajt/oneko-macs">oneko-macs</a> - Neko cat for Emacs<br /></li>
 </ul>
 </div>
 </div>
-
-<div id="outline-container-orgc1cef1a" class="outline-3">
-<h3 id="orgc1cef1a">Nix</h3>
-<div class="outline-text-3" id="text-orgc1cef1a">
-<p>
-I do most of my personal development through a nixos vm running with UTM on my mac. I love being able to version my system configuration, and steal bits of config from friends.<br />
-</p>
-
-<p>
-I also use nix as my package manager for python environments at home. Sometimes requires terrible overlays but at least it&rsquo;s hermetic, reproducible and aesthetic. ^^ It also integrates smoothly with eglot and pyright, which can be a headache, see my <a href="https://github.com/ElleNajt/emacs/tree/main/python/nix_project_defaults">python project defaults.</a><br />
-</p>
-
-<p>
-Configuring nix also meshes well with LLMs, because you can tell it about the status of your configurations with text, and it can give suggestions that can be copy pasted. :3<br />
-</p>
-
-<p>
-I  like having these linux shenanigans live inside of a computer that&rsquo;s stable, and that just <b>works</b> and interfaces as a first class citizen with the rest of the world.<br />
-</p>
+<div id="outline-container-org40c7c0c" class="outline-2">
+<h2 id="org40c7c0c">Tools I love:</h2>
+<div class="outline-text-2" id="text-org40c7c0c">
 </div>
-</div>
-
-<div id="outline-container-orgd6e1194" class="outline-3">
-<h3 id="orgd6e1194">Git</h3>
-<div class="outline-text-3" id="text-orgd6e1194">
+<div id="outline-container-org6c677ea" class="outline-3">
+<h3 id="org6c677ea">Emacs</h3>
+<div class="outline-text-3" id="text-org6c677ea">
 <p>
-I love git and versioning all sorts of things! I didn&rsquo;t always love git, I used to be afraid of messing things up, but now I understand that it&rsquo;s a tool that enables safe experimentation. It&rsquo;s quite the opposite from my original feeling!<br />
-</p>
-
-<p>
-The main change here was learning how git internals worked, from some friendly explanations plus the book <a href="https://git-scm.com/book/en/v2">pro-git</a>, and then using git constantly because of Emac&rsquo;s built in git-wrapper Magit.<br />
-</p>
-
-<p>
-Magit is great because of menu based interaction, <a href="Emacs.html#orgc0654da">which I&rsquo;ve written about here,</a> while not hiding most of git, unlike other wrappers.<br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgc6b08e2" class="outline-3">
-<h3 id="orgc6b08e2">LLMs</h3>
-<div class="outline-text-3" id="text-orgc6b08e2">
-<p>
-I wouldn&rsquo;t have been able to make such rapid progress on stuff without LLMs to get me unstuck. They can be great tutors for learning new pieces of technology; I think they&rsquo;re especially useful for learning new languages. I&rsquo;ve also benefit from using them as style pointers.<br />
-</p>
-
-<p>
-I think they&rsquo;re especially nice in the stage of mastery where you know that concepts can fit together in a certain way, but you don&rsquo;t know the syntax; digging around for the syntax is purely wasted time vs just outlining the code and getting LLMs to fill it in.<br />
-</p>
-
-<p>
-<a href="https://nicholas.carlini.com/writing/2024/how-i-use-ai.html">I like this post by Nicholas Carlini for inspiration on ways to use LLMs.</a> I think &ldquo;body-doubling&rdquo; with LLMs can an effective way to have more fun coding, and of course emacs makes it easy to have a smooth and extensible LLM companion.<br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-org4038eea" class="outline-3">
-<h3 id="org4038eea">Tests!</h3>
-<div class="outline-text-3" id="text-org4038eea">
-<p>
-This is less of a tool, but I love test driven development &#x2013; it makes for a fun feedback loop, and it&rsquo;s comforting to be able to refactor with confidence.<br />
-</p>
-
-<p>
-Recently I&rsquo;ve been experimenting with using org babel files as literate expect tests &#x2013; I like that you get documentation and tests at the same time! This is how I test my <a href="https://github.com/ElleNajt/ob-python-extras">org babel python for data science package</a>.<br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgeda3f5f" class="outline-3">
-<h3 id="orgeda3f5f">Text</h3>
-<div class="outline-text-3" id="text-orgeda3f5f">
-<p>
-The universal interface. :3<br />
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgf7cd2b7" class="outline-2">
-<h2 id="orgf7cd2b7">Opinions:</h2>
-<div class="outline-text-2" id="text-orgf7cd2b7">
-</div>
-<div id="outline-container-orgcf93838" class="outline-3">
-<h3 id="orgcf93838">Safe to fail</h3>
-<div class="outline-text-3" id="text-orgcf93838">
-<p>
-A thing that tools I like have in common is that they&rsquo;re safe to fail in, or they make it safe to fail.<br />
-I like to learn by experimenting with things.<br />
-</p>
-<ul class="org-ul">
-<li>Broke your nixos config? Just boot an earlier one. Plus it&rsquo;s version controlled with git.<br /></li>
-<li>Unclear if something works? That&rsquo;s what tests are for.<br /></li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org862e7cc" class="outline-3">
-<h3 id="org862e7cc">Fun</h3>
-<div class="outline-text-3" id="text-org862e7cc">
-<p>
-It&rsquo;s good when tools are fun and create flow. When you&rsquo;re engaged you&rsquo;re at your best, so you should optimize for fun!<br />
-</p>
-
-<p>
-Recently I&rsquo;ve been applying this <a href="Math.html#org59019ab">to my mathematical studies as well!</a><br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgb28cb99" class="outline-3">
-<h3 id="orgb28cb99">Design or modify tools to fit yourself, don&rsquo;t bend yourself to fit tools.</h3>
-<div class="outline-text-3" id="text-orgb28cb99">
-<p>
-Being able to iterate towards a tool that fits you like a glove is one of the beauties of a system like emacs.<br />
-</p>
-</div>
-</div>
-
-<div id="outline-container-orge706afa" class="outline-3">
-<h3 id="orge706afa">Find ways to develop iteratively and build positive feedback loops</h3>
-<div class="outline-text-3" id="text-orge706afa">
-<p>
-This manifestly strongly when working on workflow tooling, because I immediately get a positive reward from improving a tool. This also shows up in writing tests and releasing code for review or use by other people, or that otherwise encounters reality in some way.<br />
-</p>
-
-<p>
-On the latter aspect, there is this memorable quote from von Neumann:<br />
+I love being able to shape my editor into a glove that fits me and my idiosyncrasies. This <b>so</b> easy now that we have coding agents.<br />
 </p>
 
 <blockquote>
 <p>
-&#x2026;mathematical ideas originate in empirics, although the genealogy is sometimes long and obscure. But, once they are so conceived,<br />
-the subject begins to live a peculiar life of its own and is better<br />
-compared to a creative one, governed by almost entirely aesthetical<br />
-motivations, than to anything else and, in particular, to an empirical<br />
-science. There is, however, a further point which, I believe, needs<br />
-stressing. As a mathematical discipline travels far from its empirical<br />
-source, or still more, if it is a second and third generation only<br />
-indirectly inspired by ideas coming from &rsquo;reality&rsquo;, it is beset with<br />
-very grave dangers. It becomes more and more purely aestheticising,<br />
-more and more purely* Tart pour Tart. This need not be bad, if the<br />
-field is surrounded by correlated subjects, which still have closer<br />
-empirical connections, or if the discipline is under the influence of<br />
-men with an exceptionally well-developed taste. But there is a grave<br />
-danger that the subject will develop along the line of least resistance,<br />
-that the stream, so far from its source, will separate into a multitude<br />
-of insignificant branches, and that the discipline will become a disorganised mass of details and complexities. In other words, at a<br />
-great distance from its empirical source, or after much &rsquo;abstract&rsquo;<br />
-inbreeding, a mathematical subject is in danger of degeneration.<br />
-</p>
-
-<p>
-&#x2013; von Neumann (from the first paper in his collected works)<br />
+What is emacs? Emacs is Freedom! Freedom to control how your software behave! Emacs is interconnectedness! All your tools can interact with each other as first class citizens! Emacs is eternal! We&rsquo;ve been using emacs since the 70s, and when we&rsquo;re all gerbil-humans living under AI rule in 2035, well still be using emacs! - Me<br />
 </p>
 </blockquote>
 </div>
 </div>
-
-<div id="outline-container-org7c757b8" class="outline-3">
-<h3 id="org7c757b8">Have science buddies!</h3>
-<div class="outline-text-3" id="text-org7c757b8">
+<div id="outline-container-org8f619c1" class="outline-3">
+<h3 id="org8f619c1">Org-mode</h3>
+<div class="outline-text-3" id="text-org8f619c1">
 <p>
-<a href="https://x.com/ItaiYanai/status/1842787938175697232?t=RKkozqQX7jdShawHQ7rlWA&amp;s=19">&ldquo;Doing good science is 90% finding a science buddy to constantly talk to about the project.&rdquo;</a><br />
+I love working in org babel notebooks, they&rsquo;re much more ergonomic than jupyter notebooks. Out of the box they are missing features, but I&rsquo;ve been adding the missing features here over time <a href="https://github.com/ElleNajt/ob-python-extras">ob-python-extras</a> .<br />
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgdd07538" class="outline-3">
-<h3 id="orgdd07538">You can just get good at things!</h3>
-<div class="outline-text-3" id="text-orgdd07538">
+<div id="outline-container-orgeb1f38a" class="outline-3">
+<h3 id="orgeb1f38a">Nix</h3>
+<div class="outline-text-3" id="text-orgeb1f38a">
 <p>
-Useful subskills:<br />
+I think Nix/NixOS is a good choice in an increasingly LLM agent driven world; they can read your config and edit, and you can see what they changed and roll back if things go wrong. It also makes it easy to spin up VMs out of your environment.<br />
 </p>
-
-<ul class="org-ul">
-<li>Being able to humble yourself and learn from people who have more knowledge or better heuristics<br /></li>
-<li>Agency - you can just do things!<br /></li>
-<li>Willingness to practice; comfort failing repeatedly and comfort working on things that are hard.<br /></li>
-</ul>
+</div>
+</div>
+<div id="outline-container-org42682af" class="outline-3">
+<h3 id="org42682af">Git</h3>
+<div class="outline-text-3" id="text-org42682af">
+<p>
+I love git and versioning all sorts of things! I used to not like it very much, but it turned out I was just missing a clear mental model of what it was doing &#x2013;  <a href="https://git-scm.com/book/en/v2">pro-git</a> helped a lot!<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org751e4d1" class="outline-3">
+<h3 id="org751e4d1">LLMs</h3>
+<div class="outline-text-3" id="text-org751e4d1">
+<p>
+I live inside of Claude Code (inside of emacs).<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org688b0bc" class="outline-3">
+<h3 id="org688b0bc">Tests</h3>
+<div class="outline-text-3" id="text-org688b0bc">
+<p>
+I like tests as ways to guarantee behavior. They cost nothing to build because of LLMs.<br />
+</p>
 </div>
 </div>
 </div>
@@ -431,8 +102,8 @@ Useful subskills:<br />
 <div id="postamble" class="status">
 <p class="author">Author: Elle Najt</p>
 <p class="email">Email: <a href="mailto:LNAJT4@gmail.com">LNAJT4@gmail.com</a></p>
-<p class="date">Created: 2025-01-06 Mon 01:28</p>
-<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.4 (<a href="https://orgmode.org">Org</a> mode 9.6.15)</p>
+<p class="date">Created: 2026-02-21 Sat 20:37</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.11)</p>
 </div>
 </body>
 </html>

@@ -1,0 +1,57 @@
+#+title: Opinions
+
+* Opinions:
+
+** Safe to fail
+
+I like to learn by experimenting with things, so I like it when tools make it safe to fail. I like that it's safe for me to fail, emotionally. Clown has helped a lot with this. 
+
+** Fun
+
+It's good when tools are fun and create flow. When you're engaged you're at your best, so you should optimize for fun!
+
+Recently I've been applying this [[file:Math.org::*<2024-10-05 Sat>][to my mathematical studies as well!]]
+
+** Design or modify tools to fit yourself, don't bend yourself to fit tools.
+
+Being able to iterate towards a tool that fits you like a glove is one of the beauties of a system like emacs. 
+
+** Find ways to develop iteratively and build positive feedback loops against reality 
+
+#+begin_quote
+...mathematical ideas originate in empirics, although the genealogy is sometimes long and obscure. But, once they are so conceived,
+the subject begins to live a peculiar life of its own and is better
+compared to a creative one, governed by almost entirely aesthetical
+motivations, than to anything else and, in particular, to an empirical
+science. There is, however, a further point which, I believe, needs
+stressing. As a mathematical discipline travels far from its empirical
+source, or still more, if it is a second and third generation only
+indirectly inspired by ideas coming from 'reality', it is beset with
+very grave dangers. It becomes more and more purely aestheticising,
+more and more purely* Tart pour Tart. This need not be bad, if the
+field is surrounded by correlated subjects, which still have closer
+empirical connections, or if the discipline is under the influence of
+men with an exceptionally well-developed taste. But there is a grave
+danger that the subject will develop along the line of least resistance,
+that the stream, so far from its source, will separate into a multitude
+of insignificant branches, and that the discipline will become a disorganised mass of details and complexities. In other words, at a
+great distance from its empirical source, or after much 'abstract'
+inbreeding, a mathematical subject is in danger of degeneration.
+
+-- von Neumann (from the first paper in his collected works)
+#+end_quote
+
+** Have science buddies!
+
+[[https://x.com/ItaiYanai/status/1842787938175697232?t=RKkozqQX7jdShawHQ7rlWA&s=19]["Doing good science is 90% finding a science buddy to constantly talk to about the project."]]
+
+** You can just get good at things!
+
+Useful subskills:
+
+- Being able to humble yourself and learn from people who have more knowledge or better heuristics
+- Agency - you can just do things!
+- Willingness to be bad and practice; comfort failing repeatedly and comfort working on things that are hard.
+- Deciding that you can learn something; only you can  defeat learned helplessness.
+
+

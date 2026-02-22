@@ -5,16 +5,20 @@ Welcome to my webpage!
 Click on the headers to see more about my interests.
 
 * [[file:Topics/Math.org][Math]]
+
 I like learning math, and writing about what I'm learning clarifies things for me.
 
-* [[file:Topics/SoftwareDevelopment.org][Software Development]]
-I've been on an arc of getting better at software engineering skills.
+* [[file:Topics/SoftwareDevelopment.org][Software Tools]]
+
+I like improving at my software skills, it's empowering to be able to build tools. 
+
+* [[file:Topics/Opinions.org][Opinions]]
+Opinions on software development, learning, and building things.
 
 * [[file:Topics/Personal.org][Personal]]
 - Meditation, Clowning, Burning Man, other adventures...
 - Music I'm making or listening to
 - Tools I like
-- What I'm reading
 
 * Professional
 I obtained my math PhD Dec 2021 at the University of Wisconsin-Madison, advised by [[http://www.math.wisc.edu/~ellenber/][Jordan Ellenberg]].
@@ -24,9 +28,12 @@ I obtained my math PhD Dec 2021 at the University of Wisconsin-Madison, advised 
 Jan 2018 - August 2019 I was a visitor in [[https://people.csail.mit.edu/jsolomon/][Justin Solomon's]] lab at MIT/CSAIL. I worked with him and
 [[https://www.math.wsu.edu/faculty/ddeford/][Daryl DeFord]] to [[file:Topics/GradSchoolResearch.org::*Gerrymandering][analyze statistical techniques being used to evaluate gerrymandering.]]
 
-I currently work as a data scientist at Two Sigma. Obviously all opinions expressed on this webpage are my own.
+After graduate school I worked as a data scientist at Two Sigma for several years.
+
+Now I am doing AI safety research.
 
 * Internet presence:
 
 [[https://math.stackexchange.com/users/54092/elle-najt/][Stack Exchange]]
 [[https://github.com/ElleNajt/][Github]]
+

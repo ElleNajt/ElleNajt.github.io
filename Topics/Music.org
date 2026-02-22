@@ -2,7 +2,11 @@
 
 * Original Music
 
-[[https://soundcloud.com/ellenajt][Here is my soundcloud.]]
+I compose and write songs ... maybe I'll share some here eventually.
+
+* Live coding
+
+I really like making music with tools like Strudel. LLMs are good at it too -- I wrote some tooling to help with that here: [[https://github.com/ElleNajt/vibe-duet/][vibe-duet]].
 
 * Favorites
 

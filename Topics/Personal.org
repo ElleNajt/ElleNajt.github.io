@@ -12,7 +12,7 @@ Another thing I really like about TWIM-style practice is that it doesn't encoura
 
 * Clowning
 
-I'm interested in clowning, and specifically [[https://en.wikipedia.org/wiki/Canadian_clowning][Pochinko clowning,]] as an art form and spiritual practice. I participated in one of Sue Morrison's "Clown through Mask" classes.
+I love clowning an art form and spiritual practice. 
 
 #+begin_src quote
 Pochinko taught clowning as a sort of "reverse therapy", in which instead of
@@ -23,15 +23,17 @@ insecurities and foibles in order to package them as comedy.
 
 * Burning man
 
-I went to burning man for the first time this year (2024), had a great time, and am planning to go back.
+I went to burning man once (2024) and had a great time. I might go back. 
 
-It's worth making things beautiful, even though they are transient. At burning man we build a beautiful world that lasts only a week.
+Take aways: 
 
-There are a lot of misconceptions about burning man -- often people think it's a festival about sex, drugs and +rock-and-roll+ tech-house. It *can* be those things, but it is so much more; it can provide nearly whatever experience you're looking for. For me, it's about participating in art, strange and genuine social connections, making and deepening friendships and living in a society that embodies the 10 principles of burning man.
+- It's worth making things beautiful, even though they are transient. At burning man we build a beautiful world that lasts only a week.
 
-Living in a culture that valued radical self-expression, participation and immediacy in the way Black Rock City did [[https://burningman.org/about/10-principles/][(see the 10 principles)]] re-socialized me to be less afraid of joining spontaneous social games with people. This meshes well with my experiences with clowning.
+- There are a lot of misconceptions about burning man -- often people think it's a festival about sex, drugs and +rock-and-roll+ tech-house. It *can* be those things, but it is so much more; it can provide nearly whatever experience you're looking for. For me, it's about participating in art, strange and genuine social connections, making and deepening friendships and living in a society that embodies the 10 principles of burning man.
 
-I also attended an interesting math lecture about embodied ways of approaching mathematical problem solving, which inspired me to [[file:Math.org::*Competition Math $x + y \geq 2\sqrt{xy}$][work more on my mathematical problem solving skills]] with a tutor who is helping refactor both my understanding of foundational concepts, and improve my emotional relationship to problem-solving and mathematics overall.
+- Living in a culture that valued radical self-expression, participation and immediacy in the way Black Rock City did [[https://burningman.org/about/10-principles/][(see the 10 principles)]] re-socialized me to be less afraid of joining spontaneous social games with people. This meshes well with my experiences with clowning.
+
+- I also attended an interesting math lecture about embodied ways of approaching mathematical problem solving, which inspired me to [[file:Math.org::*Competition Math $x + y \geq 2\sqrt{xy}$][work more on my mathematical problem solving skills]] with a tutor who is helping refactor both my understanding of foundational concepts, and improve my emotional relationship to problem-solving and mathematics overall.
 
 * [[file:Music.org][Music]]
 I like music, and also make music on the piano and in ableton or cubase.
