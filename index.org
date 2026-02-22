@@ -6,15 +6,7 @@ Welcome to my webpage!
 
 Writing about experiments and ideas.
 
-* Side projects
-
-- [[https://github.com/ElleNajt/ob-python-extras][ob-python-extras]] - Making org babel a full-featured replacement for jupyter notebooks
-- [[https://github.com/ElleNajt/vibe-duet/][vibe-duet]] - Tools for vibe coding music with strudel
-- [[https://github.com/ElleNajt/meta-agent-shell][meta-agent-shell]] - Multi agent management in emacs agent-shell
-- [[https://github.com/ElleNajt/agent-bedtime][agent-bedtime]] - So coding agents can send you to bed
-- [[https://github.com/ElleNajt/agent-timecard][agent-timecard]] - Get reports on how you're spending time, based on conversation turns with coding agents
-- [[https://github.com/ElleNajt/acp-mobile][acp-mobile]] - So you can take coding agents with you everywhere (wip)
-- [[https://github.com/ElleNajt/oneko-macs][oneko-macs]] - A silly hack to have a neko cat in emacs
+* [[file:Topics/SideProjects.org][Side Projects]]
 
 * [[file:Topics/Math.org][Math]]
 
