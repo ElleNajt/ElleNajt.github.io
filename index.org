@@ -6,8 +6,6 @@ Welcome to my webpage!
 
 Writing about experiments and ideas.
 
-* [[file:Topics/SideProjects.org][Side Projects]]
-
 * [[file:Topics/Math.org][Math]]
 
 I like learning math.
@@ -15,6 +13,8 @@ I like learning math.
 * [[file:Topics/SoftwareDevelopment.org][Software Tools]]
 
 I like improving at my software skills and understanding how systems work. It's empowering to be able to build tools. 
+
+** [[file:Topics/SideProjects.org][My Side Projects and Tools]]
 
 * [[file:Topics/Opinions.org][Opinions]]
 

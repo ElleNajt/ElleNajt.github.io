@@ -1,4 +1,4 @@
-#+title: Side Projects
+#+title: My Side Projects and Tools
 
 - [[https://github.com/ElleNajt/ob-python-extras][ob-python-extras]] - Making org babel a full-featured replacement for jupyter notebooks
 - [[https://github.com/ElleNajt/vibe-duet/][vibe-duet]] - Tools for vibe coding music with strudel. Try it out! It's fun. :)
