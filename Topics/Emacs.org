@@ -3,6 +3,8 @@
 
 * Why Emacs:
 
+Even as LLMs consume the world, I think emacs still has a place -- maybe more of a place, since the frictions around customizing emacs are going to zero. Some work flows that I previously managed with emacs I manage with agents (e.g. managing git), but others still belong in emacs (like managing what I'm working on, and moving between streams quickly). 
+
 ** Truly customizable and extensible
 
 I can shape my editor into a tool that fits me, instead of contorting myself to fit someone else's UI design.
@@ -13,21 +15,17 @@ Once you get the hang of it, modifying emacs becomes easy and fun. LLM agents ma
 
 That's the main reason I like it!
 Fun is a signal, not frivolity.
-Fun is leads to flow, and flow leads to deep work and curiosity and creativity.
+Fun leads to flow, and flow leads to deep work and curiosity and creativity.
 
 ** Better than a clicking based GUI or a CLI:
 
-I also find that the transient menu style interface works fits much better in my brain than CLI or standard click-on-dropdown-menu based GUIs.
+I also find that the transient menu style interface fits much better in my brain than CLI or standard click-on-dropdown-menu based GUIs.
 
 Stuff that I use frequently becomes muscle memory, and for stuff that I don't use frequently I get gentle, immediate and usually useful hints from the system about what I'm trying to do.
-(And if the hints consistently aren't useful they can be changed without too much effort.)
 
-This applies to:
-- Magit
-- Dired
-- M-x anything
-  
 ** Great Aesthetics
+
+Who doesn't want to look like an 80s hacker when they work.
 
 ** All-encompassing
 
@@ -38,16 +36,10 @@ Emacs can absorb pretty much all parts of your workflow into the same extensible
 ** Org mode:
 *** Org babel as a replacement for jupyter notebooks
 
-Literate code! Literate dev-ops!
-
-Version controlled jupyter notebooks!
-
-Mix latex and python and bash and rust and etc. in the same file.
+Literate code! 
 
 [[https://github.com/ElleNajt/ElleNajt.github.io/blob/master/Code/OrgBabelExample/example.org][Here's an example of an org babel file as a generic data science notebook!]]
 [[file:../Code/OrgBabelExample/example.org][Here's what it looks like when published to html.]]
-
-Seriously this is great -- it's changed my life.
 
 There are some missing features, and I've written a package that adds the ones I've missed the most [[https://github.com/ElleNajt/ob-python-extras?tab=readme-ov-file][a package that adds them.]]
 

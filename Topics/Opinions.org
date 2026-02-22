@@ -2,9 +2,9 @@
 
 * Opinions:
 
-** Safe to fail
+** Make it safe to fail
 
-I like to learn by experimenting with things, so I like it when tools make it safe to fail. I like that it's safe for me to fail, emotionally. Clown has helped a lot with this. 
+I like to learn by experimenting with things, so I like it when tools make it safe to fail. I like that it's safe for me to fail, emotionally. Clown has helped a lot with this. So has git.
 
 ** Fun
 
@@ -53,5 +53,6 @@ Useful subskills:
 - Agency - you can just do things!
 - Willingness to be bad and practice; comfort failing repeatedly and comfort working on things that are hard.
 - Deciding that you can learn something; only you can  defeat learned helplessness.
+
 
 
