@@ -2,5 +2,5 @@
 
 * Posts
 
-** [[file:goldberg-variations.org][The Goldberg Variations: Musical Attractor States of LLMs]]
+** [[file:goldberg-variations.org][The Goldborg Variations: Musical Attractor States of LLMs]]
 We give four frontier LLMs the same seed -- a piece of music written in Strudel -- and ask them to repeatedly "evolve" it. Each model runs independently for 100 steps. We discover that, loosely speaking, Claude writes ambient music, Grok writes hardcore/gabber, Gemini writes IDM, and ChatGPT writes forgettable pop EDM.
