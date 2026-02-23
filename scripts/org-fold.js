@@ -23,6 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
     details.open = true; // Start expanded like org default
 
     var summary = document.createElement("summary");
+    // Preserve the heading's id so TOC anchor links still work
+    if (heading.id) {
+      summary.id = heading.id;
+    }
     // Move the heading's content into the summary
     summary.innerHTML = heading.innerHTML;
     // Copy heading tag name as a data attribute for CSS styling
