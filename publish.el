@@ -30,31 +30,7 @@ Calculates depth from repo root so paths work for pages in any subdirectory."
       (insert "#+HTML_LINK_UP: " link-up "\n")
       (insert "#+HTML_LINK_HOME: " link-home "\n")
       (insert "#+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"" css-path "\"/>\n")
-      (insert "#+HTML_HEAD: <script src=\"" js-path "\" defer></script>\n")
-      ;; Add Giscus comments to blog posts (not index pages)
-      (let ((rel-path (file-relative-name current-file elle/repo-root)))
-        (when (and (string-prefix-p "blog/" rel-path)
-                   (not is-index))
-          (goto-char (point-max))
-          (insert "\n#+begin_export html\n"
-                  "<div class=\"giscus-comments\">\n"
-                  "<script src=\"https://giscus.app/client.js\"\n"
-                  "        data-repo=\"ElleNajt/ElleNajt.github.io\"\n"
-                  "        data-repo-id=\"MDEwOlJlcG9zaXRvcnkxODkzMDY0MzM=\"\n"
-                  "        data-category=\"General\"\n"
-                  "        data-category-id=\"DIC_kwDOC0iWQc4C3EoY\"\n"
-                  "        data-mapping=\"pathname\"\n"
-                  "        data-strict=\"0\"\n"
-                  "        data-reactions-enabled=\"1\"\n"
-                  "        data-emit-metadata=\"0\"\n"
-                  "        data-input-position=\"top\"\n"
-                  "        data-theme=\"dark_dimmed\"\n"
-                  "        data-lang=\"en\"\n"
-                  "        crossorigin=\"anonymous\"\n"
-                  "        async>\n"
-                  "</script>\n"
-                  "</div>\n"
-                  "#+end_export\n"))))))
+      (insert "#+HTML_HEAD: <script src=\"" js-path "\" defer></script>\n"))))
 
 (add-hook 'org-export-before-processing-hook #'elle/org-export-setup)
 
