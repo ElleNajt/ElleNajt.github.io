@@ -1,12 +1,15 @@
 // Convert org-mode outline sections into collapsible <details>/<summary> elements.
 // Runs on DOMContentLoaded so no framework needed.
 document.addEventListener("DOMContentLoaded", function () {
-  // Match all outline container divs (outline-2, outline-3, etc.)
-  var containers = document.querySelectorAll('[class^="outline-"][class$="]"]');
-  // That selector is fragile; use a broader match:
-  document.querySelectorAll("div[id^='outline-container-']").forEach(function (container) {
-    var heading = container.querySelector("h2, h3, h4, h5, h6");
-    var content = container.querySelector("div[class^='outline-text-']");
+  // Process deepest containers first so nested sections are converted
+  // before their parents move them.
+  var containers = Array.from(
+    document.querySelectorAll("div[id^='outline-container-']")
+  );
+  containers.reverse();
+
+  containers.forEach(function (container) {
+    var heading = container.querySelector(":scope > h2, :scope > h3, :scope > h4, :scope > h5, :scope > h6");
     if (!heading) return;
 
     // Collect all sibling content: the outline-text div plus any nested outline containers
