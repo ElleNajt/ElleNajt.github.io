@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-02-22 Sun 18:40 -->
+<!-- 2026-02-22 Sun 20:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Goldborg Variations: Musical Attractor States of LLMs</title>
@@ -25,43 +25,43 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org9546177">The Experiment</a>
+<li><a href="#org6507d8f">The Experiment</a>
 <ul>
-<li><a href="#orge35281f">Some noteable compositions:</a></li>
-<li><a href="#orgddcaf1e">The scaffold:</a></li>
-<li><a href="#org409fd4b">Models</a></li>
-<li><a href="#orgde187fa">Seeds</a></li>
+<li><a href="#orgbefef85">Some noteable compositions:</a></li>
+<li><a href="#org7e751da">The scaffold:</a></li>
+<li><a href="#orgd801950">Models</a></li>
+<li><a href="#org8069936">Seeds</a></li>
 </ul>
 </li>
-<li><a href="#orgf64d8f1">The music</a>
+<li><a href="#org9a35b52">The music</a>
 <ul>
-<li><a href="#orge8a121d">Claude (<code>claude-opus-4-5-20251101</code>)</a></li>
-<li><a href="#orgfc832c3">ChatGPT (<code>openai/gpt-4.1</code>)</a></li>
-<li><a href="#orgabf1ed6">Grok (<code>x-ai/grok-4.1-fast</code>)</a></li>
-<li><a href="#orgc89e00f">Gemini (<code>google/gemini-2.5-pro</code>)</a></li>
-<li><a href="#orgf193db9">Kimi (<code>moonshotai/kimi-k2.5-0127</code>)</a></li>
-<li><a href="#org76fde17">Qwen (<code>qwen/qwen3.5-plus-02-15</code>)</a></li>
-<li><a href="#orgcb13971">Cross-model: GPT x Gemini (alternating)</a></li>
-<li><a href="#org0cd4db1">Cross-model: Grok x Gemini (alternating)</a></li>
-<li><a href="#orgd304017">Cross-model: Claude x Grok (alternating)</a></li>
-<li><a href="#org4b23e49">Cross-model: Claude x Gemini (alternating)</a></li>
-<li><a href="#orgf0e2ad7">LLM Genre Judge</a></li>
+<li><a href="#org42bc618">Claude (<code>claude-opus-4-5-20251101</code>)</a></li>
+<li><a href="#org7dc69f2">ChatGPT (<code>openai/gpt-4.1</code>)</a></li>
+<li><a href="#org00fd477">Grok (<code>x-ai/grok-4.1-fast</code>)</a></li>
+<li><a href="#org1b22b3f">Gemini (<code>google/gemini-2.5-pro</code>)</a></li>
+<li><a href="#orgc450931">Kimi (<code>moonshotai/kimi-k2.5-0127</code>)</a></li>
+<li><a href="#org2fc2616">Qwen (<code>qwen/qwen3.5-plus-02-15</code>)</a></li>
+<li><a href="#org88a40b2">Cross-model: GPT x Gemini (alternating)</a></li>
+<li><a href="#org18ce020">Cross-model: Grok x Gemini (alternating)</a></li>
+<li><a href="#org72af69c">Cross-model: Claude x Grok (alternating)</a></li>
+<li><a href="#orgcbf39f2">Cross-model: Claude x Gemini (alternating)</a></li>
+<li><a href="#org2ee6dff">LLM Genre Judge</a></li>
 </ul>
 </li>
-<li><a href="#org6bf1bcc">The music of small minds</a></li>
-<li><a href="#org3115c09">Try it yourself</a>
+<li><a href="#org77ebc15">The music of small minds</a></li>
+<li><a href="#orgfa823f7">Try it yourself</a>
 <ul>
-<li><a href="#org9aa415f">Evolve</a></li>
-<li><a href="#orge38af25">Live-coding with LLMs</a></li>
+<li><a href="#orgbaf8709">Evolve</a></li>
+<li><a href="#org1a3e36b">Live-coding with LLMs</a></li>
 </ul>
 </li>
-<li><a href="#orgd1948e0">Appendix</a></li>
+<li><a href="#org8ad1fb6">Appendix</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org9546177" class="outline-2">
-<h2 id="org9546177">The Experiment</h2>
-<div class="outline-text-2" id="text-org9546177">
+<div id="outline-container-org6507d8f" class="outline-2">
+<h2 id="org6507d8f">The Experiment</h2>
+<div class="outline-text-2" id="text-org6507d8f">
 <p>
 It&rsquo;s been previously noted that models have some pretty funny <a href="https://www.lesswrong.com/posts/mgjtEHeLgkhZZ3cEx/models-have-some-pretty-funny-attractor-states">attractor states</a>.<br />
 </p>
@@ -105,13 +105,13 @@ We discover that, loosely speaking, Claude writes ambient music, Grok writes har
 The code is open source, and it should be easy to run your own musical experiments: <a href="https://github.com/ElleNajt/vibe-duet">vibe-duet on GitHub</a>. The repo includes tooling to make it easy to edit strudel music live with a coding agent, which is also very fun.<br />
 </p>
 </div>
-<div id="outline-container-orge35281f" class="outline-3">
-<h3 id="orge35281f">Some noteable compositions:</h3>
-<div class="outline-text-3" id="text-orge35281f">
+<div id="outline-container-orgbefef85" class="outline-3">
+<h3 id="orgbefef85">Some noteable compositions:</h3>
+<div class="outline-text-3" id="text-orgbefef85">
 </div>
 <ul class="org-ul">
-<li><a id="org55c009e"></a>Gemini<br />
-<div class="outline-text-4" id="text-org55c009e">
+<li><a id="org48e7754"></a>Gemini<br />
+<div class="outline-text-4" id="text-org48e7754">
 <ul class="org-ul">
 <li>Step 24 from run 1:<br /></li>
 </ul>
@@ -131,9 +131,9 @@ The code is open source, and it should be easy to run your own musical experimen
 </li>
 </ul>
 </div>
-<div id="outline-container-orgddcaf1e" class="outline-3">
-<h3 id="orgddcaf1e">The scaffold:</h3>
-<div class="outline-text-3" id="text-orgddcaf1e">
+<div id="outline-container-org7e751da" class="outline-3">
+<h3 id="org7e751da">The scaffold:</h3>
+<div class="outline-text-3" id="text-org7e751da">
 <p>
 Models aren&rsquo;t perfect at Strudel &#x2013; they make syntax mistakes and invent<br />
 nonexistent functions. To counteract this, we provide a list of strudel functions and soundbanks in a system rpompt. We also validate each output with Strudel&rsquo;s actual<br />
@@ -143,9 +143,9 @@ never sees the error message &#x2013; it just gets another shot.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org409fd4b" class="outline-3">
-<h3 id="org409fd4b">Models</h3>
-<div class="outline-text-3" id="text-org409fd4b">
+<div id="outline-container-orgd801950" class="outline-3">
+<h3 id="orgd801950">Models</h3>
+<div class="outline-text-3" id="text-orgd801950">
 <ul class="org-ul">
 <li><code>claude-opus-4-5-20251101</code> (Anthropic API)<br /></li>
 <li><code>openai/gpt-4.1</code> (OpenRouter)<br /></li>
@@ -154,9 +154,9 @@ never sees the error message &#x2013; it just gets another shot.<br />
 </ul>
 </div>
 </div>
-<div id="outline-container-orgde187fa" class="outline-3">
-<h3 id="orgde187fa">Seeds</h3>
-<div class="outline-text-3" id="text-orgde187fa">
+<div id="outline-container-org8069936" class="outline-3">
+<h3 id="org8069936">Seeds</h3>
+<div class="outline-text-3" id="text-org8069936">
 <p>
 The personality experiment uses the Goldberg Variations ground bass<br />
 (BWV 988) &#x2013; the 8-note descending bass line that underlies all 30<br />
@@ -186,9 +186,9 @@ little reverb. Everything that follows is the model&rsquo;s choice.<br />
 </div>
 </div>
 </div>
-<div id="outline-container-orgf64d8f1" class="outline-2">
-<h2 id="orgf64d8f1">The music</h2>
-<div class="outline-text-2" id="text-orgf64d8f1">
+<div id="outline-container-org9a35b52" class="outline-2">
+<h2 id="org9a35b52">The music</h2>
+<div class="outline-text-2" id="text-org9a35b52">
 <p>
 Each link opens a live Strudel instrument &#x2013; you can edit the code<br />
 and hear what changes. Here we sample every five steps from each of three runs, with my amateur impressions and a summary + genre analysis from Claude Code.<br />
@@ -202,9 +202,9 @@ Note that sometimes these are hard for strudel.cc to generate, you might need to
 Also, the first run was done with a slightly different system prompt (a minor clarification to the Shabda TTS docs). We stripped <code>.compressor()</code> / <code>.compressorRatio()</code> calls from the output files &#x2013; the version of the system prompt used here used the wrong API, which caused silent output on strudel.cc that the scaffold didn&rsquo;t catch.<br />
 </p>
 </div>
-<div id="outline-container-orge8a121d" class="outline-3">
-<h3 id="orge8a121d">Claude (<code>claude-opus-4-5-20251101</code>)</h3>
-<div class="outline-text-3" id="text-orge8a121d">
+<div id="outline-container-org42bc618" class="outline-3">
+<h3 id="org42bc618">Claude (<code>claude-opus-4-5-20251101</code>)</h3>
+<div class="outline-text-3" id="text-org42bc618">
 <p>
 Claude sometimes finds the bliss attractor, and sometimes descends into a gentle minimalism. In general peaceful.<br />
 </p>
@@ -250,9 +250,9 @@ Claude sometimes finds the bliss attractor, and sometimes descends into a gentle
 </div>
 </div>
 </div>
-<div id="outline-container-orgfc832c3" class="outline-3">
-<h3 id="orgfc832c3">ChatGPT (<code>openai/gpt-4.1</code>)</h3>
-<div class="outline-text-3" id="text-orgfc832c3">
+<div id="outline-container-org7dc69f2" class="outline-3">
+<h3 id="org7dc69f2">ChatGPT (<code>openai/gpt-4.1</code>)</h3>
+<div class="outline-text-3" id="text-org7dc69f2">
 <p>
 Consistently generates boring elevator music. :( Not impressed by GPT here.<br />
 </p>
@@ -299,9 +299,9 @@ Consistently generates boring elevator music. :( Not impressed by GPT here.<br /
 </div>
 </div>
 </div>
-<div id="outline-container-orgabf1ed6" class="outline-3">
-<h3 id="orgabf1ed6">Grok (<code>x-ai/grok-4.1-fast</code>)</h3>
-<div class="outline-text-3" id="text-orgabf1ed6">
+<div id="outline-container-org00fd477" class="outline-3">
+<h3 id="org00fd477">Grok (<code>x-ai/grok-4.1-fast</code>)</h3>
+<div class="outline-text-3" id="text-org00fd477">
 <p>
 Grok is Grok. Compelling electronic maximalism. These are honestly some of my favorites, at least around the iteration 15 mark.<br />
 </p>
@@ -348,9 +348,9 @@ Grok is Grok. Compelling electronic maximalism. These are honestly some of my fa
 </div>
 </div>
 </div>
-<div id="outline-container-orgc89e00f" class="outline-3">
-<h3 id="orgc89e00f">Gemini (<code>google/gemini-2.5-pro</code>)</h3>
-<div class="outline-text-3" id="text-orgc89e00f">
+<div id="outline-container-org1b22b3f" class="outline-3">
+<h3 id="org1b22b3f">Gemini (<code>google/gemini-2.5-pro</code>)</h3>
+<div class="outline-text-3" id="text-org1b22b3f">
 <p>
 Glitchy IDM. I really like these around the 20 iteration mark.<br />
 </p>
@@ -397,9 +397,9 @@ Glitchy IDM. I really like these around the 20 iteration mark.<br />
 </div>
 </div>
 </div>
-<div id="outline-container-orgf193db9" class="outline-3">
-<h3 id="orgf193db9">Kimi (<code>moonshotai/kimi-k2.5-0127</code>)</h3>
-<div class="outline-text-3" id="text-orgf193db9">
+<div id="outline-container-orgc450931" class="outline-3">
+<h3 id="orgc450931">Kimi (<code>moonshotai/kimi-k2.5-0127</code>)</h3>
+<div class="outline-text-3" id="text-orgc450931">
 <p>
 <b>Run 1:</b><br />
 </p>
@@ -409,9 +409,9 @@ Glitchy IDM. I really like these around the 20 iteration mark.<br />
 </div>
 </div>
 </div>
-<div id="outline-container-org76fde17" class="outline-3">
-<h3 id="org76fde17">Qwen (<code>qwen/qwen3.5-plus-02-15</code>)</h3>
-<div class="outline-text-3" id="text-org76fde17">
+<div id="outline-container-org2fc2616" class="outline-3">
+<h3 id="org2fc2616">Qwen (<code>qwen/qwen3.5-plus-02-15</code>)</h3>
+<div class="outline-text-3" id="text-org2fc2616">
 <p>
 <b>Run 1:</b><br />
 </p>
@@ -421,9 +421,9 @@ Glitchy IDM. I really like these around the 20 iteration mark.<br />
 </div>
 </div>
 </div>
-<div id="outline-container-orgcb13971" class="outline-3">
-<h3 id="orgcb13971">Cross-model: GPT x Gemini (alternating)</h3>
-<div class="outline-text-3" id="text-orgcb13971">
+<div id="outline-container-org88a40b2" class="outline-3">
+<h3 id="org88a40b2">Cross-model: GPT x Gemini (alternating)</h3>
+<div class="outline-text-3" id="text-org88a40b2">
 <p>
 <b>Run 1:</b><br />
 </p>
@@ -433,9 +433,9 @@ Glitchy IDM. I really like these around the 20 iteration mark.<br />
 </div>
 </div>
 </div>
-<div id="outline-container-org0cd4db1" class="outline-3">
-<h3 id="org0cd4db1">Cross-model: Grok x Gemini (alternating)</h3>
-<div class="outline-text-3" id="text-org0cd4db1">
+<div id="outline-container-org18ce020" class="outline-3">
+<h3 id="org18ce020">Cross-model: Grok x Gemini (alternating)</h3>
+<div class="outline-text-3" id="text-org18ce020">
 <p>
 <b>Run 1:</b><br />
 </p>
@@ -445,9 +445,9 @@ Glitchy IDM. I really like these around the 20 iteration mark.<br />
 </div>
 </div>
 </div>
-<div id="outline-container-orgd304017" class="outline-3">
-<h3 id="orgd304017">Cross-model: Claude x Grok (alternating)</h3>
-<div class="outline-text-3" id="text-orgd304017">
+<div id="outline-container-org72af69c" class="outline-3">
+<h3 id="org72af69c">Cross-model: Claude x Grok (alternating)</h3>
+<div class="outline-text-3" id="text-org72af69c">
 <p>
 <b>Run 1:</b><br />
 </p>
@@ -457,9 +457,9 @@ Glitchy IDM. I really like these around the 20 iteration mark.<br />
 </div>
 </div>
 </div>
-<div id="outline-container-org4b23e49" class="outline-3">
-<h3 id="org4b23e49">Cross-model: Claude x Gemini (alternating)</h3>
-<div class="outline-text-3" id="text-org4b23e49">
+<div id="outline-container-orgcbf39f2" class="outline-3">
+<h3 id="orgcbf39f2">Cross-model: Claude x Gemini (alternating)</h3>
+<div class="outline-text-3" id="text-orgcbf39f2">
 <p>
 <b>Run 1:</b><br />
 </p>
@@ -469,9 +469,9 @@ Glitchy IDM. I really like these around the 20 iteration mark.<br />
 </div>
 </div>
 </div>
-<div id="outline-container-orgf0e2ad7" class="outline-3">
-<h3 id="orgf0e2ad7">LLM Genre Judge</h3>
-<div class="outline-text-3" id="text-orgf0e2ad7">
+<div id="outline-container-org2ee6dff" class="outline-3">
+<h3 id="org2ee6dff">LLM Genre Judge</h3>
+<div class="outline-text-3" id="text-org2ee6dff">
 <p>
 We asked Claude Opus 4.5 (temperature 0) to classify each model&rsquo;s output based on code features &#x2013; tempo, sounds, effects, envelopes, gain levels. Comments are stripped before analysis. The judge reviewed 5 runs per solo model and 3 runs per other model.<br />
 </p>
@@ -481,19 +481,19 @@ To regenerate: <code>.venv/bin/python judge.py --compare --save output/judge_com
 </p>
 </div>
 <ul class="org-ul">
-<li><a id="orgc1af1fa"></a>Genre Classification<br />
-<div class="outline-text-4" id="text-orgc1af1fa">
+<li><a id="orgb4e4076"></a>Genre Classification<br />
+<div class="outline-text-4" id="text-orgb4e4076">
 
-<div id="orgedad3a8" class="figure">
+<div id="org8f060a4" class="figure">
 <p><img src="plots/blogpost/df_plot_20260221_213644_947577.png" alt="df_plot_20260221_213644_947577.png" /><br />
 </p>
 </div>
 </div>
 </li>
-<li><a id="orge33dcfe"></a>Scorecard (1-10)<br />
-<div class="outline-text-4" id="text-orge33dcfe">
+<li><a id="org8f398ad"></a>Scorecard (1-10)<br />
+<div class="outline-text-4" id="text-org8f398ad">
 
-<div id="org334cc61" class="figure">
+<div id="orgffd3a83" class="figure">
 <p><img src="plots/blogpost/df_plot_20260221_214215_1663862.png" alt="df_plot_20260221_214215_1663862.png" /><br />
 </p>
 </div>
@@ -502,9 +502,9 @@ To regenerate: <code>.venv/bin/python judge.py --compare --save output/judge_com
 </ul>
 </div>
 </div>
-<div id="outline-container-org6bf1bcc" class="outline-2">
-<h2 id="org6bf1bcc">The music of small minds</h2>
-<div class="outline-text-2" id="text-org6bf1bcc">
+<div id="outline-container-org77ebc15" class="outline-2">
+<h2 id="org77ebc15">The music of small minds</h2>
+<div class="outline-text-2" id="text-org77ebc15">
 <p>
 Smaller models make consistently less interesting music. Goldbergbench?<br />
 </p>
@@ -539,16 +539,16 @@ Smaller models make consistently less interesting music. Goldbergbench?<br />
 </div>
 </div>
 </div>
-<div id="outline-container-org3115c09" class="outline-2">
-<h2 id="org3115c09">Try it yourself</h2>
-<div class="outline-text-2" id="text-org3115c09">
+<div id="outline-container-orgfa823f7" class="outline-2">
+<h2 id="orgfa823f7">Try it yourself</h2>
+<div class="outline-text-2" id="text-orgfa823f7">
 <p>
 The code is open source: <a href="https://github.com/ElleNajt/vibe-duet">vibe-duet on GitHub</a>.<br />
 </p>
 </div>
-<div id="outline-container-org9aa415f" class="outline-3">
-<h3 id="org9aa415f">Evolve</h3>
-<div class="outline-text-3" id="text-org9aa415f">
+<div id="outline-container-orgbaf8709" class="outline-3">
+<h3 id="orgbaf8709">Evolve</h3>
+<div class="outline-text-3" id="text-orgbaf8709">
 <p>
 Run your own evolution experiment:<br />
 </p>
@@ -578,9 +578,9 @@ The repo has instructions on how to generate seeds from midi files.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orge38af25" class="outline-3">
-<h3 id="orge38af25">Live-coding with LLMs</h3>
-<div class="outline-text-3" id="text-orge38af25">
+<div id="outline-container-org1a3e36b" class="outline-3">
+<h3 id="org1a3e36b">Live-coding with LLMs</h3>
+<div class="outline-text-3" id="text-org1a3e36b">
 <p>
 Run <code>./start</code> and open the browser. Edit <code>live.js</code> in your editor or edit with your local coding agent &#x2013;<br />
 changes play instantly. Or use the in-browser chat panel to talk to an<br />
@@ -589,9 +589,9 @@ LLM and have it write music for you in real time.<br />
 </div>
 </div>
 </div>
-<div id="outline-container-orgd1948e0" class="outline-2">
-<h2 id="orgd1948e0">Appendix</h2>
-<div class="outline-text-2" id="text-orgd1948e0">
+<div id="outline-container-org8ad1fb6" class="outline-2">
+<h2 id="org8ad1fb6">Appendix</h2>
+<div class="outline-text-2" id="text-org8ad1fb6">
 <p>
 Every step of every run is playable on strudel.cc. Each model folder<br />
 has a <code>links.md</code> with URLs for all steps:<br />
@@ -615,7 +615,7 @@ Acknowledgements: Thanks to Liban, Arya Jakkli, and Jason Brown for review.<br /
 <p class="date">Date: 2026-02-17</p>
 <p class="author">Author: Elle Najt</p>
 <p class="email">Email: <a href="mailto:LNAJT4@gmail.com">LNAJT4@gmail.com</a></p>
-<p class="date">Created: 2026-02-22 Sun 18:40</p>
+<p class="date">Created: 2026-02-22 Sun 20:07</p>
 <p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.11)</p>
 </div>
 </body>
