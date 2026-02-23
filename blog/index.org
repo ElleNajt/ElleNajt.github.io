@@ -2,5 +2,5 @@
 
 * Posts
 
-** [[file:goldberg-variations.org][The Goldborg Variations: Musical Attractor States of LLMs]]
-We give frontier LLMs the same seed -- a piece of music written in Strudel -- and ask them to repeatedly "evolve" it. Each model runs independently, receiving its own previous output each time. We run Claude, GPT, Gemini, Grok, Kimi, and Qwen, plus cross-model pairings. Each model develops a distinct musical personality.
+** [[file:goldborg-variations.org][The Goldborg Variations: Musical Attractor States of LLMs]]
+We give frontier LLMs the same seed -- a piece of music written in Strudel -- and ask them to repeatedly "evolve" it based on their personality. Each model runs independently, receiving its own previous output each time. We run Claude, GPT, Gemini, Grok, Kimi, and Qwen, plus cross-model pairings. To my amateur ears, each model shows a unique personality: Claude writes ambient music, Grok writes maximalist gabber, GPT writes creepy glitch music, and Gemini writes chill IDM.
