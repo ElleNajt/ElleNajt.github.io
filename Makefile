@@ -7,6 +7,7 @@ all:
 	emacs --batch --load publish.el --eval '(org-publish-all t)'
 	@# org-publish follows symlinks and names output after the real file.
 	@# Rename to match the symlink name so internal links work.
+	cp ext/vibe-duet/examples/evolve/blind_test.html docs/blog/blind_test.html
 	@for link in blog/*.org; do \
 		[ -L "$$link" ] || continue; \
 		target=$$(readlink "$$link"); \
