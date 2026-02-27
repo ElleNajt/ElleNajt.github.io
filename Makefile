@@ -3,7 +3,7 @@
 
 all:
 	git submodule update --init --recursive
-	git submodule foreach 'git pull origin main || git pull origin master || true'
+	git submodule foreach 'git fetch origin && git reset --hard origin/main || git reset --hard origin/master || true'
 	emacs --batch --load publish.el --eval '(org-publish-all t)'
 	@# org-publish follows symlinks and names output after the real file.
 	@# Rename to match the symlink name so internal links work.
