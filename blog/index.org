@@ -2,8 +2,5 @@
 
 * Posts
 
-** [[file:ralph_wiggum.org][The bitter lesson of the Ralph-Wiggum loop]]
-In defense of vibe coding
-
 ** [[file:goldborg-variations.org][The Goldborg Variations: Musical Attractor States of LLMs]]
 We give frontier LLMs the same seed -- a piece of music written in Strudel -- and ask them to repeatedly "evolve" it based on their personality. Each model runs independently, receiving its own previous output each time. We run Claude, GPT, Gemini, Grok, Kimi, and Qwen, plus cross-model pairings. To my amateur ears, each model shows a unique personality: Claude writes ambient music (and Opus 4.6 is darker than 4.5), Grok 4.1-fast writes maximalist gabber, GPT 5.2 writes creepy glitch music, and Gemini 3.1 writes IDM.
