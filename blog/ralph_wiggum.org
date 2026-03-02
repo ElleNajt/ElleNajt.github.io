@@ -14,9 +14,9 @@
 
 The Ralph-Wiggum loop is when you put a coding agent in a loop, and ask it to work on a problem until it has solved it. It is much maligned; "whatever happened to thinking?" its naysayers decry.
 
-The [[http://www.incompleteideas.net/IncIdeas/BitterLesson.html][bitter lesson]] notes a pattern in AI of general optimization algorithms making specialized problem solving obsolete. This extends beyond AI, for instance the success of [[https://www.youtube.com/watch?v=_R8-nt5NyiE][MILP/SAT solvers]] as a replacement for specialized heuristics for NP-hard optimization problems.
+The [[http://www.incompleteideas.net/IncIdeas/BitterLesson.html][bitter lesson]] notes a pattern in AI of general optimization algorithms (search and learning) making specialized problem solving obsolete. This pattern of optimization taking over the world extends beyond AI; for instance, the success of [[https://www.youtube.com/watch?v=_R8-nt5NyiE][MILP/SAT solvers]] as a replacement for specialized heuristics for NP-hard optimization problems.
 
-If you're bitter-lesson pilled, when you have a problem, you reformulate it as an optimization problem and throw compute at it. Compute gets cheaper faster than human labor does and optimization heuristics get refined, so this produces wins. 
+If you're optimization pilled, when you have a problem, you reformulate it as an optimization problem, and you throw compute at it. Compute gets cheaper faster than human labor does and optimization heuristics get refined, so this produces wins. 
 
 The Ralph-Wiggum loop for software engineering is a logical extension of this: you have a software problem that you want to solve, you formulate a prompt (and perhaps tests) that distinguish the behavior you want and you throw an agent at it.
 
