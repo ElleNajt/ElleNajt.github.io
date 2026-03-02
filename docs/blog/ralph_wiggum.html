@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-03-01 Sun 18:43 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The bitter lesson of the Ralph-Wiggum loop</title>
+<meta name="author" content="Elle Najt" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css"/>
+<script src="../scripts/org-fold.js" defer></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="./index.html"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">The bitter lesson of the Ralph-Wiggum loop</h1>
+<blockquote>
+<p>
+&ldquo;It is a profoundly erroneous truism, repeated in all copy-books and by eminent people when they are making speeches, that we should cultivate the habit of thinking of what we are doing. The precise opposite is the case. Civilization advances by extending the number of important operations which we can perform without thinking about them. Operations of thought are like cavalry charges in a battle — they are strictly limited in number, they require fresh horses, and must only be made at decisive moments.&rdquo;<br />
+</p>
+
+<p>
+— Alfred North Whitehead, <b>An Introduction to Mathematics</b> (1911)<br />
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+&ldquo;You are a senior engineer. Implement an integer-program solver. Make no mistakes.&rdquo;<br />
+</p>
+
+<ul class="org-ul">
+<li>A vibe coder<br /></li>
+</ul>
+</blockquote>
+
+<p>
+The Ralph-Wiggum loop is when you put a coding agent in a loop, and ask it to work on a problem until it has solved it. It is much maligned; &ldquo;whatever happened to thinking?&rdquo; its naysayers decry.<br />
+</p>
+
+<p>
+The <a href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html">bitter lesson</a> notes a pattern in AI of general optimization algorithms making specialized problem solving obsolete. This extends beyond AI, for instance the success of <a href="https://www.youtube.com/watch?v=_R8-nt5NyiE">MILP/SAT solvers</a> as a replacement for specialized heuristics for NP-hard optimization problems.<br />
+</p>
+
+<p>
+If you&rsquo;re bitter-lesson pilled, when you have a problem, you reformulate it as an optimization problem and throw compute at it. Compute gets cheaper faster than human labor does and optimization heuristics get refined, so this produces wins.<br />
+</p>
+
+<p>
+The Ralph-Wiggum loop for software engineering is a logical extension of this: you have a software problem that you want to solve, you formulate a prompt (and perhaps tests) that distinguish the behavior you want and you throw an agent at it.<br />
+</p>
+
+<p>
+The constraint formulation and general purpose algorithms look different, but the art remains in how you formulate the constraints. The disconnect now is that prompted constraints are often ambiguous natural language. The question of how to communicate constraints to an LLM is the place to develop opinions.<br />
+</p>
+
+<p>
+The Ralph-Wiggum loop is just another face of the bitter lesson.<br />
+</p>
+
+
+<div id="org077e7c7" class="figure">
+<p><img src="ralph_wiggum.png" alt="ralph_wiggum.png" /><br />
+</p>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Elle Najt</p>
+<p class="email">Email: <a href="mailto:LNAJT4@gmail.com">LNAJT4@gmail.com</a></p>
+<p class="date">Created: 2026-03-01 Sun 18:43</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.11)</p>
+</div>
+</body>
+</html>
