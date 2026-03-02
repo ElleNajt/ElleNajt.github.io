@@ -6,7 +6,7 @@ I compose and write songs ... maybe I'll share some here eventually.
 
 * Live coding
 
-I really like making music with tools like Strudel. LLMs are good at it too -- I wrote some tooling to help with that here: [[https://github.com/ElleNajt/vibe-duet/][vibe-duet]].
+I really like making music with tools like Strudel. LLMs are good at it too -- I wrote some tooling to help with that here: [[https://github.com/ElleNajt/vibe-duet/][vibe-duet]]. I also wrote about what happens when you let LLMs evolve music in [[file:../blog/goldborg-variations.org][The Goldborg Variations]].
 
 * Favorites
 
