@@ -18,9 +18,9 @@ The [[http://www.incompleteideas.net/IncIdeas/BitterLesson.html][bitter lesson]]
 
 If you're optimization pilled, when you have a problem, you reformulate it as an optimization problem, and you throw compute at it. Compute gets cheaper faster than human labor does and optimization heuristics get refined, so this produces wins. 
 
-The Ralph-Wiggum loop for software engineering is a logical extension of this: you have a software problem that you want to solve, you formulate a prompt (and perhaps tests) that distinguish the behavior you want and you throw an agent at it.
+The Ralph-Wiggum loop for software engineering is a logical extension of this: you have a software problem that you want to solve, you formulate a prompt (and perhaps tests) that distinguish the behavior you want and you throw an agent at it. It's not really necessary to put this in a ralph-wiggum bash loop, since agent scaffolds are increasingly good at just continuing until the prompted task is done.
 
-The constraint formulation and general purpose algorithms look different, but the art remains in how you formulate the constraints. The disconnect now is that prompted constraints are often ambiguous natural language. The question of how to communicate constraints to an LLM is the place to develop opinions. 
+The constraint formulation and general purpose algorithms look different, but the art remains in how you formulate the constraints. The disconnect now is that prompted constraints are often ambiguous natural language. The question of how to communicate constraints to an LLM is the place to develop opinions. An example of this: my preferred way to debug emacs issues now is to start up a vm with my config in it, give claude a precise description of what the correct behavior should be, and just let it rip.  
 
 The Ralph-Wiggum loop is just another face of the bitter lesson.
 

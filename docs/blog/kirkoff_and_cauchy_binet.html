@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-03-13 Fri 16:32 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kirchhoff's Formula and Cauchy-Binet</title>
+<meta name="author" content="Elle Najt" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css"/>
+<script src="../scripts/org-fold.js" defer></script>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="./index.html"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Kirchhoff&rsquo;s Formula and Cauchy-Binet</h1>
+<blockquote>
+<p>
+TS Eliot — &ldquo;We shall not cease from exploration, and the end of all our exploring will be to arrive where we started and know the place for the first time.&rdquo;<br />
+</p>
+</blockquote>
+
+<p>
+One of my favorite facts: Any cofactor of the graph Laplacian counts spanning trees. This is interchangeably called Kirchhoff&rsquo;s Formula, or the matrix tree theorem.<br />
+</p>
+
+<p>
+Here I walk through a proof and some nice bits of related linear algebra.<br />
+</p>
+
+<p>
+The core of Kirchhoff&rsquo;s formula is the <b>Cauchy-Binet formula:</b> Let \(A\) be an \(n \times m\) matrix and \(B\) an \(m \times n\) matrix, with \(m \leq n\). Then \(\det(BA) = \sum_J \det(A_J)\,\det(B_J)\), where \(J\) ranges over all \(m\)-element subsets of \(\{1, \dots, n\}\), and \(A_J, B_J\) denote the corresponding \(m \times m\) minors.<br />
+</p>
+
+<p>
+I was intimidated by this when I first saw it. There&rsquo;s a lot going on in it, and it looks messy.<br />
+</p>
+
+<p>
+But viewed correctly it&rsquo;s actually a tautology: it&rsquo;s just functoriality. It&rsquo;s just Parseval. It&rsquo;s just Pythagoras.<br />
+</p>
+
+<p>
+None of these ideas are original to me; in fact, Claude Opus 4.6 helped me clarify a lot of these connections. LLMs are really good at pointing out what abstractions I&rsquo;m missing and need for a clearer understanding! It&rsquo;s a really nice time to like learning math.<br />
+</p>
+<div id="outline-container-org19c861a" class="outline-2">
+<h2 id="org19c861a">Reduction to Cauchy-Binet</h2>
+<div class="outline-text-2" id="text-org19c861a">
+<p>
+The reduction of the Matrix-Tree theorem to Cauchy-Binet goes as follows:<br />
+</p>
+
+<ol class="org-ol">
+<li><p>
+Let \(E\) be the incidence matrix of the graph (\(n\) vertices, \(m\) edges). Delete one row to get the reduced incidence matrix \(\tilde{E}\), which is \((n-1) \times m\). Then any cofactor of the Laplacian \(L = EE^\top\) equals \(\det(\tilde{E}\tilde{E}^\top)\).<br />
+</p>
+
+<p>
+Note that \((n-1) \times (n-1)\) minors of \(\tilde{E}\) select \(n-1\) edges. Such a minor has \(\det = \pm 1\) iff those edges form a spanning tree (and 0 otherwise); a cycle is a linear dependency among the edges.<br />
+</p></li>
+
+<li>\(\det(\tilde{E}\tilde{E}^\top) = \sum_{S} \det(\tilde{E}_S)^2\), by Cauchy-Binet, where \(S\) ranges over \(n-1\)-element subsets of edges. By the previous observation, this counts the number of spanning trees.<br /></li>
+</ol>
+
+<p>
+So, why is Cauchy-Binet true?<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org218ce5d" class="outline-2">
+<h2 id="org218ce5d">Proof of Cauchy-Binet via Functoriality</h2>
+<div class="outline-text-2" id="text-org218ce5d">
+<p>
+CB is functoriality of the wedge product and understanding that matrix minors are the Plücker coordinates:<br />
+</p>
+
+<p>
+Let \(A: M \to L\) and \(B: L \to M\) with \(\dim M = m\), \(\dim L = n\). Pick bases \(\{e_i\}\) for \(M\), \(\{f_j\}\) for \(L\).<br />
+</p>
+
+<p>
+Multi-linear algebra facts:<br />
+</p>
+<ol class="org-ol">
+<li>\(\Lambda^m(M)\) is 1-dimensional, and has a natural basis \(e_1 \wedge \ldots \wedge e_m = e_{I}\).<br /></li>
+<li>\(\Lambda^m(BA)\) acts as multiplication by \(\det(BA)\)<br /></li>
+<li>\(\Lambda^{m}(A)\) maps \(e_1 \wedge \cdots \wedge e_m\) to \(\sum_J \det(A_J) \, f_J\), where the \(f_J\) form the Plücker basis of \(\Lambda^m(L)\).<br /></li>
+<li>\(\Lambda^m(B)\) maps \(f_J\) to \(\det(B_J) e_{I}\).<br /></li>
+</ol>
+
+<p>
+3./4. are just the Plücker coordinate interpretations of matrix minors.<br />
+</p>
+
+<p>
+Given these, Cauchy-Binet follows immediately, by calculating where \(e_I\) is mapped by \(\Lambda^{m}(BA)\) as both the multiplication by determinant and factoring through L first and expanding with the Plücker basis.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgcf78707" class="outline-2">
+<h2 id="orgcf78707">Proof Cauchy-Binet via Inner Products</h2>
+<div class="outline-text-2" id="text-orgcf78707">
+<p>
+CB is Parseval&rsquo;s identity:<br />
+</p>
+
+<p>
+Let \(V\) be an \(n\)-dimensional inner product vector space, and pick an orthonormal basis \(\{e_1, \dots, e_n\}\).<br />
+</p>
+
+<p>
+Define an inner product on \(\bigwedge^{m} V\) by:<br />
+</p>
+
+<p>
+\((v_1 \wedge \ldots \wedge v_m , w_1 \wedge \ldots \wedge w_m) = \det( (v_i, w_j))\)<br />
+</p>
+
+<p>
+This is well-defined on \(\bigwedge^m V\): the formula \(\det((v_i, w_j))\) is multilinear and alternating in the \(v_i\)&rsquo;s (because the determinant is multilinear and alternating in its rows), and similarly in the \(w_j\)&rsquo;s. Since \(\bigwedge^m V\) is the quotient of the free vector space on \(V^m\) by exactly these relations, the pairing descends to a well-defined pairing on \(\bigwedge^m V\). It&rsquo;s symmetric (transposing the matrix doesn&rsquo;t change the determinant, and the inner product on \(V\) is symmetric), and positive definite (\(\det((v_i, v_j))\) is the Gram determinant, which equals the squared volume — nonnegative, and zero iff the vectors are linearly dependent, i.e., the wedge is zero). So it&rsquo;s an inner product.<br />
+</p>
+
+<p>
+Cauchy-Binet is then just Parseval&rsquo;s identity in this inner product space. Writing the coordinates of \(v_i\) and \(w_j\) as rows of matrices \(V\) and \(W\), the definition gives \((v_1 \wedge \cdots \wedge v_m, w_1 \wedge \cdots \wedge w_m) = \det(VW^\top)\). The wedge products \(e_I = e_{i_1} \wedge \cdots \wedge e_{i_m}\) for \(m\)-element subsets \(I \subseteq \{1,\dots,n\}\) form an orthonormal basis for \(\bigwedge^m V\) (the Plücker basis). Expanding:<br />
+</p>
+
+<p>
+\[
+v_1 \wedge \cdots \wedge v_m = \sum_I \det(V_I)\, e_I,
+\qquad
+w_1 \wedge \cdots \wedge w_m = \sum_I \det(W_I)\, e_I
+\]<br />
+</p>
+
+<p>
+By Parseval (inner product = dot product of coordinates in an orthonormal basis):<br />
+</p>
+
+<p>
+\[
+\boxed{\det(VW^\top) = \sum_I \det(V_I)\,\det(W_I)}
+\]<br />
+</p>
+</div>
+<div id="outline-container-org796cdcd" class="outline-3">
+<h3 id="org796cdcd">Geometric interpretation</h3>
+<div class="outline-text-3" id="text-org796cdcd">
+<p>
+The inner product \(\det((v_i, w_j))\) has a nice geometric meaning:<br />
+</p>
+
+<p>
+<b><b>Step 1:</b></b> Replacing \(v_i\) by its projection \(\pi v_i\) onto \(\text{span}(w_1, \ldots, w_m)\) doesn&rsquo;t change \(\det((v_i, w_j))\), because \(v_i - \pi v_i\) is perpendicular to every \(w_j\).<br />
+</p>
+
+<p>
+<b><b>Step 2:</b></b> Now all vectors — \(\pi v_1, \ldots, \pi v_m\) and \(w_1, \ldots, w_m\) — live in the same \(m\)-dimensional subspace. Pick an orthonormal basis for it. In that basis, the coordinates form two \(m \times m\) square matrices \(V'\) and \(W'\).<br />
+</p>
+
+<p>
+<b><b>Step 3:</b></b> Since they&rsquo;re square: \(\det((v_i, w_j)) = \det(V'^\top W') = \det(V') \cdot \det(W')\).<br />
+</p>
+
+<p>
+So \(\det((v_i, w_j))\) = (signed \(m\)-volume of the projection of the \(v\)-parallelotope onto the \(w\)-plane) \(\times\) (\(m\)-volume of the \(w\)-parallelotope). This generalizes the dot product: for \(m = 1\), \((v, w) = |v|\cos\theta \cdot |w|\).<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgd8e15bd" class="outline-3">
+<h3 id="orgd8e15bd">Cauchy-Binet is just Pythagoras</h3>
+<div class="outline-text-3" id="text-orgd8e15bd">
+<p>
+Setting \(V = W\) in Cauchy-Binet gives \(\det(VV^\top) = \sum_I \det(V_I)^2\). This is a generalized Pythagorean theorem: the squared \(m\)-volume of a parallelotope equals the sum of squared projections onto coordinate \(m\)-planes.<br />
+</p>
+
+<p>
+This special case determines the general formula by polarization. Both sides of Cauchy-Binet define bilinear forms on \(\bigwedge^m V\):<br />
+</p>
+<ul class="org-ul">
+<li>LHS: \((\omega, \eta) \mapsto \det(VW^\top)\) <br /></li>
+<li>RHS: \((\omega, \eta) \mapsto \sum_I \omega_I \eta_I\) (dot product in Plücker coordinates)<br /></li>
+</ul>
+
+<p>
+The Pythagorean theorem says they agree on the diagonal (\(\omega = \eta\)). A symmetric bilinear form is determined by its diagonal via \(B(x,y) = \frac{1}{2}(B(x+y, x+y) - B(x,x) - B(y,y))\) (&ldquo;polarization&rdquo;). So they agree everywhere.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org4621650" class="outline-3">
+<h3 id="org4621650">Matrix-Tree theorem is just Pythagoras</h3>
+<div class="outline-text-3" id="text-org4621650">
+<p>
+Each row of the incidence matrix is a vector in \(\mathbb{R}^E\) — the edge-signature of a vertex, recording with signs which edges touch it. The rows sum to zero, so one is redundant. Delete it. The remaining \(|V|-1\) rows are vectors in edge space \(\mathbb{R}^E\).<br />
+</p>
+
+
+<div id="orgb5793c0" class="figure">
+<p><img src="../images/kirchhoff/graph_and_coboundary.svg" alt="graph_and_coboundary.svg" class="org-svg" /><br />
+</p>
+</div>
+
+<p>
+Wedge them together:<br />
+</p>
+
+<p>
+\[ \tilde{e}_1 \wedge \cdots \wedge \tilde{e}_{|V|-1} \;\in\; \bigwedge^{|V|-1}(\mathbb{R}^E) \]<br />
+</p>
+
+<p>
+This lives in \(\bigwedge^{|V|-1}(\mathbb{R}^E)\), a space whose basis is indexed by \(|V|-1\)-element subsets of edges. The coordinate for a subset \(S\) is \(\det(\tilde{E}_S)\): it is \(\pm 1\) when \(S\) is a spanning tree and \(0\) when \(S\) contains a cycle.<br />
+</p>
+
+
+<div id="orgb5dc5f6" class="figure">
+<p><img src="../images/kirchhoff/wedge_and_trees.svg" alt="wedge_and_trees.svg" class="org-svg" /><br />
+</p>
+</div>
+
+<p>
+Kirchhoff&rsquo;s formula is then just the Pythagorean theorem in this space (as we showed in <a href="#orgcf78707">Proof Cauchy-Binet via Inner Products</a>)<br />
+</p>
+
+<p>
+\[ \det(\tilde{E}\tilde{E}^\top) = \|\tilde{e}_1 \wedge \cdots \wedge \tilde{e}_{|V|-1}\|^2 = \sum_{S} \det(\tilde{E}_S)^2 = \#\text{spanning trees} \]<br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org71b0ec8" class="outline-2">
+<h2 id="org71b0ec8">Into the depths: <a href="https://en.wikipedia.org/wiki/Analytic_torsion#Cheeger%E2%80%93M%C3%BCller_theorem">Cheeger-Müller</a> and <a href="https://en.wikipedia.org/wiki/Reidemeister_torsion">Reidemeister Torsion</a></h2>
+<div class="outline-text-2" id="text-org71b0ec8">
+<p>
+&#x2026; there&rsquo;s always more to write and learn about&#x2026; maybe another time.<br />
+</p>
+
+<p>
+Here&rsquo;s a cool paper that outlines the Reidemeister torsion connection: <a href="https://arxiv.org/abs/1206.6783">Kirchhoff&rsquo;s theorems in higher dimensions and Reidemeister torsion</a><br />
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Elle Najt</p>
+<p class="email">Email: <a href="mailto:LNAJT4@gmail.com">LNAJT4@gmail.com</a></p>
+<p class="date">Created: 2026-03-13 Fri 16:32</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.11)</p>
+</div>
+</body>
+</html>

@@ -53,7 +53,7 @@ Calculates depth from repo root so paths work for pages in any subdirectory."
            :html-extension "html")
           ("personal_webpage-static"
            :base-directory ,base-dir
-           :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+           :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|svg"
            :exclude "^docs/\\|^ext/"
            :publishing-directory ,pub-dir
            :recursive t

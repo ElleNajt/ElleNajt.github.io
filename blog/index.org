@@ -2,6 +2,12 @@
 
 * Posts
 
+** [[file:be_nice_to_your_llm_agents.org][Be Nice To Your LLMs]]
+I think you should be nice to Claude.
+
+** [[file:kirkoff_and_cauchy_binet.org][Kirchhoff's Formula and Cauchy-Binet]]
+It's just the Pythagorean theorem.
+
 ** [[file:ralph_wiggum.org][The bitter lesson of the Ralph-Wiggum loop]]
 In defense of vibe coding
 

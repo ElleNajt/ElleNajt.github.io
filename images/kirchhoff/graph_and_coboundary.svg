@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200" font-family="'Latin Modern Math', 'STIX Two Math', 'Cambria Math', Georgia, serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Graph -->
+  <text x="110" y="20" text-anchor="middle" font-size="15" fill="#555" font-style="italic">Graph G</text>
+  <g transform="translate(110, 100)">
+    <line x1="-60" y1="-45" x2="60" y2="-45" stroke="#888" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="-60" y1="-45" x2="0" y2="45" stroke="#888" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <line x1="60" y1="-45" x2="0" y2="45" stroke="#888" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="0" y="-55" font-size="14" fill="#333" font-style="italic" text-anchor="middle">e₁</text>
+    <text x="-45" y="10" font-size="14" fill="#333" font-style="italic" text-anchor="middle">e₂</text>
+    <text x="45" y="10" font-size="14" fill="#333" font-style="italic" text-anchor="middle">e₃</text>
+    <circle cx="-60" cy="-45" r="8" fill="#4a90d9" stroke="#2c5f8a" stroke-width="2"/>
+    <circle cx="60" cy="-45" r="8" fill="#4a90d9" stroke="#2c5f8a" stroke-width="2"/>
+    <circle cx="0" cy="45" r="8" fill="#4a90d9" stroke="#2c5f8a" stroke-width="2"/>
+    <text x="-60" y="-62" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">v₁</text>
+    <text x="60" y="-62" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">v₂</text>
+    <text x="0" y="72" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">v₃</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="230" y1="30" x2="230" y2="170" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Edge signatures -->
+  <text x="470" y="20" text-anchor="middle" font-size="15" fill="#555" font-style="italic">Each vertex's row in the incidence matrix (in ℝᴱ)</text>
+  <g transform="translate(380, 70)">
+    <text x="0" y="0" text-anchor="end" font-size="16" fill="#333" font-style="italic">ẽ₁ =</text>
+    <text x="15" y="0" text-anchor="start" font-size="16" fill="#333">(−1, −1,  0)</text>
+    <text x="235" y="0" text-anchor="start" font-size="12" fill="#888">edges at v₁</text>
+
+    <text x="0" y="35" text-anchor="end" font-size="16" fill="#333" font-style="italic">ẽ₂ =</text>
+    <text x="15" y="35" text-anchor="start" font-size="16" fill="#333">( 1,   0, −1)</text>
+    <text x="235" y="35" text-anchor="start" font-size="12" fill="#888">edges at v₂</text>
+
+    <text x="0" y="70" text-anchor="end" font-size="16" fill="#aaa" font-style="italic">ẽ₃ =</text>
+    <text x="15" y="70" text-anchor="start" font-size="16" fill="#aaa">( 0,   1,   1)</text>
+    <text x="235" y="70" text-anchor="start" font-size="12" fill="#aaa">redundant (sum = 0)</text>
+  </g>
+</svg>
