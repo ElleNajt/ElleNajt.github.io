@@ -34,7 +34,15 @@ Calculates depth from repo root so paths work for pages in any subdirectory."
       (insert "#+HTML_HEAD: <script src=\"" js-path "\" defer></script>\n")
       (insert "#+HTML_HEAD: <script src=\"" tag-js-path "\" defer></script>\n"))))
 
+(defun elle/strip-cell-timer (backend)
+  "Remove Cell Timer lines from results drawers before export."
+  (save-excursion
+    (goto-char (point-min))
+    (while (re-search-forward "^Cell Timer:.*\n" nil t)
+      (replace-match ""))))
+
 (add-hook 'org-export-before-processing-hook #'elle/org-export-setup)
+(add-hook 'org-export-before-processing-hook #'elle/strip-cell-timer)
 
 (setq org-html-validation-link nil)
 (setq org-html-head-include-default-style nil)
