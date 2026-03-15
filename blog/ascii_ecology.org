@@ -3,12 +3,14 @@
 #+PROPERTY: header-args:python :results output drawer :python "./.venv/bin/python3" :async t :tangle yes :session ASCII_ecology :exports results
 
 #+begin_export html
-<pre style="font-family: Inconsolata, Monaco, Consolas, monospace; font-size: 14px; line-height: 1.1; text-align: center; background: #1e1e1e; color: #b6a0ff; padding: 1em; border-radius: 8px; overflow-x: auto;">
-  <span style="color:#989898">epoch 0</span>                <span style="color:#989898">epoch 30</span>               <span style="color:#989898">epoch 80</span>               <span style="color:#989898">epoch 150</span>
-╗┐◇▫■╠╔}═_+└┐═▀□    →  ╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═  →  ├─┼─┼─┼─┼─┼─┼─┼─┼─┼─  →  ░░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓
-(┐:█}|■#_◇─╩+→◇╦       ║░║▒║░║▒║░║▒║░║▒║░║▒     │░░│▓▓│░░│▓▓│░░│▓▓│░     ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒
-▀→╔═╱║↓↑○┘@{╚╱┼.       ╠═╬═╬═╬═╬═╬═╬═╬═╬═╬═     │▓▓│░░│▓▓│░░│▓▓│░░│▓     ▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░
-</pre>
+<table style="font-family: Inconsolata, Monaco, Consolas, monospace; font-size: 14px; line-height: 1.1; background: #1e1e1e; color: #b6a0ff; padding: 1em; border-radius: 8px; border-collapse: separate; border-spacing: 1.5em 0; margin: 0 auto;">
+<tr style="color:#989898; text-align: center;">
+  <td>epoch 0</td><td></td><td>epoch 30</td><td></td><td>epoch 80</td><td></td><td>epoch 150</td>
+</tr>
+<tr><td>╗┐◇▫■╠╔}═_+└┐═▀□</td><td>→</td><td>╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═</td><td>→</td><td>├─┼─┼─┼─┼─┼─┼─┼─┼─┼─</td><td>→</td><td>░░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓</td></tr>
+<tr><td>(┐:█}|■#_◇─╩+→◇╦</td><td></td><td>║░║▒║░║▒║░║▒║░║▒║░║▒</td><td></td><td>│░░│▓▓│░░│▓▓│░░│▓▓│░</td><td></td><td>░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒</td></tr>
+<tr><td>▀→╔═╱║↓↑○┘@{╚╱┼.</td><td></td><td>╠═╬═╬═╬═╬═╬═╬═╬═╬═╬═</td><td></td><td>│▓▓│░░│▓▓│░░│▓▓│░░│▓</td><td></td><td>▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░</td></tr>
+</table>
 #+end_export
 
 * The Experiment
