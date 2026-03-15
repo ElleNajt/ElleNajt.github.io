@@ -609,5 +609,5 @@ Cell Timer: 0:00:00
 
 * Code
 
-[[file:../Code/ascii_ecology/][Code on GitHub]]
+[[https://github.com/ElleNajt/ElleNajt.github.io/tree/master/Code/ascii_ecology][Code on GitHub]]
 

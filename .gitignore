@@ -11,6 +11,9 @@ htmlcov
 .direnv
 
 Code/ascii_ecology/results/
+Code/ascii_ecology/*.json
+Code/ascii_ecology/*.jsonl
+Code/ascii_ecology/youtube_upload.py
 docs/blog/.venv/
 docs/Code/ascii_ecology/
 blog/drafts/
