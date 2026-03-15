@@ -4,10 +4,10 @@
 
 #+begin_export html
 <pre style="font-family: Inconsolata, Monaco, Consolas, monospace; font-size: 14px; line-height: 1.1; text-align: center; background: #1e1e1e; color: #b6a0ff; padding: 1em; border-radius: 8px; overflow-x: auto;">
-░░▒▓█▓▒░░▒▓█▓▒░   ◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇   ╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔
-░▒▓█▓▒░░▒▓█▓▒░░   ✦✧✦✧✦✧✦✧✦✧✦✧✦✧✦✧   ╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝
-▒▓█▓▒░░▒▓█▓▒░░▒   ◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆   ╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚
-▓█▓▒░░▒▓█▓▒░░▒▓   ◈◉◈◉◈◉◈◉◈◉◈◉◈◉◈◉   ╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔
+  <span style="color:#989898">epoch 0</span>                <span style="color:#989898">epoch 30</span>               <span style="color:#989898">epoch 80</span>               <span style="color:#989898">epoch 150</span>
+╗┐◇▫■╠╔}═_+└┐═▀□    →  ╬═╬═╬═╬═╬═╬═╬═╬═╬═╬═  →  ├─┼─┼─┼─┼─┼─┼─┼─┼─┼─  →  ░░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓
+(┐:█}|■#_◇─╩+→◇╦       ║░║▒║░║▒║░║▒║░║▒║░║▒     │░░│▓▓│░░│▓▓│░░│▓▓│░     ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒
+▀→╔═╱║↓↑○┘@{╚╱┼.       ╠═╬═╬═╬═╬═╬═╬═╬═╬═╬═     │▓▓│░░│▓▓│░░│▓▓│░░│▓     ▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░
 </pre>
 #+end_export
 
@@ -15,9 +15,9 @@
 
 [[https://arxiv.org/abs/2406.19108][Computational Life: How Well-formed, Self-replicating Programs Emerge from Simple Interaction]] (Agüera y Arcas et al., 2024) showed that self-replicating programs emerge from random interactions in a BFF (Brainfuck variant) interpreter. They initialize a soup of random programs, repeatedly pick random pairs, concatenate them, run the result through the interpreter, and split the output back into two new programs. Over time, self-replicators (quines) emerge and take over.
 
-For fun, I took their experimental setup and changed it from a brainfuck interpreter to a temp 0 Haiku prefill, and got convergence to a few dominant species when starting with initial ASCII art, Wikipedia sentences, or random character soups. Simple repeating patterns appear to be dominant across the experiments. Prefill was necessary to avoid immediately leaving the ("User: =k$3]vR#~8xQ!pZ&7jW*2m@=" → Claude: "I'm not sure what you're asking...")
+For fun, I took their experimental setup and changed it from a brainfuck interpreter to a temp 0 Haiku prefill, and got convergence to a few dominant species when starting with initial ASCII art, Wikipedia sentences, or random character soups. Prefill was necessary to avoid immediately leaving the ("User: =k$3]vR#~8xQ!pZ&7jW*2m@=" → Claude: "I'm not sure what you're asking...")
 
-I got no sharp phase transitions; there's a quick convergence to self-replicators, and after that there are ecological dynamics. 
+I got no sharp phase transitions; there's a quick convergence to self-replicating patterns, and after that there are ecological dynamics. The self-replicators tend to be simple repeated patterns like in the banner for this post, which shows snapshots of the "Interesting (16x16)" run.
 
 ** Setup
 
