@@ -1,5 +1,5 @@
 # -*- mode: makefile; indent-tabs-mode: t -*-
-.PHONY: all clean
+.PHONY: all deploy clean
 
 all:
 	git submodule update --init --recursive
@@ -17,6 +17,10 @@ all:
 			mv "docs/blog/$$real_name.html" "docs/blog/$$link_name.html"; \
 		fi; \
 	done
+
+deploy: all
+	git add docs/
+	git commit -m "Rebuild site" || true
 
 clean:
 	rm -rf docs/*.html docs/blog docs/css/* docs/images/*

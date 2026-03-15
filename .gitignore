@@ -11,3 +11,5 @@ htmlcov
 .direnv
 
 Code/ascii_ecology/results/
+docs/blog/.venv/
+docs/Code/ascii_ecology/
