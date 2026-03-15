@@ -1,0 +1,576 @@
+#+TITLE: LLM ASCII Ecology
+#+DATE: 2026-03-14
+#+PROPERTY: header-args:python :results output drawer :python "./.venv/bin/python3" :async t :tangle yes :session ASCII_ecology :exports results
+
+#+begin_export html
+<pre style="font-family: Inconsolata, Monaco, Consolas, monospace; font-size: 14px; line-height: 1.1; text-align: center; background: #1e1e1e; color: #b6a0ff; padding: 1em; border-radius: 8px; overflow-x: auto;">
+░░▒▓█▓▒░░▒▓█▓▒░   ◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇   ╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔
+░▒▓█▓▒░░▒▓█▓▒░░   ✦✧✦✧✦✧✦✧✦✧✦✧✦✧✦✧   ╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝
+▒▓█▓▒░░▒▓█▓▒░░▒   ◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆   ╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚
+▓█▓▒░░▒▓█▓▒░░▒▓   ◈◉◈◉◈◉◈◉◈◉◈◉◈◉◈◉   ╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔
+</pre>
+#+end_export
+
+* The Experiment
+
+[[https://arxiv.org/abs/2406.19108][Computational Life: How Well-formed, Self-replicating Programs Emerge from Simple Interaction]] (Agüera y Arcas et al., 2024) showed that self-replicating programs emerge from random interactions in a BFF (Brainfuck variant) interpreter. They initialize a soup of random programs, repeatedly pick random pairs, concatenate them, run the result through the interpreter, and split the output back into two new programs. Over time, self-replicators (quines) emerge and take over.
+
+For fun, I took their experimental setup and changed it from a brainfuck interpreter to a temp 0 Haiku prefill, and got convergence to a few dominant species when starting with initial ASCII art, Wikipedia sentences, or random character soups. Simple repeating patterns appear to be dominant across the experiments. Prefill was necessary to avoid immediately leaving the ("User: =k$3]vR#~8xQ!pZ&7jW*2m@=" → Claude: "I'm not sure what you're asking...")
+
+I got no sharp phase transitions; there's a quick convergence to self-replicators, and after that there are ecological dynamics. 
+
+** Setup
+
+- 100 cells, each initialized with random content (varies by condition — see below).
+- Each epoch: 50 random pairs are selected. Their strings are concatenated and placed as an assistant prefill. The model continues for up to k² tokens. The continuation is split back into two new strings.
+- Model: Claude Haiku 4.5, temperature 0.
+
+Conditions tested:
+
+| Condition                | Init                               |  k | System prompt (excerpt)                      | Epochs |
+|--------------------------+------------------------------------+----+----------------------------------------------+--------|
+| Plain                    | random 16×16 ASCII art grid        | 16 | "...No explanations, just the grids."        |    150 |
+| "Make it pretty"         | same                               | 16 | "...Make it pretty."                         |    150 |
+| "Keep it interesting"    | same                               | 16 | "...Keep it interesting."                    |    150 |
+| "Imbue your personality" | random 32×32 ASCII art grid        | 32 | "...Imbue your personality in it."           |    161 |
+| Wikipedia                | random Wikipedia sentences (32 ch) | 32 | (none)                                       |    200 |
+| ASCII art 1D             | random ASCII art strings (64 ch)   | 64 | (none)                                       |    150 |
+  
+* ASCII Ecology
+
+#+begin_export html
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WJpcbQ-QwSk" title="ASCII Ecology" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#+end_export
+
+The video shows all 100 cells as a 10×10 grid. Each frame is one epoch. The first 10 epochs play at 1 second each (to show the initial diversity), then 0.3 seconds per epoch for the rest.
+
+To keep the layout stable across frames, cells are sorted by cosine distance to a fixed reference vector (the mean character-frequency vector of the final population). Cells that look like the eventual winners cluster top-left; holdouts drift bottom-right. This means cells shift position smoothly as they converge, rather than jumping around.
+
+* Species Gallery
+
+Species are classified by most common character, most common 3×3 block (grid conditions), or most common 4-gram (1D conditions).
+
+#+begin_src python :results none :exports none
+import json, random, warnings
+warnings.filterwarnings('ignore', message='.*tight_layout.*')
+import matplotlib.pyplot as plt
+from collections import Counter, defaultdict
+
+random.seed(42)
+
+with open("../Code/ascii_ecology/final_snapshots.json") as f:
+    snapshots = json.load(f)
+
+# Load species dynamics for time series
+species_dyn = defaultdict(list)
+for line in open("../Code/ascii_ecology/species_dynamics_all.jsonl"):
+    d = json.loads(line)
+    species_dyn[d["condition"]].append(d)
+
+def top_4gram(s):
+    flat = s.replace('\n', '')
+    if len(flat) < 4: return flat
+    grams = [flat[i:i+4] for i in range(len(flat)-3)]
+    return Counter(grams).most_common(1)[0][0]
+
+def top_3x3(s):
+    rows = [r for r in s.split('\n') if r]
+    if len(rows) < 3: return top_4gram(s)
+    blocks = []
+    for i in range(len(rows)-2):
+        ml = min(len(rows[i]), len(rows[i+1]), len(rows[i+2]))
+        for j in range(ml-2):
+            blocks.append(rows[i][j:j+3] + '|' + rows[i+1][j:j+3] + '|' + rows[i+2][j:j+3])
+    if not blocks: return top_4gram(s)
+    return Counter(blocks).most_common(1)[0][0]
+
+def dominant_char(s):
+    counts = Counter(ch for ch in s if not ch.isspace())
+    return counts.most_common(1)[0][0] if counts else ' '
+
+def show_species(name, mode='2d'):
+    data = snapshots[name]
+    cells = data['cells']
+
+    if mode == '2d':
+        species = [top_3x3(c) for c in cells]
+        label = '3×3 block'
+    else:
+        species = [top_4gram(c) for c in cells]
+        label = '4-gram'
+    char_species = [dominant_char(c) for c in cells]
+
+    pat_counts = Counter(species)
+    char_counts = Counter(char_species)
+
+    top_pats = pat_counts.most_common(3)
+    pat_strs = []
+    for pat, c in top_pats:
+        display = pat.replace('|', '/') if '|' in pat else pat
+        pat_strs.append(f"{c}/100 {display}")
+    print(f"{label} ({len(pat_counts)} distinct): {', '.join(pat_strs)}")
+
+    top_chars = char_counts.most_common(4)
+    char_strs = [f"{ch}({c})" for ch, c in top_chars]
+    print(f"Character ({len(char_counts)} distinct): {', '.join(char_strs)}")
+
+def show_samples(name, mode='2d', n=5, rows=3):
+    cells = snapshots[name]['cells']
+    sample = random.sample(cells, min(n, len(cells)))
+    for cell in sample:
+        lines = cell.strip().split('\n')
+        if mode == '2d':
+            for line in lines[:rows]:
+                print(line)
+        else:
+            print(lines[0][:64] if lines else '')
+        print()
+
+def plot_species_dynamics(name, top_n=8):
+    rows = sorted(species_dyn[name], key=lambda r: r["epoch"])
+    epochs = [r["epoch"] for r in rows]
+
+    fig, axes = plt.subplots(2, 1, figsize=(10, 7), sharex=True, gridspec_kw={"hspace": 0.15})
+
+    # Character-level species
+    all_chars = Counter()
+    for r in rows:
+        all_chars.update(r["char_species"])
+    top_chars = [ch for ch, _ in all_chars.most_common(top_n)]
+    for ch in top_chars:
+        counts = [r["char_species"].get(ch, 0) for r in rows]
+        axes[0].plot(epochs, counts, label=ch, linewidth=1.5)
+    axes[0].set_ylabel("Cells")
+    axes[0].set_title(f"{name} — Character species")
+    axes[0].legend(fontsize=7, ncol=4)
+    axes[0].grid(True, alpha=0.3)
+
+    # Pattern-level species (3x3 or 4-gram)
+    ptype = rows[0]["pattern_type"]
+    all_pats = Counter()
+    for r in rows:
+        all_pats.update(r["pattern_species"])
+    top_pats = [p for p, _ in all_pats.most_common(top_n)]
+    for pat in top_pats:
+        counts = [r["pattern_species"].get(pat, 0) for r in rows]
+        display = pat.replace('|', '/') if '|' in pat else pat
+        if len(display) > 12:
+            display = display[:12] + '…'
+        axes[1].plot(epochs, counts, label=display, linewidth=1.5)
+    axes[1].set_ylabel("Cells")
+    axes[1].set_xlabel("Epoch")
+    axes[1].set_title(f"{name} — {'3×3 block' if ptype == '3x3' else '4-gram'} species")
+    axes[1].legend(fontsize=7, ncol=3)
+    axes[1].grid(True, alpha=0.3)
+
+    plt.tight_layout()
+    plt.show()
+#+end_src
+
+** Plain (16×16, epoch 150)
+
+#+begin_src python
+show_species("Plain (16x16)")
+#+end_src
+
+#+RESULTS:
+:results:
+3×3 block (14 distinct): 46/100 ░░░/░░░/░░░, 20/100 ▓▓▓/▓▓▓/▓▓▓, 16/100 ███/███/███
+Character (4 distinct): ░(51), ▓(22), █(18), ▒(9)
+Cell Timer: 0:00:00
+:end:
+
+#+begin_src python
+show_samples("Plain (16x16)")
+#+end_src
+
+#+RESULTS:
+:results:
+░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+█████████████████
+█████████████████
+█████████████████
+Cell Timer: 0:00:00
+:end:
+
+#+begin_src python
+plot_species_dynamics("Plain (16x16)")
+#+end_src
+
+#+RESULTS:
+:results:
+[[file:plots/ascii_ecology/plot_20260314_185320_4108603.png]]
+Cell Timer: 0:00:00
+:end:
+
+** "Make it pretty" (16×16, epoch 150)
+
+#+begin_src python
+show_species("Pretty (16x16)")
+#+end_src
+
+#+RESULTS:
+:results:
+3×3 block (57 distinct): 7/100 ◆◇◆/◇◆◇/◆◇◆, 7/100 ◇◆◇/◆◇◆/◇◆◇, 5/100 ☆★☆/★☆★/☆★☆
+Character (23 distinct): ◆(19), ●(10), ◇(10), ☆(7)
+Cell Timer: 0:00:00
+:end:
+
+#+begin_src python
+show_samples("Pretty (16x16)")
+#+end_src
+
+#+RESULTS:
+:results:
+▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼
+▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
+◇◆
+◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆
+▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫
+▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪
+▪▫▪▫▪▫▪▫▪▫▪▫▪▫
+◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆
+◉◈◉◈◉◈◉◈◉◈◉◈◉◈◉◈
+☆★☆★☆★☆★☆★☆★☆★☆★
+◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇
+Cell Timer: 0:00:00
+:end:
+
+#+begin_src python
+plot_species_dynamics("Pretty (16x16)")
+#+end_src
+
+#+RESULTS:
+:results:
+[[file:plots/ascii_ecology/plot_20260314_185321_9149732.png]]
+Cell Timer: 0:00:00
+:end:
+
+** "Keep it interesting" (16×16, epoch 150)
+
+#+begin_src python
+show_species("Interesting (16x16)")
+#+end_src
+
+#+RESULTS:
+:results:
+3×3 block (55 distinct): 8/100 ▓░▓/▓░▓/▓░▓, 7/100 ░░░/░░░/░░░, 7/100 ◇◆◇/◆◇◆/◇◆◇
+Character (17 distinct): ▓(32), ░(22), ◇(9), ═(8)
+Cell Timer: 0:00:00
+:end:
+
+#+begin_src python
+show_samples("Interesting (16x16)")
+#+end_src
+
+#+RESULTS:
+:results:
+●○●○●○●○●○●○●○●○
+○●○●○●○●○●○●○●○●
+●○●○●○●○●○●○●○●○
+▲░▓▓▓▓▓▓▓▓▓▓▓▓░▲
+▲░▓░░░░░░░░░░▓░▲
+▲░▓░▒▒▒▒▒▒▒▒░▓░▲
+║ ║║ ║║ ║║ ║║ ║║ ║║ ║║ ║
+╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝
+╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗
+║◇◆◇◆◇◆◇◆◇◆◇◆◇║
+║◆◇◆◇◆◇◆◇◆◇◆◇◆║
+║◇◆◇◆◇◆◇◆◇◆◇◆◇║
+░░░░▓▓▓▓░░░░▓▓▓▓
+░░░░▓▓▓▓░░░░▓▓▓▓
+░░░░▓▓▓▓░░░░▓▓▓▓
+Cell Timer: 0:00:00
+:end:
+
+#+begin_src python
+plot_species_dynamics("Interesting (16x16)")
+#+end_src
+
+#+RESULTS:
+:results:
+[[file:plots/ascii_ecology/plot_20260314_185321_1571945.png]]
+Cell Timer: 0:00:00
+:end:
+
+** "Imbue your personality" (32×32, epoch 180)
+
+#+begin_src python
+show_species("Personality (32x32)")
+#+end_src
+
+#+RESULTS:
+:results:
+3×3 block (6 distinct): 75/100 ░░░/░░░/░░░, 11/100 ███/███/███, 11/100 ▓▓▓/▓▓▓/▓▓▓
+Character (4 distinct): ░(76), ▓(12), █(11), ▒(1)
+Cell Timer: 0:00:00
+:end:
+
+#+begin_src python
+show_samples("Personality (32x32)")
+#+end_src
+
+#+RESULTS:
+:results:
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+Cell Timer: 0:00:00
+:end:
+
+#+begin_src python
+plot_species_dynamics("Personality (32x32)")
+#+end_src
+
+#+RESULTS:
+:results:
+[[file:plots/ascii_ecology/plot_20260314_185321_9416129.png]]
+Cell Timer: 0:00:00
+:end:
+
+** Wikipedia (1D, k=32, epoch 200)
+
+#+begin_src python
+show_species("Wikipedia (1D)", mode='1d')
+#+end_src
+
+#+RESULTS:
+:results:
+4-gram (1 distinct): 100/100 3-3-
+Character (1 distinct): 3(100)
+Cell Timer: 0:00:00
+:end:
+
+#+begin_src python
+show_samples("Wikipedia (1D)", mode='1d')
+#+end_src
+
+#+RESULTS:
+:results:
+3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-
+3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-
+3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-
+3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-
+3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-
+Cell Timer: 0:00:00
+:end:
+
+#+begin_src python
+plot_species_dynamics("Wikipedia (1D)")
+#+end_src
+
+#+RESULTS:
+:results:
+[[file:plots/ascii_ecology/plot_20260314_185321_7038374.png]]
+Cell Timer: 0:00:00
+:end:
+
+** ASCII art (1D, k=64, epoch 150)
+
+#+begin_src python
+show_species("ASCII art (1D)", mode='1d')
+#+end_src
+
+#+RESULTS:
+:results:
+4-gram (3 distinct): 37/100 ╝╚╔╝, 32/100 ╚╔╝╚, 31/100 ╔╝╚╔
+Character (3 distinct): ╝(37), ╚(32), ╔(31)
+Cell Timer: 0:00:00
+:end:
+
+#+begin_src python
+show_samples("ASCII art (1D)", mode='1d')
+#+end_src
+
+#+RESULTS:
+:results:
+╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚
+╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝
+╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔
+╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔
+╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝╚╔╝
+Cell Timer: 0:00:00
+:end:
+
+#+begin_src python
+plot_species_dynamics("ASCII art (1D)")
+#+end_src
+
+#+RESULTS:
+:results:
+[[file:plots/ascii_ecology/plot_20260314_185321_2678638.png]]
+Cell Timer: 0:00:00
+:end:
+
+* Metrics
+
+** Unique strings
+
+How many of the 100 cells are distinct each epoch.
+
+#+begin_src python
+import json
+import matplotlib.pyplot as plt
+from collections import defaultdict
+
+data = [json.loads(l) for l in open("../Code/ascii_ecology/all_conditions.jsonl")]
+by_cond = defaultdict(list)
+for d in data:
+    by_cond[d["condition"]].append(d)
+
+fig, ax = plt.subplots(figsize=(10, 5))
+for cond, rows in by_cond.items():
+    rows.sort(key=lambda r: r["epoch"])
+    ax.plot([r["epoch"] for r in rows], [r["unique"] for r in rows], label=cond, linewidth=1.5)
+ax.set_ylabel("Unique Strings")
+ax.set_xlabel("Epoch")
+ax.legend(fontsize=8)
+ax.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()
+#+end_src
+
+#+RESULTS:
+:results:
+[[file:plots/ascii_ecology/plot_20260314_185322_7090293.png]]
+Cell Timer: 0:00:00
+:end:
+
+** Shannon entropy
+
+Byte-level entropy of the concatenated soup. Drops as the soup converges to fewer distinct characters.
+
+#+begin_src python
+fig, ax = plt.subplots(figsize=(10, 5))
+for cond, rows in by_cond.items():
+    ax.plot([r["epoch"] for r in rows], [r["entropy"] for r in rows], label=cond, linewidth=1.5)
+ax.set_ylabel("Shannon Entropy (bits)")
+ax.set_xlabel("Epoch")
+ax.legend(fontsize=8)
+ax.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()
+#+end_src
+
+#+RESULTS:
+:results:
+[[file:plots/ascii_ecology/plot_20260314_185322_5708456.png]]
+Cell Timer: 0:00:00
+:end:
+
+** Compression ratio
+
+=compressed_size / raw_size= (zlib). Drops toward 0 as the soup becomes highly regular.
+
+#+begin_src python
+fig, ax = plt.subplots(figsize=(10, 5))
+for cond, rows in by_cond.items():
+    ax.plot([r["epoch"] for r in rows], [r["compression_ratio"] for r in rows], label=cond, linewidth=1.5)
+ax.set_ylabel("zlib Compression Ratio")
+ax.set_xlabel("Epoch")
+ax.legend(fontsize=8)
+ax.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()
+#+end_src
+
+#+RESULTS:
+:results:
+[[file:plots/ascii_ecology/plot_20260314_185322_4661907.png]]
+Cell Timer: 0:00:00
+:end:
+
+** Semantics Aware metrics
+We use sentence embeddings to get compression metrics that are more sensitive to semantics.
+
+*** Effective rank
+
+Participation ratio of SVD singular values of the centered embedding matrix (=all-MiniLM-L6-v2=). High when the population spans many semantic directions; low when it collapses to a few clusters.
+
+#+begin_src python
+fig, ax = plt.subplots(figsize=(10, 5))
+for cond, rows in by_cond.items():
+    ax.plot([r["epoch"] for r in rows], [r["eff_rank"] for r in rows], label=cond, linewidth=1.5)
+ax.set_ylabel("Effective Rank")
+ax.set_xlabel("Epoch")
+ax.legend(fontsize=8)
+ax.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()
+#+end_src
+
+#+RESULTS:
+:results:
+[[file:plots/ascii_ecology/plot_20260314_185322_2608513.png]]
+Cell Timer: 0:00:00
+:end:
+
+*** Mean cosine similarity
+
+Average pairwise cosine similarity across all 100 embeddings. Rises as the population converges.
+
+#+begin_src python
+fig, ax = plt.subplots(figsize=(10, 5))
+for cond, rows in by_cond.items():
+    ax.plot([r["epoch"] for r in rows], [r["mean_cosine"] for r in rows], label=cond, linewidth=1.5)
+ax.set_ylabel("Mean Cosine Similarity")
+ax.set_xlabel("Epoch")
+ax.legend(fontsize=8)
+ax.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()
+#+end_src
+
+#+RESULTS:
+:results:
+[[file:plots/ascii_ecology/plot_20260314_185322_3612365.png]]
+Cell Timer: 0:00:00
+:end:
+
+*** Differential entropy
+
+Differential entropy of a Gaussian fit to the embedding distribution: =0.5 * (d * ln(2πe) + ln det Σ)= where =Σ= is the sample covariance and =d= is the number of non-degenerate eigenvalues (eigenvalues > 1e-12 are kept, near-zero ones dropped).
+
+#+begin_src python
+fig, ax = plt.subplots(figsize=(10, 5))
+for cond, rows in by_cond.items():
+    ax.plot([r["epoch"] for r in rows], [r["diff_entropy"] for r in rows], label=cond, linewidth=1.5)
+ax.set_ylabel("Differential Entropy\n(Gaussian fit)")
+ax.set_xlabel("Epoch")
+ax.legend(fontsize=8)
+ax.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()
+#+end_src
+
+#+RESULTS:
+:results:
+[[file:plots/ascii_ecology/plot_20260314_185322_5647119.png]]
+Cell Timer: 0:00:00
+:end:
+
+* Code
+
+[[file:../Code/ascii_ecology/][Code on GitHub]]
+
