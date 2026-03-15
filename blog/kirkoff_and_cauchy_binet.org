@@ -1,4 +1,5 @@
 #+title: Kirchhoff's Formula and Cauchy-Binet
+#+DATE: 2026-03-13
 
 #+begin_quote
 TS Eliot — "We shall not cease from exploration, and the end of all our exploring will be to arrive where we started and know the place for the first time."

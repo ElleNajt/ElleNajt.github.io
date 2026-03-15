@@ -24,13 +24,15 @@ Calculates depth from repo root so paths work for pages in any subdirectory."
                      (dir-has-index "./index.html")
                      (t (concat prefix "index.html"))))
            (css-path (concat prefix "css/stylesheet.css"))
-           (js-path (concat prefix "scripts/org-fold.js")))
+           (js-path (concat prefix "scripts/org-fold.js"))
+           (tag-js-path (concat prefix "scripts/tag-filter.js")))
       (goto-char (point-min))
       (insert "#+SETUPFILE: " relative-path "\n")
       (insert "#+HTML_LINK_UP: " link-up "\n")
       (insert "#+HTML_LINK_HOME: " link-home "\n")
       (insert "#+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"" css-path "\"/>\n")
-      (insert "#+HTML_HEAD: <script src=\"" js-path "\" defer></script>\n"))))
+      (insert "#+HTML_HEAD: <script src=\"" js-path "\" defer></script>\n")
+      (insert "#+HTML_HEAD: <script src=\"" tag-js-path "\" defer></script>\n"))))
 
 (add-hook 'org-export-before-processing-hook #'elle/org-export-setup)
 

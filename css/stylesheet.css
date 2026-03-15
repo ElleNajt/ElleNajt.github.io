@@ -261,3 +261,63 @@ hr {
   border-top: 1px solid #333333;
   margin: 2em 0;
 }
+
+/* === Org tags (emacs-style :tag: display) === */
+
+.tag {
+  font-family: Inconsolata, monospace;
+  font-size: 0.75em;
+  font-weight: normal;
+  margin-left: 0.8em;
+  vertical-align: middle;
+}
+
+.tag > span {
+  color: #989898;
+}
+
+.tag > span::before {
+  content: ":";
+  color: #5a5a5a;
+}
+
+.tag > span:last-child::after {
+  content: ":";
+  color: #5a5a5a;
+}
+
+/* === Tag filter bar === */
+
+.tag-filter-bar {
+  font-family: Inconsolata, monospace;
+  font-size: 0.9em;
+  margin: 0.5em 0 1.5em 1em;
+  color: #989898;
+}
+
+.tag-filter-label {
+  color: #b6a0ff;
+}
+
+.tag-filter-btn {
+  font-family: Inconsolata, monospace;
+  font-size: 1em;
+  background: none;
+  border: 1px solid #333333;
+  color: #989898;
+  padding: 2px 6px;
+  margin: 0 3px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.tag-filter-btn:hover {
+  color: #79a8ff;
+  border-color: #79a8ff;
+}
+
+.tag-filter-btn.active {
+  color: #6ae4b9;
+  border-color: #6ae4b9;
+  background: rgba(106, 228, 185, 0.1);
+}
