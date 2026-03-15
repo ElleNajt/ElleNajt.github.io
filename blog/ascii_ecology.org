@@ -208,8 +208,9 @@ plot_species_dynamics("Plain (16x16)")
 
 #+RESULTS:
 :results:
-[[file:plots/ascii_ecology/plot_20260314_185320_4108603.png]]
-Cell Timer: 0:00:00
+
+[[file:plots/ascii_ecology/plot_20260314_203614_4108603.png]]
+Cell Timer: 0:00:05
 :end:
 
 ** "Make it pretty" (16×16, epoch 150)
@@ -241,7 +242,8 @@ show_samples("Pretty (16x16)")
 ◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆
 ◉◈◉◈◉◈◉◈◉◈◉◈◉◈◉◈
 ☆★☆★☆★☆★☆★☆★☆★☆★
-◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇
+◆◇◆◇◆◇◆◇◆◇◆◇
+◆◇◆◇
 Cell Timer: 0:00:00
 :end:
 
@@ -251,7 +253,7 @@ plot_species_dynamics("Pretty (16x16)")
 
 #+RESULTS:
 :results:
-[[file:plots/ascii_ecology/plot_20260314_185321_9149732.png]]
+[[file:plots/ascii_ecology/plot_20260314_203614_9149732.png]]
 Cell Timer: 0:00:00
 :end:
 
@@ -285,7 +287,8 @@ show_samples("Interesting (16x16)")
 ╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗
 ║◇◆◇◆◇◆◇◆◇◆◇◆◇║
 ║◆◇◆◇◆◇◆◇◆◇◆◇◆║
-║◇◆◇◆◇◆◇◆◇◆◇◆◇║
+║◇◆◇◆◇◆
+◇◆◇◆◇◆◇║
 ░░░░▓▓▓▓░░░░▓▓▓▓
 ░░░░▓▓▓▓░░░░▓▓▓▓
 ░░░░▓▓▓▓░░░░▓▓▓▓
@@ -298,7 +301,7 @@ plot_species_dynamics("Interesting (16x16)")
 
 #+RESULTS:
 :results:
-[[file:plots/ascii_ecology/plot_20260314_185321_1571945.png]]
+[[file:plots/ascii_ecology/plot_20260314_203615_1571945.png]]
 Cell Timer: 0:00:00
 :end:
 
@@ -345,7 +348,7 @@ plot_species_dynamics("Personality (32x32)")
 
 #+RESULTS:
 :results:
-[[file:plots/ascii_ecology/plot_20260314_185321_9416129.png]]
+[[file:plots/ascii_ecology/plot_20260314_203615_9416129.png]]
 Cell Timer: 0:00:00
 :end:
 
@@ -357,9 +360,7 @@ show_species("Wikipedia (1D)", mode='1d')
 
 #+RESULTS:
 :results:
-4-gram (1 distinct): 100/100 3-3-
-Character (1 distinct): 3(100)
-Cell Timer: 0:00:00
+6e906c01-abea-4d85-8c68-dc1f37d51f6b
 :end:
 
 #+begin_src python
@@ -368,12 +369,7 @@ show_samples("Wikipedia (1D)", mode='1d')
 
 #+RESULTS:
 :results:
-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-
-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-
-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-
-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-
-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-3-
-Cell Timer: 0:00:00
+4d6b140b-bdac-4520-b4e5-0ebc7d2528e1
 :end:
 
 #+begin_src python
@@ -382,8 +378,7 @@ plot_species_dynamics("Wikipedia (1D)")
 
 #+RESULTS:
 :results:
-[[file:plots/ascii_ecology/plot_20260314_185321_7038374.png]]
-Cell Timer: 0:00:00
+7d9c7d57-9e16-4ab8-8bf6-4f2d933e0bd7
 :end:
 
 ** ASCII art (1D, k=64, epoch 150)
@@ -394,9 +389,7 @@ show_species("ASCII art (1D)", mode='1d')
 
 #+RESULTS:
 :results:
-4-gram (3 distinct): 37/100 ╝╚╔╝, 32/100 ╚╔╝╚, 31/100 ╔╝╚╔
-Character (3 distinct): ╝(37), ╚(32), ╔(31)
-Cell Timer: 0:00:00
+48949ceb-1497-4be4-99d0-0ca1f6ead1d8
 :end:
 
 #+begin_src python
@@ -419,7 +412,7 @@ plot_species_dynamics("ASCII art (1D)")
 
 #+RESULTS:
 :results:
-[[file:plots/ascii_ecology/plot_20260314_185321_2678638.png]]
+[[file:plots/ascii_ecology/plot_20260314_203616_2678638.png]]
 Cell Timer: 0:00:00
 :end:
 
@@ -453,7 +446,7 @@ plt.show()
 
 #+RESULTS:
 :results:
-[[file:plots/ascii_ecology/plot_20260314_185322_7090293.png]]
+[[file:plots/ascii_ecology/plot_20260314_203616_7090293.png]]
 Cell Timer: 0:00:00
 :end:
 
@@ -475,7 +468,7 @@ plt.show()
 
 #+RESULTS:
 :results:
-[[file:plots/ascii_ecology/plot_20260314_185322_5708456.png]]
+[[file:plots/ascii_ecology/plot_20260314_203617_5708456.png]]
 Cell Timer: 0:00:00
 :end:
 
@@ -497,7 +490,8 @@ plt.show()
 
 #+RESULTS:
 :results:
-[[file:plots/ascii_ecology/plot_20260314_185322_4661907.png]]
+
+[[file:plots/ascii_ecology/plot_20260314_203617_4661907.png]]
 Cell Timer: 0:00:00
 :end:
 
@@ -522,7 +516,7 @@ plt.show()
 
 #+RESULTS:
 :results:
-[[file:plots/ascii_ecology/plot_20260314_185322_2608513.png]]
+[[file:plots/ascii_ecology/plot_20260314_203617_2608513.png]]
 Cell Timer: 0:00:00
 :end:
 
@@ -544,7 +538,7 @@ plt.show()
 
 #+RESULTS:
 :results:
-[[file:plots/ascii_ecology/plot_20260314_185322_3612365.png]]
+[[file:plots/ascii_ecology/plot_20260314_203618_3612365.png]]
 Cell Timer: 0:00:00
 :end:
 
@@ -566,7 +560,7 @@ plt.show()
 
 #+RESULTS:
 :results:
-[[file:plots/ascii_ecology/plot_20260314_185322_5647119.png]]
+[[file:plots/ascii_ecology/plot_20260314_203618_5647119.png]]
 Cell Timer: 0:00:00
 :end:
 
