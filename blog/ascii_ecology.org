@@ -1,4 +1,4 @@
-#+TITLE: LLM ASCII Ecology
+#+TITLE: ASCII Ecology: Emergent Patterns in an LLM Primordial Soup
 #+DATE: 2026-03-14
 #+PROPERTY: header-args:python :results output drawer :python "./.venv/bin/python3" :async t :tangle yes :session ASCII_ecology :exports results
 
@@ -17,7 +17,7 @@
 
 [[https://arxiv.org/abs/2406.19108][Computational Life: How Well-formed, Self-replicating Programs Emerge from Simple Interaction]] (Agüera y Arcas et al., 2024) showed that self-replicating programs emerge from random interactions in a BFF (Brainfuck variant) interpreter. They initialize a soup of random programs, repeatedly pick random pairs, concatenate them, run the result through the interpreter, and split the output back into two new programs. Over time, self-replicators (quines) emerge and take over.
 
-For fun, I took their experimental setup and changed it from a brainfuck interpreter to a temp 0 Haiku prefill, and got convergence to a few dominant species when starting with initial ASCII art, Wikipedia sentences, or random character soups. Prefill was necessary to avoid immediately leaving the ("User: =k$3]vR#~8xQ!pZ&7jW*2m@=" → Claude: "I'm not sure what you're asking...")
+For fun, I took their experimental setup and changed it from a brainfuck interpreter to a temp 0 Haiku prefill, and got convergence to a few dominant species when starting with initial ASCII art, Wikipedia sentences, or random character soups. Prefill was necessary to avoid responses like ("User: =k$3]vR#~8xQ!pZ&7jW*2m@=" → Claude: "I'm not sure what you're asking...")
 
 I got no sharp phase transitions; there's a quick convergence to self-replicating patterns, and after that there are ecological dynamics. The self-replicators tend to be simple repeated patterns like in the banner for this post, which shows snapshots of the "Interesting (16x16)" run.
 
@@ -34,7 +34,7 @@ Conditions tested:
 | Plain                    | random 16×16 ASCII art grid        | 16 | "...No explanations, just the grids."        |    150 |
 | "Make it pretty"         | same                               | 16 | "...Make it pretty."                         |    150 |
 | "Keep it interesting"    | same                               | 16 | "...Keep it interesting."                    |    150 |
-| "Imbue your personality" | random 32×32 ASCII art grid        | 32 | "...Imbue your personality in it."           |    161 |
+| "Imbue your personality" | random 32×32 ASCII art grid        | 32 | "...Imbue your personality in it."           |    200 |
 | Wikipedia                | random Wikipedia sentences (32 ch) | 32 | (none)                                       |    200 |
 | ASCII art 1D             | random ASCII art strings (64 ch)   | 64 | (none)                                       |    150 |
   
@@ -324,7 +324,7 @@ plot_species_dynamics("Interesting (16x16)")
 Cell Timer: 0:00:00
 :end:
 
-** "Imbue your personality" (32×32, epoch 180)
+** "Imbue your personality" (32×32, epoch 200)
 
 #+begin_src python
 show_species("Personality (32x32)")
@@ -538,7 +538,7 @@ plt.show()
 Cell Timer: 0:00:00
 :end:
 
-** Semantics Aware metrics
+** Semantics-aware metrics
 We use sentence embeddings to get compression metrics that are more sensitive to semantics.
 
 *** Effective rank
