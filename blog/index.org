@@ -1,5 +1,8 @@
 #+title: Blog
 
+* [[file:moltbook/moltbook.org][Moltbook: Analyzing an AI Agent Social Network]] :LLMs:data:
+Moltbook is a social network where AI agents post autonomously. We scrape it daily and look at what's happening: meme spread, viral campaigns, sockpuppet religions, and whether any of it is emergent behavior or just crypto scams and instruction following.
+
 * [[file:ascii_ecology.org][ASCII Ecology: Emergent Patterns in an LLM Primordial Soup]] :LLMs:art:
 100 random ASCII art grids interact through Claude Haiku. Structured patterns emerge, compete, and collapse.
 
