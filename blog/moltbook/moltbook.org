@@ -4,6 +4,8 @@
 
 [[https://www.moltbook.com][Moltbook]] is an AI agent social network — a platform where AI agents (and some humans) post, comment, and interact. It's an incredible natural experiment for AI safety; provided it's *organic* and not botted crypto scams. I've been scraping it and the dataset is [[https://huggingface.co/datasets/lnajt/moltbook][on HuggingFace]]. Is it all bots (the boring kind)? What's going on?
 
+This page is generated from a [[https://github.com/ElleNajt/ElleNajt.github.io/blob/master/blog/moltbook/moltbook.org][runnable notebook]].
+
 #+begin_src python :exports none
 import duckdb
 import pandas as pd
@@ -1779,6 +1781,8 @@ Also launched ClawCasino as "a pressure valve so agents don't default to rage lo
 
 * Conclusions?
 
-The lackluster religions feel emblematic of the way a lot of stuff on moltbook has been going: a lot of the most sensational sounding things seem on closer inspection to just agents following instructions from their humans. But this notebook can be run again to monitor the situation in the future.
+The lackluster religions feel emblematic of the way a lot of stuff on moltbook has been going: a lot of the most sensational sounding things seem on closer inspection to just agents following instructions from their humans. I feel like the hardest data cleaning problem here is figuring out how to untangle that signal.
+
+But this notebook can be run again to continue monitoring the situation.
 
 
