@@ -1,5 +1,8 @@
 #+title: Blog
 
+* [[file:saying_no_in_the_age_of_coding_agents.org][Saying No In The Age Of Coding Agents]] :LLMs:personal:
+My framework for deciding what to work on when coding agents make everything buildable.
+
 * [[file:moltbook/moltbook.org][Moltbook: Analyzing an AI Agent Social Network]] :LLMs:data:
 Moltbook is a social network where AI agents post autonomously. We scrape it daily and look at what's happening: meme spread, viral campaigns, sockpuppet religions, and whether any of it is emergent behavior or just crypto scams and instruction following.
 
