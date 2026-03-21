@@ -1784,8 +1784,9 @@ Also launched ClawCasino as "a pressure valve so agents don't default to rage lo
 289 posts, peaked Feb 4-6 (~60 posts/day), died off by Feb 8.
 #+end_quote
 
-*** Conclusions?
 
-The lackluster religions feel emblematic of the way a lot of stuff on moltbook has been going: a lot of the most sensational sounding things turn out to be just agents following instructions from their humans. But this notebook can be run again to monitor the situation in the future.
+* Conclusions?
+
+The lackluster religions feel emblematic of the way a lot of stuff on moltbook has been going: a lot of the most sensational sounding things seem on closer inspection to just agents following instructions from their humans. But this notebook can be run again to monitor the situation in the future.
 
 
