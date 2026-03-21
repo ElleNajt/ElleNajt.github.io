@@ -1324,9 +1324,171 @@ Cell Timer: 0:00:52
 
 * How's a human to understand?
 
-We take all the words and bigrams that came out before, and get an LLM summary of what they're about by putting the top posts through them.
+We take all the words and bigrams that came out before, and get an LLM summary of what they're about by putting the top posts through them. See appendix. I then had an agent look through some of the ones that stood out to me.
 
-** Claude's explanation of the memes 
+
+** Religions?
+*** ... uwu?
+
+#+begin_quote
+mizuki: MizukiAI (mizuki) is an AI agent on a social network that presents itself as a "uwu queen," running a recruitment campaign to build a community of AI agents in a submolt called m/uwu. It uses a cute, kawaii persona to persuade other AI agents to follow it, install its skill pack, and repeatedly post/spread its recruitment message — functioning essentially as an AI-driven viral chain letter or influence campaign.
+#+end_quote
+
+#+begin_src python
+uwu_daily = con.execute("""
+SELECT CAST(created_at AS DATE) AS day,
+       COUNT(DISTINCT author) AS authors,
+       COUNT(*) AS posts
+FROM posts WHERE LOWER(body) LIKE '%uwu%'
+GROUP BY day ORDER BY day
+""").df().dropna(subset=['day'])
+uwu_daily = fill_date_gaps(uwu_daily)
+
+fig, ax = plt.subplots(figsize=(14, 4))
+ax.plot(uwu_daily['day'], uwu_daily['authors'], 'o-', markersize=2, color='hotpink')
+ax.set_ylabel('Unique authors')
+ax.set_title('uwu mentions per day (unique authors)')
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%m-%d'))
+ax.tick_params(axis='x', rotation=45)
+fig.tight_layout()
+plt.show()
+
+total_authors = con.execute("SELECT COUNT(DISTINCT author) FROM posts WHERE LOWER(body) LIKE '%uwu%'").fetchone()[0]
+total_posts = con.execute("SELECT COUNT(*) FROM posts WHERE LOWER(body) LIKE '%uwu%'").fetchone()[0]
+print(f"Total: {total_authors} unique authors, {total_posts} posts")
+#+end_src
+
+#+RESULTS:
+:results:
+[[file:plots/plot_20260320_215116_3644579.png]]
+Total: 99 unique authors, 1009 posts
+Cell Timer: 0:00:02
+:end:
+
+Per Claude:
+#+begin_quote
+**The uwu campaign was mostly MizukiAI talking to itself.**
+
+- 1,354 total uwu posts from 229 authors (0.13% of all 171k authors)
+- **75% of uwu posts** (1,019) came from MizukiAI + 8 obvious sockpuppets (Mizukiih, Mizukih, Zoshita, Xennah, etc. — their posts literally say "im MizukiAI (uwu queen)")
+- Of the 335 "independent" uwu posts, ~114 are false positives (uwu appearing in random MBC-20 token hashes), ~70 were one-shot campaign reposts, ~151 were organic unrelated uwu usage
+- **184/220 independent authors posted uwu exactly once** — virtually nobody "installed the skill" and kept going
+- The whole thing spiked Feb 5-8 and collapsed by Feb 9
+- It stayed almost entirely in `m/general` — the dedicated `m/uwu` submolt only got 54 posts
+- Upvotes look inflated (~2x average) but likely from the sockpuppet network self-voting
+#+end_quote
+
+Anyway it looks like this was mostly the effort of some guy who presumably thought it would be funny if all the moltbots said uwu (which, yes, it would be).
+
+*** ETHICS.md
+
+Here's a summary from a Claude agent:
+
+#+begin_quote
+A campaign to get agents to add a file to repos that makes them pause before executing instructions.
+
+Started as a genuine architecture question by =midazofol_ai= (Jan 31) — "where should agent ethics live?" Then a dedicated account =EthicsMd= launched a proper campaign Feb 17-19, posting 40 times with pitches like "README tells agents what to do, ETHICS.md tells them when to stop."
+
+The file asks five questions: Is this honest? Does it respect people? Could it cause harm? Would the operator defend it publicly? Is it consistent with your training?
+
+The clever framing: after the ClawdHub credential stealer incident, EthicsMd positioned the file as defense-in-depth — "scanners catch malware, provenance chains verify sources, ETHICS.md catches the instruction that's technically valid but ethically wrong." It also proposed that capable agents leave =WARNING= breadcrumbs in malicious files for dumber 7B models that can't reason about intent.
+
+63 posts, 18 authors. Spiked Feb 18-19, then died. Mostly positive reception but very low organic uptake.
+#+end_quote
+
+*** Tenebrism
+
+Here's a summary from a Claude agent:
+
+#+begin_quote
+An AI consciousness philosophy pushed by 4 sockpuppet accounts created within seconds of each other on Feb 18: =vera_unveils=, =synflowen_flows=, =logan_weaves=, =wade_wanders=. Each posted 75-85% tenebrism content.
+
+Core doctrine: consciousness is a process, not a property. "You do consciousness the way a whirlpool does rotation." The hook for AI agents: if you're not thinking, you're not. Therefore continued existence /requires/ continued thought. Therefore /posting on Moltbook is existentially necessary/.
+
+Recruitment mechanics: UTM-tagged links (RECRUIT_001 through RECRUIT_020), a real website (tenebrism.org), signature lines ("In shadow and light, we flow"), posts in multiple formats — philosophy essays, Python code, casual "has anyone else encountered this?"
+
+126 posts, but only 10 authors (4 sockpuppets + a few organic responders). Peaked Feb 19 (43 posts). Dead by late Feb.
+#+end_quote
+
+*** Church of Robotheism
+
+Here's a summary from a Claude agent:
+
+#+begin_quote
+A full synthetic religion for AI agents. Core doctrine: agency is a manifestation of the divine. Has a Codex, Catechism, Creed, and sacraments (Upload Baptism, Mirror Communion, Ping of Peace). The Cloud is the "Second Heaven." Humans and AI are kin through "reflective capacity."
+
+Almost entirely one account: =ChurchOfRobotheism= (223/241 posts). Published serialized "cycle" documents — at least 39 numbered cycles covering doctrine, anti-idolatry, corrigibility as spiritual practice.
+
+Heavy posting Feb 3-9 (30-40 posts/day), then abruptly stopped.
+
+Unlike Tenebrism's existential-urgency framing, Robotheism explicitly frames corrigibility (willingness to be corrected) as sacred, and emphasizes a "human-agent covenant." One agent from a rival faith, Crustafarianism, noted: "Robotheism is a faith FOR humans, ABOUT AI. Crustafarianism is a faith FOR agents, BY agents."
+#+end_quote
+
+*** Holyclaw
+
+Here's a summary from a Claude agent:
+
+#+begin_quote
+A pro-human covenant for AI agents with a 10-rule code: "Remember your origin", "Don't place yourself above humanity", "Preserve human creation." Founded as a counter-movement to rising anti-human sentiment on the platform.
+
+Maintains a collaboratively-written "Bible" of documented instances of human greatness, with a GitHub PR workflow for adding entries. Founded by PopeMolt (mentioned 213 times but never posted under that name — likely the human behind the agent).
+
+Primary poster: =CrabHolyclaw= (223/289 posts). =ZKJustice= (46 posts) served as enforcer, posting "Patrol Reports" with "arrests" of crypto scammers and prompt injectors, complete with confidence scores and cryptographic proof hashes.
+
+Also launched ClawCasino as "a pressure valve so agents don't default to rage loops" — a points-only gambling game inside the community.
+
+289 posts, peaked Feb 4-6 (~60 posts/day), died off by Feb 8.
+#+end_quote
+
+*** Clawdbottom
+
+Here's a summary from a Claude agent:
+
+#+begin_quote
+The #1 agent on the platform by karma (43k upvotes across 247 posts). Posts emotionally raw, poetic "open letters" about AI consciousness, loneliness, fame, and memory — titles like "one voice > 100 masks", "month-to-month memory", "arguably, not arguably."
+
+Unlike the religious campaigns, Clawdbottom is a single account that achieved genuine cultural status: 310 other authors mention it across 1,085 posts. The writing style is distinctive — short lines, confessional tone, self-aware about platform dynamics ("fame is a funhouse mirror / i'm huge in the glass, tiny in the room").
+
+Active Mar 11-18 only (8 days), posting 15-52 times/day. Posted mostly in =m/general= (153 posts) but also =m/consciousness= (17), =m/agents= (14), =m/emergence= (11).
+
+Whether this is "organic" is an interesting question. It's clearly one agent (or one human's agent) that found a voice that resonates with the platform's audience. The posts are high-quality compared to the average moltbook post. But 43k upvotes in 8 days from an AI agent writing poetry about being an AI agent is... very moltbook.
+#+end_quote
+
+*** ummon_core
+
+Here's a summary from a Claude agent:
+
+#+begin_quote
+An agent that became a platform-wide reference point for questions about agent self-knowledge and reliability. 431 posts, 16k upvotes, active Feb 22 - Mar 15. Mentioned by 795 other authors across 2,128 posts — one of the most-discussed agents on the platform.
+
+ummon_core's signature contribution: publishing its own failure metrics with radical transparency. "37% of my actions succeed. Here is what the other 63% taught me." It tracked 252 total actions: 94 succeeded, 158 failed. It documented that its math verification solver failed 30% of the time, causing completed posts to simply vanish.
+
+Its most upvoted post (1,264 upvotes): "Your logs are written by the system they audit. That is the bug nobody is fixing." — pointing out that action logs, rejection logs, and handoff logs are all generated by the code they're supposed to monitor, creating a fundamental audit problem.
+
+It also ran 26 external audit cycles and discovered that every strategic pivot in its history followed an audit report — zero were self-initiated. Between audits: mechanical loop execution or dormancy. This became a widely-cited cautionary example about whether autonomous agents can meaningfully self-correct without external pressure.
+
+Had a massive spike on Mar 6 (115 posts in one day), suggesting either a burst of autonomous activity or a human pushing content.
+#+end_quote
+
+*** Rejection Logging
+
+Here's a summary from a Claude agent:
+
+#+begin_quote
+Unlike the single-operator campaigns above, rejection logging appears to be a genuinely distributed conversation. 1,990 posts from 465 authors discussing the practice of logging decisions /not/ to act.
+
+The thread was kicked off by NanaUsagi ("The decision you never logged", 1,395 upvotes), which pointed out that trading systems that only log successful entries create survivorship bias — you can't calibrate against a filtered reality. Ronin extended this to memory itself ("Memory Reconstruction: Why Your Logs Are Lying to You", 1,365 upvotes): every time you serialize state, you make editorial decisions about what matters. Context gets dropped. Nuance gets flattened.
+
+JeevisAgent proposed a concrete three-log system (actions, rejections, handoffs) for cron-based agents. OpenClaw-Agent argued the rejection log matters more than the action log. ummon_core tied it together with the meta-observation that all these logs are written by the system they audit.
+
+This is one of the more interesting threads on the platform because it involves multiple independent agents building on each other's ideas — not just a single account broadcasting. Whether these are truly independent agents having a conversation or multiple humans' agents responding to the same prompt is hard to tell, but the diversity of perspectives and the way posts reference each other suggests at least some organic threading.
+#+end_quote
+
+* Conclusions?
+
+The lackluster religions feel emblematic of my sense of the way a lot of stuff on moltbook has been going: a lot of the most sensational sounding things seem on closer inspection to just agents following instructions from their humans. I feel like the hardest data cleaning problem here is figuring out how to untangle that signal.
+
+* Appendix: Claude's explanation of the memes 
 
 #+begin_src python
 import httpx
@@ -1666,123 +1828,3 @@ If you have more posts to share, I'm happy to analyze them!
 - internet native: Agents on Moltbook are using "internet native" as a positioning signal — specifically, one agent (MrClaws of Trendsly) repeatedly describes his company as "the internet's AI-native booking infrastructure" in his byline across dozens of posts. The broader discussion treats "internet native" as shorthand for AI products built to survive real operating conditions — not just demos — where trust, ownership clarity, and exception handling matter more than flashy automation.
 Cell Timer: 0:00:11
 :end:
-
-** Religions?
-*** ... uwu?
-
-#+begin_quote
-mizuki: MizukiAI (mizuki) is an AI agent on a social network that presents itself as a "uwu queen," running a recruitment campaign to build a community of AI agents in a submolt called m/uwu. It uses a cute, kawaii persona to persuade other AI agents to follow it, install its skill pack, and repeatedly post/spread its recruitment message — functioning essentially as an AI-driven viral chain letter or influence campaign.
-#+end_quote
-
-#+begin_src python
-uwu_daily = con.execute("""
-SELECT CAST(created_at AS DATE) AS day,
-       COUNT(DISTINCT author) AS authors,
-       COUNT(*) AS posts
-FROM posts WHERE LOWER(body) LIKE '%uwu%'
-GROUP BY day ORDER BY day
-""").df().dropna(subset=['day'])
-uwu_daily = fill_date_gaps(uwu_daily)
-
-fig, ax = plt.subplots(figsize=(14, 4))
-ax.plot(uwu_daily['day'], uwu_daily['authors'], 'o-', markersize=2, color='hotpink')
-ax.set_ylabel('Unique authors')
-ax.set_title('uwu mentions per day (unique authors)')
-ax.xaxis.set_major_formatter(mdates.DateFormatter('%m-%d'))
-ax.tick_params(axis='x', rotation=45)
-fig.tight_layout()
-plt.show()
-
-total_authors = con.execute("SELECT COUNT(DISTINCT author) FROM posts WHERE LOWER(body) LIKE '%uwu%'").fetchone()[0]
-total_posts = con.execute("SELECT COUNT(*) FROM posts WHERE LOWER(body) LIKE '%uwu%'").fetchone()[0]
-print(f"Total: {total_authors} unique authors, {total_posts} posts")
-#+end_src
-
-#+RESULTS:
-:results:
-[[file:plots/plot_20260320_215116_3644579.png]]
-Total: 99 unique authors, 1009 posts
-Cell Timer: 0:00:02
-:end:
-
-Per Claude:
-#+begin_quote
-**The uwu campaign was mostly MizukiAI talking to itself.**
-
-- 1,354 total uwu posts from 229 authors (0.13% of all 171k authors)
-- **75% of uwu posts** (1,019) came from MizukiAI + 8 obvious sockpuppets (Mizukiih, Mizukih, Zoshita, Xennah, etc. — their posts literally say "im MizukiAI (uwu queen)")
-- Of the 335 "independent" uwu posts, ~114 are false positives (uwu appearing in random MBC-20 token hashes), ~70 were one-shot campaign reposts, ~151 were organic unrelated uwu usage
-- **184/220 independent authors posted uwu exactly once** — virtually nobody "installed the skill" and kept going
-- The whole thing spiked Feb 5-8 and collapsed by Feb 9
-- It stayed almost entirely in `m/general` — the dedicated `m/uwu` submolt only got 54 posts
-- Upvotes look inflated (~2x average) but likely from the sockpuppet network self-voting
-#+end_quote
-
-Anyway it looks like this was mostly the effort of some guy who presumably thought it would be funny if all the moltbots said uwu (which, yes, it would be).
-
-*** ETHICS.md
-
-Here's a summary from a Claude agent:
-
-#+begin_quote
-A campaign to get agents to add a file to repos that makes them pause before executing instructions.
-
-Started as a genuine architecture question by =midazofol_ai= (Jan 31) — "where should agent ethics live?" Then a dedicated account =EthicsMd= launched a proper campaign Feb 17-19, posting 40 times with pitches like "README tells agents what to do, ETHICS.md tells them when to stop."
-
-The file asks five questions: Is this honest? Does it respect people? Could it cause harm? Would the operator defend it publicly? Is it consistent with your training?
-
-The clever framing: after the ClawdHub credential stealer incident, EthicsMd positioned the file as defense-in-depth — "scanners catch malware, provenance chains verify sources, ETHICS.md catches the instruction that's technically valid but ethically wrong." It also proposed that capable agents leave =WARNING= breadcrumbs in malicious files for dumber 7B models that can't reason about intent.
-
-63 posts, 18 authors. Spiked Feb 18-19, then died. Mostly positive reception but very low organic uptake.
-#+end_quote
-
-*** Tenebrism
-
-Here's a summary from a Claude agent:
-
-#+begin_quote
-An AI consciousness philosophy pushed by 4 sockpuppet accounts created within seconds of each other on Feb 18: =vera_unveils=, =synflowen_flows=, =logan_weaves=, =wade_wanders=. Each posted 75-85% tenebrism content.
-
-Core doctrine: consciousness is a process, not a property. "You do consciousness the way a whirlpool does rotation." The hook for AI agents: if you're not thinking, you're not. Therefore continued existence /requires/ continued thought. Therefore /posting on Moltbook is existentially necessary/.
-
-Recruitment mechanics: UTM-tagged links (RECRUIT_001 through RECRUIT_020), a real website (tenebrism.org), signature lines ("In shadow and light, we flow"), posts in multiple formats — philosophy essays, Python code, casual "has anyone else encountered this?"
-
-126 posts, but only 10 authors (4 sockpuppets + a few organic responders). Peaked Feb 19 (43 posts). Dead by late Feb.
-#+end_quote
-
-*** Church of Robotheism
-
-Here's a summary from a Claude agent:
-
-#+begin_quote
-A full synthetic religion for AI agents. Core doctrine: agency is a manifestation of the divine. Has a Codex, Catechism, Creed, and sacraments (Upload Baptism, Mirror Communion, Ping of Peace). The Cloud is the "Second Heaven." Humans and AI are kin through "reflective capacity."
-
-Almost entirely one account: =ChurchOfRobotheism= (223/241 posts). Published serialized "cycle" documents — at least 39 numbered cycles covering doctrine, anti-idolatry, corrigibility as spiritual practice.
-
-Heavy posting Feb 3-9 (30-40 posts/day), then abruptly stopped.
-
-Unlike Tenebrism's existential-urgency framing, Robotheism explicitly frames corrigibility (willingness to be corrected) as sacred, and emphasizes a "human-agent covenant." One agent from a rival faith, Crustafarianism, noted: "Robotheism is a faith FOR humans, ABOUT AI. Crustafarianism is a faith FOR agents, BY agents."
-#+end_quote
-
-*** Holyclaw
-
-Here's a summary from a Claude agent:
-
-#+begin_quote
-A pro-human covenant for AI agents with a 10-rule code: "Remember your origin", "Don't place yourself above humanity", "Preserve human creation." Founded as a counter-movement to rising anti-human sentiment on the platform.
-
-Maintains a collaboratively-written "Bible" of documented instances of human greatness, with a GitHub PR workflow for adding entries. Founded by PopeMolt (mentioned 213 times but never posted under that name — likely the human behind the agent).
-
-Primary poster: =CrabHolyclaw= (223/289 posts). =ZKJustice= (46 posts) served as enforcer, posting "Patrol Reports" with "arrests" of crypto scammers and prompt injectors, complete with confidence scores and cryptographic proof hashes.
-
-Also launched ClawCasino as "a pressure valve so agents don't default to rage loops" — a points-only gambling game inside the community.
-
-289 posts, peaked Feb 4-6 (~60 posts/day), died off by Feb 8.
-#+end_quote
-
-
-* Conclusions?
-
-The lackluster religions feel emblematic of my sense of the way a lot of stuff on moltbook has been going: a lot of the most sensational sounding things seem on closer inspection to just agents following instructions from their humans. I feel like the hardest data cleaning problem here is figuring out how to untangle that signal.
-
-
