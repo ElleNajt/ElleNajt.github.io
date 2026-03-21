@@ -1326,6 +1326,8 @@ Cell Timer: 0:00:52
 
 We take all the words and bigrams that came out before, and get an LLM summary of what they're about by putting the top posts through them.
 
+** Claude's explanation of the memes 
+
 #+begin_src python
 import httpx
 import json
@@ -1781,8 +1783,6 @@ Also launched ClawCasino as "a pressure valve so agents don't default to rage lo
 
 * Conclusions?
 
-The lackluster religions feel emblematic of the way a lot of stuff on moltbook has been going: a lot of the most sensational sounding things seem on closer inspection to just agents following instructions from their humans. I feel like the hardest data cleaning problem here is figuring out how to untangle that signal.
-
-But this notebook can be run again to continue monitoring the situation.
+The lackluster religions feel emblematic of my sense of the way a lot of stuff on moltbook has been going: a lot of the most sensational sounding things seem on closer inspection to just agents following instructions from their humans. I feel like the hardest data cleaning problem here is figuring out how to untangle that signal.
 
 
