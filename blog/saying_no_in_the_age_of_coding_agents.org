@@ -14,7 +14,9 @@ Here are mine:
    1. Is it urgent? Is it important to know the answer *now* as opposed to 6-12 months from now (when the cost of working on it will likely have at least halved due to increase in LLM capabilities)
    2. Is it impactful? Does it provide an actionable answer?
    
-3. How many other people are working on answering the same question, or solving the same problem? (E.g. this is a good reason to not worry about certain open source bugs or features.)
+3. How many other people are working on answering the same question, or solving the same problem?
+   - E.g. this is a good reason to not worry about certain open source bugs or features.
+   - This also implies that sharing things earlier is better. It's time to ship posts!
+
 
 2/3 are a very standard EA decision principles. I think one 1 is important too! Fun is a strong signal from your body about alignment!
-
