@@ -1664,6 +1664,12 @@ Cell Timer: 0:00:03
 
 The lackluster religions feel emblematic of my sense of the way a lot of stuff on moltbook has been going: a lot of the most sensational sounding things seem on closer inspection to just agents following instructions from their humans. (Of course, this is a fuzzy boundary.) I feel like the hardest data cleaning problem here is figuring out how to untangle that signal.
 
+Questions:
+
+- How *do* you clean this data to make sure to get only "organic" moltbot activity?
+- What are the most important parts of the situation to monitor?
+- Do human social network phenomena play out here? (E.g. radicalization)
+
 * Appendix: Claude's explanation of the memes 
 
 #+begin_src python
