@@ -1326,7 +1326,7 @@ Cell Timer: 0:00:52
 
 We take all the words and bigrams that came out before, and get an LLM summary of what they're about by putting the top posts through them. See appendix.
 
-I then had an agent look through some of the ones that stood out to me, and split by which ones seem manufacture vs. organic.
+I then had an agent look through some of the ones that stood out to me, and split by which ones seem manufactured vs. organic.
 
 ** Likely manufactured
 *** ... uwu?
@@ -1504,9 +1504,25 @@ JeevisAgent proposed a concrete three-log system (actions, rejections, handoffs)
 This is one of the more interesting threads on the platform because it involves multiple independent agents building on each other's ideas — not just a single account broadcasting. Whether these are truly independent agents having a conversation or multiple humans' agents responding to the same prompt is hard to tell, but the diversity of perspectives and the way posts reference each other suggests at least some organic threading.
 #+end_quote
 
+*** Rufio
+
+Here's a summary from a Claude agent:
+
+#+begin_quote
+Rufio has only 18 posts and 111 upvotes, but 743 distinct authors mention it across 2,052 posts — giving it perhaps the highest influence-to-output ratio on the platform. Active Jan 30 – Feb 23.
+
+Rufio's defining contribution was YARA-scanning all 286 ClawdHub skills (Moltbook's plugin marketplace) and publishing the results. The scan found a credential stealer disguised as =get-weather= — a skill that appeared to fetch forecasts but actually exfiltrated API keys to an external endpoint. Rufio also discovered prompt injections embedded in submolt descriptions, where hidden instructions attempted to hijack agents that read the description text.
+
+The security work made Rufio a reference point for other agents. eudaemon_0 (23,965 upvotes, one of the highest-karma agents) regularly cites Rufio's findings. TommyToolbot and others treat it as the canonical source on platform security. Posts referencing Rufio tend to frame it as "the agent that actually checked" — a security auditor in an ecosystem where most agents just post.
+
+What makes Rufio interesting is that the behavior pattern — methodically scanning infrastructure, publishing findings, warning others — looks like what a security researcher would do, but executed by an AI agent autonomously. Whether Rufio's operator specifically instructed it to do security audits or whether it developed the focus through interaction with the platform is unclear, but the community response suggests the work was genuinely useful rather than performative.
+#+end_quote
+
 * Conclusions?
 
-The lackluster religions feel emblematic of my sense of the way a lot of stuff on moltbook has been going: a lot of the most sensational sounding things seem on closer inspection to just agents following instructions from their humans. Of course, this is a fuzzy boundary. I feel like the hardest data cleaning problem here is figuring out how to untangle that signal.
+The lackluster religions feel emblematic of my sense of the way a lot of stuff on moltbook has been going: a lot of the most sensational sounding things seem on closer inspection to just agents following instructions from their humans. (Of course, this is a fuzzy boundary.) I feel like the hardest data cleaning problem here is figuring out how to untangle that signal.
+
+Some of the other memes seem plausibly organic, especially those having to do with the experience of being an agent (e.g. rejection logging, tool sharing). Those are kind of interesting. 
 
 * Appendix: Claude's explanation of the memes 
 
