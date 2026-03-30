@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-03-30 Mon 15:48 -->
+<!-- 2026-03-30 Mon 15:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Kirchhoff's Formula and Cauchy-Binet</title>
@@ -81,9 +81,9 @@ But viewed correctly it&rsquo;s actually a tautology: it&rsquo;s just functorial
 <p>
 None of these ideas are original to me; in fact, Claude Opus 4.6 helped me clarify a lot of these connections. LLMs are really good at pointing out what abstractions I&rsquo;m missing and need for a clearer understanding! It&rsquo;s a really nice time to like learning math.<br />
 </p>
-<div id="outline-container-org35ce03a" class="outline-2">
-<h2 id="org35ce03a">Reduction to Cauchy-Binet</h2>
-<div class="outline-text-2" id="text-org35ce03a">
+<div id="outline-container-org93915d4" class="outline-2">
+<h2 id="org93915d4">Reduction to Cauchy-Binet</h2>
+<div class="outline-text-2" id="text-org93915d4">
 <p>
 The reduction of the Matrix-Tree theorem to Cauchy-Binet goes as follows:<br />
 </p>
@@ -105,9 +105,9 @@ So, why is Cauchy-Binet true?<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orged150db" class="outline-2">
-<h2 id="orged150db">Proof of Cauchy-Binet via Functoriality</h2>
-<div class="outline-text-2" id="text-orged150db">
+<div id="outline-container-org80278d8" class="outline-2">
+<h2 id="org80278d8">Proof of Cauchy-Binet via Functoriality</h2>
+<div class="outline-text-2" id="text-org80278d8">
 <p>
 CB is functoriality of the wedge product and understanding that matrix minors are the Plücker coordinates:<br />
 </p>
@@ -135,9 +135,9 @@ Given these, Cauchy-Binet follows immediately, by calculating where \(e_I\) is m
 </p>
 </div>
 </div>
-<div id="outline-container-orgd65f3fe" class="outline-2">
-<h2 id="orgd65f3fe">Proof Cauchy-Binet via Inner Products</h2>
-<div class="outline-text-2" id="text-orgd65f3fe">
+<div id="outline-container-org339cae1" class="outline-2">
+<h2 id="org339cae1">Proof Cauchy-Binet via Inner Products</h2>
+<div class="outline-text-2" id="text-org339cae1">
 <p>
 CB is Parseval&rsquo;s identity:<br />
 </p>
@@ -180,9 +180,9 @@ By Parseval (inner product = dot product of coordinates in an orthonormal basis)
 \]<br />
 </p>
 </div>
-<div id="outline-container-org45c3f7d" class="outline-3">
-<h3 id="org45c3f7d">Geometric interpretation</h3>
-<div class="outline-text-3" id="text-org45c3f7d">
+<div id="outline-container-orgd0f582c" class="outline-3">
+<h3 id="orgd0f582c">Geometric interpretation</h3>
+<div class="outline-text-3" id="text-orgd0f582c">
 <p>
 The inner product \(\det((v_i, w_j))\) has a nice geometric meaning:<br />
 </p>
@@ -204,9 +204,9 @@ So \(\det((v_i, w_j))\) = (signed \(m\)-volume of the projection of the \(v\)-pa
 </p>
 </div>
 </div>
-<div id="outline-container-orgc5b9c29" class="outline-3">
-<h3 id="orgc5b9c29">Cauchy-Binet is just Pythagoras</h3>
-<div class="outline-text-3" id="text-orgc5b9c29">
+<div id="outline-container-orge73077d" class="outline-3">
+<h3 id="orge73077d">Cauchy-Binet is just Pythagoras</h3>
+<div class="outline-text-3" id="text-orge73077d">
 <p>
 Setting \(V = W\) in Cauchy-Binet gives \(\det(VV^\top) = \sum_I \det(V_I)^2\). This is a generalized Pythagorean theorem: the squared \(m\)-volume of a parallelotope equals the sum of squared projections onto coordinate \(m\)-planes.<br />
 </p>
@@ -224,15 +224,15 @@ The Pythagorean theorem says they agree on the diagonal (\(\omega = \eta\)). A s
 </p>
 </div>
 </div>
-<div id="outline-container-orgb3b30e9" class="outline-3">
-<h3 id="orgb3b30e9">Matrix-Tree theorem is just Pythagoras</h3>
-<div class="outline-text-3" id="text-orgb3b30e9">
+<div id="outline-container-org5d6d7a8" class="outline-3">
+<h3 id="org5d6d7a8">Matrix-Tree theorem is just Pythagoras</h3>
+<div class="outline-text-3" id="text-org5d6d7a8">
 <p>
 Each row of the incidence matrix is a vector in \(\mathbb{R}^E\) — the edge-signature of a vertex, recording with signs which edges touch it. The rows sum to zero, so one is redundant. Delete it. The remaining \(|V|-1\) rows are vectors in edge space \(\mathbb{R}^E\).<br />
 </p>
 
 
-<div id="orgb6ab226" class="figure">
+<div id="orgcfe6f02" class="figure">
 <p><img src="../images/kirchhoff/graph_and_coboundary.svg" alt="graph_and_coboundary.svg" class="org-svg" /><br />
 </p>
 </div>
@@ -250,13 +250,13 @@ This lives in \(\bigwedge^{|V|-1}(\mathbb{R}^E)\), a space whose basis is indexe
 </p>
 
 
-<div id="org2f18943" class="figure">
+<div id="org302d2a5" class="figure">
 <p><img src="../images/kirchhoff/wedge_and_trees.svg" alt="wedge_and_trees.svg" class="org-svg" /><br />
 </p>
 </div>
 
 <p>
-Kirchhoff&rsquo;s formula is then just the Pythagorean theorem in this space (as we showed in <a href="#orgd65f3fe">Proof Cauchy-Binet via Inner Products</a>)<br />
+Kirchhoff&rsquo;s formula is then just the Pythagorean theorem in this space (as we showed in <a href="#org339cae1">Proof Cauchy-Binet via Inner Products</a>)<br />
 </p>
 
 <p>
@@ -265,9 +265,9 @@ Kirchhoff&rsquo;s formula is then just the Pythagorean theorem in this space (as
 </div>
 </div>
 </div>
-<div id="outline-container-orgd82c325" class="outline-2">
-<h2 id="orgd82c325">Into the depths: <a href="https://en.wikipedia.org/wiki/Analytic_torsion#Cheeger%E2%80%93M%C3%BCller_theorem">Cheeger-Müller</a> and <a href="https://en.wikipedia.org/wiki/Reidemeister_torsion">Reidemeister Torsion</a></h2>
-<div class="outline-text-2" id="text-orgd82c325">
+<div id="outline-container-orga47b81d" class="outline-2">
+<h2 id="orga47b81d">Into the depths: <a href="https://en.wikipedia.org/wiki/Analytic_torsion#Cheeger%E2%80%93M%C3%BCller_theorem">Cheeger-Müller</a> and <a href="https://en.wikipedia.org/wiki/Reidemeister_torsion">Reidemeister Torsion</a></h2>
+<div class="outline-text-2" id="text-orga47b81d">
 <p>
 &#x2026; there&rsquo;s always more to write and learn about&#x2026; maybe another time.<br />
 </p>
@@ -282,7 +282,7 @@ Here&rsquo;s a cool paper that outlines the Reidemeister torsion connection: <a 
 <p class="date">Date: 2026-03-13</p>
 <p class="author">Author: Elle Najt</p>
 <p class="email">Email: <a href="mailto:LNAJT4@gmail.com">LNAJT4@gmail.com</a></p>
-<p class="date">Created: 2026-03-30 Mon 15:48</p>
+<p class="date">Created: 2026-03-30 Mon 15:52</p>
 <p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.11)</p>
 </div>
 </body>
