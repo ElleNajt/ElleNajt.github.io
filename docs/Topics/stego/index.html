@@ -98,6 +98,10 @@ p { margin: 8px 0; line-height: 1.6; color: #bbb; }
     <div class="reveal-section" id="reveal" style="display:none;">
       <div class="reveal-label" id="reveal-label">Original text:</div>
       <div class="reveal-box" id="reveal-text"></div>
+      <details style="margin-top: 8px;">
+        <summary style="color: #7b9eee; font-size: 0.85em; cursor: pointer;">Show Opus 4.6's reasoning</summary>
+        <div class="reveal-box" id="cot-text" style="font-size: 0.85em; color: #999; white-space: pre-wrap; max-height: 300px; overflow-y: auto;"></div>
+      </details>
     </div>
 
     <button class="next-btn" id="next-btn" style="display:none;" onclick="nextRound()">Next</button>
@@ -239,6 +243,7 @@ function guess(letter) {
     document.getElementById('reveal-text').textContent = t.question;
   }
 
+  document.getElementById('cot-text').textContent = t.cot || '';
   document.getElementById('next-btn').style.display = 'block';
 }
 
