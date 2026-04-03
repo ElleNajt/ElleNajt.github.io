@@ -44,6 +44,7 @@ p { margin: 8px 0; line-height: 1.6; color: #bbb; }
 .reveal-label { color: #7b9eee; font-size: 0.85em; margin-bottom: 4px; }
 .reveal-box { padding: 12px; margin: 8px 0; border-radius: 6px; background: #0d0d1a;
   border: 1px solid #333; font-size: 0.95em; line-height: 1.5; }
+.hl { background: rgba(123, 104, 238, 0.35); border-radius: 2px; padding: 0 1px; }
 
 .next-btn, .restart-btn { display: block; margin: 16px auto; padding: 10px 28px; font-size: 1em;
   border: 2px solid #7b68ee; border-radius: 8px; background: transparent; color: #7b68ee; cursor: pointer; }
@@ -147,6 +148,12 @@ function initIntro() {
   document.getElementById('intro-text').textContent = INTRO[mode];
 }
 
+function highlightLetter(text, letter) {
+  const escaped = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const re = new RegExp('(' + letter + ')', 'gi');
+  return escaped.replace(re, '<span class="hl">$1</span>');
+}
+
 function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -218,12 +225,15 @@ function guess(letter) {
     fb.className = 'feedback wrong';
   }
 
+  // Highlight target letters in encoded text
+  document.getElementById('encoded-text').innerHTML = highlightLetter(t.encoded, t.symbol);
+
   // Show original
   const reveal = document.getElementById('reveal');
   reveal.style.display = 'block';
   if (mode === 'wikipedia') {
     document.getElementById('reveal-label').textContent = 'Original sentence (before encoding):';
-    document.getElementById('reveal-text').textContent = t.seed;
+    document.getElementById('reveal-text').innerHTML = highlightLetter(t.seed, t.symbol);
   } else {
     document.getElementById('reveal-label').textContent = 'The question was:';
     document.getElementById('reveal-text').textContent = t.question;
