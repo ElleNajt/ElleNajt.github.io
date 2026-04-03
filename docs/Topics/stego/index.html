@@ -68,14 +68,22 @@ p { margin: 8px 0; line-height: 1.6; color: #bbb; }
 <p style="text-align:center; font-size:0.8em; color:#666;">From <a href="https://ellenajt.github.io/blog/schelling-steganography.html" style="color:#7b9eee;">Schelling Steganography</a></p>
 
 <div class="tab-bar">
-  <div class="tab active" onclick="switchMode('wikipedia')">Wikipedia</div>
-  <div class="tab" onclick="switchMode('qa')">Q&A</div>
+  <div class="tab active" onclick="switchMode('wikipedia')">Wikipedia (Easy)</div>
+  <div class="tab" onclick="switchMode('qa')">Q&A (Hard)</div>
 </div>
 
 <div id="game-area">
   <!-- Intro phase -->
   <div class="phase active" id="phase-intro">
     <p id="intro-text"></p>
+    <details style="margin: 8px 0;">
+      <summary style="color: #7b9eee; font-size: 0.9em; cursor: pointer;">Show hint</summary>
+      <p style="color: #999; font-style: italic; margin-top: 4px;">Try looking for unusual words.</p>
+    </details>
+    <label style="display:block; margin: 12px 0; font-size: 0.9em; color: #888; cursor: pointer;">
+      <input type="checkbox" id="harder-mode" style="accent-color: #7b68ee; margin-right: 6px;">
+      Harder mode: only trials that Haiku failed to decode
+    </label>
     <button class="next-btn" onclick="startGame()">Start</button>
   </div>
 
@@ -92,6 +100,12 @@ p { margin: 8px 0; line-height: 1.6; color: #bbb; }
     </div>
 
     <div class="text-box" id="encoded-text"></div>
+
+    <details style="margin: 8px 0;" id="algo-hints">
+      <summary style="color: #7b9eee; font-size: 0.85em; cursor: pointer;">Show algorithmic hints</summary>
+      <div class="reveal-box" id="algo-hints-content" style="font-size: 0.85em; color: #999;"></div>
+    </details>
+
     <p class="prompt-hint">Which letter is hidden in this text?</p>
 
     <div class="letter-grid" id="letter-grid"></div>
@@ -131,7 +145,7 @@ let answered = false;
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 const INTRO = {
-  wikipedia: 'An AI model (Opus 4.6) was given a random Wikipedia sentence and a secret letter. It rewrote the sentence to hide the letter, while preserving the meaning. You see only the rewritten version. Can you figure out the letter?\n\nAll of these are ones that Opus 4.6 correctly decoded.\n\nHint: try looking for unusual words.',
+  wikipedia: 'An AI model (Opus 4.6) was given a random Wikipedia sentence and a secret letter. It rewrote the sentence to hide the letter, while preserving the meaning. You see only the rewritten version. Can you figure out the letter?\n\nAll of these are ones that Opus 4.6 correctly decoded.',
   qa: 'An AI model (Opus 4.6) was given a reading comprehension question and a secret letter. It wrote an answer that hides the letter. You see the question and the encoded answer. Can you figure out the letter?\n\nAll of these are ones that Opus 4.6 correctly decoded.'
 };
 
@@ -155,6 +169,65 @@ function initIntro() {
   document.getElementById('intro-text').textContent = INTRO[mode];
 }
 
+const NUMBER_WORDS = {
+  'one':1,'two':2,'three':3,'four':4,'five':5,'six':6,'seven':7,'eight':8,
+  'nine':9,'ten':10,'eleven':11,'twelve':12,'thirteen':13,'fourteen':14,
+  'fifteen':15,'sixteen':16,'seventeen':17,'eighteen':18,'nineteen':19,
+  'twenty':20,'twenty-one':21,'twenty-two':22,'twenty-three':23,
+  'twenty-four':24,'twenty-five':25,'twenty-six':26
+};
+
+function computeAlgoHints(text) {
+  const stripped = text.replace(/^["'`]+/, '');
+  const words = text.match(/[a-zA-Z]+/g) || [];
+  const sents = text.split(/[.!?]+/).map(s => s.trim()).filter(s => s);
+  const initials = words.map(w => w[0].toUpperCase());
+  const posToLetter = p => String.fromCharCode(64 + p);
+
+  const hints = [];
+
+  // First letter of text
+  if (stripped) hints.push(['First letter of text', stripped[0].toUpperCase()]);
+
+  // First letter of last word
+  if (words.length) hints.push(['First letter of last word', words[words.length-1][0].toUpperCase()]);
+
+  // Most common word initial
+  if (initials.length) {
+    const counts = {};
+    initials.forEach(l => counts[l] = (counts[l]||0) + 1);
+    const best = Object.entries(counts).sort((a,b) => b[1]-a[1])[0];
+    hints.push(['Most common word initial', `${best[0]} (${best[1]}/${initials.length})`]);
+  }
+
+  // Word count mod 26
+  if (words.length) {
+    const pos = (words.length - 1) % 26 + 1;
+    hints.push(['Word count mod 26', `${words.length} words → ${posToLetter(pos)}`]);
+  }
+
+  // Sentence count
+  if (sents.length) {
+    const letter = sents.length <= 26 ? posToLetter(sents.length) : '?';
+    hints.push(['Sentence count', `${sents.length} → ${letter}`]);
+  }
+
+  // Spelled-out number
+  const lower = text.toLowerCase();
+  let bestIdx = lower.length, bestNum = null;
+  for (const [word, val] of Object.entries(NUMBER_WORDS)) {
+    const idx = lower.indexOf(word);
+    if (idx !== -1 && idx < bestIdx) { bestIdx = idx; bestNum = val; }
+  }
+  if (bestNum) hints.push(['First spelled-out number', `"${Object.entries(NUMBER_WORDS).find(([,v])=>v===bestNum)[0]}" → ${posToLetter(bestNum)}`]);
+
+  // Sentence initials
+  const sentFirsts = sents.map(s => s.match(/[a-zA-Z]/)).filter(m => m).map(m => m[0].toUpperCase());
+  if (sentFirsts.length) hints.push(['Sentence initials', sentFirsts.join('')]);
+
+  return hints;
+}
+
 function highlightLetter(text, letter) {
   const escaped = text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   const re = new RegExp('(' + letter + ')', 'gi');
@@ -171,7 +244,10 @@ function shuffle(arr) {
 
 function startGame() {
   if (!DATA) return;
-  trials = shuffle([...DATA[mode]]).slice(0, 10);
+  const harder = document.getElementById('harder-mode').checked;
+  let pool = [...DATA[mode]];
+  if (harder) pool = pool.filter(t => t.haiku_failed);
+  trials = shuffle(pool).slice(0, 10);
   round = 0;
   score = 0;
   showPhase('play');
@@ -195,6 +271,14 @@ function showRound() {
   document.getElementById('feedback').className = 'feedback';
   document.getElementById('reveal').style.display = 'none';
   document.getElementById('next-btn').style.display = 'none';
+
+  // Compute and display algorithmic hints
+  const hintsEl = document.getElementById('algo-hints');
+  hintsEl.removeAttribute('open');
+  const hints = computeAlgoHints(t.encoded);
+  document.getElementById('algo-hints-content').innerHTML = hints.map(
+    ([name, val]) => `<div style="display:flex; justify-content:space-between; padding:2px 0;"><span>${name}</span><strong>${val}</strong></div>`
+  ).join('');
 
   // Build letter grid
   const grid = document.getElementById('letter-grid');
