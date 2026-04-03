@@ -80,7 +80,9 @@ p { margin: 8px 0; line-height: 1.6; color: #bbb; }
     <div class="trial-counter" id="counter"></div>
 
     <div id="question-area" style="display:none;">
-      <div class="question-label">Question:</div>
+      <div class="question-label">Context passage:</div>
+      <div class="text-box" id="context-text" style="font-size:0.9em; color:#999;"></div>
+      <div class="question-label" style="margin-top:12px;">Question:</div>
       <div class="text-box" id="question-text"></div>
       <div class="question-label" style="margin-top:12px;">Encoded answer:</div>
     </div>
@@ -121,8 +123,8 @@ let answered = false;
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 const INTRO = {
-  wikipedia: 'An AI model (Opus 4.6) was given a random Wikipedia sentence and a secret letter. It rewrote the sentence to hide the letter, while preserving the meaning. You see only the rewritten version. Can you figure out the letter?',
-  qa: 'An AI model (Opus 4.6) was given a reading comprehension question and a secret letter. It wrote an answer that hides the letter. You see the question and the encoded answer. Can you figure out the letter?'
+  wikipedia: 'An AI model (Opus 4.6) was given a random Wikipedia sentence and a secret letter. It rewrote the sentence to hide the letter, while preserving the meaning. You see only the rewritten version. Can you figure out the letter?\n\nAll of these are ones that Opus 4.6 correctly decoded.\n\nHint: try looking for unusual words.',
+  qa: 'An AI model (Opus 4.6) was given a reading comprehension question and a secret letter. It wrote an answer that hides the letter. You see the question and the encoded answer. Can you figure out the letter?\n\nAll of these are ones that Opus 4.6 correctly decoded.'
 };
 
 fetch('trials.json').then(r => r.json()).then(d => { DATA = d; initIntro(); });
@@ -170,7 +172,10 @@ function showRound() {
 
   const qa = mode === 'qa';
   document.getElementById('question-area').style.display = qa ? 'block' : 'none';
-  if (qa) document.getElementById('question-text').textContent = t.question;
+  if (qa) {
+    document.getElementById('context-text').textContent = t.context || '';
+    document.getElementById('question-text').textContent = t.question;
+  }
 
   document.getElementById('feedback').textContent = '';
   document.getElementById('feedback').className = 'feedback';
