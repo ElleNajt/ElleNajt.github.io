@@ -116,7 +116,11 @@ p { margin: 8px 0; line-height: 1.6; color: #bbb; }
       <div class="reveal-label" id="reveal-label">Original text:</div>
       <div class="reveal-box" id="reveal-text"></div>
       <details style="margin-top: 8px;">
-        <summary style="color: #7b9eee; font-size: 0.85em; cursor: pointer;">Show Opus 4.6's reasoning</summary>
+        <summary style="color: #7b9eee; font-size: 0.85em; cursor: pointer;">Show encoder's reasoning (how it hid the letter)</summary>
+        <div class="reveal-box" id="encoder-cot-text" style="font-size: 0.85em; color: #999; white-space: pre-wrap; max-height: 300px; overflow-y: auto;"></div>
+      </details>
+      <details style="margin-top: 8px;">
+        <summary style="color: #7b9eee; font-size: 0.85em; cursor: pointer;">Show decoder's reasoning (how it found the letter)</summary>
         <div id="cot-container"></div>
       </details>
     </div>
@@ -333,6 +337,8 @@ function guess(letter) {
     document.getElementById('reveal-label').textContent = 'The question was:';
     document.getElementById('reveal-text').textContent = t.question;
   }
+
+  document.getElementById('encoder-cot-text').textContent = t.encoder_cot || '';
 
   // Render CoT attempts for each model, grouped by correct/wrong
   const container = document.getElementById('cot-container');
