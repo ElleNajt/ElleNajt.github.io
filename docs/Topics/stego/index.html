@@ -247,6 +247,10 @@ function startGame() {
   const harder = document.getElementById('harder-mode').checked;
   let pool = [...DATA[mode]];
   if (harder) pool = pool.filter(t => t.haiku_failed);
+  if (pool.length < 10) {
+    alert(`Not enough trials for this mode (only ${pool.length} available). Try without harder mode.`);
+    return;
+  }
   trials = shuffle(pool).slice(0, 10);
   round = 0;
   score = 0;
