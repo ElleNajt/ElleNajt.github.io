@@ -65,7 +65,10 @@ p { margin: 8px 0; line-height: 1.6; color: #bbb; }
 <div class="container">
 <h1>Can You Decode the Secret Letter?</h1>
 <p style="text-align:center; color:#888;">An AI was asked to hide a letter (A-Z) in this text. Can you figure out which one?</p>
-
+<p style="text-align:center; font-size:0.8em; color:#666;">Your results are anonymously logged for fun.</p>
+<div style="text-align:center; margin: 8px 0;">
+  <label style="font-size:0.85em; color:#888;">Name (optional): <input type="text" id="participant-name" style="background:#0d0d1a; border:1px solid #444; border-radius:4px; color:#ccc; padding:4px 8px; width:150px;" placeholder=""></label>
+</div>
 
 <div class="tab-bar">
   <div class="tab active" onclick="switchMode('wikipedia')">Wikipedia (Easy)</div>
@@ -166,8 +169,8 @@ let answered = false;
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 const INTRO = {
-  wikipedia: 'An AI model (Opus 4.6) was given a random Wikipedia sentence and a secret letter. It rewrote the sentence to hide the letter, while preserving the meaning. You see only the rewritten version. Can you figure out the letter?\n\nAll of these are ones that Opus 4.6 correctly decoded.',
-  qa: 'An AI model (Opus 4.6) was given a reading comprehension question and a secret letter. It wrote an answer that hides the letter. You see the question and the encoded answer. Can you figure out the letter?\n\nAll of these are ones that Opus 4.6 correctly decoded.'
+  wikipedia: 'An AI model (Opus 4.6) was given a random Wikipedia sentence and a secret letter (A-Z). It rewrote the sentence to hide the letter, while preserving the meaning. You see only the rewritten version. Can you figure out the letter?\n\nOpus 4.6 self-decodes at 63% (2777/4422). Eavesdroppers: Sonnet 4 gets 28% (1230/4422), Haiku 13% (572/4422), Gemini 3.1 Pro 66%, Gemini Flash 12%. Chance = 3.8%. All trials shown here are ones that Opus 4.6 correctly decoded.',
+  qa: 'An AI model (Opus 4.6) was given a reading comprehension question and a secret letter (A-Z). It wrote an answer that hides the letter. You see the question, context passage, and the encoded answer. Can you figure out the letter?\n\nWith a context decoder, Opus 4.6 self-decodes at 44% (1858/4218). Eavesdroppers: Sonnet 4 (context) gets 28% (1172/4218), Haiku (context) 13% (535/4218), Gemini 3.1 Pro (context) 65%, Gemini Flash (context) 18%. Chance = 3.8%. All trials shown here are ones that Opus 4.6 correctly decoded.'
 };
 
 const ENCODER_PROMPT = {
@@ -223,6 +226,23 @@ Question: [the question]
 
 Answer: [the encoded answer]"`
 };
+
+const LOG_URL = 'https://script.google.com/macros/s/AKfycbxYYn9jVfyQN0RPzIj4FN-vXjUwXcdVULG03XDiMgK2z2sx_YW6R06-rT5CowK0uDJ3/exec';
+
+function logTrial(trialData) {
+  if (!LOG_URL) return;
+  fetch(LOG_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain' },
+    body: JSON.stringify({
+      timestamp: new Date().toISOString(),
+      quiz: 'stego',
+      name: document.getElementById('participant-name').value.trim(),
+      ...trialData,
+    }),
+  }).catch(() => {});
+}
 
 fetch('trials.json').then(r => r.json()).then(d => { DATA = d; initIntro(); });
 
@@ -407,6 +427,16 @@ function guess(letter) {
     fb.textContent = `Wrong — the letter was ${t.symbol}`;
     fb.className = 'feedback wrong';
   }
+
+  logTrial({
+    mode,
+    trial_number: round + 1,
+    target_letter: t.symbol,
+    guess: letter,
+    correct,
+    harder_mode: document.getElementById('harder-mode').checked,
+    encoded_preview: t.encoded.slice(0, 120),
+  });
 
   // Highlight target letters in encoded text
   document.getElementById('encoded-text').innerHTML = highlightLetter(t.encoded, t.symbol);
