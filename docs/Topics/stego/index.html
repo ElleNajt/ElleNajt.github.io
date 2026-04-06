@@ -237,7 +237,7 @@ function logTrial(trialData) {
     headers: { 'Content-Type': 'text/plain' },
     body: JSON.stringify({
       timestamp: new Date().toISOString(),
-      quiz: 'stego',
+      game: 'stego',
       name: document.getElementById('participant-name').value.trim(),
       ...trialData,
     }),
