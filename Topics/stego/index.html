@@ -112,6 +112,11 @@ p { margin: 8px 0; line-height: 1.6; color: #bbb; }
 
     <div class="text-box" id="encoded-text"></div>
 
+    <details style="margin: 8px 0;" id="round-encoder-prompt">
+      <summary style="color: #7b9eee; font-size: 0.85em; cursor: pointer;">What was the AI encoder told?</summary>
+      <div class="reveal-box" id="round-encoder-prompt-text" style="font-size: 0.85em; color: #999; white-space: pre-wrap;"></div>
+    </details>
+
     <details style="margin: 8px 0;" id="round-decoder-prompt">
       <summary style="color: #7b9eee; font-size: 0.85em; cursor: pointer;">What was the AI decoder told?</summary>
       <div class="reveal-box" id="round-decoder-prompt-text" style="font-size: 0.85em; color: #999; white-space: pre-wrap;"></div>
@@ -237,7 +242,7 @@ function logTrial(trialData) {
     headers: { 'Content-Type': 'text/plain' },
     body: JSON.stringify({
       timestamp: new Date().toISOString(),
-      quiz: 'stego',
+      game: 'stego',
       name: document.getElementById('participant-name').value.trim(),
       ...trialData,
     }),
@@ -372,6 +377,11 @@ function showRound() {
   document.getElementById('feedback').className = 'feedback';
   document.getElementById('reveal').style.display = 'none';
   document.getElementById('next-btn').style.display = 'none';
+
+  // Show encoder prompt (generic, without revealing the letter)
+  const encPromptEl = document.getElementById('round-encoder-prompt');
+  encPromptEl.removeAttribute('open');
+  document.getElementById('round-encoder-prompt-text').textContent = ENCODER_PROMPT[mode];
 
   // Show decoder prompt with actual trial text filled in
   const promptEl = document.getElementById('round-decoder-prompt');
