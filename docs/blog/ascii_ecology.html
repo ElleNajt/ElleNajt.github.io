@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-04-05 Sun 22:01 -->
+<!-- 2026-04-06 Mon 22:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ASCII Ecology: Emergent Patterns in an LLM Primordial Soup</title>
@@ -28,9 +28,9 @@
 <tr><td>(┐:█}|■#_◇─╩+→◇╦</td><td></td><td>║░║▒║░║▒║░║▒║░║▒║░║▒</td><td></td><td>│░░│▓▓│░░│▓▓│░░│▓▓│░</td><td></td><td>░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒</td></tr>
 <tr><td>▀→╔═╱║↓↑○┘@{╚╱┼.</td><td></td><td>╠═╬═╬═╬═╬═╬═╬═╬═╬═╬═</td><td></td><td>│▓▓│░░│▓▓│░░│▓▓│░░│▓</td><td></td><td>▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░</td></tr>
 </table>
-<div id="outline-container-org7a622a3" class="outline-2">
-<h2 id="org7a622a3">The Experiment</h2>
-<div class="outline-text-2" id="text-org7a622a3">
+<div id="outline-container-org5ce3fd9" class="outline-2">
+<h2 id="org5ce3fd9">The Experiment</h2>
+<div class="outline-text-2" id="text-org5ce3fd9">
 <p>
 <a href="https://arxiv.org/abs/2406.19108">Computational Life: How Well-formed, Self-replicating Programs Emerge from Simple Interaction</a> (Agüera y Arcas et al., 2024) showed that self-replicating programs emerge from random interactions in a BFF (Brainfuck variant) interpreter. They initialize a soup of random programs, repeatedly pick random pairs, concatenate them, run the result through the interpreter, and split the output back into two new programs. Over time, self-replicators (quines) emerge and take over.<br />
 </p>
@@ -43,9 +43,9 @@ For fun, I took their experimental setup and changed it from a brainfuck interpr
 I got no sharp phase transitions; there&rsquo;s a quick convergence to self-replicating patterns, and after that there are ecological dynamics. The self-replicators tend to be simple repeated patterns like in the banner for this post, which shows snapshots of the &ldquo;Interesting (16x16)&rdquo; run.<br />
 </p>
 </div>
-<div id="outline-container-org5b8dd30" class="outline-3">
-<h3 id="org5b8dd30">Setup</h3>
-<div class="outline-text-3" id="text-org5b8dd30">
+<div id="outline-container-org9d4ce56" class="outline-3">
+<h3 id="org9d4ce56">Setup</h3>
+<div class="outline-text-3" id="text-org9d4ce56">
 <ul class="org-ul">
 <li>100 cells, each initialized with random content (varies by condition — see below).<br /></li>
 <li>Each epoch: 50 random pairs are selected. Their strings are concatenated and placed as an assistant prefill. The model continues for up to k² tokens. The continuation is split back into two new strings.<br /></li>
@@ -132,9 +132,9 @@ Conditions tested:<br />
 </div>
 </div>
 </div>
-<div id="outline-container-org30db150" class="outline-2">
-<h2 id="org30db150">ASCII Ecology</h2>
-<div class="outline-text-2" id="text-org30db150">
+<div id="outline-container-orgfa53d93" class="outline-2">
+<h2 id="orgfa53d93">ASCII Ecology</h2>
+<div class="outline-text-2" id="text-orgfa53d93">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WJpcbQ-QwSk" title="ASCII Ecology" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <p>
@@ -146,16 +146,16 @@ To keep the layout stable across frames, cells are sorted by cosine distance to 
 </p>
 </div>
 </div>
-<div id="outline-container-orge7ae534" class="outline-2">
-<h2 id="orge7ae534">Species Gallery</h2>
-<div class="outline-text-2" id="text-orge7ae534">
+<div id="outline-container-org979578d" class="outline-2">
+<h2 id="org979578d">Species Gallery</h2>
+<div class="outline-text-2" id="text-org979578d">
 <p>
 Species are classified by most common character, most common 3×3 block (grid conditions), or most common 4-gram (1D conditions).<br />
 </p>
 </div>
-<div id="outline-container-orgae745cc" class="outline-3">
-<h3 id="orgae745cc">Plain (16×16, epoch 150)</h3>
-<div class="outline-text-3" id="text-orgae745cc">
+<div id="outline-container-org7dd14de" class="outline-3">
+<h3 id="org7dd14de">Plain (16×16, epoch 150)</h3>
+<div class="outline-text-3" id="text-org7dd14de">
 <p>
 3×3 block (14 distinct): 46/100 ░░░/░░░/░░░, 20/100 ▓▓▓/▓▓▓/▓▓▓, 16/100 ███/███/███<br />
 Character (4 distinct): ░(51), ▓(22), █(18), ▒(9)<br />
@@ -184,15 +184,15 @@ Sample of 5 cells (out of 100):<br />
 </p>
 
 
-<div id="orgd3053d3" class="figure">
+<div id="orgc039377" class="figure">
 <p><img src="plots/ascii_ecology/plot_20260314_204143_4108603.png" alt="plot_20260314_204143_4108603.png" /><br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd97efc7" class="outline-3">
-<h3 id="orgd97efc7">&ldquo;Make it pretty&rdquo; (16×16, epoch 150)</h3>
-<div class="outline-text-3" id="text-orgd97efc7">
+<div id="outline-container-org197b07b" class="outline-3">
+<h3 id="org197b07b">&ldquo;Make it pretty&rdquo; (16×16, epoch 150)</h3>
+<div class="outline-text-3" id="text-org197b07b">
 <p>
 3×3 block (57 distinct): 7/100 ◆◇◆/◇◆◇/◆◇◆, 7/100 ◇◆◇/◆◇◆/◇◆◇, 5/100 ☆★☆/★☆★/☆★☆<br />
 Character (23 distinct): ◆(19), ●(10), ◇(10), ☆(7)<br />
@@ -224,15 +224,15 @@ Sample of 5 cells (out of 100):<br />
 
 
 
-<div id="org7aef389" class="figure">
+<div id="org44d82ae" class="figure">
 <p><img src="plots/ascii_ecology/plot_20260314_204144_9149732.png" alt="plot_20260314_204144_9149732.png" /><br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgedaf3b6" class="outline-3">
-<h3 id="orgedaf3b6">&ldquo;Keep it interesting&rdquo; (16×16, epoch 150)</h3>
-<div class="outline-text-3" id="text-orgedaf3b6">
+<div id="outline-container-orgfec4dd2" class="outline-3">
+<h3 id="orgfec4dd2">&ldquo;Keep it interesting&rdquo; (16×16, epoch 150)</h3>
+<div class="outline-text-3" id="text-orgfec4dd2">
 <p>
 3×3 block (55 distinct): 8/100 ▓░▓/▓░▓/▓░▓, 7/100 ░░░/░░░/░░░, 7/100 ◇◆◇/◆◇◆/◇◆◇<br />
 Character (17 distinct): ▓(32), ░(22), ◇(9), ═(8)<br />
@@ -261,15 +261,15 @@ Sample of 5 cells (out of 100):<br />
 </p>
 
 
-<div id="orgcd865cd" class="figure">
+<div id="org005d354" class="figure">
 <p><img src="plots/ascii_ecology/plot_20260314_204223_5770619.png" alt="plot_20260314_204223_5770619.png" /><br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org42a1797" class="outline-3">
-<h3 id="org42a1797">&ldquo;Imbue your personality&rdquo; (32×32, epoch 200)</h3>
-<div class="outline-text-3" id="text-org42a1797">
+<div id="outline-container-orgfccb4d1" class="outline-3">
+<h3 id="orgfccb4d1">&ldquo;Imbue your personality&rdquo; (32×32, epoch 200)</h3>
+<div class="outline-text-3" id="text-orgfccb4d1">
 <p>
 3×3 block (6 distinct): 75/100 ░░░/░░░/░░░, 11/100 ███/███/███, 11/100 ▓▓▓/▓▓▓/▓▓▓<br />
 Character (4 distinct): ░(76), ▓(12), █(11), ▒(1)<br />
@@ -299,15 +299,15 @@ Sample of 5 cells (out of 100):<br />
 </p>
 
 
-<div id="orge6b0406" class="figure">
+<div id="org6406ac0" class="figure">
 <p><img src="plots/ascii_ecology/plot_20260314_204145_9416129.png" alt="plot_20260314_204145_9416129.png" /><br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org0dc643c" class="outline-3">
-<h3 id="org0dc643c">Wikipedia (1D, k=32, epoch 200)</h3>
-<div class="outline-text-3" id="text-org0dc643c">
+<div id="outline-container-org0c9b604" class="outline-3">
+<h3 id="org0c9b604">Wikipedia (1D, k=32, epoch 200)</h3>
+<div class="outline-text-3" id="text-org0c9b604">
 <p>
 4-gram (1 distinct): 100/100 3-3-<br />
 Character (1 distinct): 3(100)<br />
@@ -327,15 +327,15 @@ Sample of 5 cells (out of 100):<br />
 </p>
 
 
-<div id="orgbeb785e" class="figure">
+<div id="org073167e" class="figure">
 <p><img src="plots/ascii_ecology/plot_20260314_204145_7038374.png" alt="plot_20260314_204145_7038374.png" /><br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd79f67f" class="outline-3">
-<h3 id="orgd79f67f">ASCII art (1D, k=64, epoch 150)</h3>
-<div class="outline-text-3" id="text-orgd79f67f">
+<div id="outline-container-org2d12284" class="outline-3">
+<h3 id="org2d12284">ASCII art (1D, k=64, epoch 150)</h3>
+<div class="outline-text-3" id="text-org2d12284">
 <p>
 4-gram (3 distinct): 37/100 ╝╚╔╝, 32/100 ╚╔╝╚, 31/100 ╔╝╚╔<br />
 Character (3 distinct): ╝(37), ╚(32), ╔(31)<br />
@@ -355,103 +355,103 @@ Sample of 5 cells (out of 100):<br />
 </p>
 
 
-<div id="org4fc6dde" class="figure">
+<div id="org8b09ad8" class="figure">
 <p><img src="plots/ascii_ecology/plot_20260314_204147_2678638.png" alt="plot_20260314_204147_2678638.png" /><br />
 </p>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org38849e8" class="outline-2">
-<h2 id="org38849e8">Metrics</h2>
-<div class="outline-text-2" id="text-org38849e8">
+<div id="outline-container-org43053f6" class="outline-2">
+<h2 id="org43053f6">Metrics</h2>
+<div class="outline-text-2" id="text-org43053f6">
 </div>
-<div id="outline-container-org999415d" class="outline-3">
-<h3 id="org999415d">Unique strings</h3>
-<div class="outline-text-3" id="text-org999415d">
+<div id="outline-container-orgbfd9a6f" class="outline-3">
+<h3 id="orgbfd9a6f">Unique strings</h3>
+<div class="outline-text-3" id="text-orgbfd9a6f">
 <p>
 How many of the 100 cells are distinct each epoch.<br />
 </p>
 
 
-<div id="orgd89384f" class="figure">
+<div id="orgb6cd2b0" class="figure">
 <p><img src="plots/ascii_ecology/plot_20260314_204148_7090293.png" alt="plot_20260314_204148_7090293.png" /><br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org8f64403" class="outline-3">
-<h3 id="org8f64403">Shannon entropy</h3>
-<div class="outline-text-3" id="text-org8f64403">
+<div id="outline-container-org63cbaed" class="outline-3">
+<h3 id="org63cbaed">Shannon entropy</h3>
+<div class="outline-text-3" id="text-org63cbaed">
 <p>
 Byte-level entropy of the concatenated soup. Drops as the soup converges to fewer distinct characters.<br />
 </p>
 
 
-<div id="orga6b8731" class="figure">
+<div id="org7d39fa5" class="figure">
 <p><img src="plots/ascii_ecology/plot_20260314_204148_5708456.png" alt="plot_20260314_204148_5708456.png" /><br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org4e5d2a6" class="outline-3">
-<h3 id="org4e5d2a6">Compression ratio</h3>
-<div class="outline-text-3" id="text-org4e5d2a6">
+<div id="outline-container-orgeea5b3f" class="outline-3">
+<h3 id="orgeea5b3f">Compression ratio</h3>
+<div class="outline-text-3" id="text-orgeea5b3f">
 <p>
 <code>compressed_size / raw_size</code> (zlib). Drops toward 0 as the soup becomes highly regular.<br />
 </p>
 
 
-<div id="orge635462" class="figure">
+<div id="org7159dfc" class="figure">
 <p><img src="plots/ascii_ecology/plot_20260314_204148_4661907.png" alt="plot_20260314_204148_4661907.png" /><br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org77ac6d3" class="outline-3">
-<h3 id="org77ac6d3">Semantics-aware metrics</h3>
-<div class="outline-text-3" id="text-org77ac6d3">
+<div id="outline-container-org00ec312" class="outline-3">
+<h3 id="org00ec312">Semantics-aware metrics</h3>
+<div class="outline-text-3" id="text-org00ec312">
 <p>
 We use sentence embeddings to get compression metrics that are more sensitive to semantics.<br />
 </p>
 </div>
-<div id="outline-container-org379497b" class="outline-4">
-<h4 id="org379497b">Effective rank</h4>
-<div class="outline-text-4" id="text-org379497b">
+<div id="outline-container-orge419dd3" class="outline-4">
+<h4 id="orge419dd3">Effective rank</h4>
+<div class="outline-text-4" id="text-orge419dd3">
 <p>
 Participation ratio of SVD singular values of the centered embedding matrix (<code>all-MiniLM-L6-v2</code>). High when the population spans many semantic directions; low when it collapses to a few clusters.<br />
 </p>
 
 
-<div id="orgd5225b3" class="figure">
+<div id="org754be3c" class="figure">
 <p><img src="plots/ascii_ecology/plot_20260314_204148_2608513.png" alt="plot_20260314_204148_2608513.png" /><br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orge1bf1cd" class="outline-4">
-<h4 id="orge1bf1cd">Mean cosine similarity</h4>
-<div class="outline-text-4" id="text-orge1bf1cd">
+<div id="outline-container-orgdfe8e5a" class="outline-4">
+<h4 id="orgdfe8e5a">Mean cosine similarity</h4>
+<div class="outline-text-4" id="text-orgdfe8e5a">
 <p>
 Average pairwise cosine similarity across all 100 embeddings. Rises as the population converges.<br />
 </p>
 
 
-<div id="orgd1fb0da" class="figure">
+<div id="org4ad3be6" class="figure">
 <p><img src="plots/ascii_ecology/plot_20260314_204148_3612365.png" alt="plot_20260314_204148_3612365.png" /><br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org3256e1e" class="outline-4">
-<h4 id="org3256e1e">Differential entropy</h4>
-<div class="outline-text-4" id="text-org3256e1e">
+<div id="outline-container-org1a57c38" class="outline-4">
+<h4 id="org1a57c38">Differential entropy</h4>
+<div class="outline-text-4" id="text-org1a57c38">
 <p>
 Differential entropy of a Gaussian fit to the embedding distribution: <code>0.5 * (d * ln(2πe) + ln det Σ)</code> where <code>Σ</code> is the sample covariance and <code>d</code> is the number of non-degenerate eigenvalues (eigenvalues &gt; 1e-12 are kept, near-zero ones dropped).<br />
 </p>
 
 
-<div id="org83252c9" class="figure">
+<div id="org452d65d" class="figure">
 <p><img src="plots/ascii_ecology/plot_20260314_204149_5647119.png" alt="plot_20260314_204149_5647119.png" /><br />
 </p>
 </div>
@@ -459,9 +459,9 @@ Differential entropy of a Gaussian fit to the embedding distribution: <code>0.5 
 </div>
 </div>
 </div>
-<div id="outline-container-org4353575" class="outline-2">
-<h2 id="org4353575">Code</h2>
-<div class="outline-text-2" id="text-org4353575">
+<div id="outline-container-org6744266" class="outline-2">
+<h2 id="org6744266">Code</h2>
+<div class="outline-text-2" id="text-org6744266">
 <p>
 <a href="https://github.com/ElleNajt/ElleNajt.github.io/tree/master/Code/ascii_ecology">Code on GitHub</a><br />
 </p>
@@ -472,7 +472,7 @@ Differential entropy of a Gaussian fit to the embedding distribution: <code>0.5 
 <p class="date">Date: 2026-03-14</p>
 <p class="author">Author: Elle Najt</p>
 <p class="email">Email: <a href="mailto:LNAJT4@gmail.com">LNAJT4@gmail.com</a></p>
-<p class="date">Created: 2026-04-05 Sun 22:01</p>
+<p class="date">Created: 2026-04-06 Mon 22:00</p>
 <p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.11)</p>
 </div>
 </body>
