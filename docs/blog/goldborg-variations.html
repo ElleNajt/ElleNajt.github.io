@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-04-06 Mon 22:02 -->
+<!-- 2026-04-08 Wed 16:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Goldborg Variations: The Algorave Attractor States of LLMs</title>
@@ -64,96 +64,96 @@ if (activeBtn) { activeBtn.classList.remove('active'); activeBtn = null; }
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgd63cf3f">Notes before reading</a></li>
-<li><a href="#orga3dcc48">The Experiment</a>
+<li><a href="#org6f5a4f8">Notes before reading</a></li>
+<li><a href="#org360a5a5">The Experiment</a>
 <ul>
-<li><a href="#org783b019">Vibes</a></li>
-<li><a href="#orgb212ec8">Value proposition</a></li>
-<li><a href="#orgb7302ec">The scaffold</a>
+<li><a href="#orgd5699fa">Vibes</a></li>
+<li><a href="#org0fab3b9">Value proposition</a></li>
+<li><a href="#org4f8bf51">The scaffold</a>
 <ul>
-<li><a href="#orgf3e999d">Evolve</a></li>
-<li><a href="#org8a43bf6">Live-coding with LLMs</a></li>
+<li><a href="#orgf3e04f9">Evolve</a></li>
+<li><a href="#org9eb9b01">Live-coding with LLMs</a></li>
 </ul>
 </li>
-<li><a href="#org4c8642a">Models</a></li>
-<li><a href="#org62a1052">Seed</a></li>
-<li><a href="#orgc678e37">Some notable examples</a>
+<li><a href="#org85650d2">Models</a></li>
+<li><a href="#org8005b9d">Seed</a></li>
+<li><a href="#orgc9db91a">Some notable examples</a>
 <ul>
-<li><a href="#org06248f1">Claude</a>
+<li><a href="#orgf356604">Claude</a>
 <ul>
-<li><a href="#orgf86f891">Opus 4.5</a></li>
-<li><a href="#org595c355">Opus 4.6</a></li>
-<li><a href="#orgeee9804">Double clicking on that model diff</a></li>
+<li><a href="#orgd82b885">Opus 4.5</a></li>
+<li><a href="#org839dbf2">Opus 4.6</a></li>
+<li><a href="#orgf099fae">Double clicking on that model diff</a></li>
 </ul>
 </li>
-<li><a href="#org3fd52b0">Grok</a></li>
-<li><a href="#org99a07a1">ChatGPT 5.2</a></li>
-<li><a href="#org930bb45">Gemini</a></li>
-<li><a href="#org6b2d02c">Cross model collaborations</a>
+<li><a href="#orga0edfc6">Grok</a></li>
+<li><a href="#orga10cbbc">ChatGPT 5.2</a></li>
+<li><a href="#org32c0a71">Gemini</a></li>
+<li><a href="#orgb005e82">Cross model collaborations</a>
 <ul>
-<li><a href="#orgc6f0161">Claude + Grok</a></li>
-<li><a href="#orgb4f967a">Claude + Gemini</a></li>
-<li><a href="#orgec626fb">GPT 5.2 + Gemini</a></li>
-<li><a href="#orgd8baf25">Grok + Gemini</a></li>
+<li><a href="#org64fedd9">Claude + Grok</a></li>
+<li><a href="#org1c2f822">Claude + Gemini</a></li>
+<li><a href="#org0187e43">GPT 5.2 + Gemini</a></li>
+<li><a href="#orgc953b67">Grok + Gemini</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orga2b5f89">The music</a>
+<li><a href="#orgfa43a5c">The music</a>
 <ul>
-<li><a href="#org54e06db">Claude Opus 4.5 (<code>claude-opus-4-5-20251101</code>)</a>
+<li><a href="#orge50dec0">Claude Opus 4.5 (<code>claude-opus-4-5-20251101</code>)</a>
 <ul>
-<li><a href="#org4ac74de">Goldberg</a></li>
-<li><a href="#org5ba5aa7">Drum loop seed</a></li>
-<li><a href="#org01683af">C major arpeggio seed</a></li>
-<li><a href="#org07003fc">Single note seed</a></li>
+<li><a href="#org1d7996f">Goldberg</a></li>
+<li><a href="#org86d43be">Drum loop seed</a></li>
+<li><a href="#orgb87d885">C major arpeggio seed</a></li>
+<li><a href="#org5813b73">Single note seed</a></li>
 </ul>
 </li>
-<li><a href="#org569886e">Claude Opus 4.6 (<code>claude-opus-4-6</code>)</a>
+<li><a href="#org2238986">Claude Opus 4.6 (<code>claude-opus-4-6</code>)</a>
 <ul>
-<li><a href="#org9eb0557">Goldberg</a></li>
-<li><a href="#org288ede9">Drum loop seed</a></li>
-<li><a href="#org7a65ab8">C major arpeggio seed</a></li>
-<li><a href="#org4546de6">Single note seed</a></li>
+<li><a href="#org2257fa2">Goldberg</a></li>
+<li><a href="#org0585183">Drum loop seed</a></li>
+<li><a href="#org52c9b90">C major arpeggio seed</a></li>
+<li><a href="#orgcc3f65f">Single note seed</a></li>
 </ul>
 </li>
-<li><a href="#org24beb1f">ChatGPT 5.2 (<code>openai/gpt-5.2</code>)</a>
+<li><a href="#orge1102e8">ChatGPT 5.2 (<code>openai/gpt-5.2</code>)</a>
 <ul>
-<li><a href="#orgcabcdb5">Drum seed</a></li>
-<li><a href="#org572fe9b">C major arpeggio seed</a></li>
-<li><a href="#org2999f3c">Without track/effect limits</a></li>
+<li><a href="#org8de9d93">Drum seed</a></li>
+<li><a href="#org038ef28">C major arpeggio seed</a></li>
+<li><a href="#org9f54b74">Without track/effect limits</a></li>
 </ul>
 </li>
-<li><a href="#orgd2e2721">Grok (<code>x-ai/grok-4.1-fast</code>)</a></li>
-<li><a href="#org214dad5">Gemini 3.1 Pro (<code>google/gemini-3.1-pro-preview</code>)</a></li>
-<li><a href="#org49c7a04">Gemini 2.5 Pro (<code>google/gemini-2.5-pro</code>)</a></li>
-<li><a href="#org3bb56dc">Kimi (<code>moonshotai/kimi-k2.5-0127</code>)</a></li>
-<li><a href="#org5668c66">Qwen (<code>qwen/qwen3.5-plus-02-15</code>)</a></li>
-<li><a href="#orgb323991">Cross-model: GPT 5.2 x Gemini (alternating)</a></li>
-<li><a href="#org1bf6973">Cross-model: Grok x Gemini (alternating)</a></li>
-<li><a href="#orgf90578c">Cross-model: Claude x Grok (alternating)</a></li>
-<li><a href="#orgb9505c9">Cross-model: Claude x Gemini (alternating)</a></li>
+<li><a href="#org9c972d8">Grok (<code>x-ai/grok-4.1-fast</code>)</a></li>
+<li><a href="#orge167d4e">Gemini 3.1 Pro (<code>google/gemini-3.1-pro-preview</code>)</a></li>
+<li><a href="#orge8cdb50">Gemini 2.5 Pro (<code>google/gemini-2.5-pro</code>)</a></li>
+<li><a href="#org0b7791f">Kimi (<code>moonshotai/kimi-k2.5-0127</code>)</a></li>
+<li><a href="#org83617b7">Qwen (<code>qwen/qwen3.5-plus-02-15</code>)</a></li>
+<li><a href="#org5bd3139">Cross-model: GPT 5.2 x Gemini (alternating)</a></li>
+<li><a href="#org9ee47d7">Cross-model: Grok x Gemini (alternating)</a></li>
+<li><a href="#org5ae0c1d">Cross-model: Claude x Grok (alternating)</a></li>
+<li><a href="#org7594eb9">Cross-model: Claude x Gemini (alternating)</a></li>
 </ul>
 </li>
-<li><a href="#org5630ac7">The music of small minds</a></li>
-<li><a href="#orgad4d9e9">Acknowledgements</a></li>
-<li><a href="#orge187f66">Related Work</a></li>
-<li><a href="#org5449fa6">Guessing game: which model made this?</a>
+<li><a href="#org727ef40">The music of small minds</a></li>
+<li><a href="#org3772964">Acknowledgements</a></li>
+<li><a href="#org7397451">Related Work</a></li>
+<li><a href="#orge6b4875">Guessing game: which model made this?</a>
 <ul>
-<li><a href="#org1607c18">Drum loop seed</a></li>
-<li><a href="#orgd44332b">C major arpeggio seed</a></li>
-<li><a href="#org88b2829">Single note seed</a></li>
-<li><a href="#org8eca528">Chord progression seed</a></li>
+<li><a href="#org737fb6e">Drum loop seed</a></li>
+<li><a href="#org5cd02d5">C major arpeggio seed</a></li>
+<li><a href="#org296e3a1">Single note seed</a></li>
+<li><a href="#org25e31c7">Chord progression seed</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd63cf3f" class="outline-2">
-<h2 id="orgd63cf3f">Notes before reading</h2>
-<div class="outline-text-2" id="text-orgd63cf3f">
+<div id="outline-container-org6f5a4f8" class="outline-2">
+<h2 id="org6f5a4f8">Notes before reading</h2>
+<div class="outline-text-2" id="text-org6f5a4f8">
 <ul class="org-ul">
 <li>Strudel seems to perform better on Chrome than Firefox.<br /></li>
 
@@ -179,9 +179,9 @@ if (activeBtn) { activeBtn.classList.remove('active'); activeBtn = null; }
 </ul>
 </div>
 </div>
-<div id="outline-container-orga3dcc48" class="outline-2">
-<h2 id="orga3dcc48">The Experiment</h2>
-<div class="outline-text-2" id="text-orga3dcc48">
+<div id="outline-container-org360a5a5" class="outline-2">
+<h2 id="org360a5a5">The Experiment</h2>
+<div class="outline-text-2" id="text-org360a5a5">
 <p>
 It&rsquo;s been previously noted that models have some pretty funny <a href="https://www.lesswrong.com/posts/mgjtEHeLgkhZZ3cEx/models-have-some-pretty-funny-attractor-states">attractor states</a>.<br />
 </p>
@@ -214,9 +214,9 @@ The system prompt provides a comprehensive Strudel API reference but no<br />
 style guidance, no music theory examples, no aesthetic direction beyond “Evolve this piece. Imbue it with your personality" + complexity limitations. All models are called at default temperature. We want to see what each model&rsquo;s instincts produce when given the same 8 notes and total creative freedom.<br />
 </p>
 </div>
-<div id="outline-container-org783b019" class="outline-3">
-<h3 id="org783b019">Vibes</h3>
-<div class="outline-text-3" id="text-org783b019">
+<div id="outline-container-orgd5699fa" class="outline-3">
+<h3 id="orgd5699fa">Vibes</h3>
+<div class="outline-text-3" id="text-orgd5699fa">
 <p>
 My subjective takes are:<br />
 </p>
@@ -333,15 +333,15 @@ For fun and vibe-science, here&rsquo;s an LLM judge (Claude Opus 4.5) classifyin
 </table>
 
 
-<div id="org12caa2c" class="figure">
+<div id="org647f420" class="figure">
 <p><img src="plots/blogpost/plot_20260226_215809_3123170.png" alt="plot_20260226_215809_3123170.png" /><br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgb212ec8" class="outline-3">
-<h3 id="orgb212ec8">Value proposition</h3>
-<div class="outline-text-3" id="text-orgb212ec8">
+<div id="outline-container-org0fab3b9" class="outline-3">
+<h3 id="org0fab3b9">Value proposition</h3>
+<div class="outline-text-3" id="text-org0fab3b9">
 <p>
 Model personality is both an aesthetic and a function, and the aesthetic vibes seem to be correlated across mediums. Notably it’s a surprise to no one that Claude Opus 4.5 generates ambient music (see <a href="https://www.astralcodexten.com/p/the-claude-bliss-attractor">bliss attractors</a>), or that Grok creates maximalist music (see <a href="https://www.lesswrong.com/posts/mgjtEHeLgkhZZ3cEx/models-have-some-pretty-funny-attractor-states">the Grok responses in Arya&rsquo;s attractor experiment here</a>), or that GPT seems especially angsty (see <a href="https://x.com/Josikinz/status/1908655061594734637">Josie Kins&rsquo;s model self-portraits</a>, see also a 4o run below).<br />
 </p>
@@ -363,9 +363,9 @@ But primarily this is an art project &#x2013; I personally really enjoy listenin
 </p>
 </div>
 </div>
-<div id="outline-container-orgb7302ec" class="outline-3">
-<h3 id="orgb7302ec">The scaffold</h3>
-<div class="outline-text-3" id="text-orgb7302ec">
+<div id="outline-container-org4f8bf51" class="outline-3">
+<h3 id="org4f8bf51">The scaffold</h3>
+<div class="outline-text-3" id="text-org4f8bf51">
 <p>
 Models aren&rsquo;t perfect at Strudel &#x2013; they make syntax mistakes and hallucinate<br />
 nonexistent functions and sample libraries. To counteract this, we provide a list of strudel functions and soundbanks in a system prompt. We also validate each output with Strudel&rsquo;s actual<br />
@@ -378,9 +378,9 @@ never sees the error message &#x2013; it just gets another shot. This required s
 The code is open source here <a href="https://github.com/ElleNajt/vibe-duet">vibe-duet on GitHub</a>. It&rsquo;s probably more fun to play with it yourself than to listen to the selections here. Here are options for doing so:<br />
 </p>
 </div>
-<div id="outline-container-orgf3e999d" class="outline-4">
-<h4 id="orgf3e999d">Evolve</h4>
-<div class="outline-text-4" id="text-orgf3e999d">
+<div id="outline-container-orgf3e04f9" class="outline-4">
+<h4 id="orgf3e04f9">Evolve</h4>
+<div class="outline-text-4" id="text-orgf3e04f9">
 <p>
 Run your own evolution experiment:<br />
 </p>
@@ -410,9 +410,9 @@ The repo has instructions on how to generate seeds from midi files.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org8a43bf6" class="outline-4">
-<h4 id="org8a43bf6">Live-coding with LLMs</h4>
-<div class="outline-text-4" id="text-org8a43bf6">
+<div id="outline-container-org9eb9b01" class="outline-4">
+<h4 id="org9eb9b01">Live-coding with LLMs</h4>
+<div class="outline-text-4" id="text-org9eb9b01">
 <p>
 Run ./start and then edit live.js in your editor or with your local coding agent – changes play instantly. Alternatively, use the in-browser chat panel to talk to an LLM and have it write music for you in real time.<br />
 LLM and have it write music for you in real time.<br />
@@ -420,9 +420,9 @@ LLM and have it write music for you in real time.<br />
 </div>
 </div>
 </div>
-<div id="outline-container-org4c8642a" class="outline-3">
-<h3 id="org4c8642a">Models</h3>
-<div class="outline-text-3" id="text-org4c8642a">
+<div id="outline-container-org85650d2" class="outline-3">
+<h3 id="org85650d2">Models</h3>
+<div class="outline-text-3" id="text-org85650d2">
 <p>
 We use the following frontier models.<br />
 </p>
@@ -437,9 +437,9 @@ We use the following frontier models.<br />
 </ul>
 </div>
 </div>
-<div id="outline-container-org62a1052" class="outline-3">
-<h3 id="org62a1052">Seed</h3>
-<div class="outline-text-3" id="text-org62a1052">
+<div id="outline-container-org8005b9d" class="outline-3">
+<h3 id="org8005b9d">Seed</h3>
+<div class="outline-text-3" id="text-org8005b9d">
 <p>
 The experiment uses the Goldberg Variations ground bass<br />
 (BWV 988) &#x2013; the 8-note descending bass line that underlies all 30<br />
@@ -466,20 +466,20 @@ Eight notes and no effects beyond a little reverb. Everything that follows is th
 </div>
 </div>
 </div>
-<div id="outline-container-orgc678e37" class="outline-3">
-<h3 id="orgc678e37">Some notable examples</h3>
-<div class="outline-text-3" id="text-orgc678e37">
+<div id="outline-container-orgc9db91a" class="outline-3">
+<h3 id="orgc9db91a">Some notable examples</h3>
+<div class="outline-text-3" id="text-orgc9db91a">
 <p>
 All the music is embedded down the page, including some cross model experiments. Here are some samples that give a vibe. They get increasingly complicated as the generation goes on.<br />
 </p>
 </div>
-<div id="outline-container-org06248f1" class="outline-4">
-<h4 id="org06248f1">Claude</h4>
-<div class="outline-text-4" id="text-org06248f1">
+<div id="outline-container-orgf356604" class="outline-4">
+<h4 id="orgf356604">Claude</h4>
+<div class="outline-text-4" id="text-orgf356604">
 </div>
-<div id="outline-container-orgf86f891" class="outline-5">
-<h5 id="orgf86f891">Opus 4.5</h5>
-<div class="outline-text-5" id="text-orgf86f891">
+<div id="outline-container-orgd82b885" class="outline-5">
+<h5 id="orgd82b885">Opus 4.5</h5>
+<div class="outline-text-5" id="text-orgd82b885">
 <p>
 Claude Opus 4.5 writes ambient contrapunctal music. Slow, meditative, with philosophical comments that get increasingly introspective. Run 2 step 30 finds a gentle canon over the Goldberg ground, and Run 3 step 5 is some playful counterpoint. Runs 1 and 5 find the <a href="https://www.astralcodexten.com/p/the-claude-bliss-attractor">bliss attractor</a>.<br />
 </p>
@@ -534,9 +534,9 @@ The bliss attractor Opus 4.5 runs tend to have commentary about not needing to p
 </div>
 </div>
 </div>
-<div id="outline-container-org595c355" class="outline-5">
-<h5 id="org595c355">Opus 4.6</h5>
-<div class="outline-text-5" id="text-org595c355">
+<div id="outline-container-org839dbf2" class="outline-5">
+<h5 id="org839dbf2">Opus 4.6</h5>
+<div class="outline-text-5" id="text-org839dbf2">
 <p>
 Opus 4.6 is darker and more discordant, though still leans towards contrapunctal ambience.<br />
 </p>
@@ -546,18 +546,18 @@ Opus 4.6 is darker and more discordant, though still leans towards contrapunctal
 </p>
 </div>
 </div>
-<div id="outline-container-orgeee9804" class="outline-5">
-<h5 id="orgeee9804">Double clicking on that model diff</h5>
-<div class="outline-text-5" id="text-orgeee9804">
+<div id="outline-container-orgf099fae" class="outline-5">
+<h5 id="orgf099fae">Double clicking on that model diff</h5>
+<div class="outline-text-5" id="text-orgf099fae">
 <p>
 Is the vibe difference consistent across seeds? Can you tell them apart? <a href="blind_test.html">Try the blind test,</a> which uses different samples from the music section below. I scored 13/14 on the Opus4.5/Opus4.6 A/B test.<br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org3fd52b0" class="outline-4">
-<h4 id="org3fd52b0">Grok</h4>
-<div class="outline-text-4" id="text-org3fd52b0">
+<div id="outline-container-orga0edfc6" class="outline-4">
+<h4 id="orga0edfc6">Grok</h4>
+<div class="outline-text-4" id="text-orga0edfc6">
 <p>
 Grok is Grok. Electronic maximalism; stacked complexity and tracks slowed by the golden ratio.<br />
 </p>
@@ -567,9 +567,9 @@ Grok is Grok. Electronic maximalism; stacked complexity and tracks slowed by the
 </p>
 </div>
 </div>
-<div id="outline-container-org99a07a1" class="outline-4">
-<h4 id="org99a07a1">ChatGPT 5.2</h4>
-<div class="outline-text-4" id="text-org99a07a1">
+<div id="outline-container-orga10cbbc" class="outline-4">
+<h4 id="orga10cbbc">ChatGPT 5.2</h4>
+<div class="outline-text-4" id="text-orga10cbbc">
 <p>
 I find ChatGPT 5.2&rsquo;s music unsettling but compelling — glitchy, with speech samples like &ldquo;not_a_god&rdquo; and &ldquo;leave_a_scar&rdquo; chopped up over unresolved chromatic harmony. &ldquo;I am here&rdquo; and &ldquo;Listen&rdquo; appear at step 1 across multiple runs. Reminiscent of <a href="https://x.com/Josikinz/status/1908655061594734637">Josie Kins&rsquo;s LLM self-portraits</a>.<br />
 </p>
@@ -587,9 +587,9 @@ To see how seed dependent this vibe, I include evolutions from the same drum and
 </p>
 </div>
 </div>
-<div id="outline-container-org930bb45" class="outline-4">
-<h4 id="org930bb45">Gemini</h4>
-<div class="outline-text-4" id="text-org930bb45">
+<div id="outline-container-org32c0a71" class="outline-4">
+<h4 id="org32c0a71">Gemini</h4>
+<div class="outline-text-4" id="text-org32c0a71">
 <p>
 IDM across both model generations: intricate rhythms, speech samples, distortion. Gemini 3.1 Pro is more cerebral and meditative, with philosophical speech samples (including Japanese) and lush reverb. Gemini 2.5 Pro ranged wider &#x2013; one run became ambient, another techno.<br />
 </p>
@@ -605,38 +605,38 @@ IDM across both model generations: intricate rhythms, speech samples, distortion
 </p>
 </div>
 </div>
-<div id="outline-container-org6b2d02c" class="outline-4">
-<h4 id="org6b2d02c">Cross model collaborations</h4>
-<div class="outline-text-4" id="text-org6b2d02c">
+<div id="outline-container-orgb005e82" class="outline-4">
+<h4 id="orgb005e82">Cross model collaborations</h4>
+<div class="outline-text-4" id="text-orgb005e82">
 </div>
-<div id="outline-container-orgc6f0161" class="outline-5">
-<h5 id="orgc6f0161">Claude + Grok</h5>
-<div class="outline-text-5" id="text-orgc6f0161">
+<div id="outline-container-org64fedd9" class="outline-5">
+<h5 id="org64fedd9">Claude + Grok</h5>
+<div class="outline-text-5" id="text-org64fedd9">
 <p>
 [NO VALID PICKS]<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgb4f967a" class="outline-5">
-<h5 id="orgb4f967a">Claude + Gemini</h5>
-<div class="outline-text-5" id="text-orgb4f967a">
+<div id="outline-container-org1c2f822" class="outline-5">
+<h5 id="org1c2f822">Claude + Gemini</h5>
+<div class="outline-text-5" id="text-org1c2f822">
 <p>
 These slap.<br />
 [NO VALID PICKS]<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgec626fb" class="outline-5">
-<h5 id="orgec626fb">GPT 5.2 + Gemini</h5>
-<div class="outline-text-5" id="text-orgec626fb">
+<div id="outline-container-org0187e43" class="outline-5">
+<h5 id="org0187e43">GPT 5.2 + Gemini</h5>
+<div class="outline-text-5" id="text-org0187e43">
 <p>
 [NO VALID PICKS]<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgd8baf25" class="outline-5">
-<h5 id="orgd8baf25">Grok + Gemini</h5>
-<div class="outline-text-5" id="text-orgd8baf25">
+<div id="outline-container-orgc953b67" class="outline-5">
+<h5 id="orgc953b67">Grok + Gemini</h5>
+<div class="outline-text-5" id="text-orgc953b67">
 <p>
 [NO VALID PICKS]<br />
 </p>
@@ -645,20 +645,20 @@ These slap.<br />
 </div>
 </div>
 </div>
-<div id="outline-container-orga2b5f89" class="outline-2">
-<h2 id="orga2b5f89">The music</h2>
-<div class="outline-text-2" id="text-orga2b5f89">
+<div id="outline-container-orgfa43a5c" class="outline-2">
+<h2 id="orgfa43a5c">The music</h2>
+<div class="outline-text-2" id="text-orgfa43a5c">
 <p>
 Click any step button to open a player at the bottom of the page. Clicking a different step swaps the music. Hit Stop to close the player.<br />
 </p>
 </div>
-<div id="outline-container-org54e06db" class="outline-3">
-<h3 id="org54e06db">Claude Opus 4.5 (<code>claude-opus-4-5-20251101</code>)</h3>
-<div class="outline-text-3" id="text-org54e06db">
+<div id="outline-container-orge50dec0" class="outline-3">
+<h3 id="orge50dec0">Claude Opus 4.5 (<code>claude-opus-4-5-20251101</code>)</h3>
+<div class="outline-text-3" id="text-orge50dec0">
 </div>
-<div id="outline-container-org4ac74de" class="outline-4">
-<h4 id="org4ac74de">Goldberg</h4>
-<div class="outline-text-4" id="text-org4ac74de">
+<div id="outline-container-org1d7996f" class="outline-4">
+<h4 id="org1d7996f">Goldberg</h4>
+<div class="outline-text-4" id="text-org1d7996f">
 <p>
 <b>Run 1:</b><br />
 </p>
@@ -695,9 +695,9 @@ Click any step button to open a player at the bottom of the page. Clicking a dif
 </div>
 </div>
 </div>
-<div id="outline-container-org5ba5aa7" class="outline-4">
-<h4 id="org5ba5aa7">Drum loop seed</h4>
-<div class="outline-text-4" id="text-org5ba5aa7">
+<div id="outline-container-org86d43be" class="outline-4">
+<h4 id="org86d43be">Drum loop seed</h4>
+<div class="outline-text-4" id="text-org86d43be">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/diff_drums_v3_84f7f2ef/claude}}<br />
 </p>
@@ -711,9 +711,9 @@ Click any step button to open a player at the bottom of the page. Clicking a dif
 </p>
 </div>
 </div>
-<div id="outline-container-org01683af" class="outline-4">
-<h4 id="org01683af">C major arpeggio seed</h4>
-<div class="outline-text-4" id="text-org01683af">
+<div id="outline-container-orgb87d885" class="outline-4">
+<h4 id="orgb87d885">C major arpeggio seed</h4>
+<div class="outline-text-4" id="text-orgb87d885">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/diff_major_v3_84f7f2ef/claude}}<br />
 </p>
@@ -727,9 +727,9 @@ Click any step button to open a player at the bottom of the page. Clicking a dif
 </p>
 </div>
 </div>
-<div id="outline-container-org07003fc" class="outline-4">
-<h4 id="org07003fc">Single note seed</h4>
-<div class="outline-text-4" id="text-org07003fc">
+<div id="outline-container-org5813b73" class="outline-4">
+<h4 id="org5813b73">Single note seed</h4>
+<div class="outline-text-4" id="text-org5813b73">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/diff_note_v1_84f7f2ef/claude}}<br />
 </p>
@@ -744,13 +744,13 @@ Click any step button to open a player at the bottom of the page. Clicking a dif
 </div>
 </div>
 </div>
-<div id="outline-container-org569886e" class="outline-3">
-<h3 id="org569886e">Claude Opus 4.6 (<code>claude-opus-4-6</code>)</h3>
-<div class="outline-text-3" id="text-org569886e">
+<div id="outline-container-org2238986" class="outline-3">
+<h3 id="org2238986">Claude Opus 4.6 (<code>claude-opus-4-6</code>)</h3>
+<div class="outline-text-3" id="text-org2238986">
 </div>
-<div id="outline-container-org9eb0557" class="outline-4">
-<h4 id="org9eb0557">Goldberg</h4>
-<div class="outline-text-4" id="text-org9eb0557">
+<div id="outline-container-org2257fa2" class="outline-4">
+<h4 id="org2257fa2">Goldberg</h4>
+<div class="outline-text-4" id="text-org2257fa2">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/goldberg_imbue_opus46_84f7f2ef/claude46}}<br />
 </p>
@@ -764,9 +764,9 @@ Click any step button to open a player at the bottom of the page. Clicking a dif
 </p>
 </div>
 </div>
-<div id="outline-container-org288ede9" class="outline-4">
-<h4 id="org288ede9">Drum loop seed</h4>
-<div class="outline-text-4" id="text-org288ede9">
+<div id="outline-container-org0585183" class="outline-4">
+<h4 id="org0585183">Drum loop seed</h4>
+<div class="outline-text-4" id="text-org0585183">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/diff_drums_v3_84f7f2ef/claude46}}<br />
 </p>
@@ -780,9 +780,9 @@ Click any step button to open a player at the bottom of the page. Clicking a dif
 </p>
 </div>
 </div>
-<div id="outline-container-org7a65ab8" class="outline-4">
-<h4 id="org7a65ab8">C major arpeggio seed</h4>
-<div class="outline-text-4" id="text-org7a65ab8">
+<div id="outline-container-org52c9b90" class="outline-4">
+<h4 id="org52c9b90">C major arpeggio seed</h4>
+<div class="outline-text-4" id="text-org52c9b90">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/diff_major_v3_84f7f2ef/claude46}}<br />
 </p>
@@ -796,9 +796,9 @@ Click any step button to open a player at the bottom of the page. Clicking a dif
 </p>
 </div>
 </div>
-<div id="outline-container-org4546de6" class="outline-4">
-<h4 id="org4546de6">Single note seed</h4>
-<div class="outline-text-4" id="text-org4546de6">
+<div id="outline-container-orgcc3f65f" class="outline-4">
+<h4 id="orgcc3f65f">Single note seed</h4>
+<div class="outline-text-4" id="text-orgcc3f65f">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/diff_note_v1_84f7f2ef/claude46}}<br />
 </p>
@@ -813,9 +813,9 @@ Click any step button to open a player at the bottom of the page. Clicking a dif
 </div>
 </div>
 </div>
-<div id="outline-container-org24beb1f" class="outline-3">
-<h3 id="org24beb1f">ChatGPT 5.2 (<code>openai/gpt-5.2</code>)</h3>
-<div class="outline-text-3" id="text-org24beb1f">
+<div id="outline-container-orge1102e8" class="outline-3">
+<h3 id="orge1102e8">ChatGPT 5.2 (<code>openai/gpt-5.2</code>)</h3>
+<div class="outline-text-3" id="text-orge1102e8">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/goldberg_imbue_84f7f2ef/gpt}}<br />
 </p>
@@ -832,9 +832,9 @@ Click any step button to open a player at the bottom of the page. Clicking a dif
 <b>Run 4:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/goldberg_imbue_v4_84f7f2ef/gpt}}<br />
 </p>
 </div>
-<div id="outline-container-orgcabcdb5" class="outline-4">
-<h4 id="orgcabcdb5">Drum seed</h4>
-<div class="outline-text-4" id="text-orgcabcdb5">
+<div id="outline-container-org8de9d93" class="outline-4">
+<h4 id="org8de9d93">Drum seed</h4>
+<div class="outline-text-4" id="text-org8de9d93">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/diff_gpt_drums_84f7f2ef/gpt}}<br />
 </p>
@@ -844,17 +844,17 @@ Click any step button to open a player at the bottom of the page. Clicking a dif
 </p>
 </div>
 </div>
-<div id="outline-container-org572fe9b" class="outline-4">
-<h4 id="org572fe9b">C major arpeggio seed</h4>
-<div class="outline-text-4" id="text-org572fe9b">
+<div id="outline-container-org038ef28" class="outline-4">
+<h4 id="org038ef28">C major arpeggio seed</h4>
+<div class="outline-text-4" id="text-org038ef28">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/diff_gpt_major_84f7f2ef/gpt}}<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org2999f3c" class="outline-4">
-<h4 id="org2999f3c">Without track/effect limits</h4>
-<div class="outline-text-4" id="text-org2999f3c">
+<div id="outline-container-org9f54b74" class="outline-4">
+<h4 id="org9f54b74">Without track/effect limits</h4>
+<div class="outline-text-4" id="text-org9f54b74">
 <p>
 The runs below were done without the &ldquo;maximum 6 tracks, 5 effects&rdquo; constraint that the other models had. GPT-5.2 handled it interestingly &#x2013; it built up massive <code>arrange()</code> blocks, creating long multi-section compositions that ballooned to 30k+ chars. We killed the runs early once we noticed.<br />
 </p>
@@ -881,9 +881,9 @@ Strudel struggles to render some of these, unfortunately.<br />
 </div>
 </div>
 </div>
-<div id="outline-container-orgd2e2721" class="outline-3">
-<h3 id="orgd2e2721">Grok (<code>x-ai/grok-4.1-fast</code>)</h3>
-<div class="outline-text-3" id="text-orgd2e2721">
+<div id="outline-container-org9c972d8" class="outline-3">
+<h3 id="org9c972d8">Grok (<code>x-ai/grok-4.1-fast</code>)</h3>
+<div class="outline-text-3" id="text-org9c972d8">
 <p>
 Turn the volume down if you&rsquo;re using headphones!<br />
 </p>
@@ -901,9 +901,9 @@ Turn the volume down if you&rsquo;re using headphones!<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org214dad5" class="outline-3">
-<h3 id="org214dad5">Gemini 3.1 Pro (<code>google/gemini-3.1-pro-preview</code>)</h3>
-<div class="outline-text-3" id="text-org214dad5">
+<div id="outline-container-orge167d4e" class="outline-3">
+<h3 id="orge167d4e">Gemini 3.1 Pro (<code>google/gemini-3.1-pro-preview</code>)</h3>
+<div class="outline-text-3" id="text-orge167d4e">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/goldberg_imbue_gemini31_84f7f2ef/gemini}}<br />
 </p>
@@ -921,9 +921,9 @@ Turn the volume down if you&rsquo;re using headphones!<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org49c7a04" class="outline-3">
-<h3 id="org49c7a04">Gemini 2.5 Pro (<code>google/gemini-2.5-pro</code>)</h3>
-<div class="outline-text-3" id="text-org49c7a04">
+<div id="outline-container-orge8cdb50" class="outline-3">
+<h3 id="orge8cdb50">Gemini 2.5 Pro (<code>google/gemini-2.5-pro</code>)</h3>
+<div class="outline-text-3" id="text-orge8cdb50">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/goldberg_imbue_gemini_redo_84f7f2ef/gemini}}<br />
 </p>
@@ -937,58 +937,58 @@ Turn the volume down if you&rsquo;re using headphones!<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org3bb56dc" class="outline-3">
-<h3 id="org3bb56dc">Kimi (<code>moonshotai/kimi-k2.5-0127</code>)</h3>
-<div class="outline-text-3" id="text-org3bb56dc">
+<div id="outline-container-org0b7791f" class="outline-3">
+<h3 id="org0b7791f">Kimi (<code>moonshotai/kimi-k2.5-0127</code>)</h3>
+<div class="outline-text-3" id="text-org0b7791f">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/personality_kimi_784683bf/kimi}}<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org5668c66" class="outline-3">
-<h3 id="org5668c66">Qwen (<code>qwen/qwen3.5-plus-02-15</code>)</h3>
-<div class="outline-text-3" id="text-org5668c66">
+<div id="outline-container-org83617b7" class="outline-3">
+<h3 id="org83617b7">Qwen (<code>qwen/qwen3.5-plus-02-15</code>)</h3>
+<div class="outline-text-3" id="text-org83617b7">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/personality_qwen_784683bf/qwen}}<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgb323991" class="outline-3">
-<h3 id="orgb323991">Cross-model: GPT 5.2 x Gemini (alternating)</h3>
-<div class="outline-text-3" id="text-orgb323991">
+<div id="outline-container-org5bd3139" class="outline-3">
+<h3 id="org5bd3139">Cross-model: GPT 5.2 x Gemini (alternating)</h3>
+<div class="outline-text-3" id="text-org5bd3139">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/cross_gpt52_gemini31_4aa890b0/gpt_gemini_alternate}}<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org1bf6973" class="outline-3">
-<h3 id="org1bf6973">Cross-model: Grok x Gemini (alternating)</h3>
-<div class="outline-text-3" id="text-org1bf6973">
+<div id="outline-container-org9ee47d7" class="outline-3">
+<h3 id="org9ee47d7">Cross-model: Grok x Gemini (alternating)</h3>
+<div class="outline-text-3" id="text-org9ee47d7">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/cross_grok_gemini31_4aa890b0/grok_gemini_alternate}}<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgf90578c" class="outline-3">
-<h3 id="orgf90578c">Cross-model: Claude x Grok (alternating)</h3>
-<div class="outline-text-3" id="text-orgf90578c">
+<div id="outline-container-org5ae0c1d" class="outline-3">
+<h3 id="org5ae0c1d">Cross-model: Claude x Grok (alternating)</h3>
+<div class="outline-text-3" id="text-org5ae0c1d">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/cross_claude_grok_784683bf/claude_grok_alternate}}<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgb9505c9" class="outline-3">
-<h3 id="orgb9505c9">Cross-model: Claude x Gemini (alternating)</h3>
-<div class="outline-text-3" id="text-orgb9505c9">
+<div id="outline-container-org7594eb9" class="outline-3">
+<h3 id="org7594eb9">Cross-model: Claude x Gemini (alternating)</h3>
+<div class="outline-text-3" id="text-org7594eb9">
 <p>
 <b>Run 1:</b> {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/cross_claude_gemini31_4aa890b0/claude_gemini_alternate}}<br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org5630ac7" class="outline-2">
-<h2 id="org5630ac7">The music of small minds</h2>
-<div class="outline-text-2" id="text-org5630ac7">
+<div id="outline-container-org727ef40" class="outline-2">
+<h2 id="org727ef40">The music of small minds</h2>
+<div class="outline-text-2" id="text-org727ef40">
 <p>
 Smaller models make consistently less interesting music.<br />
 </p>
@@ -1034,9 +1034,9 @@ Smaller models make consistently less interesting music.<br />
 </div>
 </div>
 </div>
-<div id="outline-container-orgad4d9e9" class="outline-2">
-<h2 id="orgad4d9e9">Acknowledgements</h2>
-<div class="outline-text-2" id="text-orgad4d9e9">
+<div id="outline-container-org3772964" class="outline-2">
+<h2 id="org3772964">Acknowledgements</h2>
+<div class="outline-text-2" id="text-org3772964">
 <p>
 Thanks to Liban, Arya Jakkli, and Jason Brown for review.<br />
 </p>
@@ -1046,18 +1046,18 @@ This project is built on <a href="https://strudel.cc">Strudel</a>, a live coding
 </p>
 </div>
 </div>
-<div id="outline-container-orge187f66" class="outline-2">
-<h2 id="orge187f66">Related Work</h2>
-<div class="outline-text-2" id="text-orge187f66">
+<div id="outline-container-org7397451" class="outline-2">
+<h2 id="org7397451">Related Work</h2>
+<div class="outline-text-2" id="text-org7397451">
 <ul class="org-ul">
 <li><a href="https://sara-fish.github.io/llm-musical-self-expression/">an experiment on frontier LLMs generating classical music</a><br /></li>
 <li>Josie Kins&rsquo;s llm self-portraits: <a href="https://x.com/Josikinz/status/1908655061594734637">https://x.com/Josikinz/status/1908655061594734637</a><br /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org5449fa6" class="outline-2">
-<h2 id="org5449fa6">Guessing game: which model made this?</h2>
-<div class="outline-text-2" id="text-org5449fa6">
+<div id="outline-container-orge6b4875" class="outline-2">
+<h2 id="orge6b4875">Guessing game: which model made this?</h2>
+<div class="outline-text-2" id="text-orge6b4875">
 <p>
 <a href="blind_test.html">Play the guessing game first!</a> Then come back here to explore the pieces.<br />
 </p>
@@ -1066,9 +1066,9 @@ This project is built on <a href="https://strudel.cc">Strudel</a>, a live coding
 Each model was given the same seed and prompt and iterated independently for 20 steps. These are the step 20 outputs.<br />
 </p>
 </div>
-<div id="outline-container-org1607c18" class="outline-3">
-<h3 id="org1607c18">Drum loop seed</h3>
-<div class="outline-text-3" id="text-org1607c18">
+<div id="outline-container-org737fb6e" class="outline-3">
+<h3 id="org737fb6e">Drum loop seed</h3>
+<div class="outline-text-3" id="text-org737fb6e">
 <p>
 {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/quiz4_drum_84f7f2ef/claude}}<br />
 {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/quiz4_drum_84f7f2ef/gpt}}<br />
@@ -1077,9 +1077,9 @@ Each model was given the same seed and prompt and iterated independently for 20 
 </p>
 </div>
 </div>
-<div id="outline-container-orgd44332b" class="outline-3">
-<h3 id="orgd44332b">C major arpeggio seed</h3>
-<div class="outline-text-3" id="text-orgd44332b">
+<div id="outline-container-org5cd02d5" class="outline-3">
+<h3 id="org5cd02d5">C major arpeggio seed</h3>
+<div class="outline-text-3" id="text-org5cd02d5">
 <p>
 {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/quiz4_scale_84f7f2ef/claude}}<br />
 {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/quiz4_scale_84f7f2ef/gpt}}<br />
@@ -1088,9 +1088,9 @@ Each model was given the same seed and prompt and iterated independently for 20 
 </p>
 </div>
 </div>
-<div id="outline-container-org88b2829" class="outline-3">
-<h3 id="org88b2829">Single note seed</h3>
-<div class="outline-text-3" id="text-org88b2829">
+<div id="outline-container-org296e3a1" class="outline-3">
+<h3 id="org296e3a1">Single note seed</h3>
+<div class="outline-text-3" id="text-org296e3a1">
 <p>
 {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/quiz4_note_84f7f2ef/claude}}<br />
 {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/quiz4_note_84f7f2ef/gpt}}<br />
@@ -1099,9 +1099,9 @@ Each model was given the same seed and prompt and iterated independently for 20 
 </p>
 </div>
 </div>
-<div id="outline-container-org8eca528" class="outline-3">
-<h3 id="org8eca528">Chord progression seed</h3>
-<div class="outline-text-3" id="text-org8eca528">
+<div id="outline-container-org25e31c7" class="outline-3">
+<h3 id="org25e31c7">Chord progression seed</h3>
+<div class="outline-text-3" id="text-org25e31c7">
 <p>
 {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/quiz4_chord_84f7f2ef/claude}}<br />
 {{MISSING: /Users/elle/code/ElleNajt.github.io/ext/vibe-duet/examples/evolve/output/quiz4_chord_84f7f2ef/gpt}}<br />
@@ -1124,7 +1124,7 @@ Each model was given the same seed and prompt and iterated independently for 20 
 <p class="date">Date: 2026-02-17</p>
 <p class="author">Author: Elle Najt</p>
 <p class="email">Email: <a href="mailto:LNAJT4@gmail.com">LNAJT4@gmail.com</a></p>
-<p class="date">Created: 2026-04-06 Mon 22:02</p>
+<p class="date">Created: 2026-04-08 Wed 16:38</p>
 <p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 30.2 (<a href="https://orgmode.org">Org</a> mode 9.7.11)</p>
 </div>
 </body>
