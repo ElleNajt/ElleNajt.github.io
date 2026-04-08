@@ -1,7 +1,7 @@
 #+title: Blog
 
-* [[https://www.lesswrong.com/posts/e5sdgYxYFKqdM6vF4/opus-s-schelling-steganography-has-amplifiable-secrecy][Opus's Schelling Steganography Has Amplifiable Secrecy]] :LLMs:safety:
-Opus 4.6 can hide a letter in text and decode it at 63%, while eavesdropper models do much worse. [[https://ellenajt.github.io/Topics/stego/index.html][Try the game yourself.]]
+* [[https://www.lesswrong.com/posts/e5sdgYxYFKqdM6vF4/opus-s-schelling-steganography-has-amplifiable-secrecy][Opus's Schelling Steganography Has Amplifiable Secrecy Against Weaker Eavesdroppers]] :LLMs:safety:
+Frontier models can agree on Schelling steganography schemes with significant advantage against weaker eavesdroppers. Paraphrasing removes this advantage, but it can be amplified through wiretap codes that thinking models can implement. We frame Schelling steganography as providing noisy channels for wiretap coding and argue this is important for understanding steganography risk in AI control deployments. [[https://ellenajt.github.io/Topics/stego/index.html][Try the decoding game yourself.]]
 
 * [[file:saying_no_in_the_age_of_coding_agents.org][Saying No In The Age Of Coding Agents]] :LLMs:personal:
 My framework for deciding what to work on when coding agents make everything buildable.
