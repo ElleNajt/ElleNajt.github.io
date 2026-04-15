@@ -8,6 +8,8 @@ all:
 	@# org-publish follows symlinks and names output after the real file.
 	@# Rename to match the symlink name so internal links work.
 	cp ext/vibe-duet/examples/evolve/blind_test.html docs/blog/blind_test.html
+	mkdir -p docs/Topics/stego
+	cp -r Topics/stego/* docs/Topics/stego/
 	@for link in blog/*.org; do \
 		[ -L "$$link" ] || continue; \
 		target=$$(readlink "$$link"); \
